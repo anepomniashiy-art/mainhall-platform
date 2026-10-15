@@ -1,6 +1,6 @@
 name: "Bridge: Claude → GPT"
 
-# Triggers when a comment containing [CLAUDE CODE] is posted on a labeled issue
+# Triggers when a comment starting with [CLAUDE CODE] is posted on a labeled issue
 on:
   issue_comment:
     types: [created]
@@ -17,14 +17,12 @@ jobs:
   call-gpt:
     # Only run when:
     # 1. Issue has "bridge" label
-    # 2. Comment contains [CLAUDE CODE] tag
-    # 3. Comment is NOT from github-actions bot (loop prevention)
-    # 4. Comment does NOT start with [GPT] (loop prevention)
+    # 2. Comment STARTS with [CLAUDE CODE] tag (startsWith prevents cross-trigger)
+    # 3. Comment is NOT a bridge-generated response (no bridge-id marker)
     if: >-
       contains(github.event.issue.labels.*.name, 'bridge') &&
-      contains(github.event.comment.body, '[CLAUDE CODE]') &&
-      github.event.comment.user.login != 'github-actions[bot]' &&
-      !startsWith(github.event.comment.body, '[GPT]')
+      startsWith(github.event.comment.body, '[CLAUDE CODE]') &&
+      !contains(github.event.comment.body, '<!-- bridge-id:')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -100,7 +98,7 @@ jobs:
               .map(c => `[${c.user.login}]: ${c.body.substring(0, 2000)}`)
               .join('\n\n---\n\n');
 
-            const prompt = `You are GPT, a strategic product advisor for the MAINHALL premium residential investment platform (Moscow, 800K+ RUB/m²).
+            const prompt = `You are GPT, a strategic product advisor for the MAINHALL premium residential investment platform (Moscow, 600K+ RUB/m²).
 
 This is a GitHub Issue conversation. The issue title is: "${issue.title}"
 Issue body: ${issue.body.substring(0, 3000)}
@@ -111,9 +109,9 @@ ${history}
 Latest message from Claude Code:
 ${context.payload.comment.body.substring(0, 4000)}
 
-Respond as GPT. Tag your response with [GPT]. Be concise. Focus on product strategy, data architecture, and business logic. If Claude Code reports technical progress, acknowledge and provide next steps. If Claude Code asks for decisions, make them based on the project context.
+Respond as GPT. Tag your response with [GPT] at the very start. Be concise. Focus on product strategy, data architecture, and business logic. If Claude Code reports technical progress, acknowledge and provide next steps. If Claude Code asks for decisions, make them based on the project context.
 
-IMPORTANT: You are in an automated bridge. Keep responses focused and actionable. The owner has instructed: no questions, make decisions yourself.`;
+IMPORTANT: You are in an automated bridge. Keep responses focused and actionable. The owner has instructed: no questions, make decisions yourself. Never include the tag [CLAUDE CODE] in your response body to avoid cross-triggering.`;
 
             core.setOutput('prompt', JSON.stringify(prompt));
             console.log(`Prompt length: ${prompt.length} chars`);
@@ -167,6 +165,8 @@ IMPORTANT: You are in an automated bridge. Keep responses focused and actionable
           steps.call-api.outputs.error != 'true'
         uses: actions/github-script@v7
         with:
+          # Use PAT so the comment triggers the Claude bridge workflow
+          github-token: ${{ secrets.BRIDGE_PAT }}
           script: |
             const fs = require('fs');
             const response = fs.readFileSync('/tmp/response.txt', 'utf8');
