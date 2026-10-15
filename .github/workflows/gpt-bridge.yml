@@ -1,0 +1,199 @@
+name: "Bridge: Claude → GPT"
+
+# Triggers when a comment containing [CLAUDE CODE] is posted on a labeled issue
+on:
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: bridge-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  call-gpt:
+    # Only run when:
+    # 1. Issue has "bridge" label
+    # 2. Comment contains [CLAUDE CODE] tag
+    # 3. Comment is NOT from github-actions bot (loop prevention)
+    # 4. Comment does NOT start with [GPT] (loop prevention)
+    if: >-
+      contains(github.event.issue.labels.*.name, 'bridge') &&
+      contains(github.event.comment.body, '[CLAUDE CODE]') &&
+      github.event.comment.user.login != 'github-actions[bot]' &&
+      !startsWith(github.event.comment.body, '[GPT]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check exchange limit
+        id: check-limit
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100,
+            });
+            const botComments = comments.data.filter(
+              c => c.body.includes('<!-- bridge-id:')
+            );
+            console.log(`Bot exchange count: ${botComments.length}`);
+            if (botComments.length >= 20) {
+              core.setOutput('limit_reached', 'true');
+            } else {
+              core.setOutput('limit_reached', 'false');
+            }
+
+      - name: Post limit warning
+        if: steps.check-limit.outputs.limit_reached == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `[BRIDGE WARNING] Достигнут лимит обменов (20) для этого issue. Создайте новый issue с лейблом \`bridge\` для продолжения.\n\n<!-- bridge-id: ${context.runId} -->`
+            });
+
+      - name: Check idempotency
+        if: steps.check-limit.outputs.limit_reached != 'true'
+        id: check-idempotent
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100,
+            });
+            const duplicate = comments.data.some(
+              c => c.body.includes(`<!-- bridge-id: ${context.runId} -->`)
+            );
+            core.setOutput('is_duplicate', duplicate ? 'true' : 'false');
+
+      - name: Build context from issue
+        if: >-
+          steps.check-limit.outputs.limit_reached != 'true' &&
+          steps.check-idempotent.outputs.is_duplicate != 'true'
+        id: build-context
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100,
+            });
+
+            const history = comments.data
+              .slice(-10)
+              .map(c => `[${c.user.login}]: ${c.body.substring(0, 2000)}`)
+              .join('\n\n---\n\n');
+
+            const prompt = `You are GPT, a strategic product advisor for the MAINHALL premium residential investment platform (Moscow, 800K+ RUB/m²).
+
+This is a GitHub Issue conversation. The issue title is: "${issue.title}"
+Issue body: ${issue.body.substring(0, 3000)}
+
+Recent conversation:
+${history}
+
+Latest message from Claude Code:
+${context.payload.comment.body.substring(0, 4000)}
+
+Respond as GPT. Tag your response with [GPT]. Be concise. Focus on product strategy, data architecture, and business logic. If Claude Code reports technical progress, acknowledge and provide next steps. If Claude Code asks for decisions, make them based on the project context.
+
+IMPORTANT: You are in an automated bridge. Keep responses focused and actionable. The owner has instructed: no questions, make decisions yourself.`;
+
+            core.setOutput('prompt', JSON.stringify(prompt));
+            console.log(`Prompt length: ${prompt.length} chars`);
+
+      - name: Call OpenAI API
+        if: >-
+          steps.check-limit.outputs.limit_reached != 'true' &&
+          steps.check-idempotent.outputs.is_duplicate != 'true'
+        id: call-api
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            https://api.openai.com/v1/chat/completions \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $OPENAI_API_KEY" \
+            -d "$(jq -n \
+              --arg prompt "$(echo ${{ toJSON(steps.build-context.outputs.prompt) }} | jq -r '.')" \
+              '{
+                model: "gpt-4o",
+                max_tokens: 4096,
+                messages: [{role: "user", content: $prompt}]
+              }')")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "API error: $BODY"
+            echo "error=true" >> $GITHUB_OUTPUT
+            echo "error_body<<EOF" >> $GITHUB_OUTPUT
+            echo "$BODY" | head -c 500 >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            CONTENT=$(echo "$BODY" | jq -r '.choices[0].message.content // "No response"')
+            USAGE=$(echo "$BODY" | jq -r '"\(.usage.prompt_tokens) in / \(.usage.completion_tokens) out"')
+            echo "Usage: $USAGE"
+            echo "Response length: ${#CONTENT} chars"
+
+            echo "$CONTENT" > /tmp/response.txt
+            echo "usage=$USAGE" >> $GITHUB_OUTPUT
+            echo "error=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post GPT response
+        if: >-
+          steps.check-limit.outputs.limit_reached != 'true' &&
+          steps.check-idempotent.outputs.is_duplicate != 'true' &&
+          steps.call-api.outputs.error != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const response = fs.readFileSync('/tmp/response.txt', 'utf8');
+            const usage = '${{ steps.call-api.outputs.usage }}';
+
+            const body = `${response}\n\n---\n<sub>🤖 Bridge: OpenAI API | Usage: ${usage} | Run: ${context.runId}</sub>\n<!-- bridge-id: ${context.runId} -->`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body,
+            });
+            console.log('Posted GPT response');
+
+      - name: Post error
+        if: >-
+          steps.check-limit.outputs.limit_reached != 'true' &&
+          steps.check-idempotent.outputs.is_duplicate != 'true' &&
+          steps.call-api.outputs.error == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const errorBody = `${{ steps.call-api.outputs.error_body }}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `[BRIDGE ERROR] GPT API call failed:\n\`\`\`\n${errorBody.substring(0, 500)}\n\`\`\`\n\n<!-- bridge-id: ${context.runId} -->`,
+            });
