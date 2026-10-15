@@ -17,12 +17,11 @@ jobs:
   call-gpt:
     # Only run when:
     # 1. Issue has "bridge" label
-    # 2. Comment STARTS with [CLAUDE CODE] tag (startsWith prevents cross-trigger)
-    # 3. Comment is NOT a bridge-generated response (no bridge-id marker)
+    # 2. Comment STARTS with [CLAUDE CODE] tag (allows PAT-authored bridge responses)
+    # 3. Bridge-generated comments ARE allowed to trigger the counterpart workflow
     if: >-
       contains(github.event.issue.labels.*.name, 'bridge') &&
-      startsWith(github.event.comment.body, '[CLAUDE CODE]') &&
-      !contains(github.event.comment.body, '<!-- bridge-id:')
+      startsWith(github.event.comment.body, '[CLAUDE CODE]')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -172,7 +171,8 @@ IMPORTANT: You are in an automated bridge. Keep responses focused and actionable
             const response = fs.readFileSync('/tmp/response.txt', 'utf8');
             const usage = '${{ steps.call-api.outputs.usage }}';
 
-            const body = `${response}\n\n---\n<sub>🤖 Bridge: OpenAI API | Usage: ${usage} | Run: ${context.runId}</sub>\n<!-- bridge-id: ${context.runId} -->`;
+            const safeResponse = response.trim().startsWith('[GPT]') ? response.trim() : '[GPT] ' + response.trim();
+            const body = `${safeResponse}\n\n---\n<sub>🤖 Bridge: OpenAI API | Usage: ${usage} | Run: ${context.runId}</sub>\n<!-- bridge-id: ${context.runId} -->`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
