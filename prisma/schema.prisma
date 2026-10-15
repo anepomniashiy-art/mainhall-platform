@@ -1,0 +1,317 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Developers ─────────────────────────────────────────────
+
+model Developer {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  slug        String    @unique
+  officialUrl String?   @map("official_url")
+  logoUrl     String?   @map("logo_url")
+  description String?
+  classTypes  String[]  @default([]) @map("class_types") // premium, luxury, business+
+  isActive    Boolean   @default(true) @map("is_active")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  projects Project[]
+
+  @@map("developers")
+}
+
+// ─── Projects (ЖК) ─────────────────────────────────────────
+
+model Project {
+  id              String    @id @default(cuid())
+  developerId     String    @map("developer_id")
+  name            String
+  slug            String    @unique
+  address         String?
+  district        String?   // район Москвы
+  metro           String[]  @default([]) // ближайшие станции метро
+  latitude        Float?
+  longitude       Float?
+  jurisdiction    String    @default("moscow") // moscow | moscow_oblast
+  projectClass    String?   @map("project_class") // premium, luxury, business+, de luxe
+  classSource     String?   @map("class_source") // кто присвоил класс
+  status          ProjectStatus @default(UNDER_CONSTRUCTION)
+  completionDate  DateTime?     @map("completion_date")
+  completionQ     String?       @map("completion_quarter") // "2026Q4"
+  priceMinRub     BigInt?       @map("price_min_rub")
+  priceMaxRub     BigInt?       @map("price_max_rub")
+  pricePerSqmMin  Int?          @map("price_per_sqm_min")
+  pricePerSqmMax  Int?          @map("price_per_sqm_max")
+  meetsThreshold  Boolean   @default(false) @map("meets_threshold") // >=800K ₽/m²
+  officialUrl     String?   @map("official_url")
+  sourceEvidence  String?   @map("source_evidence") // ссылка на источник подтверждения порога
+  description     String?
+  amenities       String[]  @default([])
+  isActive        Boolean   @default(true) @map("is_active")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  developer       Developer @relation(fields: [developerId], references: [id])
+  buildings       Building[]
+  units           Unit[]
+  images          Image[]
+  documents       ProjectDocument[]
+  sourceRecords   SourceRecord[]
+
+  @@index([developerId])
+  @@index([jurisdiction])
+  @@index([meetsThreshold])
+  @@map("projects")
+}
+
+enum ProjectStatus {
+  PLANNING
+  UNDER_CONSTRUCTION
+  COMPLETED
+  ON_SALE
+}
+
+// ─── Buildings ──────────────────────────────────────────────
+
+model Building {
+  id         String   @id @default(cuid())
+  projectId  String   @map("project_id")
+  name       String?  // "Корпус 1", "Башня А"
+  floors     Int?
+  sections   Int?
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  project    Project  @relation(fields: [projectId], references: [id])
+  units      Unit[]
+
+  @@index([projectId])
+  @@map("buildings")
+}
+
+// ─── Units (квартиры/апартаменты) ───────────────────────────
+
+model Unit {
+  id               String       @id @default(cuid())
+  sourceId         String?      @map("source_id") // ID у девелопера
+  projectId        String       @map("project_id")
+  buildingId       String?      @map("building_id")
+  unitNumber       String?      @map("unit_number")
+  floor            Int?
+  rooms            Int?         // 0 = студия
+  areaSqm          Float?       @map("area_sqm")
+  livingAreaSqm    Float?       @map("living_area_sqm")
+  finish           String?      // без отделки, предчистовая, чистовая, с мебелью
+  orientation      String?      // сторона света / вид
+  orientationSource String?     @map("orientation_source")
+  priceRub         BigInt?      @map("price_rub")
+  pricePerSqm      Int?         @map("price_per_sqm") // derived
+  salesStatus      UnitStatus   @default(UNKNOWN) @map("sales_status")
+  mortgageInfo     String?      @map("mortgage_info")
+  discountInfo     String?      @map("discount_info")
+  sourceUrl        String?      @map("source_url")
+  fetchedAt        DateTime?    @map("fetched_at")
+  sourceUpdatedAt  DateTime?    @map("source_updated_at")
+  firstSeenAt      DateTime     @default(now()) @map("first_seen_at")
+  lastSeenAt       DateTime     @default(now()) @map("last_seen_at")
+  checksum         String?      // hash для дедупликации
+  confidence       Float        @default(0) // 0-1
+  verification     VerificationState @default(UNVERIFIED)
+  createdAt        DateTime     @default(now()) @map("created_at")
+  updatedAt        DateTime     @updatedAt @map("updated_at")
+
+  project          Project      @relation(fields: [projectId], references: [id])
+  building         Building?    @relation(fields: [buildingId], references: [id])
+  priceSnapshots   PriceSnapshot[]
+  availabilityEvents AvailabilityEvent[]
+  images           Image[]
+
+  @@unique([projectId, sourceId], name: "unit_source_unique")
+  @@index([projectId])
+  @@index([salesStatus])
+  @@index([pricePerSqm])
+  @@index([rooms])
+  @@map("units")
+}
+
+enum UnitStatus {
+  AVAILABLE
+  RESERVED
+  SOLD
+  BLOCKED
+  UNKNOWN
+}
+
+enum VerificationState {
+  UNVERIFIED
+  AUTO_VERIFIED
+  MANUALLY_VERIFIED
+  DISPUTED
+}
+
+// ─── Price Snapshots ────────────────────────────────────────
+
+model PriceSnapshot {
+  id          String   @id @default(cuid())
+  unitId      String   @map("unit_id")
+  priceRub    BigInt   @map("price_rub")
+  pricePerSqm Int?    @map("price_per_sqm")
+  source      String?  // URL или описание источника
+  snapshotAt  DateTime @default(now()) @map("snapshot_at")
+
+  unit        Unit     @relation(fields: [unitId], references: [id])
+
+  @@index([unitId, snapshotAt])
+  @@map("price_snapshots")
+}
+
+// ─── Availability Events ────────────────────────────────────
+
+model AvailabilityEvent {
+  id        String     @id @default(cuid())
+  unitId    String     @map("unit_id")
+  oldStatus UnitStatus @map("old_status")
+  newStatus UnitStatus @map("new_status")
+  source    String?
+  eventAt   DateTime   @default(now()) @map("event_at")
+
+  unit      Unit       @relation(fields: [unitId], references: [id])
+
+  @@index([unitId, eventAt])
+  @@map("availability_events")
+}
+
+// ─── Source Records ─────────────────────────────────────────
+
+model SourceRecord {
+  id           String   @id @default(cuid())
+  projectId    String?  @map("project_id")
+  sourceType   String   @map("source_type") // official_site, broker_feed, api, manual
+  sourceUrl    String?  @map("source_url")
+  rawData      Json?    @map("raw_data")
+  fetchedAt    DateTime @default(now()) @map("fetched_at")
+  importRunId  String?  @map("import_run_id")
+
+  project      Project?   @relation(fields: [projectId], references: [id])
+  importRun    ImportRun? @relation(fields: [importRunId], references: [id])
+
+  @@index([projectId])
+  @@map("source_records")
+}
+
+// ─── Images ─────────────────────────────────────────────────
+
+model Image {
+  id            String   @id @default(cuid())
+  projectId     String?  @map("project_id")
+  unitId        String?  @map("unit_id")
+  type          String   // render, floorplan, photo, exterior, interior
+  originalUrl   String?  @map("original_url")
+  storagePath   String?  @map("storage_path")
+  attribution   String?
+  licenseScope  String?  @map("license_scope")
+  licenseDate   DateTime? @map("license_date")
+  fileHash      String?  @map("file_hash")
+  width         Int?
+  height        Int?
+  sizeBytes     Int?     @map("size_bytes")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  project       Project? @relation(fields: [projectId], references: [id])
+  unit          Unit?    @relation(fields: [unitId], references: [id])
+
+  @@index([projectId])
+  @@map("images")
+}
+
+// ─── Project Documents ──────────────────────────────────────
+
+model ProjectDocument {
+  id          String   @id @default(cuid())
+  projectId   String   @map("project_id")
+  type        String   // разрешение, проектная_декларация, etc.
+  title       String
+  url         String?
+  storagePath String?  @map("storage_path")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  project     Project  @relation(fields: [projectId], references: [id])
+
+  @@index([projectId])
+  @@map("project_documents")
+}
+
+// ─── Import Runs ────────────────────────────────────────────
+
+model ImportRun {
+  id            String   @id @default(cuid())
+  connectorName String   @map("connector_name")
+  status        String   @default("running") // running, completed, failed
+  recordsTotal  Int      @default(0) @map("records_total")
+  recordsNew    Int      @default(0) @map("records_new")
+  recordsUpdated Int     @default(0) @map("records_updated")
+  errors        Json?
+  startedAt     DateTime @default(now()) @map("started_at")
+  finishedAt    DateTime? @map("finished_at")
+
+  sourceRecords SourceRecord[]
+
+  @@map("import_runs")
+}
+
+// ─── Leads ──────────────────────────────────────────────────
+
+model Lead {
+  id         String   @id @default(cuid())
+  name       String?
+  phone      String?
+  email      String?
+  telegram   String?
+  source     String?  // form, whatsapp, telegram, phone
+  projectId  String?  @map("project_id")
+  unitId     String?  @map("unit_id")
+  message    String?
+  status     String   @default("new") // new, contacted, qualified, closed
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("leads")
+}
+
+// ─── Audit Events ───────────────────────────────────────────
+
+model AuditEvent {
+  id        String   @id @default(cuid())
+  entity    String   // unit, project, image, lead
+  entityId  String   @map("entity_id")
+  action    String   // create, update, delete, override, verify
+  actor     String?  // system, admin:email, import:connector
+  diff      Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([entity, entityId])
+  @@index([createdAt])
+  @@map("audit_events")
+}
+
+// ─── Manual Overrides ───────────────────────────────────────
+
+model ManualOverride {
+  id        String   @id @default(cuid())
+  entity    String
+  entityId  String   @map("entity_id")
+  field     String
+  oldValue  String?  @map("old_value")
+  newValue  String?  @map("new_value")
+  reason    String?
+  author    String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([entity, entityId])
+  @@map("manual_overrides")
+}

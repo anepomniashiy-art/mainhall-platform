@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --gold: #BFA066;
+  --gold-light: #D4BC8A;
+  --gold-dark: #9A8050;
+  --dark: #17140F;
+  --dark-2: #1E1B15;
+  --dark-3: #252219;
+  --cream: #F5F0E8;
+  --cream-2: #EDE7DB;
+  --bg: #FAF8F4;
+  --bg-2: #F2EDE4;
+  --white: #FFFFFF;
+  --text: #2A2720;
+  --text-2: #5A5548;
+  --gray: #8A8578;
+  --gray-light: #B5AFA3;
+
+  --background: var(--bg);
+  --foreground: var(--text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-dark: var(--dark);
+  --color-cream: var(--cream);
+  --color-cream-2: var(--cream-2);
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
