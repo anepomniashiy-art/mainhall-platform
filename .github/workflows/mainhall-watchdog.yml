@@ -1,0 +1,73 @@
+name: MAINHALL progress watchdog
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+concurrency:
+  group: mainhall-progress-watchdog
+  cancel-in-progress: false
+
+jobs:
+  check-progress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner, repo = context.repo.repo;
+            const watchedIssue = 2;
+            const now = Date.now();
+            const staleMs = 60 * 60 * 1000;
+            const cooldownMs = 60 * 60 * 1000;
+
+            const commits = await github.rest.repos.listCommits({owner, repo, per_page: 1});
+            const latest = commits.data[0];
+            const latestAt = latest ? new Date(latest.commit.committer.date).getTime() : 0;
+            const age = now - latestAt;
+
+            const prs = await github.rest.pulls.list({owner, repo, state: 'open', per_page: 25});
+            const issue = await github.rest.issues.get({owner, repo, issue_number: watchedIssue});
+            console.log(JSON.stringify({
+              latest_commit: latest?.sha ?? null,
+              last_commit_at: latest?.commit.committer.date ?? null,
+              minutes_since_commit: Math.round(age / 60000),
+              open_prs: prs.data.map(p => ({number:p.number, draft:p.draft, title:p.title})),
+              issue_url: issue.data.html_url
+            }));
+
+            if (age < staleMs) {
+              console.log('Recent commit: no escalation needed');
+              return;
+            }
+
+            const comments = await github.paginate(github.rest.issues.listComments,
+              {owner, repo, issue_number: watchedIssue, per_page: 100});
+            const reminders = comments.filter(c => c.body?.includes('<!-- mainhall-watchdog:v1 -->'));
+            const last = reminders.length ? reminders[reminders.length - 1] : null;
+            if (last && now - new Date(last.created_at).getTime() < cooldownMs) {
+              console.log('Escalation cooldown active');
+              return;
+            }
+
+            const body = [
+              '[GPT] MAINHALL WATCHDOG — подтверждённый простой репозитория.',
+              'Последний коммит: ' + (latest?.sha?.slice(0, 12) ?? 'не найден') + '.',
+              'С момента последнего коммита: ' + Math.round(age/60000) + ' мин.',
+              'Открытых PR: ' + prs.data.length + '.',
+              '',
+              'Для исполнительного Claude Code: возобновить следующую безопасную P0-задачу из #2 и #3.',
+              'Не выдавать ответы текстового API-моста за запуск CLI. В ответе приложить ссылку на новый коммит, PR или успешный исполнительный workflow.',
+              'Если исполнительный агент не подключён, сообщить точный блокер вместо заявления об исполнении.',
+              '<!-- mainhall-watchdog:v1 -->'
+            ].join('\n');
+
+            await github.rest.issues.createComment({owner,repo,issue_number:watchedIssue,body});
+            console.log('Posted one stale-progress escalation');
