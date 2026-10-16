@@ -21,8 +21,10 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-serif text-xl font-bold tracking-[0.15em] text-[var(--gold)] group-hover:text-[var(--gold-light)] transition-colors">
-              {COMPANY.name}
+            <span className="flex items-center gap-2 text-[var(--cream)] group-hover:text-[var(--gold-light)] transition-colors" aria-label="MAINHALL">
+              <span className="font-sans text-2xl font-light tracking-[-0.09em]">M</span>
+              <span aria-hidden="true" className="h-px w-10 bg-current" />
+              <span className="font-sans text-2xl font-light tracking-[-0.09em]">H</span>
             </span>
           </Link>
 
