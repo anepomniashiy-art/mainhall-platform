@@ -1,0 +1,47 @@
+name: MAINHALL Claude Code Executor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: read
+
+concurrency:
+  group: mainhall-claude-executor
+  cancel-in-progress: false
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Claude Code implementation cycle
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            You are the REAL Claude Code executor for MAINHALL, not a conversational bridge.
+            This is an authorized scheduled implementation cycle. Read the repository and GitHub issues #2 and #3.
+            Continue the single highest-priority safe unfinished task that can be completed without outside credentials.
+            You MUST actually modify repository code or tests and run relevant validation when possible.
+            Prefer work toward full verified Moscow developer/project/unit catalog, official-feed ingestion,
+            Next.js UX, investment scenario calculations and independent staging.
+            User threshold starts at 600000 RUB/sqm but preserve all units inside qualifying projects.
+            Never fabricate inventory, prices, developer partnerships, image permissions or a staging URL.
+            If feeds/database/deploy secrets are missing, implement independently testable code instead.
+            Never alter main-hall.ru DNS, Tilda, production data, secrets, permissions or billing.
+            Do not bypass publisher access controls, anti-bot restrictions or copyright rules.
+            Create a feature branch/PR for changes, include test evidence; do not push to production.
+            Avoid repetitive no-op comments or infinite loops. If no safe work is possible, clearly report the blocker in issue #2.
+          claude_args: |
+            --max-turns 18
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(npm ci),Bash(npm run build),Bash(npm run lint),Bash(npm run db:validate),Bash(node --test *)"
