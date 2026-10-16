@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | MAINHALL",
   },
   description:
-    "Премиальная жилая недвижимость Москвы от 800 000 ₽/м². Каталог проектов, аналитика цен, инвестиционные стратегии.",
+    "Премиальная жилая недвижимость Москвы от 600 000 ₽/м². Каталог проектов, аналитика цен, инвестиционные стратегии.",
   metadataBase: new URL("https://main-hall.ru"),
   openGraph: {
     siteName: "MAINHALL",
