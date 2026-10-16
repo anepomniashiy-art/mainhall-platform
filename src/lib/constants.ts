@@ -1,5 +1,5 @@
 /** Price threshold for qualifying projects — RUB per m² */
-export const PRICE_THRESHOLD_PER_SQM = 800_000;
+export const PRICE_THRESHOLD_PER_SQM = 600_000;
 
 /** Brand colors — inherited from original MAINHALL design */
 export const BRAND = {
@@ -31,7 +31,7 @@ export const COMPANY = {
   tagline: "Инвестиции в премиальную недвижимость Москвы",
 } as const;
 
-/** Target developers for Moscow 800K+ segment */
+/** Target developers for Moscow 600K+ segment */
 export const TARGET_DEVELOPERS = [
   { name: "Sminex", url: "https://www.sminex.com/" },
   { name: "Vesper", url: "https://www.vespermoscow.com/" },
