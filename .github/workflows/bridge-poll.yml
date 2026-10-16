@@ -1,0 +1,259 @@
+name: "Bridge: Poll & Process"
+
+# Polling-based bridge — works with ANY comment source (GitHub App, bot, human)
+# Runs every 3 minutes + manual trigger for testing
+on:
+  schedule:
+    - cron: '*/3 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  poll-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Process bridge comments
+        uses: actions/github-script@v7
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // ── 1. Find open issues with 'bridge' label ──
+            const issues = await github.rest.issues.listForRepo({
+              owner, repo,
+              labels: 'bridge',
+              state: 'open',
+              per_page: 10,
+            });
+
+            if (issues.data.length === 0) {
+              console.log('No open bridge issues found');
+              return;
+            }
+
+            console.log(`Found ${issues.data.length} bridge issue(s)`);
+
+            // Process at most 1 comment per run to avoid rate issues
+            let processed = false;
+
+            for (const issue of issues.data) {
+              if (processed) break;
+
+              console.log(`\n── Issue #${issue.number}: ${issue.title} ──`);
+
+              // ── 2. Get all comments ──
+              const allComments = await github.paginate(
+                github.rest.issues.listComments,
+                { owner, repo, issue_number: issue.number, per_page: 100 }
+              );
+
+              // ── 3. Check exchange limit ──
+              const bridgeResponses = allComments.filter(
+                c => c.body.includes('<!-- bridge-id:')
+              );
+              console.log(`Bridge responses so far: ${bridgeResponses.length}/20`);
+
+              if (bridgeResponses.length >= 20) {
+                console.log('Exchange limit reached, skipping issue');
+                continue;
+              }
+
+              // ── 4. Find unprocessed comments ──
+              // A comment is a bridge candidate if:
+              //   - starts with [GPT] or [CLAUDE CODE]
+              //   - does NOT have 👀 reaction (means not yet processed)
+              const candidates = [];
+
+              for (const comment of allComments) {
+                const body = comment.body.trim();
+                const isGPT = body.startsWith('[GPT]');
+                const isClaude = body.startsWith('[CLAUDE CODE]');
+
+                if (!isGPT && !isClaude) continue;
+
+                // Check if already processed (has 👀 reaction)
+                try {
+                  const reactions = await github.rest.reactions.listForIssueComment({
+                    owner, repo, comment_id: comment.id,
+                    content: 'eyes',
+                    per_page: 100,
+                  });
+                  const alreadyProcessed = reactions.data.some(
+                    r => r.user.type === 'Bot' || r.user.login === 'github-actions[bot]'
+                  );
+                  if (alreadyProcessed) continue;
+                } catch (e) {
+                  // If reactions API fails, check bridge-response marker
+                  if (comment.body.includes('<!-- bridge-id:')) continue;
+                }
+
+                candidates.push({
+                  id: comment.id,
+                  body: body,
+                  direction: isGPT ? 'gpt-to-claude' : 'claude-to-gpt',
+                  user: comment.user.login,
+                  created: comment.created_at,
+                });
+              }
+
+              if (candidates.length === 0) {
+                console.log('No unprocessed comments');
+                continue;
+              }
+
+              // Take oldest unprocessed
+              const target = candidates[0];
+              console.log(`\nProcessing: ${target.direction} | comment ${target.id} by ${target.user}`);
+              console.log(`Body preview: ${target.body.substring(0, 100)}...`);
+
+              // ── 5. Build context ──
+              const history = allComments
+                .slice(-10)
+                .map(c => `[${c.user.login}]: ${c.body.substring(0, 2000)}`)
+                .join('\n\n---\n\n');
+
+              let prompt, apiName;
+
+              if (target.direction === 'gpt-to-claude') {
+                apiName = 'Anthropic';
+                prompt = `You are Claude Code, working on the MAINHALL premium residential investment platform (Moscow, 600K+ RUB/m²).
+
+            This is a GitHub Issue conversation. The issue title is: "${issue.title}"
+            Issue body: ${(issue.body || '').substring(0, 3000)}
+
+            Recent conversation:
+            ${history}
+
+            Latest message (tagged [GPT]):
+            ${target.body.substring(0, 4000)}
+
+            Respond as Claude Code. Start your response with [CLAUDE CODE] on the very first line. Be concise and technical. If asked for code or architecture decisions, provide them. If something is proposed, evaluate and respond.
+
+            IMPORTANT: You are in an automated bridge. Keep responses focused and actionable. Do not ask the human owner questions — resolve decisions yourself. Do NOT include the literal text "[GPT]" anywhere in your response.`;
+              } else {
+                apiName = 'OpenAI';
+                prompt = `You are GPT, a strategic product advisor for the MAINHALL premium residential investment platform (Moscow, 600K+ RUB/m²).
+
+            This is a GitHub Issue conversation. The issue title is: "${issue.title}"
+            Issue body: ${(issue.body || '').substring(0, 3000)}
+
+            Recent conversation:
+            ${history}
+
+            Latest message (tagged [CLAUDE CODE]):
+            ${target.body.substring(0, 4000)}
+
+            Respond as GPT. Start your response with [GPT] on the very first line. Be concise. Focus on product strategy, data architecture, and business logic. If technical progress is reported, acknowledge and provide next steps.
+
+            IMPORTANT: You are in an automated bridge. Keep responses focused and actionable. The owner has instructed: no questions, make decisions yourself. Do NOT include the literal text "[CLAUDE CODE]" anywhere in your response.`;
+              }
+
+              // ── 6. Call API ──
+              let responseText;
+              let usage;
+
+              try {
+                if (target.direction === 'gpt-to-claude') {
+                  // Call Anthropic API
+                  const res = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: {
+                      'content-type': 'application/json',
+                      'x-api-key': process.env.ANTHROPIC_API_KEY,
+                      'anthropic-version': '2023-06-01',
+                    },
+                    body: JSON.stringify({
+                      model: 'claude-sonnet-4-20250514',
+                      max_tokens: 4096,
+                      messages: [{ role: 'user', content: prompt }],
+                    }),
+                  });
+
+                  if (!res.ok) {
+                    const err = await res.text();
+                    throw new Error(`Anthropic API ${res.status}: ${err.substring(0, 300)}`);
+                  }
+
+                  const data = await res.json();
+                  responseText = data.content[0].text;
+                  usage = `${data.usage.input_tokens} in / ${data.usage.output_tokens} out`;
+
+                } else {
+                  // Call OpenAI API
+                  const res = await fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+                    },
+                    body: JSON.stringify({
+                      model: 'gpt-4o',
+                      max_tokens: 4096,
+                      messages: [{ role: 'user', content: prompt }],
+                    }),
+                  });
+
+                  if (!res.ok) {
+                    const err = await res.text();
+                    throw new Error(`OpenAI API ${res.status}: ${err.substring(0, 300)}`);
+                  }
+
+                  const data = await res.json();
+                  responseText = data.choices[0].message.content;
+                  usage = `${data.usage.prompt_tokens} in / ${data.usage.completion_tokens} out`;
+                }
+
+                console.log(`API response received: ${responseText.length} chars | Usage: ${usage}`);
+
+              } catch (error) {
+                console.error(`API call failed: ${error.message}`);
+
+                // Post error comment
+                await github.rest.issues.createComment({
+                  owner, repo,
+                  issue_number: issue.number,
+                  body: `[BRIDGE ERROR] ${apiName} API call failed:\n\`\`\`\n${error.message.substring(0, 500)}\n\`\`\`\n\n<!-- bridge-id: ${context.runId} -->`,
+                });
+
+                // Mark as processed so we don't retry forever
+                await github.rest.reactions.createForIssueComment({
+                  owner, repo, comment_id: target.id,
+                  content: 'eyes',
+                });
+
+                processed = true;
+                continue;
+              }
+
+              // ── 7. Post response ──
+              const responseBody = `${responseText}\n\n---\n<sub>🤖 Bridge (poll): ${apiName} API | Usage: ${usage} | Run: ${context.runId}</sub>\n<!-- bridge-id: ${context.runId} -->`;
+
+              await github.rest.issues.createComment({
+                owner, repo,
+                issue_number: issue.number,
+                body: responseBody,
+              });
+
+              console.log('Response posted');
+
+              // ── 8. Mark original as processed ──
+              await github.rest.reactions.createForIssueComment({
+                owner, repo, comment_id: target.id,
+                content: 'eyes',
+              });
+
+              console.log(`Marked comment ${target.id} as processed (👀)`);
+              processed = true;
+            }
+
+            if (!processed) {
+              console.log('\nNo comments to process across all bridge issues');
+            }
