@@ -1,0 +1,20 @@
+name: Feed readiness checks
+on:
+  push:
+    paths:
+      - 'src/lib/feed-readiness.mjs'
+      - 'tests/feed-readiness.test.mjs'
+      - '.github/workflows/feed-readiness-check.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/feed-readiness.test.mjs
