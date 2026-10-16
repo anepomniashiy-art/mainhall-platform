@@ -132,7 +132,7 @@ IMPORTANT: You are in an automated bridge. Keep responses focused and actionable
             -d "$(jq -n \
               --arg prompt "$(echo ${{ toJSON(steps.build-context.outputs.prompt) }} | jq -r '.')" \
               '{
-                model: "claude-3-5-sonnet-20241022",
+                model: "claude-haiku-4-5",
                 max_tokens: 4096,
                 messages: [{role: "user", content: $prompt}]
               }')")
