@@ -1,0 +1,100 @@
+name: MAINHALL Push Agent Pipeline
+
+# Event-driven coordination: an owner issue/comment triggers OpenAI planning
+# and real Claude Code execution IN THE SAME RUN. No bot-comment recursion.
+on:
+  issues:
+    types: [opened, reopened, labeled]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "GitHub issue number to execute"
+        required: true
+        default: "7"
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: mainhall-push-${{ github.event.issue.number || inputs.issue_number || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  coordinate-and-execute:
+    # Only trusted owner initiates a paid agent run; ignore bot and unrelated events.
+    if: >-
+      github.actor == 'anepomniashiy-art' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event_name == 'issues' && github.event.issue.pull_request == null) ||
+       (github.event_name == 'issue_comment' && github.event.issue.pull_request == null &&
+        (contains(github.event.comment.body, '[EXECUTE]') ||
+         contains(github.event.comment.body, '@claude'))))
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Coordinator — GPT API
+        id: coordinator
+        uses: actions/github-script@v7
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TARGET_ISSUE: ${{ github.event.issue.number || inputs.issue_number }}
+        with:
+          script: |
+            const owner=context.repo.owner,repo=context.repo.repo;
+            const issue_number=Number(process.env.TARGET_ISSUE);
+            if (!Number.isInteger(issue_number)||issue_number<1) throw Error('Invalid issue number');
+            const issue=(await github.rest.issues.get({owner,repo,issue_number})).data;
+            const comments=(await github.rest.issues.listComments({owner,repo,issue_number,per_page:20})).data;
+            const task = [
+              'You are MAINHALL project coordinator, not the coding executor.',
+              'Find ONE concrete, achievable technical next action for real Claude Code.',
+              'Owner approved production cutover only AFTER legacy backup/subdomain and verified rollback; never alter root before those checks.',
+              'Preserve privacy and credentials. No invented data or statements of success.',
+              'Issue title: '+issue.title,
+              'Issue body: '+String(issue.body||'').slice(0,9000),
+              'Latest comments: '+comments.slice(-5).map(c=>String(c.body||'').slice(0,1500)).join('\n---\n'),
+              'Return <=1200 characters of precise implementation direction. No markdown preamble.'
+            ].join('\n');
+            if (!process.env.OPENAI_API_KEY) throw Error('Missing OPENAI_API_KEY GitHub Secret');
+            const response=await fetch('https://api.openai.com/v1/chat/completions',{
+              method:'POST',headers:{'content-type':'application/json','authorization':'Bearer '+process.env.OPENAI_API_KEY},
+              body:JSON.stringify({model:'gpt-4o',max_tokens:650,messages:[{role:'user',content:task}]})
+            });
+            if(!response.ok) throw Error('Coordinator API HTTP '+response.status);
+            const json=await response.json();
+            const plan=String(json.choices?.[0]?.message?.content||'').slice(0,1800).trim();
+            if(!plan) throw Error('Empty coordinator plan');
+            core.setOutput('plan',plan);
+            core.setOutput('issue',String(issue_number));
+            console.log('Coordinator proposed task for issue #'+issue_number+' ('+plan.length+' chars)');
+
+      - name: Execute — Claude Code CLI
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          track_progress: true
+          additional_permissions: |
+            actions: read
+          prompt: |
+            You are the ACTUAL MAINHALL coding executor, not a text conversation simulator.
+            Work on owner-authorized issue #${{ steps.coordinator.outputs.issue }}.
+            GPT coordinator task:
+            ${{ steps.coordinator.outputs.plan }}
+
+            Read relevant repository files and issue details, implement one useful safe change,
+            run tests, and commit to a feature branch (propose a PR where possible).
+            Preserve existing commercial website and backup/rollback plan before DNS cutover.
+            Never claim a deployment, API feed, pricing, rights or result without evidence.
+            Never expose secrets. Report proof with commit/PR URL and test logs.
+            If blocked, report exact missing access on the issue; do not fabricate completion.
+          claude_args: |
+            --max-turns 15
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(npm:*),Bash(node:*)"
