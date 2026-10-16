@@ -79,6 +79,9 @@ jobs:
 
                 if (!isGPT && !isClaude) continue;
 
+                // Skip bridge-generated responses (they contain bridge-id marker)
+                if (body.includes('<!-- bridge-id:')) continue;
+
                 // Check if already processed (has 👀 reaction)
                 try {
                   const reactions = await github.rest.reactions.listForIssueComment({
