@@ -1,0 +1,24 @@
+name: Official feed contract checks
+on:
+  push:
+    paths:
+      - 'src/lib/official-feed.mjs'
+      - 'scripts/import-official-feed.mjs'
+      - 'tests/official-feed.test.mjs'
+      - '.github/workflows/official-feed-check.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  feed-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check src/lib/official-feed.mjs
+      - run: node --check scripts/import-official-feed.mjs
+      - run: node --test tests/official-feed.test.mjs
