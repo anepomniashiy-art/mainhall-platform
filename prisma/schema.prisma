@@ -48,7 +48,7 @@ model Project {
   priceMaxRub     BigInt?       @map("price_max_rub")
   pricePerSqmMin  Int?          @map("price_per_sqm_min")
   pricePerSqmMax  Int?          @map("price_per_sqm_max")
-  meetsThreshold  Boolean   @default(false) @map("meets_threshold") // >=800K ₽/m²
+  meetsThreshold  Boolean   @default(false) @map("meets_threshold") // project-level cache, not a hard gate; user default 600K ₽/m²
   officialUrl     String?   @map("official_url")
   sourceEvidence  String?   @map("source_evidence") // ссылка на источник подтверждения порога
   description     String?
