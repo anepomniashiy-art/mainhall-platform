@@ -7,8 +7,8 @@ import { COMPANY } from "@/lib/constants";
 const NAV_ITEMS = [
   { label: "Проекты", href: "/projects" },
   { label: "Девелоперы", href: "/developers" },
-  { label: "Каталог", href: "/units" },
-  { label: "О нас", href: "/#about" },
+  { label: "Инвестиции", href: "/#approach" },
+  { label: "Коммерческая", href: "/commercial" },
   { label: "Контакты", href: "/#contact" },
 ] as const;
 
