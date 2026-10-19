@@ -46,4 +46,4 @@ jobs:
             Avoid repetitive no-op comments or infinite loops. If no safe work is possible, clearly report the blocker in issue #2.
           claude_args: |
             --max-turns 18
-            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(npm ci),Bash(npm run build),Bash(npm run lint),Bash(npm run db:validate),Bash(node --test *)"
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash"
