@@ -1,0 +1,56 @@
+name: MAINHALL — screenshot live URL
+
+# Renders a live URL on a clean-internet runner (fonts/CSS load for real) and
+# commits desktop + mobile screenshots for visual verification. Dispatch-only.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to screenshot"
+        default: "https://anepomniashiy-art.github.io/mainhall-platform/"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mainhall-shot
+  cancel-in-progress: false
+
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SHOT_URL: ${{ inputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright && playwright install --with-deps chromium
+      - name: Screenshot
+        run: python scripts/shot_url.py
+      - name: Upload shots
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: mainhall-shots
+          path: _shots/
+          if-no-files-found: warn
+      - name: Commit shots into branch
+        if: always()
+        run: |
+          git config user.name "claude-code"
+          git config user.email "noreply@anthropic.com"
+          git add -A _shots/ || true
+          if git diff --cached --quiet; then
+            echo "no shots"
+          else
+            git commit -m "chore(shots): live screenshots for verification"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+              echo "retry $i"; sleep $((2**i))
+            done
+          fi
