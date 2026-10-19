@@ -1,0 +1,28 @@
+name: Fetch authorized MR imagery
+on:
+  push:
+    branches: [codex/minimal-design]
+    paths: [".github/workflows/mr-assets.yml"]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Download official public image files
+        run: |
+          mkdir mr-assets
+          curl -fL --max-time 30 https://city.mr-group.ru/img/hero/one-hero-1.jpg -o mr-assets/one-exterior.jpg
+          curl -fL --max-time 30 https://city.mr-group.ru/img/sliders/one-slider-05.jpg -o mr-assets/one-entrance.jpg
+          python3 - <<'PY'
+          from pathlib import Path
+          for p in Path('mr-assets').glob('*.jpg'):
+              data=p.read_bytes()
+              assert data[:3] == bytes.fromhex('ffd8ff'), 'MR returned a non-image response'
+              print(p.name, len(data), 'JPEG signature verified')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: authorized-mr-images
+          path: mr-assets

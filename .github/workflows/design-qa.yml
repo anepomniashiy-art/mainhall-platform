@@ -1,0 +1,34 @@
+name: Design browser QA
+on:
+  push:
+    branches: [codex/minimal-design]
+    paths: [".github/workflows/design-qa.yml", "tests/design-smoke.mjs", "src/app/globals.css", "public/fonts/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      DATABASE_URL: postgresql://build:build@localhost:5432/mainhall
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npm run build:host
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Verify desktop, mobile and reduced motion
+        run: |
+          python3 -m http.server 8091 --directory out > /tmp/mainhall-preview.log 2>&1 &
+          node tests/design-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mainhall-design-screenshots
+          path: design-proof/
