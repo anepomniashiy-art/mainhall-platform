@@ -1,0 +1,1 @@
+2026-10-19: Execute issue #7. First resolve PR #13 conflicts and verify CI, then arrange safe staging and publication of MAINHALL with preserved /commercial legacy. Report evidence to Issue #7. This file triggers the paid GitHub agent workflow on push; do not commit secrets here.
