@@ -1,5 +1,5 @@
 name: "Deploy to GitHub Pages"
-# Deploy preview from codex/preserve-commercial-site, including refreshed premium homepage.
+# Deploy preview from codex/preserve-commercial-site, including cinematic brand intro.
 
 on:
   push:
