@@ -11,6 +11,11 @@ if (statSync(route).isFile()) {
   writeFileSync(`${route}/index.html`, html);
 }
 const html = readFileSync(`${route}/index.html`, 'utf8');
+// A Pages CNAME makes the site root-mounted. Project-path asset URLs would 404.
+if (existsSync('CNAME') && readFileSync('CNAME', 'utf8').trim() === 'main-hall.ru' &&
+    html.includes('/mainhall-platform/')) {
+  throw Error('Commercial export contains GitHub project-path URLs on a root custom domain');
+}
 const paths = [...html.matchAll(/(?:src|href)="((?:\/mainhall-platform)?\/legacy-mainhall\/assets\/[^"#]+)"/g)];
 if (!paths.length) throw Error('Commercial assets missing from export');
 for (const [, path] of paths) {
