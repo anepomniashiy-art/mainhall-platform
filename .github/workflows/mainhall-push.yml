@@ -95,5 +95,4 @@ jobs:
             Never claim a deployment, API feed, pricing, rights or result without evidence.
             Never expose secrets. Report proof with commit/PR URL and test logs.
             If blocked, report exact missing access on the issue; do not fabricate completion.
-          max_turns: "15"
-          allowed_tools: "Read,Write,Edit,Glob,Grep,Bash"
+          claude_args: "--max-turns 15"
