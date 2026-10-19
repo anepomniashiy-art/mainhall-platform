@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   ...(process.env.MAINHALL_STATIC_EXPORT === "true" && { output: "export" }),
   ...(isGitHubPages && {
     output: "export",
-    basePath: "/mainhall-platform",
   }),
   images: {
     unoptimized: true,

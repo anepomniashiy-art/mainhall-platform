@@ -26,8 +26,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:static
-      - name: Copy legacy site into output
+      - name: Copy CNAME and legacy site into output
         run: |
+          cp CNAME out/CNAME
           if [ -d legacy ]; then
             cp -r legacy out/legacy
           fi
