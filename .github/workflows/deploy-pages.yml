@@ -1,5 +1,5 @@
 name: "Deploy to GitHub Pages"
-# Deploy preview from codex/preserve-commercial-site, including cinematic brand intro.
+# Deploy the canonical main branch (MAINHALL Next app) + the preserved /legacy/ site.
 
 on:
   push:
@@ -20,8 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: codex/preserve-commercial-site
       - uses: actions/setup-node@v4
         with:
           node-version: 22
