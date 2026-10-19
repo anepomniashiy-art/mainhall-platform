@@ -1,16 +1,32 @@
 import Link from "next/link";
+import Image from "next/image";
 import {COMPANY} from "@/lib/constants";
 import {editorialProjects} from "@/lib/editorial-projects";
+import heroForum from "@/media/forum-hero.webp";
 const steps=[
  {n:"01",title:"Отбираем потенциал",copy:"Изучаем микрорайон, девелопера, стадии строительства и альтернативные предложения."},
  {n:"02",title:"Считаем сценарии",copy:"Оцениваем денежный поток, расходы, риски, аренду и ликвидность — без обещаний гарантированной доходности."},
  {n:"03",title:"Выбираем момент",copy:"Сопоставляем реальные условия покупки, рассрочки и срок выхода из инвестиции."}
 ];
 export default function HomePage(){return <div className="bg-[#F8F7F4] text-[#1E2B22]">
-<section className="bg-[#14241B] text-[#F0F2EC]">
- <div className="mx-auto max-w-7xl px-5 pt-28 pb-24 lg:py-36 grid lg:grid-cols-[1.4fr_.6fr] gap-16 items-end">
- <div><p className="text-xs uppercase tracking-[.38em] text-[#B3C5B1]">MAINHALL / Investment Advisory / Moscow</p><h1 className="mt-10 font-serif text-5xl sm:text-7xl lg:text-[6.6rem] leading-[1.03] tracking-[-.035em]">Инвестируем<br/>в <em className="text-[#B8CBAF]">потенциал.</em><br/>Не в метры.</h1><p className="mt-10 max-w-xl text-lg leading-8 text-[#C2CEC2]">Инвестиционное агентство жилой недвижимости Москвы. Ищем стоимость, которую рынок ещё не полностью отразил в цене, и проверяем гипотезы цифрами.</p><div className="mt-12 flex flex-wrap gap-4"><Link href="/projects" className="bg-[#C1D0B8] px-8 py-4 text-[#12241A] text-sm font-medium hover:bg-white transition-colors">Исследовать проекты ↗</Link><a href="#approach" className="border border-[#849989] px-8 py-4 text-sm">Наш подход ↓</a></div></div>
- <aside className="border-l border-[#526657] pl-7 text-[#C0CCBF]"><p className="text-xs tracking-widest uppercase">Сегмент</p><p className="mt-4 font-serif text-4xl text-white">Бизнес+<br/>Премиум<br/>Элитная</p><p className="mt-7 leading-6 text-sm">От 600 000 ₽/м² в стартовом фильтре. Внутри подходящих жилых комплексов анализируем все квартиры — независимо от цены за метр.</p></aside>
+<section className="bg-gradient-to-b from-[#F6F4EE] to-[#EEECE4] text-[#17251C]">
+ <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 lg:py-36 grid lg:grid-cols-[1fr_1.05fr] gap-16 lg:gap-24 items-center">
+ <div>
+  <p className="text-[11px] uppercase tracking-[.42em] text-[#8A9784]">MAINHALL / Investment Advisory / Moscow</p>
+  <h1 className="mt-9 font-serif font-light text-6xl sm:text-7xl lg:text-[7rem] leading-[0.96] tracking-[-.03em]">Шаг раньше<br/><span className="italic font-light text-[#3E6B4A]">рынка.</span></h1>
+  <p className="mt-10 max-w-md text-lg leading-[1.75] text-[#5D6B57]">Инвестируем в потенциал, не в метры. Находим в премиальной жилой недвижимости Москвы стоимость, которую рынок ещё не отразил в цене, и проверяем гипотезы цифрами.</p>
+  <div className="mt-12 flex flex-wrap items-center gap-4">
+   <Link href="/projects" className="group inline-flex items-center gap-2 rounded-sm bg-[#17251C] px-9 py-4 text-sm font-medium text-[#F4F2EC] shadow-[0_18px_40px_-18px_rgba(23,37,28,0.45)] transition-all duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] hover:shadow-[0_26px_60px_-20px_rgba(23,37,28,0.5)]">Исследовать проекты <span className="transition-transform duration-500 group-hover:translate-x-1">↗</span></Link>
+   <a href="#approach" className="rounded-sm border border-black/[0.08] px-8 py-4 text-sm text-[#5A5440] transition-all duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:border-black/20 hover:bg-white/50">Наш подход ↓</a>
+  </div>
+  <p className="mt-12 text-[11px] uppercase tracking-[.2em] text-[#9AA594]">Сегмент бизнес-плюс, премиум и элит · от 600&nbsp;000&nbsp;₽/м²</p>
+ </div>
+ <div className="group relative">
+  <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[3px] border border-black/[0.04] shadow-[0_40px_80px_-28px_rgba(23,37,28,0.22)] transition-transform duration-700 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.01]">
+   <Image src={heroForum} alt="Клубный дом ФОРУМ (MR Group), вид на башню" fill priority sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+  </div>
+  <span className="absolute bottom-4 right-4 rounded-sm border border-black/[0.05] bg-white/60 px-3.5 py-1.5 text-[11px] tracking-wide text-[#3A4A3D] backdrop-blur-xl">ЖК ФОРУМ · MR&nbsp;Group</span>
+ </div>
  </div>
 </section>
 <section id="approach" className="mx-auto max-w-7xl px-5 py-24 md:py-32"><p className="uppercase text-xs tracking-[.3em] text-[#7B907E]">Философия MAINHALL</p><div className="mt-8 grid gap-12 lg:grid-cols-2"><h2 className="font-serif text-4xl md:text-6xl leading-[1.1]">Мы не продаём квадратные метры. Мы изучаем инвестиционную перспективу.</h2><div className="text-lg leading-8 text-[#5A685D]"><p>Хорошая недвижимость не всегда становится хорошей инвестицией. Значение имеют цена входа, условия платежей, предложение конкурентов, расходы и стратегия выхода.</p><p className="mt-6">Поэтому каждую гипотезу сопровождаем источниками, актуальностью данных, альтернативными сценариями и ограничениями расчётов.</p></div></div>
