@@ -50,16 +50,22 @@ echo "curl sitemap exit=$?"; head -60 "${REC}/sitemap.xml" 2>/dev/null
 grep -oE "<loc>[^<]+</loc>" "${REC}/sitemap.xml" 2>/dev/null | sed -E "s|</?loc>||g" > "${REC}/sitemap_urls.txt" || true
 echo "sitemap urls:"; cat "${REC}/sitemap_urls.txt" 2>/dev/null
 
-# ---- 4. Full mirror (assets included) → artifact ----
-log "MIRROR (wget)"
-wget --mirror --convert-links --adjust-extension --page-requisites --no-parent \
-  --domains="${SITE_HOST},www.${SITE_HOST}" --timeout=40 --tries=2 --wait=0.3 \
-  -e robots=off -U "Mozilla/5.0 MAINHALL-backup" \
-  -P "_mirror" "${SITE}/" 2>&1 | tail -60
+# ---- 4. Self-contained mirror (page + ALL requisites, incl. static.tildacdn.com) → artifact ----
+# Not --mirror (that recurses infinitely across spanned hosts). -p -H -D fetches the
+# single page plus every cross-host requisite (css/js/images/fonts) in the allowed hosts.
+log "MIRROR (wget — page + cross-host requisites)"
+wget -p -k -E -H --no-parent \
+  --domains="${SITE_HOST},www.${SITE_HOST},static.tildacdn.com,static.tildacdn.ru,static.tildacdn.one" \
+  --timeout=40 --tries=3 --wait=0.2 -e robots=off -U "Mozilla/5.0 MAINHALL-backup" \
+  -P "_mirror" "${SITE}/" 2>&1 | tail -80
 
 log "MIRROR RESULT"
 find "_mirror" -type f 2>/dev/null | sort | tee "${REC}/filelist.txt" | wc -l
 du -sh "_mirror" 2>/dev/null | tee "${REC}/size.txt"
+
+# ---- 4b. SHA-256 checksum manifest of every backed-up file (rollback verification) ----
+log "CHECKSUMS (sha256)"
+( cd _mirror && find . -type f -print0 | sort -z | xargs -0 sha256sum ) | tee "${REC}/checksums.txt" | wc -l
 
 # ---- 5. Copy text/html pages into committed backup; extract forms/canonical/meta ----
 log "EXTRACT html pages + forms/canonical/meta"
