@@ -76,6 +76,15 @@ jobs:
             core.setOutput('issue',String(issue_number));
             console.log('Coordinator proposed task for issue #'+issue_number+' ('+plan.length+' chars)');
 
+      - name: Capture baseline PR state
+        id: baseline
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prs=await github.paginate(github.rest.pulls.list,{owner:context.repo.owner,repo:context.repo.repo,state:'all',per_page:100});
+            core.setOutput('pr_numbers',prs.map(p=>p.number).join(','));
+            console.log('PR baseline recorded: '+prs.length);
+
       - name: Execute — Claude Code CLI
         uses: anthropics/claude-code-action@v1
         with:
@@ -89,10 +98,36 @@ jobs:
             GPT coordinator task:
             ${{ steps.coordinator.outputs.plan }}
 
-            Read relevant repository files and issue details, implement one useful safe change,
-            run tests, and commit to a feature branch (propose a PR where possible).
+            CRITICAL: do not end with just a text reply. Make a tangible source-code change,
+            run tests, create a feature branch AND open a PR. If unable, explain the precise technical blocker.
             Preserve existing commercial website and backup/rollback plan before DNS cutover.
             Never claim a deployment, API feed, pricing, rights or result without evidence.
             Never expose secrets. Report proof with commit/PR URL and test logs.
             If blocked, report exact missing access on the issue; do not fabricate completion.
           claude_args: "--max-turns 15"
+
+      - name: Verify deliverable and report back to issue
+        if: always() && steps.coordinator.outputs.issue != ''
+        uses: actions/github-script@v7
+        env:
+          TARGET_ISSUE: ${{ steps.coordinator.outputs.issue }}
+          BASELINE_PRS: ${{ steps.baseline.outputs.pr_numbers }}
+          CLAUDE_STATUS: ${{ steps.coordinator.outcome }}
+          EXECUTOR_STATUS: ${{ steps.baseline.outcome }}
+        with:
+          script: |
+            const owner=context.repo.owner, repo=context.repo.repo;
+            const issue_number=Number(process.env.TARGET_ISSUE);
+            const before=new Set((process.env.BASELINE_PRS||'').split(',').filter(Boolean).map(Number));
+            const all=await github.paginate(github.rest.pulls.list,{owner,repo,state:'all',per_page:100});
+            const created=all.filter(p=>!before.has(p.number) && new Date(p.created_at)>=new Date(Date.now()-60*60*1000));
+            const report=[
+              '[AUTOMATION REPORT] GitHub Push Agent Pipeline',
+              'Run: '+context.serverUrl+'/'+owner+'/'+repo+'/actions/runs/'+context.runId,
+              'New PR created during this run: '+(created.length?created.map(p=>p.html_url).join(', '):'NONE VERIFIED'),
+              'Status: '+(created.length?'PR CREATED — CI still requires independent verification':'NO PR — execution goal not satisfied'),
+              'This message is machine-generated from GitHub PR API; a successful action step alone is NOT proof of code delivery.',
+              '<!-- mainhall-push-result:'+context.runId+' -->'
+            ].join('\\n');
+            await github.rest.issues.createComment({owner,repo,issue_number,body:report});
+            if(!created.length) core.setFailed('Claude Code did not create a verifiable PR; inspect executor step logs');
