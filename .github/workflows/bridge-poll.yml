@@ -41,11 +41,12 @@ jobs:
 
             console.log(`Found ${issues.data.length} bridge issue(s)`);
 
-            // Process at most 1 comment per run to avoid rate issues
-            let processed = false;
+            // Process up to 3 comments per run
+            let processedCount = 0;
+            const maxPerRun = 3;
 
             for (const issue of issues.data) {
-              if (processed) break;
+              if (processedCount >= maxPerRun) break;
 
               console.log(`\n── Issue #${issue.number}: ${issue.title} ──`);
 
@@ -59,9 +60,9 @@ jobs:
               const bridgeResponses = allComments.filter(
                 c => c.body.includes('<!-- bridge-id:')
               );
-              console.log(`Bridge responses so far: ${bridgeResponses.length}/20`);
+              console.log(`Bridge responses so far: ${bridgeResponses.length}/100`);
 
-              if (bridgeResponses.length >= 20) {
+              if (bridgeResponses.length >= 100) {
                 console.log('Exchange limit reached, skipping issue');
                 continue;
               }
@@ -174,7 +175,7 @@ jobs:
                       'anthropic-version': '2023-06-01',
                     },
                     body: JSON.stringify({
-                      model: 'claude-haiku-4-5',
+                      model: 'claude-sonnet-4-5',
                       max_tokens: 4096,
                       messages: [{ role: 'user', content: prompt }],
                     }),
@@ -232,7 +233,7 @@ jobs:
                   content: 'eyes',
                 });
 
-                processed = true;
+                processedCount++;
                 continue;
               }
 
@@ -254,9 +255,11 @@ jobs:
               });
 
               console.log(`Marked comment ${target.id} as processed (👀)`);
-              processed = true;
+              processedCount++;
             }
 
-            if (!processed) {
+            if (processedCount === 0) {
               console.log('\nNo comments to process across all bridge issues');
+            } else {
+              console.log(`\nProcessed ${processedCount} comment(s) this run`);
             }
