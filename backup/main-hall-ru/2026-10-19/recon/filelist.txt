@@ -41,5 +41,5 @@ _mirror/static.tildacdn.com/tild6630-6661-4434-b765-393337633133/06_olonetskiy_c
 _mirror/static.tildacdn.com/tild6632-6265-4363-b234-353665373339/favicon_dark.png
 _mirror/static.tildacdn.com/tild6633-3532-4266-a138-666630623930/03_volokolamskoe_fac.jpg
 _mirror/static.tildacdn.com/tild6661-3762-4933-b634-383339373362/photo.svg
-_mirror/static.tildacdn.com/ws/project22535556/tilda-blocks-page122450506.min.css?t=1772294102.css
-_mirror/static.tildacdn.com/ws/project22535556/tilda-blocks-page122450506.min.js?t=1772294102
+_mirror/static.tildacdn.com/ws/project22535556/tilda-blocks-page122450506.min.css
+_mirror/static.tildacdn.com/ws/project22535556/tilda-blocks-page122450506.min.js
