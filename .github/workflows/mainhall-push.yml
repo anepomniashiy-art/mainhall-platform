@@ -4,7 +4,7 @@ name: MAINHALL Push Agent Pipeline
 # and real Claude Code execution IN THE SAME RUN. No bot-comment recursion.
 on:
   issues:
-    types: [opened, reopened, labeled]
+    types: [labeled]
   issue_comment:
     types: [created]
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
     if: >-
       github.actor == 'anepomniashiy-art' &&
       (github.event_name == 'workflow_dispatch' ||
-       (github.event_name == 'issues' && github.event.issue.pull_request == null) ||
+       (github.event_name == 'issues' && github.event.label.name == 'execute' && github.event.issue.pull_request == null) ||
        (github.event_name == 'issue_comment' && github.event.issue.pull_request == null &&
         (contains(github.event.comment.body, '[EXECUTE]') ||
          contains(github.event.comment.body, '@claude'))))
@@ -52,7 +52,7 @@ jobs:
             const issue_number=Number(process.env.TARGET_ISSUE);
             if (!Number.isInteger(issue_number)||issue_number<1) throw Error('Invalid issue number');
             const issue=(await github.rest.issues.get({owner,repo,issue_number})).data;
-            const comments=(await github.rest.issues.listComments({owner,repo,issue_number,per_page:20})).data;
+            const comments=await github.paginate(github.rest.issues.listComments,{owner,repo,issue_number,per_page:100});
             const task = [
               'You are MAINHALL project coordinator, not the coding executor.',
               'Find ONE concrete, achievable technical next action for real Claude Code.',
@@ -86,6 +86,7 @@ jobs:
             console.log('PR baseline recorded: '+prs.length);
 
       - name: Execute — Claude Code CLI
+        id: executor
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -98,13 +99,16 @@ jobs:
             GPT coordinator task:
             ${{ steps.coordinator.outputs.plan }}
 
+            Use branch claude/push-${{ github.run_id }} exclusively. Target main. Include the exact marker
+            <!-- mainhall-task:${{ steps.coordinator.outputs.issue }}:run:${{ github.run_id }} --> in the PR body.
+            Do not modify workflows, secrets, DNS or production in this task.
             CRITICAL: do not end with just a text reply. Make a tangible source-code change,
             run tests, create a feature branch AND open a PR. If unable, explain the precise technical blocker.
             Preserve existing commercial website and backup/rollback plan before DNS cutover.
             Never claim a deployment, API feed, pricing, rights or result without evidence.
             Never expose secrets. Report proof with commit/PR URL and test logs.
             If blocked, report exact missing access on the issue; do not fabricate completion.
-          claude_args: "--max-turns 15"
+          claude_args: '--max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep,Bash"'
 
       - name: Verify deliverable and report back to issue
         if: always() && steps.coordinator.outputs.issue != ''
@@ -112,22 +116,29 @@ jobs:
         env:
           TARGET_ISSUE: ${{ steps.coordinator.outputs.issue }}
           BASELINE_PRS: ${{ steps.baseline.outputs.pr_numbers }}
-          CLAUDE_STATUS: ${{ steps.coordinator.outcome }}
-          EXECUTOR_STATUS: ${{ steps.baseline.outcome }}
+          COORDINATOR_STATUS: ${{ steps.coordinator.outcome }}
+          EXECUTOR_STATUS: ${{ steps.executor.outcome }}
         with:
           script: |
             const owner=context.repo.owner, repo=context.repo.repo;
             const issue_number=Number(process.env.TARGET_ISSUE);
             const before=new Set((process.env.BASELINE_PRS||'').split(',').filter(Boolean).map(Number));
             const all=await github.paginate(github.rest.pulls.list,{owner,repo,state:'all',per_page:100});
-            const created=all.filter(p=>!before.has(p.number) && new Date(p.created_at)>=new Date(Date.now()-60*60*1000));
+            const marker='<!-- mainhall-task:'+issue_number+':run:'+context.runId+' -->';
+            const created=all.filter(p=>!before.has(p.number) && p.head.repo?.full_name===owner+'/'+repo && p.head.ref==='claude/push-'+context.runId && p.base.ref==='main' && p.body?.includes(marker));
+            for (const p of created) {
+              const files=await github.paginate(github.rest.pulls.listFiles,{owner,repo,pull_number:p.number,per_page:100});
+              if (!files.length) throw Error('PR has no changed files');
+            }
             const report=[
               '[AUTOMATION REPORT] GitHub Push Agent Pipeline',
               'Run: '+context.serverUrl+'/'+owner+'/'+repo+'/actions/runs/'+context.runId,
               'New PR created during this run: '+(created.length?created.map(p=>p.html_url).join(', '):'NONE VERIFIED'),
+              'Coordinator: '+process.env.COORDINATOR_STATUS+'; executor: '+process.env.EXECUTOR_STATUS,
               'Status: '+(created.length?'PR CREATED — CI still requires independent verification':'NO PR — execution goal not satisfied'),
               'This message is machine-generated from GitHub PR API; a successful action step alone is NOT proof of code delivery.',
               '<!-- mainhall-push-result:'+context.runId+' -->'
-            ].join('\\n');
+            ].join('\n');
             await github.rest.issues.createComment({owner,repo,issue_number,body:report});
+            if(process.env.EXECUTOR_STATUS !== 'success') core.setFailed('Executor failed; see run logs');
             if(!created.length) core.setFailed('Claude Code did not create a verifiable PR; inspect executor step logs');
