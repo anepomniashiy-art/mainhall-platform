@@ -1,0 +1,48 @@
+name: MAINHALL — backup live main-hall.ru
+
+# Autonomous backup/recon of the current production site on a clean-internet
+# runner (the agent sandbox cannot resolve or reach main-hall.ru). Commits the
+# text backup into the dispatched branch and uploads the full mirror as an artifact.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mainhall-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq dnsutils whois wget curl
+      - name: Backup + recon
+        run: bash scripts/backup_main_hall.sh
+      - name: Upload full mirror (assets included)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-hall-ru-full-mirror
+          path: _mirror/
+          if-no-files-found: warn
+      - name: Commit text backup into branch
+        if: always()
+        run: |
+          git config user.name "claude-code"
+          git config user.email "noreply@anthropic.com"
+          git add -A backup/ || true
+          if git diff --cached --quiet; then
+            echo "nothing to commit (site may not have resolved — check recon log)"
+          else
+            git commit -m "backup: archive live main-hall.ru (recon + html mirror)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+              echo "retry $i"; sleep $((2**i))
+            done
+          fi
