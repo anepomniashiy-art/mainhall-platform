@@ -1,0 +1,57 @@
+name: MAINHALL — fetch FORUM official images
+
+# Renders the official FORUM (MR Group) microsite on a clean-internet runner and
+# downloads its render/photo images for selecting a bright exterior hero.
+# workflow_dispatch only; commits downloaded images to the dispatched branch.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "FORUM page URL"
+        default: "https://forum.mr-group.ru/"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mainhall-fetch-forum
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      FORUM_URL: ${{ inputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright && playwright install --with-deps chromium
+      - name: Fetch FORUM images
+        run: python scripts/fetch_forum_images.py
+      - name: Upload images
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: forum-images
+          path: _forum/
+          if-no-files-found: warn
+      - name: Commit downloaded images into branch
+        if: always()
+        run: |
+          git config user.name "claude-code"
+          git config user.email "noreply@anthropic.com"
+          git add -A _forum/ || true
+          if git diff --cached --quiet; then
+            echo "nothing downloaded — check log"
+          else
+            git commit -m "assets(forum): fetch official FORUM render candidates"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+              echo "retry $i"; sleep $((2**i))
+            done
+          fi
