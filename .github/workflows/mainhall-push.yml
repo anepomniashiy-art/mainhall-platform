@@ -3,6 +3,10 @@ name: MAINHALL Push Agent Pipeline
 # Event-driven coordination: an owner issue/comment triggers OpenAI planning
 # and real Claude Code execution IN THE SAME RUN. No bot-comment recursion.
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/agent-triggers/execute.txt'
   issues:
     types: [labeled]
   issue_comment:
@@ -22,19 +26,20 @@ permissions:
   actions: read
 
 concurrency:
-  group: mainhall-push-${{ github.event.issue.number || inputs.issue_number || github.run_id }}
+  group: mainhall-push-${{ github.event.issue.number || inputs.issue_number || '7' || github.run_id }}
   cancel-in-progress: false
 
 jobs:
   coordinate-and-execute:
     # Only trusted owner initiates a paid agent run; ignore bot and unrelated events.
     if: >-
-      github.actor == 'anepomniashiy-art' &&
-      (github.event_name == 'workflow_dispatch' ||
+      ((github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+       (github.actor == 'anepomniashiy-art' &&
+       (github.event_name == 'workflow_dispatch' ||
        (github.event_name == 'issues' && github.event.label.name == 'execute' && github.event.issue.pull_request == null) ||
        (github.event_name == 'issue_comment' && github.event.issue.pull_request == null &&
         (contains(github.event.comment.body, '[EXECUTE]') ||
-         contains(github.event.comment.body, '@claude'))))
+         contains(github.event.comment.body, '@claude')))))
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
@@ -45,7 +50,7 @@ jobs:
         uses: actions/github-script@v7
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          TARGET_ISSUE: ${{ github.event.issue.number || inputs.issue_number }}
+          TARGET_ISSUE: ${{ github.event.issue.number || inputs.issue_number || '7' }}
         with:
           script: |
             const owner=context.repo.owner,repo=context.repo.repo;
