@@ -1,7 +1,16 @@
+import type {Metadata} from "next";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {editorialProjects} from "@/lib/editorial-projects";
 export function generateStaticParams(){return editorialProjects.map(p=>({slug:p.slug}));}
+// Metadata uses only editorial registry fields (name/developer/area/summary): no prices, inventory or images.
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
+ const {slug}=await params; const p=editorialProjects.find(x=>x.slug===slug);
+ if(!p)return {title:"Проект не найден",robots:{index:false,follow:true}};
+ const title=`${p.name} — ${p.developer}, ${p.area}`;
+ return {title,description:p.summary,alternates:{canonical:`/projects/${p.slug}/`},
+  openGraph:{title,description:p.summary,url:`/projects/${p.slug}/`,type:"article"}};
+}
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params; const p=editorialProjects.find(x=>x.slug===slug);if(!p)notFound();
  return <div className="bg-[#F8F7F4] text-[#242D26]">
