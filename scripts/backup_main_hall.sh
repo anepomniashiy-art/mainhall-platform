@@ -59,6 +59,12 @@ wget -p -k -E -H --no-parent \
   --timeout=40 --tries=3 --wait=0.2 -e robots=off -U "Mozilla/5.0 MAINHALL-backup" \
   -P "_mirror" "${SITE}/" 2>&1 | tail -80
 
+# sanitize filenames containing characters upload-artifact rejects (? : * < > |)
+find _mirror -depth -name '*[?:*<>|]*' -print 2>/dev/null | while IFS= read -r f; do
+  nf="$(printf '%s' "$f" | sed 's/[?:*<>|].*$//')"
+  if [ -n "$nf" ] && [ "$nf" != "$f" ]; then mv -f "$f" "$nf" 2>/dev/null || true; fi
+done
+
 log "MIRROR RESULT"
 find "_mirror" -type f 2>/dev/null | sort | tee "${REC}/filelist.txt" | wc -l
 du -sh "_mirror" 2>/dev/null | tee "${REC}/size.txt"

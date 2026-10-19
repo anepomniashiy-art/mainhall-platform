@@ -26,6 +26,7 @@ jobs:
         run: bash scripts/backup_main_hall.sh
       - name: Upload full mirror (assets included)
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: main-hall-ru-full-mirror
