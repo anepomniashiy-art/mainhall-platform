@@ -8,8 +8,8 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
  const {slug}=await params; const p=editorialProjects.find(x=>x.slug===slug);
  if(!p)return {title:"Проект не найден",robots:{index:false,follow:true}};
  const title=`${p.name} — ${p.developer}, ${p.area}`;
- return {title,description:p.summary,alternates:{canonical:`/projects/${p.slug}`},
-  openGraph:{title,description:p.summary,url:`/projects/${p.slug}`,type:"article"}};
+ return {title,description:p.summary,alternates:{canonical:`/projects/${p.slug}/`},
+  openGraph:{title,description:p.summary,url:`/projects/${p.slug}/`,type:"article"}};
 }
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params; const p=editorialProjects.find(x=>x.slug===slug);if(!p)notFound();
