@@ -31,8 +31,8 @@ export function MainhallExperience() {
    <div className="hero-shade" />
    <div className="hero-topline"><span>Частное агентство недвижимости</span><span>Москва, Россия</span></div>
    <div className="hero-content"><p className="mh-eyebrow hero-caption">MAINHALL / MOSCOW REAL ESTATE</p>
-    <h1><span className="hero-line"><span>Архитектура.</span></span><span className="hero-line"><span>Адрес. Капитал.</span></span></h1>
-    <div className="hero-bottom hero-caption"><p>Недвижимость Москвы.<br/>Личный подход к выбору.</p><Link href="/projects/" className="mh-pill">Смотреть проекты <span>↗</span></Link></div>
+    <h1><span className="hero-line"><span>На шаг</span></span><span className="hero-line"><span>раньше рынка.</span></span></h1>
+    <div className="hero-bottom hero-caption"><p>Мы посчитали не только дом. Но и всё, что появится вокруг — скоро и не очень.<br/>Нам мало, чтобы вы купили. Нам нужно, чтобы вы заработали.</p><Link href="/projects/" className="mh-pill">Смотреть проекты <span>↗</span></Link></div>
    </div>
    <div className="hero-foot"><a href="#selection">Листайте вниз ↓</a><span>01 — MAINHALL</span></div>
   </section>
