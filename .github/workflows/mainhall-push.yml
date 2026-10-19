@@ -80,7 +80,8 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          track_progress: true
+          # track_progress поддерживается только для issue/PR-событий; при workflow_dispatch → false
+          track_progress: ${{ github.event_name != 'workflow_dispatch' }}
           additional_permissions: |
             actions: read
           prompt: |
