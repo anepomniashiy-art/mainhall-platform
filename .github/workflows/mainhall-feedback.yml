@@ -21,7 +21,10 @@ jobs:
             const {owner,repo}=context.repo;
             const run=context.payload.workflow_run;
             const prs=await github.paginate(github.rest.pulls.list,{owner,repo,state:'all',per_page:100});
-            for (const pr of prs.filter(p=>p.head.sha===run.head_sha && p.head.repo?.full_name===owner+'/'+repo)) {
+            console.log(JSON.stringify({run:run.id,sha:run.head_sha,branch:run.head_branch,event:run.event,conclusion:run.conclusion,associated:run.pull_requests?.map(p=>({number:p.number,head:p.head?.sha}))}));
+            const candidates=prs.filter(p=>p.head.repo?.full_name===owner+'/'+repo && p.head.ref===run.head_branch);
+            console.log('Branch-matched PRs: '+candidates.map(p=>p.number).join(','));
+            for (const pr of candidates) {
               const match=String(pr.body||'').match(/<!-- mainhall-task:(\d+):run:(\d+) -->/);
               if (!match || pr.head.ref!=='claude/push-'+match[2]) continue;
               const issue_number=Number(match[1]);
@@ -29,11 +32,13 @@ jobs:
               const comments=await github.paginate(github.rest.issues.listComments,{owner,repo,issue_number,per_page:100});
               if (comments.some(c=>c.body?.includes(marker))) continue;
               const current=(await github.rest.pulls.get({owner,repo,pull_number:pr.number})).data;
-              if(current.head.sha!==run.head_sha) continue;
+              const associated=run.pull_requests?.some(p=>p.number===pr.number && p.head?.sha===current.head.sha);
+              if(current.head.sha!==run.head_sha && !associated) { console.log('Ignoring stale or unmatched CI for PR '+pr.number); continue; }
               await github.rest.issues.createComment({owner,repo,issue_number,body:[
                 '[AUTOMATION CI RESULT]',
                 'PR: '+pr.html_url,
-                'Commit: '+run.head_sha,
+                'Commit: '+current.head.sha,
+                'CI commit: '+run.head_sha,
                 'CI: '+run.conclusion,
                 'Run: '+run.html_url,
                 'Source executor run: '+context.serverUrl+'/'+owner+'/'+repo+'/actions/runs/'+match[2],
