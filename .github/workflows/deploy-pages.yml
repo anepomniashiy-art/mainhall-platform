@@ -25,6 +25,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: GITHUB_PAGES=true npx next build
+      - name: Copy legacy site into output
+        run: |
+          if [ -d legacy ]; then
+            cp -r legacy out/legacy
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
