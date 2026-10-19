@@ -3,8 +3,10 @@ name: "Bridge: Poll & Process"
 # Polling-based bridge — works with ANY comment source (GitHub App, bot, human)
 # Runs every 3 minutes + manual trigger for testing
 on:
-  schedule:
-    - cron: '*/3 * * * *'
+  # Schedule disabled — use mainhall-push.yml for event-driven coordination.
+  # Re-enable cron if text bridge is needed again.
+  # schedule:
+  #   - cron: '*/3 * * * *'
   workflow_dispatch: {}
 
 permissions:

@@ -2,8 +2,9 @@ name: MAINHALL Claude Code Executor
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 * * * *'
+  # Hourly schedule disabled — use mainhall-push.yml for coordinated execution.
+  # schedule:
+  #   - cron: '0 * * * *'
 
 permissions:
   contents: write

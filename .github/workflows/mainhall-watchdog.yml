@@ -1,8 +1,10 @@
 name: MAINHALL progress watchdog
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  # Schedule disabled — was running 288 times/day for rare escalations.
+  # Re-enable if automated stale-progress alerts are needed.
+  # schedule:
+  #   - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
