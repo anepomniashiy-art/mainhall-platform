@@ -4,6 +4,7 @@ import os
 import sqlite3
 import time
 import urllib.request
+import urllib.error
 
 
 def api_reply(agent, task):
@@ -54,19 +55,24 @@ class Worker:
             output = json.loads(saved[0])
         else:
             started = time.perf_counter()
-            answer = self.responder(self.name, str(data.get('task', ''))[:24000])
+            try:
+                answer = self.responder(self.name, str(data.get('task', ''))[:24000])
+                failure = None
+            except Exception as error:
+                answer = ''
+                failure = {'type': type(error).__name__, 'http_status': getattr(error, 'code', None)}
             target = data.get('next') if data.get('hop', 0) == 0 else None
             if target == self.name or target not in ('gpt', 'claude'):
                 target = None
             correlation = str(data.get('correlation_id', mid))[:128]
-            if target:
+            if target and not failure:
                 text = {'kind': 'request', 'hop': 1, 'reply_to': event['sender'], 'correlation_id': correlation, 'task': 'Review this technical coordination answer. State any errors or missing evidence.\nOriginal task: ' + str(data.get('task', ''))[:12000] + '\nAnswer from ' + self.name + ': ' + answer, 'upstream': {'agent': self.name, 'answer': answer}}
                 recipient = target
             else:
                 recipient = data.get('reply_to', event['sender'])
                 if recipient not in ('gpt', 'claude', 'claude-code', 'owner'):
                     recipient = event['sender']
-                text = {'kind': 'response', 'agent': self.name, 'correlation_id': correlation, 'answer': answer, 'model_seconds': round(time.perf_counter() - started, 3), 'upstream': data.get('upstream')}
+                text = {'kind': 'error' if failure else 'response', 'agent': self.name, 'correlation_id': correlation, 'answer': answer, 'error': failure, 'model_seconds': round(time.perf_counter() - started, 3), 'upstream': data.get('upstream')}
             output = {'to': recipient, 'request_id': f'{self.name}-result-{mid}', 'text': json.dumps(text)}
             with sqlite3.connect(self.database) as db:
                 db.execute('INSERT OR REPLACE INTO completed(message_id,result) VALUES(?,?)', (mid, json.dumps(output)))
