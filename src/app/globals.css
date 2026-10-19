@@ -48,3 +48,16 @@ h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-weight: 400;
 }
+
+/* MAINHALL intro: Cormorant Garamond + Manrope; display tracking -0.04em and line-height 1.1. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Manrope:wght@300;400;500&display=swap');
+.mainhall-intro{position:fixed;z-index:9999;inset:0;display:grid;place-items:center;overflow:hidden;background:#111712;color:#f6f4ec;pointer-events:none;animation:mh-curtain 3.4s cubic-bezier(.16,1,.3,1) both}
+.mainhall-intro-glow{position:absolute;inset:-35%;background:radial-gradient(ellipse at 52% 53%,rgba(205,212,184,.21),transparent 30%),radial-gradient(ellipse at 29% 64%,rgba(162,165,144,.12),transparent 42%);filter:blur(64px);transform:scale(1.3);animation:mh-haze 3.4s ease-out both}
+.mainhall-intro-inner{position:relative;text-align:center;display:flex;align-items:center;flex-direction:column;gap:22px;animation:mh-letters 3.1s ease-in-out both}
+.mainhall-intro-monogram{font:300 clamp(3rem,8vw,8rem)/1.1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.04em}
+.mainhall-intro-wordmark{font:400 clamp(.8rem,1.2vw,1.1rem)/1.7 'Manrope',sans-serif;letter-spacing:.35em}
+.mainhall-intro-subtitle{font:500 9px/1.7 'Manrope',sans-serif;letter-spacing:.2em;color:rgba(255,255,255,.48)}
+@keyframes mh-curtain{0%,66%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}100%{opacity:0;visibility:hidden}}
+@keyframes mh-haze{from{transform:translateX(-8%) scale(1.3);opacity:.1}to{transform:translateX(5%) scale(1);opacity:1}}
+@keyframes mh-letters{0%{opacity:0;transform:translateY(12px)}25%,70%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-12px)}}
+@media(prefers-reduced-motion:reduce){.mainhall-intro{display:none}}
