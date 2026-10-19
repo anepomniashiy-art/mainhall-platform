@@ -9,23 +9,23 @@ const steps=[
  {n:"03",title:"Выбираем момент",copy:"Сопоставляем реальные условия покупки, рассрочки и срок выхода из инвестиции."}
 ];
 export default function HomePage(){return <div className="bg-[#F8F7F4] text-[#1E2B22]">
-<section className="bg-[#F3F1EA] text-[#17251C]">
- <div className="mx-auto max-w-7xl px-5 pt-24 pb-14 lg:py-24 grid lg:grid-cols-[1fr_1.04fr] gap-12 lg:gap-16 items-center">
+<section className="bg-gradient-to-b from-[#F6F4EE] to-[#EEECE4] text-[#17251C]">
+ <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 lg:py-36 grid lg:grid-cols-[1fr_1.05fr] gap-16 lg:gap-24 items-center">
  <div>
-  <p className="text-xs uppercase tracking-[.38em] text-[#7E9079]">MAINHALL / Investment Advisory / Moscow</p>
-  <h1 className="mt-8 font-serif text-5xl sm:text-7xl lg:text-[6.4rem] leading-[1.02] tracking-[-.035em]">Шаг раньше<br/><em className="not-italic text-[#3E6B4A]">рынка.</em></h1>
-  <p className="mt-9 max-w-xl text-lg leading-8 text-[#55634F]">Инвестируем в потенциал, не в метры. Находим в премиальной жилой недвижимости Москвы стоимость, которую рынок ещё не отразил в цене, и проверяем гипотезы цифрами.</p>
-  <div className="mt-11 flex flex-wrap items-center gap-4">
-   <Link href="/projects" className="bg-[#17251C] px-8 py-4 text-[#F3F1EA] text-sm font-medium hover:bg-[#24402D] transition-colors">Исследовать проекты ↗</Link>
-   <a href="#approach" className="border border-[#C3B48E] px-8 py-4 text-sm text-[#5A5440] hover:bg-[#EBE5D8] transition-colors">Наш подход ↓</a>
+  <p className="text-[11px] uppercase tracking-[.42em] text-[#8A9784]">MAINHALL / Investment Advisory / Moscow</p>
+  <h1 className="mt-9 font-serif font-normal text-6xl sm:text-7xl lg:text-[6.8rem] leading-[0.98] tracking-[-.045em]">Шаг раньше<br/><span className="text-[#3E6B4A]">рынка.</span></h1>
+  <p className="mt-10 max-w-md text-lg leading-[1.75] text-[#5D6B57]">Инвестируем в потенциал, не в метры. Находим в премиальной жилой недвижимости Москвы стоимость, которую рынок ещё не отразил в цене, и проверяем гипотезы цифрами.</p>
+  <div className="mt-12 flex flex-wrap items-center gap-4">
+   <Link href="/projects" className="group inline-flex items-center gap-2 rounded-sm bg-[#17251C] px-9 py-4 text-sm font-medium text-[#F4F2EC] shadow-[0_18px_40px_-18px_rgba(23,37,28,0.45)] transition-all duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] hover:shadow-[0_26px_60px_-20px_rgba(23,37,28,0.5)]">Исследовать проекты <span className="transition-transform duration-500 group-hover:translate-x-1">↗</span></Link>
+   <a href="#approach" className="rounded-sm border border-black/[0.08] px-8 py-4 text-sm text-[#5A5440] transition-all duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:border-black/20 hover:bg-white/50">Наш подход ↓</a>
   </div>
-  <p className="mt-10 text-sm text-[#6C7A69]">Бизнес-плюс, премиум и элитный сегмент · от 600&nbsp;000&nbsp;₽/м² в стартовом фильтре.</p>
+  <p className="mt-12 text-[11px] uppercase tracking-[.2em] text-[#9AA594]">Сегмент бизнес-плюс, премиум и элит · от 600&nbsp;000&nbsp;₽/м²</p>
  </div>
- <div className="relative">
-  <div className="relative aspect-[5/4] w-full overflow-hidden rounded-sm shadow-[0_40px_90px_-50px_rgba(23,37,28,.55)]">
-   <Image src={heroForum} alt="Клубный дом ФОРУМ, MR Group — вид на башню" fill priority sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+ <div className="group relative">
+  <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[3px] border border-black/[0.04] shadow-[0_40px_80px_-28px_rgba(23,37,28,0.22)] transition-transform duration-700 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.01]">
+   <Image src={heroForum} alt="Клубный дом ФОРУМ (MR Group), вид на башню" fill priority sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
   </div>
-  <span className="absolute bottom-3 right-3 bg-white/85 backdrop-blur-sm px-3 py-1 text-[11px] tracking-wide text-[#3A4A3D]">ЖК ФОРУМ · MR&nbsp;Group</span>
+  <span className="absolute bottom-4 right-4 rounded-sm border border-black/[0.05] bg-white/60 px-3.5 py-1.5 text-[11px] tracking-wide text-[#3A4A3D] backdrop-blur-xl">ЖК ФОРУМ · MR&nbsp;Group</span>
  </div>
  </div>
 </section>
