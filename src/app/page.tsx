@@ -6,7 +6,7 @@ const steps=[
  {n:"02",title:"Считаем сценарии",copy:"Оцениваем денежный поток, расходы, риски, аренду и ликвидность — без обещаний гарантированной доходности."},
  {n:"03",title:"Выбираем момент",copy:"Сопоставляем реальные условия покупки, рассрочки и срок выхода из инвестиции."}
 ];
-export default function HomePage(){return <div className="bg-[#F8F7F4] text-[#1E2B22]">
+export default function HomePage(){return <div className="bg-[#F8F7F4] text-[#1E2B22]"><div className="mainhall-intro" aria-hidden="true"><div className="mainhall-intro-glow"/><div className="mainhall-intro-inner"><span className="mainhall-intro-monogram">M — H</span><span className="mainhall-intro-wordmark">MAINHALL</span><span className="mainhall-intro-subtitle">PRIVATE INVESTMENT ADVISORY · MOSCOW</span></div></div>
 <section className="relative isolate min-h-[88svh] overflow-hidden bg-[#E9E6DD] text-[#242922]">
  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2400&q=85')] bg-cover bg-center opacity-85" aria-hidden="true"/>
  <div className="absolute inset-0 bg-gradient-to-r from-[#F6F3ED]/95 via-[#F6F3ED]/70 to-[#F6F3ED]/10" aria-hidden="true"/>
