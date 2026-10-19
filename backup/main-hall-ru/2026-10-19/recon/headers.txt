@@ -1,34 +1,33 @@
 ### GET https://main-hall.ru/
 HTTP/2 200 
 server: ddos-guard
-set-cookie: __ddg8_=NmxPXXKrcHAIe8Zl; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 15:53:49 GMT
-set-cookie: __ddg10_=1792424029; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 15:53:49 GMT
-set-cookie: __ddg9_=4.154.236.225; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 15:53:49 GMT
-set-cookie: __ddg1_=hv05dNq2xEphxRsId6Re; Domain=.main-hall.ru; HttpOnly; Path=/; Expires=Tue, 19-Oct-2027 15:33:49 GMT
-date: Mon, 19 Oct 2026 15:33:49 GMT
+set-cookie: __ddg8_=YEaSaNJA0y9RmgUd; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 16:21:09 GMT
+set-cookie: __ddg10_=1792425669; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 16:21:09 GMT
+set-cookie: __ddg9_=48.217.59.198; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 16:21:09 GMT
+set-cookie: __ddg1_=Wv0KaAOZB40Y2n01wnz0; Domain=.main-hall.ru; HttpOnly; Path=/; Expires=Tue, 19-Oct-2027 16:01:09 GMT
+date: Mon, 19 Oct 2026 16:01:09 GMT
 content-type: text/html; charset=UTF-8
 last-modified: Sat, 28 Feb 2026 15:55:02 GMT
 etag: W/"c1ff-64be460686b29-gzip"
 x-frame-options: SAMEORIGIN
 x-host: main-hall.ru
-x-tilda-server: 31
-x-tilda-imprint: 8c541518-9e5a-4b3d-af8c-7e2036b49f50
+x-tilda-server: 30
+x-tilda-imprint: 20e75294-d200-47e0-a193-850f7af3b0b3
 
 
 ### GET https://www.main-hall.ru/
 HTTP/2 200 
 server: ddos-guard
-set-cookie: __ddg8_=lZAUFmrVb9UtjqHM; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 15:53:50 GMT
-set-cookie: __ddg10_=1792424030; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 15:53:50 GMT
-set-cookie: __ddg9_=4.154.236.225; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 15:53:50 GMT
-set-cookie: __ddg1_=9tB9V5lmIhV4wpi3lI7J; Domain=.main-hall.ru; HttpOnly; Path=/; Expires=Tue, 19-Oct-2027 15:33:50 GMT
-date: Mon, 19 Oct 2026 15:33:50 GMT
+set-cookie: __ddg8_=tcBB5mLOFVm65BuQ; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 16:21:10 GMT
+set-cookie: __ddg10_=1792425670; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 16:21:10 GMT
+set-cookie: __ddg9_=48.217.59.198; Domain=.main-hall.ru; Path=/; Expires=Mon, 19-Oct-2026 16:21:10 GMT
+set-cookie: __ddg1_=0vQZaT3fZK7t4QJJCdQd; Domain=.main-hall.ru; HttpOnly; Path=/; Expires=Tue, 19-Oct-2027 16:01:10 GMT
+date: Mon, 19 Oct 2026 16:01:10 GMT
 content-type: text/html; charset=UTF-8
 last-modified: Sat, 28 Feb 2026 15:55:02 GMT
-etag: W/"c1ff-64be46068e6a3-gzip"
+etag: W/"c1ff-64be460686b29-gzip"
 x-frame-options: SAMEORIGIN
-x-ws-id: 3
 x-host: www.main-hall.ru
-x-tilda-server: 28
-x-tilda-imprint: b75d44ac-7eb5-4af7-87dc-e304c20096a6
+x-tilda-server: 31
+x-tilda-imprint: af5c92cb-e7ac-4f62-8e98-ca4febff1569
 
