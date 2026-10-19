@@ -9,7 +9,8 @@
     "lint": "eslint",
     "db:generate": "prisma generate",
     "db:validate": "prisma validate",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "build:static": "GITHUB_PAGES=true next build && node scripts/finalize-static-export.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.16.3",
