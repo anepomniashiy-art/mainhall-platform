@@ -2,7 +2,7 @@ name: Design browser QA
 on:
   push:
     branches: [codex/minimal-design]
-    paths: [".github/workflows/design-qa.yml", "tests/design-smoke.mjs"]
+    paths: [".github/workflows/design-qa.yml", "tests/design-smoke.mjs", "src/app/globals.css", "public/fonts/**"]
   workflow_dispatch:
 permissions:
   contents: read
