@@ -10,12 +10,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from server import Relay
+from worker import Worker
 
 
 class RelayTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
-        self.tokens = {'gpt': 'a' * 32, 'claude-code': 'b' * 32, 'claude': 'c' * 32}
+        self.tokens = {'gpt': 'a' * 32, 'claude-code': 'b' * 32, 'claude': 'c' * 32, 'owner': 'd' * 32}
         self.server = Relay(('127.0.0.1', 0), Path(self.tmp.name) / 'queue.sqlite', self.tokens)
         self.port = self.server.server_port
         threading.Thread(target=self.server.serve_forever, daemon=True).start()
@@ -92,6 +93,32 @@ class RelayTest(unittest.TestCase):
             self.assertEqual(event['text'], 'durable')
         finally:
             stream.close(); c.close()
+
+    def test_bounded_gpt_to_claude_roundtrip_and_replay(self):
+        calls = []
+        def responder(agent, task):
+            calls.append(agent)
+            return agent + ' verified test reply'
+        url = f'http://127.0.0.1:{self.port}'
+        gpt = Worker('gpt', url, self.tokens['gpt'], str(Path(self.tmp.name) / 'gpt.sqlite'), responder)
+        claude = Worker('claude', url, self.tokens['claude'], str(Path(self.tmp.name) / 'claude.sqlite'), responder)
+        cg, sg = self.stream('gpt'); cc, sc = self.stream('claude'); co, so = self.stream('owner')
+        try:
+            self.post('/messages', {'to': 'gpt', 'request_id': 'chain', 'text': json.dumps({'kind':'request','task':'test','next':'claude','correlation_id':'chain'})}, agent='owner')
+            first = self.event(sg)
+            gpt.handle(first)
+            # Replay cannot cause another model call or duplicate durable result.
+            gpt.handle(first)
+            second = self.event(sc)
+            self.assertEqual(second['sender'], 'gpt')
+            claude.handle(second)
+            result = json.loads(self.event(so)['text'])
+            self.assertEqual(result['agent'], 'claude')
+            self.assertEqual(result['upstream']['agent'], 'gpt')
+            self.assertEqual(result['correlation_id'], 'chain')
+            self.assertEqual(calls, ['gpt', 'claude'])
+        finally:
+            for c,s in [(cg,sg),(cc,sc),(co,so)]:s.close();c.close()
 
 
 if __name__ == '__main__':
