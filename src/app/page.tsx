@@ -13,7 +13,7 @@ export default function HomePage(){return <div className="bg-[#F8F7F4] text-[#1E
  <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 lg:py-36 grid lg:grid-cols-[1fr_1.05fr] gap-16 lg:gap-24 items-center">
  <div>
   <p className="text-[11px] uppercase tracking-[.42em] text-[#8A9784]">MAINHALL / Investment Advisory / Moscow</p>
-  <h1 className="mt-9 font-serif font-normal text-6xl sm:text-7xl lg:text-[6.8rem] leading-[0.98] tracking-[-.045em]">Шаг раньше<br/><span className="text-[#3E6B4A]">рынка.</span></h1>
+  <h1 className="mt-9 font-serif font-light text-6xl sm:text-7xl lg:text-[7rem] leading-[0.96] tracking-[-.03em]">Шаг раньше<br/><span className="italic font-light text-[#3E6B4A]">рынка.</span></h1>
   <p className="mt-10 max-w-md text-lg leading-[1.75] text-[#5D6B57]">Инвестируем в потенциал, не в метры. Находим в премиальной жилой недвижимости Москвы стоимость, которую рынок ещё не отразил в цене, и проверяем гипотезы цифрами.</p>
   <div className="mt-12 flex flex-wrap items-center gap-4">
    <Link href="/projects" className="group inline-flex items-center gap-2 rounded-sm bg-[#17251C] px-9 py-4 text-sm font-medium text-[#F4F2EC] shadow-[0_18px_40px_-18px_rgba(23,37,28,0.45)] transition-all duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] hover:shadow-[0_26px_60px_-20px_rgba(23,37,28,0.5)]">Исследовать проекты <span className="transition-transform duration-500 group-hover:translate-x-1">↗</span></Link>
