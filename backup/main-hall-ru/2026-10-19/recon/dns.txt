@@ -1,0 +1,14 @@
+# A record
+176.57.67.199
+# AAAA
+# www CNAME
+main-hall.ru.
+# NS (who controls the zone — this is who must repoint)
+ns1.tildadns.com.
+ns2.tildadns.com.
+# MX
+# TXT
+# whois registrar
+nserver:       ns1.tildadns.com.
+nserver:       ns2.tildadns.com.
+registrar:     REGRU-RU
