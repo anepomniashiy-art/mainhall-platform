@@ -10,7 +10,8 @@
     "db:generate": "prisma generate",
     "db:validate": "prisma validate",
     "db:migrate": "prisma migrate dev",
-    "build:static": "GITHUB_PAGES=true next build && node scripts/finalize-static-export.mjs"
+    "build:static": "node scripts/clean-static-export.mjs && GITHUB_PAGES=true next build && node scripts/finalize-static-export.mjs",
+    "build:host": "node scripts/clean-static-export.mjs && MAINHALL_STATIC_EXPORT=true next build && node scripts/finalize-static-export.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.16.3",
