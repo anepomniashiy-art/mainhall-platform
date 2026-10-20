@@ -93,8 +93,9 @@ export function MainhallExperience() {
   ["andrey","Андрей Непомнящий","Управляющий партнёр MAINHALL"],
   ["margarita","Маргарита Непомнящая","Работа с клиентами"],
   ["igor","Игорь Константинов","Подбор объектов и работа с застройщиками"],
-  ["marina","Марина Тебекина","Работа с инвесторами из Москвы и регионов"]
- ].map(([photo,name,role])=><article key={photo}><img src={"/images/team/"+photo+".jpg"} alt={name} width="360" height="360" loading="lazy"/><h3>{name}</h3><p>{role}</p><a href={COMPANY.whatsapp+"?text="+encodeURIComponent("Хочу обсудить подбор недвижимости. Специалист: "+name)} target="_blank" rel="noopener noreferrer" className="mh-text-link">Обсудить подбор ↗</a></article>)}</div></section>
+  ["marina","Марина Тебекина","Работа с инвесторами из Москвы и регионов"],
+  ["pavel","Павел Евтеев","Директор по работе с частными инвесторами и привилегированными клиентами"]
+ ].map(([photo,name,role])=><article key={photo}><div className={"mh-team-portrait"+(photo==="pavel"?" mh-team-portrait-pavel":"")}><img src={"/images/team/"+photo+".jpg"} alt={name} width={photo==="pavel"?709:360} height={photo==="pavel"?1536:360} loading="lazy"/></div><h3>{name}</h3><p>{role}</p><a href={COMPANY.whatsapp+"?text="+encodeURIComponent("Хочу обсудить подбор недвижимости. Специалист: "+name)} target="_blank" rel="noopener noreferrer" className="mh-text-link">Обсудить подбор ↗</a></article>)}</div></section>
   <section className="mh-process mh-pad">
    <div className="mh-section-head" data-reveal><p className="mh-eyebrow">05 / КАК РАБОТАЕМ</p><span>От первого разговора до сделки</span></div>
    <div className="mh-process-grid">{[["01","Разбираем задачу","Бюджет, срок, цель покупки и допустимая нагрузка. Сначала договариваемся, какой результат вам нужен."],["02","Сравниваем варианты","Короткий список с аргументами: почему эти проекты, чем отличаются условия и что стоит проверить."],["03","Проверяем конкретный лот","Цена, планировка, вид, график платежей и документы. Переходим от общей идеи к конкретным цифрам."],["04","Сопровождаем покупку","Помогаем пройти переговоры и оформление. Заранее обсуждаем дальнейший план: жить, сдавать или продавать."]].map(([n,t,d])=><article data-reveal key={n}><span className="mh-index">{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div>
