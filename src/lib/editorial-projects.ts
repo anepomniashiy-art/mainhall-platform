@@ -4,7 +4,7 @@
  */
 export type ProjectEntry = {
  slug: string; name: string; developer: string; area: string;
- className: "Бизнес+" | "Премиум" | "Элитная"; sourceUrl: string;
+ className: "Бизнес+" | "Премиум" | "Элитная" | "Комфорт"; sourceUrl: string;
  summary: string; thesis: string; dueDiligence: string[];
 };
 export const editorialProjects: ProjectEntry[] = [
@@ -22,7 +22,7 @@ export const editorialProjects: ProjectEntry[] = [
  {slug:"shagal",name:"Шагал",developer:"Группа Эталон",area:"Даниловский",className:"Бизнес+",sourceUrl:"https://etalongroup.ru/",summary:"Масштабный квартальный проект на территории развивающейся городской локации.",thesis:"Сравниваем корпуса и сроки, оцениваем предложение конкурентов и влияние очередности застройки.",dueDiligence:["Корпуса и сроки ввода","Акции по каждому лоту","Сопоставимые предложения"]},
 
  // ── Level Group ──
- {slug:"level-yuzhnoportovaya",name:"Level Южнопортовая",developer:"Level Group",area:"Южнопортовый",className:"Бизнес+",sourceUrl:"https://level.ru/",summary:"Многокорпусная жилая застройка с вариативностью квартир.",thesis:"Ищем отклонения в цене сопоставимых планировок с учётом стадии строительства и вида.",dueDiligence:["Различия между корпусами","Фактические цены после акций","Объём предложения по типам лотов"]},
+ {slug:"level-yuzhnoportovaya",name:"Level Южнопортовая",developer:"Level Group",area:"Печатники",className:"Комфорт",sourceUrl:"https://level.ru/",summary:"Многокорпусная жилая застройка с вариативностью квартир.",thesis:"Ищем отклонения в цене сопоставимых планировок с учётом стадии строительства и вида.",dueDiligence:["Различия между корпусами","Фактические цены после акций","Объём предложения по типам лотов"]},
 
  // ── MR Group ──
  {slug:"symphony-34",name:"Symphony 34",developer:"MR Group",area:"Дмитровская",className:"Премиум",sourceUrl:"https://www.mr-group.ru/",summary:"Высотный жилой комплекс в районе Дмитровской.",thesis:"Оцениваем премию за высотность и виды, сравниваем с ценами на вторичном рынке после ввода в эксплуатацию.",dueDiligence:["Ликвидность на вторичном рынке","Эксплуатационные расходы высотки","Сопоставимые проекты в локации"]},
@@ -45,5 +45,5 @@ export const editorialProjects: ProjectEntry[] = [
 
  // ── Upside Development ──
  {slug:"upside-towers",name:"Upside Towers",developer:"Upside Development",area:"Бутырский",className:"Бизнес+",sourceUrl:"https://upsidedev.ru/",summary:"Квартал небоскрёбов в северо-восточной части Москвы.",thesis:"Сравниваем высотный формат с классическими проектами бизнес-класса, оцениваем этапность застройки.",dueDiligence:["Корпуса и очереди строительства","Цены по этажам и видам","Ликвидность высотного формата"]},
- {slug:"enigmia",name:"Энигмия",developer:"Upside Development",area:"Новослободская",className:"Премиум",sourceUrl:"https://upsidedev.ru/",summary:"Клубный дом на 35 квартир вблизи Новослободской.",thesis:"Анализируем камерный формат в центральной локации с высоким пешеходным трафиком.",dueDiligence:["Ограниченное число лотов","Условия покупки","Конкурирующие клубные дома в ЦАО"]},
+ {slug:"enigmia",name:"Энигмия",developer:"Upside Development",area:"Новослободская",className:"Премиум",sourceUrl:"https://upsidedev.ru/",summary:"Клубный дом в Тверском районе Москвы, в локации Новослободской.",thesis:"Анализируем камерный формат в центральной локации с высоким пешеходным трафиком.",dueDiligence:["Ограниченное число лотов","Условия покупки","Конкурирующие клубные дома в ЦАО"]},
 ];

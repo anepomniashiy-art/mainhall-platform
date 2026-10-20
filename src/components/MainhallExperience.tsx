@@ -20,7 +20,7 @@ export function MainhallExperience() {
     .from(".hero-caption",{y:18,opacity:0,duration:.8},"-=.6");
    gsap.to(".hero-image",{scale:1.08,ease:"none",scrollTrigger:{trigger:".mh-hero",start:"top top",end:"bottom top",scrub:true}});
    gsap.utils.toArray<HTMLElement>("[data-reveal]",root.current).forEach(el=>{
-    gsap.from(el,{y:35,opacity:0,duration:.85,scrollTrigger:{trigger:el,start:"top 92%",once:true}});
+    gsap.from(el,{y:18,duration:.85,scrollTrigger:{trigger:el,start:"top 92%",once:true}});
    });
   });
   return () => media.revert();
