@@ -44,3 +44,18 @@ Object.assign(projectImages, {
   "caption": "Stories на Мосфильмовской · October Group · материалы проекта"
  }
 });
+
+Object.assign(projectImages, {
+ "stone-sokolniki": {
+  "src": "/images/projects/stone-sokolniki.jpg",
+  "caption": "STONE Сокольники · STONE · визуализация"
+ },
+ "stone-blik": {
+  "src": "/images/projects/stone-blik.jpg",
+  "caption": "STONE Блик · STONE · визуализация"
+ },
+ "king-and-sons": {
+  "src": "/images/projects/king-and-sons.jpg",
+  "caption": "KING & SONS · October Group · визуализация"
+ }
+});
