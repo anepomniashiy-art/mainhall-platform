@@ -1,0 +1,15 @@
+name: Check live homepage
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/check-production.py', '.github/workflows/check-live-home.yml']
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check-production.py
