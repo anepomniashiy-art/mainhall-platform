@@ -52,6 +52,28 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api "repos/${{ github.repository }}/pages" --jq '{cname, html_url, https_enforced, https_certificate, status}'
+      - name: Diagnose Pages validation and authoritative DNS
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/pages/health" || true
+          for resolver in 1.1.1.1 8.8.8.8; do
+            for type in NS A CAA DS; do
+              echo "DNS resolver=$resolver host=main-hall.ru type=$type"
+              dig @"$resolver" main-hall.ru "$type" +time=2 +tries=1 +noall +comments +answer +authority || true
+            done
+          done
+          for server in ns1.reg.ru ns2.reg.ru; do
+            for host in main-hall.ru www.main-hall.ru; do
+              for type in A CAA; do
+                echo "AUTHORITATIVE server=$server host=$host type=$type"
+                dig @"$server" "$host" "$type" +time=2 +tries=1 +noall +comments +answer +authority || true
+                dig @"$server" "$host" "$type" +tcp +time=2 +tries=1 +noall +comments +answer +authority || true
+              done
+            done
+          done
+          gh api "repos/${{ github.repository }}/pages/health" || true
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Check the live document on both production hosts
