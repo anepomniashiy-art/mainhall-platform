@@ -13,24 +13,6 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN }}
     steps:
-      - name: Restart the stuck custom-domain certificate request once
-        run: |
-          state=$(gh api "repos/${{ github.repository }}/pages")
-          echo "$state" | jq '{cname,https_certificate,https_enforced}'
-          if ! echo "$state" | jq -e '.cname == "main-hall.ru" and .https_certificate.state == "new" and .https_enforced == false' >/dev/null; then
-            echo "No reset: domain or certificate state changed."
-            exit 0
-          fi
-          restore_domain() {
-            printf '%s' '{"cname":"main-hall.ru"}' | gh api --method PUT "repos/${{ github.repository }}/pages" --input -
-          }
-          trap restore_domain EXIT
-          printf '%s' '{"cname":null}' | gh api --method PUT "repos/${{ github.repository }}/pages" --input -
-          gh api "repos/${{ github.repository }}/pages" --jq '{cname,https_certificate}'
-          sleep 10
-          restore_domain
-          trap - EXIT
-          gh api "repos/${{ github.repository }}/pages" --jq '{cname,https_certificate}'
       - name: Read Pages and wait for internal DNS health
         run: |
           gh api "repos/${{ github.repository }}/pages" --jq '{cname,https_enforced,https_certificate}'
