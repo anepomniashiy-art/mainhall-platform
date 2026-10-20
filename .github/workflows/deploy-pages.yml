@@ -69,6 +69,6 @@ jobs:
           curl --fail --location --max-time 30 --output /tmp/mainhall.html --write-out 'HTTPS status=%{http_code} URL=%{url_effective}\n' https://main-hall.ru/
           grep -o '<title>[^<]*' /tmp/mainhall.html
 
-      - name: Notify Yandex IndexNow after HTTPS verification
+      - name: Notify Yandex IndexNow for the reachable production origin
         if: success()
         run: python3 scripts/notify-indexnow.py

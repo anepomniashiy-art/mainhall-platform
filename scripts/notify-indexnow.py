@@ -1,7 +1,7 @@
-"""Notify Yandex only after HTTPS and the published verification file are reachable."""
+"""Notify Yandex only after the origin and the published verification file are reachable."""
 from pathlib import Path
 import json,urllib.request,urllib.error,xml.etree.ElementTree as ET
-base='https://main-hall.ru'
+base='http://main-hall.ru'
 key=Path('_seo/indexnow-key.txt').read_text().strip()
 try:
  def get(path):

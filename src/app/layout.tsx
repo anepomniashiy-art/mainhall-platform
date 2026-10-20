@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   description:
     "Недвижимость Москвы с инвестиционной логикой. Проекты, разборы районов, рассрочки и персональный подбор MAINHALL.",
-  metadataBase: new URL("https://main-hall.ru"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     siteName: "MAINHALL",
     locale: "ru_RU",
