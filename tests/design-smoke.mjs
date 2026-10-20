@@ -11,10 +11,21 @@ try {
   await page.goto('http://127.0.0.1:8091/',{waitUntil:'networkidle'});
   await page.getByRole('heading',{level:1}).waitFor({state:'visible'});
   await page.waitForTimeout(1800);
-  assert.equal(await page.locator('.hero-image').evaluate(el=>el.complete && el.naturalWidth>0),true);
+  assert.equal(await page.locator('.hero-image.is-active').evaluate(el=>el.complete && el.naturalWidth>0),true);
+  await page.screenshot({path:'design-proof/top-'+viewport.width+'.png'});
   await page.screenshot({path:'design-proof/layout-'+viewport.width+'.png',fullPage:true});
   const overflow = await page.evaluate(()=>Array.from(document.querySelectorAll('body *')).filter(el=>el.getBoundingClientRect().right>innerWidth+1 && getComputedStyle(el).position!=='absolute').slice(0,10).map(el=>({tag:el.tagName,cls:el.className,right:el.getBoundingClientRect().right})));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true,JSON.stringify(overflow));
+  await page.getByRole('button',{name:'02 OPUS',exact:true}).click();
+  assert.equal(await page.locator('.hero-image.is-active').getAttribute('src'),'/images/projects/opus.jpg');
+  await page.getByRole('button',{name:'01 Николь',exact:true}).click();
+  await page.locator('.mh-approach-signature').scrollIntoViewIfNeeded();
+  await page.locator('.mh-motion-player svg').waitFor({state:'visible'});
+  await page.getByRole('tab',{name:'Павелецкая',exact:true}).click();
+  assert.match(await page.locator('.mh-district-visual img').getAttribute('src'),/opus/);
+  await page.getByRole('tab',{name:'Китай-город',exact:true}).click();
+  assert.match(await page.locator('.mh-district-visual img').getAttribute('src'),/lumin/);
+  await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));
   if(viewport.width<768){
    await page.getByRole('button',{name:'Открыть меню'}).click();
    assert.equal(await page.getByRole('navigation',{name:'Мобильная навигация'}).isVisible(),true);
@@ -37,5 +48,17 @@ try {
  await page.goto('http://127.0.0.1:8091/',{waitUntil:'networkidle'});
  assert.equal(await page.getByRole('heading',{level:1}).isVisible(),true);
  assert.equal(await page.locator('.hero-line span').first().evaluate(el=>getComputedStyle(el).transform),'none');
+ assert.equal(await page.locator('.mh-motion-player svg').count(),0);
  console.log('PASS reduced motion');
+ if(process.env.LOTTIE_STUDIO_URL){
+  const studio=await browser.newPage({viewport:{width:1200,height:900}});
+  for(const frame of [0,45,90,179]){
+   await studio.goto(process.env.LOTTIE_STUDIO_URL+'/mainhall/scene-1?frame='+frame,{waitUntil:'networkidle'});
+   const canvas=studio.locator('#main-canvas');await canvas.waitFor({state:'visible'});
+   await studio.waitForTimeout(1200);
+   await canvas.screenshot({path:'design-proof/lottie-frame-'+frame+'.png'});
+   assert.equal(await canvas.evaluate(el=>el.width>0 && el.height>0),true);
+  }
+  console.log('PASS official Skottie player pinned frames');
+ }
 } finally { await browser.close(); }
