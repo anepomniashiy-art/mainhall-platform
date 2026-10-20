@@ -43,11 +43,23 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Bind main-hall.ru to this Pages site
+      - name: Inspect Pages configuration
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api --method PUT "repos/${{ github.repository }}/pages" --raw-field cname=main-hall.ru
           gh api "repos/${{ github.repository }}/pages" --jq '{cname, html_url, https_enforced, status}'
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify production DNS and HTTP
+        if: success()
+        continue-on-error: true
+        run: |
+          for host in main-hall.ru www.main-hall.ru; do
+            echo "DNS: $host"
+            dig +short "$host" A
+            dig +short "$host" AAAA
+            dig +short "$host" CNAME
+          done
+          curl --fail --location --max-time 30 --output /tmp/mainhall.html --write-out 'HTTPS status=%{http_code} URL=%{url_effective}\n' https://main-hall.ru/
+          grep -o '<title>[^<]*' /tmp/mainhall.html
