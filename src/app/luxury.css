@@ -68,7 +68,7 @@ body{background:var(--paper);color:var(--ink)}
 @media(prefers-reduced-motion:reduce){.hero-image{transition:none!important}.mh-district-visual img{animation:none!important}.mh-photo-frame img{transform:none!important}}
 
 /* Five specialists; portrait viewport excludes the phone interface in Pavel's supplied image. */
-.mh-team-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.mh-team-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:45px 32px}
 .mh-team-grid article{display:flex;flex-direction:column;min-width:0}
 .mh-team-portrait{position:relative;aspect-ratio:1;overflow:hidden}
 .mh-team-portrait img{width:100%;height:100%;object-fit:cover}
@@ -78,3 +78,6 @@ body{background:var(--paper);color:var(--ink)}
 .mh-team-grid .mh-text-link{align-self:flex-start}
 @media(min-width:768px) and (max-width:1100px){.mh-team-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:767px){.mh-team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}.mh-team-grid h3{font-size:20px}}
+
+/* Match the existing eye line and head scale, with a little more room above the hair. */
+.mh-team-portrait-evgeny img{position:absolute;max-width:none;width:116.4545%;height:auto;aspect-ratio:auto;left:-10.9091%;top:-2.2727%}

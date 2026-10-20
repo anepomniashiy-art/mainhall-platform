@@ -4,5 +4,6 @@ export function TeamSection(){return (<section id="team" className="mh-team-sect
   ["margarita","Маргарита Непомнящая","Работа с клиентами"],
   ["igor","Игорь Константинов","Подбор объектов и работа с застройщиками"],
   ["marina","Марина Тебекина","Работа с инвесторами из Москвы и регионов"],
-  ["pavel","Павел Евтеев","Директор по работе с частными инвесторами и привилегированными клиентами"]
- ].map(([photo,name,role])=><article key={photo}><div className={"mh-team-portrait"+(photo==="pavel"?" mh-team-portrait-pavel":"")}><img src={"/images/team/"+photo+".jpg"} alt={name} width={photo==="pavel"?709:360} height={photo==="pavel"?1536:360} loading="lazy"/></div><h3>{name}</h3><p>{role}</p><a href={COMPANY.whatsapp+"?text="+encodeURIComponent("Хочу обсудить подбор недвижимости. Специалист: "+name)} target="_blank" rel="noopener noreferrer" className="mh-text-link">Обсудить подбор ↗</a></article>)}</div></section>);}
+  ["pavel","Павел Евтеев","Директор по работе с частными инвесторами и привилегированными клиентами"],
+  ["evgeny","Евгений Прохоров","Директор по работе с частными инвесторами и привилегированными клиентами"]
+ ].map(([photo,name,role])=><article key={photo}><div className={"mh-team-portrait mh-team-portrait-"+photo}><img src={"/images/team/"+photo+".jpg"} alt={name} width={photo==="pavel"?709:photo==="evgeny"?1281:360} height={photo==="pavel"?1536:photo==="evgeny"?1920:360} loading="lazy"/></div><h3>{name}</h3><p>{role}</p><a href={COMPANY.whatsapp+"?text="+encodeURIComponent("Хочу обсудить подбор недвижимости. Специалист: "+name)} target="_blank" rel="noopener noreferrer" className="mh-text-link">Обсудить подбор ↗</a></article>)}</div></section>);}
