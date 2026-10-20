@@ -6,10 +6,16 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: read
+  pages: read
 jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
+      - name: Read Pages source and domain settings
+        env:
+          GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN || github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/pages" --jq '{build_type,source,cname,html_url,https_enforced,https_certificate,status,public}'
       - run: python3 scripts/check-production.py
