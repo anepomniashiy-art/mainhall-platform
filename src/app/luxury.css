@@ -72,7 +72,7 @@ body{background:var(--paper);color:var(--ink)}
 .mh-team-grid article{display:flex;flex-direction:column;min-width:0}
 .mh-team-portrait{position:relative;aspect-ratio:1;overflow:hidden}
 .mh-team-portrait img{width:100%;height:100%;object-fit:cover}
-.mh-team-portrait-pavel img{position:absolute;max-width:none;width:122.2414%;height:auto;aspect-ratio:auto;left:-11.2069%;top:-82.7586%}
+.mh-team-portrait-pavel img{position:absolute;max-width:none;width:177.25%;height:auto;aspect-ratio:auto;left:-47.5%;top:-114.75%}
 .mh-team-grid h3{font-size:22px}
 .mh-team-grid article>p{flex:1}
 .mh-team-grid .mh-text-link{align-self:flex-start}
