@@ -74,6 +74,24 @@ jobs:
             done
           done
           gh api "repos/${{ github.repository }}/pages/health" || true
+      - name: Reproduce validation with GitHub's public health checker
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          gem install --user-install github-pages-health-check --no-document
+          ruby -r github-pages-health-check -r json -e '
+            ["main-hall.ru", "www.main-hall.ru"].each do |host|
+              domain = GitHubPages::HealthCheck::Domain.new(host)
+              puts JSON.generate(domain.to_hash)
+              GitHubPages::HealthCheck::Domain::REQUESTED_RECORD_TYPES.each do |type|
+                begin
+                  puts JSON.generate({host: host, type: type.to_s, answers: domain.resolver.query(type).map(&:to_s)})
+                rescue StandardError => e
+                  puts JSON.generate({host: host, type: type.to_s, error: e.class.name, message: e.message})
+                end
+              end
+            end
+          '
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Check the live document on both production hosts
