@@ -32,5 +32,8 @@ jobs:
       - run: npm run build
       - name: Static export and commercial asset check
         run: npm run build:static
+      - name: Verify SEO static export
+        run: python3 tests/seo-export.py
       - name: Data-contract tests
         run: node --test tests/official-feed.test.mjs
+

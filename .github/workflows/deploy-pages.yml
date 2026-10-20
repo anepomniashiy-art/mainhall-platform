@@ -26,6 +26,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:static
+      - name: Verify crawlability, metadata and internal links
+        run: python3 tests/seo-export.py
       - name: Copy CNAME and legacy site into output
         run: |
           cp CNAME out/CNAME
@@ -43,12 +45,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
       - name: Inspect Pages configuration
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api "repos/${{ github.repository }}/pages" --jq '{cname, html_url, https_enforced, status}'
+          gh api "repos/${{ github.repository }}/pages" --jq '{cname, html_url, https_enforced, https_certificate, status}'
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Verify production DNS and HTTP
@@ -60,6 +63,12 @@ jobs:
             dig +short "$host" A
             dig +short "$host" AAAA
             dig +short "$host" CNAME
+            dig +short "$host" CAA
           done
+          curl --fail --location --max-time 30 --output /tmp/mainhall-http.html --write-out 'HTTP status=%{http_code} URL=%{url_effective}\n' http://main-hall.ru/
           curl --fail --location --max-time 30 --output /tmp/mainhall.html --write-out 'HTTPS status=%{http_code} URL=%{url_effective}\n' https://main-hall.ru/
           grep -o '<title>[^<]*' /tmp/mainhall.html
+
+      - name: Notify Yandex IndexNow after HTTPS verification
+        if: success()
+        run: python3 scripts/notify-indexnow.py

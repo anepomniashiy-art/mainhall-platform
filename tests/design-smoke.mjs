@@ -40,6 +40,12 @@ try {
   await page.getByRole('heading',{level:1,name:'HIGH LIFE'}).waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:'design-proof/project-'+viewport.width+'.png',fullPage:true});
+  for(const route of ['/districts/paveletskaya/','/analytics/rassrochka-ot-zastroishchika/','/collections/u-vody/','/about/','/installments/']){
+   await page.goto('http://127.0.0.1:8091'+route,{waitUntil:'networkidle'});
+   assert.equal(await page.getByRole('heading',{level:1}).count(),1);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true,'overflow '+route+' '+viewport.width);
+   await page.screenshot({path:'design-proof/'+route.split('/')[1]+'-'+viewport.width+'.png',fullPage:true});
+  }
   assert.deepEqual(errors,[]);
   await page.close();
   console.log('PASS layout/menu/catalogue/project '+viewport.width);
