@@ -54,6 +54,9 @@ jobs:
           gh api "repos/${{ github.repository }}/pages" --jq '{cname, html_url, https_enforced, https_certificate, status}'
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Check the live document on both production hosts
+        if: success()
+        run: python3 scripts/check-production.py
       - name: Verify production DNS and HTTP
         if: success()
         continue-on-error: true
