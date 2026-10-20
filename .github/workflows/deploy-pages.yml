@@ -49,13 +49,13 @@ jobs:
       - name: Inspect Pages configuration
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN || github.token }}
         run: |
           gh api "repos/${{ github.repository }}/pages" --jq '{cname, html_url, https_enforced, https_certificate, status}'
       - name: Diagnose Pages validation and authoritative DNS
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN || github.token }}
         run: |
           gh api "repos/${{ github.repository }}/pages/health" || true
           for resolver in 1.1.1.1 8.8.8.8; do
