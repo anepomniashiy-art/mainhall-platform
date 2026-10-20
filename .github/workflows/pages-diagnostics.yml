@@ -1,0 +1,25 @@
+name: Pages domain diagnostics
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/pages-diagnostics.yml]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    env:
+      GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN }}
+    steps:
+      - name: Read Pages and wait for internal DNS health
+        run: |
+          gh api "repos/${{ github.repository }}/pages" --jq '{cname,https_enforced,https_certificate}'
+          for attempt in $(seq 1 12); do
+            gh api "repos/${{ github.repository }}/pages/health" > /tmp/pages-health.json
+            cat /tmp/pages-health.json
+            if jq -e '.domain.host' /tmp/pages-health.json >/dev/null; then break; fi
+            sleep 10
+          done
+          gh api "repos/${{ github.repository }}/pages" --jq '{cname,https_enforced,https_certificate}'
