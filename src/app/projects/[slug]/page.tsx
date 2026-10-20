@@ -16,7 +16,7 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
  return <article className="mh-project-detail mh-pad">
   <Link href="/projects/" className="mh-eyebrow">← ПРОЕКТЫ</Link>
   <header className="pt-14"><p className="mh-eyebrow">{p.className} / {p.area}</p><h1>{p.name}</h1><p className="max-w-2xl text-base leading-7 text-[#666a60]">{p.summary}</p></header>
-  <div className="mh-detail-layout"><section><p className="mh-eyebrow">01 / ПЕРСПЕКТИВА</p><h2 className="mt-6">В фокусе MAINHALL</h2><p>{p.thesis}</p><ul className="mt-10">{p.dueDiligence.map(x=><li key={x}>{x}</li>)}</ul></section><aside><p className="mh-eyebrow mb-6">О ПРОЕКТЕ</p><dl><div><dt>Девелопер</dt><dd>{p.developer}</dd></div><div><dt>Район</dt><dd>{p.area}</dd></div><div><dt>Класс</dt><dd>{p.className}</dd></div><div><dt>Цены и наличие</dt><dd>По запросу</dd></div></dl><a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="mh-text-link">Сайт девелопера ↗</a></aside></div>
+  <div className="mh-detail-layout"><section><p className="mh-eyebrow">01 / ПЕРСПЕКТИВА</p><h2 className="mt-6">В фокусе MAINHALL</h2><p>{p.thesis}</p><ul className="mt-10">{p.dueDiligence.map(x=><li key={x}>{x}</li>)}</ul></section><aside><p className="mh-eyebrow mb-6">О ПРОЕКТЕ</p><dl><div><dt>Девелопер</dt><dd>{p.developer}</dd></div><div><dt>Район</dt><dd>{p.area}</dd></div><div><dt>Класс</dt><dd>{p.className}</dd></div><div><dt>Цены и наличие</dt><dd>По запросу</dd></div></dl><Link href="/#contact" className="mh-text-link">Получить подборку квартир ↗</Link></aside></div>
   <div className="mh-detail-contact"><h2>Рассмотрим ближе?</h2><Link href="/#contact" className="mh-text-link">Связаться с MAINHALL ↗</Link></div>
  </article>;
 }
