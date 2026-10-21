@@ -1,0 +1,41 @@
+name: Compare authoritative DNS and GitHub Pages validation
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/dns-path-check.yml]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+  pages: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Read GitHub Pages validation
+        env:
+          GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN || github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/pages" --jq '{cname,build_type,source,https_certificate,https_enforced}'
+          gh api "repos/${{ github.repository }}/pages/health"
+      - name: Compare independent resolvers and authoritative servers
+        run: |
+          for resolver in 1.1.1.1 8.8.8.8; do
+            for kind in NS A AAAA CAA DS; do
+              echo "RESOLVER $resolver main-hall.ru $kind"
+              dig @"$resolver" main-hall.ru "$kind" +dnssec +time=2 +tries=1 +noall +comments +answer +authority
+            done
+            echo "RESOLVER $resolver www.main-hall.ru CNAME"
+            dig @"$resolver" www.main-hall.ru CNAME +time=2 +tries=1 +noall +comments +answer
+          done
+          for server in ns1.reg.ru ns2.reg.ru; do
+            for kind in SOA NS A AAAA CAA; do
+              echo "AUTHORITATIVE $server main-hall.ru $kind"
+              dig @"$server" main-hall.ru "$kind" +norecurse +time=2 +tries=1 +noall +comments +answer +authority
+            done
+            echo "AUTHORITATIVE TCP $server main-hall.ru CAA"
+            dig @"$server" main-hall.ru CAA +tcp +norecurse +time=2 +tries=1 +noall +comments +answer +authority
+          done
+          echo "PARENT DELEGATION AND DNSSEC"
+          dig @a.dns.ripn.net main-hall.ru NS +norecurse +time=2 +tries=1 +noall +comments +answer +authority
+          dig @a.dns.ripn.net main-hall.ru DS +norecurse +time=2 +tries=1 +noall +comments +answer +authority
