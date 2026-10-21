@@ -11,26 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Check API access and hosting inventory
+      - name: Inspect target hosting and web address
         env:
           BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
         run: |
           python3 - <<'PY'
-          import os,json,urllib.request,urllib.parse
+          import os,json,urllib.request,urllib.parse,socket,subprocess
           password=os.environ['BEGET_API_PASSWORD']
           if not password: raise SystemExit('BEGET_API_PASSWORD is missing')
-          for method in ['user/getAccountInfo','site/getList','domain/getList','ftp/getList']:
-              data=urllib.parse.urlencode({'login':'wellton','passwd':password,'output_format':'json'}).encode()
-              try:
-                  response=json.load(urllib.request.urlopen(urllib.request.Request('https://api.beget.com/api/'+method,data=data),timeout=30))
-              except Exception as e:
-                  raise SystemExit(type(e).__name__+' while contacting Beget')
-              if response.get('status')!='success':
-                  print(method,json.dumps(response,ensure_ascii=False).replace(password,'***'))
-                  raise SystemExit('Beget API rejected connection')
-              answer=response.get('answer',{})
-              if method=='user/getAccountInfo':
-                  result=answer.get('result',{})
-                  answer={k:result.get(k) for k in ['plan_name','user_sites','server_name','server_ip','user_login']}
-              print(method,json.dumps(answer,ensure_ascii=False).replace(password,'***'))
+          def api(method,args={}):
+              data=urllib.parse.urlencode({'login':'wellton','passwd':password,'input_format':'json','output_format':'json','input_data':json.dumps(args)}).encode()
+              result=json.load(urllib.request.urlopen(urllib.request.Request('https://api.beget.com/api/'+method,data=data),timeout=30))
+              if result.get('status')!='success': raise SystemExit('API error')
+              return result['answer'].get('result')
+          print('TARGET_SITE',json.dumps([s for s in api('site/getList') if s['path']=='main-hall.ru/public_html']))
+          print('TARGET_DNS',json.dumps(api('dns/getData',{'fqdn':'main-hall.ru'})))
+          for host in ['wellton.beget.tech','urdak.beget.com']:
+              ip=socket.gethostbyname(host)
+              print('HOST_IP',host,ip,flush=True)
+              for path in ['/','/images/team/pavel.jpg','/images/team/evgeny-portrait.jpg','/projects/']:
+                  result=subprocess.run(['curl','--max-time','15','-sS','--resolve','main-hall.ru:80:'+ip,'http://main-hall.ru'+path,'-o','/dev/null','-w','%{http_code}'],capture_output=True,text=True)
+                  print('ORIGIN',ip,path,result.stdout,flush=True)
           PY
