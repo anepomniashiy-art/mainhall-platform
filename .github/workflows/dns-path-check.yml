@@ -3,39 +3,32 @@ on:
   push:
     branches: [main]
     paths: [.github/workflows/dns-path-check.yml]
-  workflow_dispatch: {}
+  workflow_dispatch:
 permissions:
   contents: read
   pages: read
 jobs:
   diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 4
     steps:
       - name: Read GitHub Pages validation
         env:
           GH_TOKEN: ${{ secrets.MAINHALL_PAGES_TOKEN || github.token }}
         run: |
-          gh api "repos/${{ github.repository }}/pages" --jq '{cname,build_type,source,https_certificate,https_enforced}'
-          gh api "repos/${{ github.repository }}/pages/health"
-      - name: Compare independent resolvers and authoritative servers
+          gh api repos/anepomniashiy-art/mainhall-platform/pages --jq '{cname,https_certificate,https_enforced}'
+          gh api repos/anepomniashiy-art/mainhall-platform/pages/health || true
+      - name: Compare current delegation and direct authoritative answers
         run: |
-          for resolver in 1.1.1.1 8.8.8.8; do
+          for server in a.dns.ripn.net 1.1.1.1 8.8.8.8 brian.ns.cloudflare.com sandra.ns.cloudflare.com; do
             for kind in NS A AAAA CAA DS; do
-              echo "RESOLVER $resolver main-hall.ru $kind"
-              dig @"$resolver" main-hall.ru "$kind" +dnssec +time=2 +tries=1 +noall +comments +answer +authority
+              echo "DNS $server main-hall.ru $kind"
+              dig @"$server" main-hall.ru "$kind" +time=3 +tries=2 +noall +comments +answer +authority || true
             done
-            echo "RESOLVER $resolver www.main-hall.ru CNAME"
-            dig @"$resolver" www.main-hall.ru CNAME +time=2 +tries=1 +noall +comments +answer
+            echo "DNS $server www.main-hall.ru CNAME"
+            dig @"$server" www.main-hall.ru CNAME +time=3 +tries=2 +noall +comments +answer +authority || true
           done
-          for server in ns1.reg.ru ns2.reg.ru; do
-            for kind in SOA NS A AAAA CAA; do
-              echo "AUTHORITATIVE $server main-hall.ru $kind"
-              dig @"$server" main-hall.ru "$kind" +norecurse +time=2 +tries=1 +noall +comments +answer +authority
-            done
-            echo "AUTHORITATIVE TCP $server main-hall.ru CAA"
-            dig @"$server" main-hall.ru CAA +tcp +norecurse +time=2 +tries=1 +noall +comments +answer +authority
+          for url in http://main-hall.ru/ https://main-hall.ru/ https://www.main-hall.ru/; do
+            echo "HTTP $url"
+            curl --max-time 15 -sS -L -o /tmp/page -w 'status=%{http_code} final=%{url_effective} ssl=%{ssl_verify_result}\n' "$url" || true
           done
-          echo "PARENT DELEGATION AND DNSSEC"
-          dig @a.dns.ripn.net main-hall.ru NS +norecurse +time=2 +tries=1 +noall +comments +answer +authority
-          dig @a.dns.ripn.net main-hall.ru DS +norecurse +time=2 +tries=1 +noall +comments +answer +authority
