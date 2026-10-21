@@ -1,0 +1,35 @@
+name: Inspect live apartment source pages
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/catalogue-lot-probe.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Fetch source HTML for apartment adapters
+        run: |
+          mkdir -p lot-probe
+          python3 - <<'PY'
+          import urllib.request,json,pathlib,datetime
+          rows=[]
+          for name,url in [('high-life-405','https://highlife.ru/flats/405'),('high-life-penthouse','https://highlife.ru/penthouse'),('stone-blik-a157','https://stone.ru/catalog/residential/blik/a-157')]:
+              try:
+                  request=urllib.request.Request(url,headers={'User-Agent':'MAINHALL-PublicProjectCollector/1.0 (+https://main-hall.ru)'})
+                  with urllib.request.urlopen(request,timeout=20) as r:
+                      body=r.read(6000000)
+                      pathlib.Path('lot-probe/'+name+'.html').write_bytes(body)
+                      rows.append({'name':name,'url':url,'http':r.status,'bytes':len(body),'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+              except Exception as e: rows.append({'name':name,'url':url,'error':str(e)})
+          pathlib.Path('lot-probe/results.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
+          print(json.dumps(rows))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-apartment-html
+          path: lot-probe/
+          retention-days: 14
