@@ -1,5 +1,6 @@
 import os,json,urllib.request,urllib.parse,hmac,hashlib,ftplib,ssl,socket,time
 from pathlib import Path
+import subprocess,re
 login='wellton'
 password=os.environ['BEGET_API_PASSWORD']
 if not password: raise SystemExit('Missing BEGET_API_PASSWORD')
@@ -42,6 +43,22 @@ if existing:
     api('ftp/changePassword',{'suffix':suffix,'password':ftp_password})
 else:
     api('ftp/add',{'suffix':suffix,'homedir':'/main-hall.ru/public_html','password':ftp_password})
+probe=subprocess.run(['openssl','s_client','-starttls','ftp','-connect',host+':21','-servername',host],input=b'',stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,timeout=20,check=False)
+certinfo=subprocess.run(['openssl','x509','-noout','-ext','subjectAltName'],input=probe.stdout,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,check=True).stdout.decode()
+sans=re.findall(r'DNS:([^,\\s]+)',certinfo)
+print('FTP certificate names:',sans,flush=True)
+original_ips=set(socket.gethostbyname_ex(host)[2])
+candidates=[host]+[name.replace('*',host.split('.')[0]) for name in sans if name.endswith(('.beget.com','.beget.ru','.beget.tech'))]
+verified_host=None
+for candidate in candidates:
+    try:
+        if original_ips.intersection(socket.gethostbyname_ex(candidate)[2]) and any(ssl._dnsname_match(name,candidate) for name in sans):
+            verified_host=candidate
+            break
+    except socket.gaierror: pass
+if not verified_host: raise SystemExit('No verified Beget FTP hostname matches this server')
+print('Verified FTP hostname:',verified_host,flush=True)
+host=verified_host
 ftp=ftplib.FTP_TLS(context=ssl.create_default_context(),timeout=45)
 ftp.connect(host,21)
 ftp.login(ftp_login,ftp_password)
