@@ -2,8 +2,6 @@ name: "Deploy to GitHub Pages"
 # Deploy the canonical main branch (MAINHALL Next app) + the preserved /legacy/ site.
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch: {}
 
 permissions:

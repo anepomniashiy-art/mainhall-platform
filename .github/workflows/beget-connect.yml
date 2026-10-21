@@ -33,3 +33,14 @@ jobs:
                   result=subprocess.run(['curl','--max-time','15','-sS','--resolve','main-hall.ru:80:'+ip,'http://main-hall.ru'+path,'-o','/dev/null','-w','%{http_code}'],capture_output=True,text=True)
                   print('ORIGIN',ip,path,result.stdout,flush=True)
           PY
+
+      - name: Verify public domain after migration
+        run: |
+          for server in brian.ns.cloudflare.com sandra.ns.cloudflare.com 1.1.1.1 8.8.8.8; do
+            echo "DNS $server"
+            dig @"$server" main-hall.ru A +short
+            dig @"$server" www.main-hall.ru CNAME +short
+          done
+          for url in http://main-hall.ru/ http://www.main-hall.ru/ https://main-hall.ru/; do
+            curl --max-time 15 -sS -o /dev/null -w "URL=$url status=%{http_code} ip=%{remote_ip} ssl=%{ssl_verify_result}\n" "$url" || true
+          done
