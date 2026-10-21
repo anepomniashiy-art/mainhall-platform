@@ -52,7 +52,15 @@ print('FTP certificate names:',sans,flush=True)
 tls_name=login+'.beget.tech'
 if not any(ssl._dnsname_match(name,tls_name) for name in sans):
     raise SystemExit('Unexpected Beget FTP certificate')
-ftp=ftplib.FTP_TLS(context=ssl.create_default_context(),timeout=45)
+class ReusingFTP_TLS(ftplib.FTP_TLS):
+    def ntransfercmd(self,cmd,rest=None):
+        connection,size=ftplib.FTP.ntransfercmd(self,cmd,rest)
+        if self._prot_p:
+            connection=self.context.wrap_socket(connection,server_hostname=self.host,session=self.sock.session)
+        return connection,size
+tls_context=ssl.create_default_context()
+tls_context.maximum_version=ssl.TLSVersion.TLSv1_2
+ftp=ReusingFTP_TLS(context=tls_context,timeout=45)
 ftp.connect(host,21)
 ftp.host=tls_name
 print('FTP TLS identity:',tls_name,flush=True)
@@ -76,6 +84,6 @@ for number,path in enumerate(files,1):
     with path.open('rb') as stream: ftp.storbinary('STOR '+relative,stream,blocksize=262144)
     if number%100==0: print('Uploaded',number,'/',len(files),flush=True)
 ftp.quit()
-ip=socket.gethostbyname(host)
+ip=socket.gethostbyname(login+'.beget.tech')
 print('UPLOAD_COMPLETE files='+str(len(files))+' host='+host+' ip='+ip,flush=True)
 Path('/tmp/beget-ip').write_text(ip)
