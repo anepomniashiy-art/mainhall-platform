@@ -1,0 +1,36 @@
+name: Beget hosting connection
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/beget-connect.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check API access and hosting inventory
+        env:
+          BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.parse
+          password=os.environ['BEGET_API_PASSWORD']
+          if not password: raise SystemExit('BEGET_API_PASSWORD is missing')
+          for method in ['user/getAccountInfo','site/getList','domain/getList','ftp/getList']:
+              data=urllib.parse.urlencode({'login':'wellton','passwd':password,'output_format':'json'}).encode()
+              try:
+                  response=json.load(urllib.request.urlopen(urllib.request.Request('https://api.beget.com/api/'+method,data=data),timeout=30))
+              except Exception as e:
+                  raise SystemExit(type(e).__name__+' while contacting Beget')
+              if response.get('status')!='success':
+                  print(method,json.dumps(response,ensure_ascii=False).replace(password,'***'))
+                  raise SystemExit('Beget API rejected connection')
+              answer=response.get('answer',{})
+              if method=='user/getAccountInfo':
+                  result=answer.get('result',{})
+                  answer={k:result.get(k) for k in ['plan_name','user_sites','server_name','server_ip','user_login']}
+              print(method,json.dumps(answer,ensure_ascii=False).replace(password,'***'))
+          PY
