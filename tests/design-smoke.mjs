@@ -25,6 +25,19 @@ try {
   assert.match(await page.locator('.mh-district-visual img').getAttribute('src'),/opus/);
   await page.getByRole('tab',{name:'Китай-город',exact:true}).click();
   assert.match(await page.locator('.mh-district-visual img').getAttribute('src'),/lumin/);
+  for(const person of ['pavel','evgeny']){
+   const frame=page.locator('.mh-team-portrait-'+person);
+   await frame.scrollIntoViewIfNeeded();
+   await frame.locator('img').evaluate(async img=>{await img.decode();});
+   const geometry=await frame.evaluate(el=>{
+    const img=el.querySelector('img'),a=el.getBoundingClientRect(),b=img.getBoundingClientRect();
+    return {loaded:img.complete&&img.naturalWidth>0,ratio:b.width/b.height,natural:img.naturalWidth/img.naturalHeight,covers:b.left<=a.left+1&&b.top<=a.top+1&&b.right>=a.right-1&&b.bottom>=a.bottom-1};
+   });
+   assert.equal(geometry.loaded,true,person+' loaded');
+   assert.equal(geometry.covers,true,person+' fills portrait frame '+JSON.stringify(geometry));
+   assert.ok(Math.abs(geometry.ratio-geometry.natural)<.005,person+' preserves source proportions');
+  }
+  await page.locator('.mh-team-grid').screenshot({path:'design-proof/team-'+viewport.width+'.png'});
   await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));
   if(viewport.width<768){
    await page.getByRole('button',{name:'Открыть меню'}).click();

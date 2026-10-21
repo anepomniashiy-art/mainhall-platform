@@ -67,12 +67,12 @@ body{background:var(--paper);color:var(--ink)}
 @media(max-width:350px){.mh-home-v2 .hero-bottom{align-items:start;flex-direction:column}.mh-home-v2 .hero-bottom p{max-width:none}.mh-home-v2 .hero-bottom .mh-pill{font-size:13px}.hero-image-panel{height:350px}.hero-project-label{gap:10px}.hero-project-label p{font-size:10px}.hero-project-label a{font-size:26px}.mh-featured-project .mh-photo-frame{height:320px}}
 @media(prefers-reduced-motion:reduce){.hero-image{transition:none!important}.mh-district-visual img{animation:none!important}.mh-photo-frame img{transform:none!important}}
 
-/* Five specialists; portrait viewport excludes the phone interface in Pavel's supplied image. */
+/* Six specialists; portrait viewport excludes the phone interface in Pavel's supplied image. */
 .mh-team-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:45px 32px}
 .mh-team-grid article{display:flex;flex-direction:column;min-width:0}
 .mh-team-portrait{position:relative;aspect-ratio:1;overflow:hidden}
-.mh-team-portrait img{width:100%;height:100%;object-fit:cover}
-.mh-team-portrait-pavel img{position:absolute;max-width:none;width:177.25%;height:auto;aspect-ratio:auto;left:-47.5%;top:-114.75%}
+.mh-team-grid .mh-team-portrait img{display:block;width:100%;height:100%;object-fit:cover}
+.mh-team-grid .mh-team-portrait-pavel img{position:absolute;max-width:none;width:177.25%;height:384%;aspect-ratio:auto;left:-47.5%;top:-114.75%}
 .mh-team-grid h3{font-size:22px}
 .mh-team-grid article>p{flex:1}
 .mh-team-grid .mh-text-link{align-self:flex-start}
@@ -80,4 +80,4 @@ body{background:var(--paper);color:var(--ink)}
 @media(max-width:767px){.mh-team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}.mh-team-grid h3{font-size:20px}}
 
 /* Match the existing eye line and head scale, with a little more room above the hair. */
-.mh-team-portrait-evgeny img{position:absolute;max-width:none;width:116.4545%;height:auto;aspect-ratio:auto;left:-10.9091%;top:-2.2727%}
+.mh-team-grid .mh-team-portrait-evgeny img{position:absolute;max-width:none;width:116.4545%;height:174.5455%;aspect-ratio:auto;left:-10.9091%;top:-2.2727%}
