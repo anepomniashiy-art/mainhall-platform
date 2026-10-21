@@ -47,20 +47,15 @@ probe=subprocess.run(['openssl','s_client','-starttls','ftp','-connect',host+':2
 certinfo=subprocess.run(['openssl','x509','-noout','-ext','subjectAltName'],input=probe.stdout,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,check=True).stdout.decode()
 sans=[part.split(',')[0].strip().split()[0] for part in certinfo.split('DNS:')[1:]]
 print('FTP certificate names:',sans,flush=True)
-original_ips=set(socket.gethostbyname_ex(host)[2])
-candidates=[host,login+'.beget.tech']+[name.replace('*',host.split('.')[0]) for name in sans if name.endswith(('.beget.com','.beget.ru','.beget.tech'))]
-verified_host=None
-for candidate in candidates:
-    try:
-        if original_ips.intersection(socket.gethostbyname_ex(candidate)[2]) and any(ssl._dnsname_match(name,candidate) for name in sans):
-            verified_host=candidate
-            break
-    except socket.gaierror: pass
-if not verified_host: raise SystemExit('No verified Beget FTP hostname matches this server')
-print('Verified FTP hostname:',verified_host,flush=True)
-host=verified_host
+# The API supplies the physical FTP endpoint; Beget issues its certificate
+# for technical account names. Verify that technical name during TLS.
+tls_name=login+'.beget.tech'
+if not any(ssl._dnsname_match(name,tls_name) for name in sans):
+    raise SystemExit('Unexpected Beget FTP certificate')
 ftp=ftplib.FTP_TLS(context=ssl.create_default_context(),timeout=45)
 ftp.connect(host,21)
+ftp.host=tls_name
+print('FTP TLS identity:',tls_name,flush=True)
 ftp.login(ftp_login,ftp_password)
 ftp.prot_p()
 base=Path('out')
