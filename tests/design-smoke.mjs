@@ -1,7 +1,11 @@
 import assert from 'node:assert/strict';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 await mkdir('design-proof', { recursive: true });
+for(const person of ['pavel','evgeny']) {
+ const jpeg=await readFile('public/images/team/'+person+'.jpg');
+ assert.equal(jpeg.subarray(-2).toString('hex'),'ffd9',person+' JPEG is complete');
+}
 const browser = await chromium.launch();
 try {
  for (const viewport of [{width:1440,height:1000},{width:390,height:844},{width:320,height:740}]) {
