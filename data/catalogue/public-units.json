@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "sourcePriority": [
+    "nmarket",
+    "partner_feed",
+    "public_site"
+  ],
+  "generatedAt": "2026-10-21T16:22:52.766142+00:00",
+  "units": [
+    {
+      "id": "high-life:405",
+      "projectSlug": "high-life",
+      "sourceType": "public_site",
+      "sourceId": "405",
+      "sourceUrl": "https://highlife.ru/flats/405",
+      "fetchedAt": "2026-10-21T16:22:28.511974+00:00",
+      "salesStatus": "UNKNOWN",
+      "proof": {
+        "rawHtmlSha256": "fe78fec7ea69a4eee861b93799198607d8438e243347784ee49d11a21a650229",
+        "statePath": "__NEXT_DATA__.props.pageProps.initialState.api.queries[\"getFlatById({\\\"id\\\":\\\"405\\\",\\\"name\\\":\\\"getFlatById\\\"})\"].data.data",
+        "fields": {
+          "priceRub": "price_discount",
+          "areaSqm": "square",
+          "rooms": "rooms",
+          "floor": "floor",
+          "unitNumber": "num",
+          "availabilityRaw": "status"
+        }
+      },
+      "unitNumber": "2/146",
+      "buildingName": "К2",
+      "floor": 24,
+      "rooms": 3,
+      "bedrooms": null,
+      "areaSqm": 148.2,
+      "finish": "без отделки",
+      "type": "Пентхаус",
+      "priceRub": 140790000,
+      "priceBeforeDiscountRub": 140790000,
+      "pricePerSqm": 950000,
+      "priceBasis": "discount price reported by official site",
+      "availabilityRaw": "Свободно",
+      "features": [
+        "Пентхаус"
+      ],
+      "view": [
+        "Вид во двор"
+      ],
+      "planImageUrl": "https://highlife.ru/upload/plans_png/apts_mp_600x600/b2-s1-f24-p3.png",
+      "planSha256": "77146c222ae9f1755943c87d79793bb5b6eb4569418a723e7ca8d77156f736a3",
+      "planImageSrc": "/images/plans/high-life-405.webp"
+    },
+    {
+      "id": "stone-blik:13805",
+      "projectSlug": "stone-blik",
+      "sourceType": "public_site",
+      "sourceId": "13805",
+      "sourceUrl": "https://stone.ru/catalog/residential/blik/a-157",
+      "fetchedAt": "2026-10-21T16:22:30.992556+00:00",
+      "salesStatus": "UNKNOWN",
+      "proof": {
+        "rawHtmlSha256": "179e6a3fe1465d8eb8bf21d255f13f4856f0da07856104b941584d17fb2f2cbc",
+        "statePath": "self.__next_f[1d]$[3][\"value\"][\"lot\"]",
+        "fields": {
+          "priceRub": "sellingPrice",
+          "priceBeforeDiscountRub": "sellingPriceBeforeDiscount",
+          "areaSqm": "area",
+          "rooms": "roomsCount",
+          "bedrooms": "bedroomsCount",
+          "floor": "floor",
+          "unitNumber": "number",
+          "availabilityRaw": "status"
+        }
+      },
+      "sourceLotUuid": "62484d57-fdda-11f0-83bd-005056b5170a",
+      "unitNumber": "A-157",
+      "buildingName": "Корпус А",
+      "floor": 14,
+      "floorsTotal": 50,
+      "rooms": 3,
+      "bedrooms": 3,
+      "areaSqm": 89.1,
+      "unitType": "apartment",
+      "finish": "без отделки",
+      "priceRub": 50693891,
+      "priceBeforeDiscountRub": 53361990,
+      "pricePerSqm": 568955,
+      "priceBasis": "sellingPrice reported by official site; payment conditions require confirmation",
+      "discountPercent": 5,
+      "availabilityRaw": 1,
+      "completionYear": 2030,
+      "address": "Москва, Новоданиловская набережная, 12",
+      "features": [
+        "Выделенная гардеробная",
+        "Мастер-спальня",
+        "Окна в пол; Моллированное остекление",
+        "Этаж 14 из 50",
+        "Секция 1А"
+      ],
+      "view": [
+        "Виды на город"
+      ],
+      "ceilingHeightM": 3.2,
+      "planImageUrl": "https://storage.yandexcloud.net/feeder/cache/ObjectModels/ObjectModel34374/portal_interior_plan_text_ad9d54_portal.png",
+      "floorPlanImageUrl": "https://storage.yandexcloud.net/feeder/cache/ObjectModels/ObjectModel34374/9cf2930ab7-1_portal.jpeg",
+      "sourceUpdatedAt": "2026-10-20T09:13:39.000000Z",
+      "planSha256": "0c8877d4d803eb561b244d51d19ab50c01e979fa5a450d63489ba2614a74febe",
+      "planImageSrc": "/images/plans/stone-blik-13805.webp"
+    },
+    {
+      "id": "stone-sokolniki:3487",
+      "projectSlug": "stone-sokolniki",
+      "sourceType": "public_site",
+      "sourceId": "3487",
+      "sourceUrl": "https://stone.ru/catalog/residential/sokolniki/c-006",
+      "fetchedAt": "2026-10-21T16:22:35.435509+00:00",
+      "salesStatus": "UNKNOWN",
+      "proof": {
+        "rawHtmlSha256": "2946ca21399ef9e04f2deee7a8aab5c9337cebebd8ac73e7cd5b7184ba3b0ec4",
+        "statePath": "self.__next_f[1d]$[3][\"value\"][\"lot\"]",
+        "fields": {
+          "priceRub": "sellingPrice",
+          "priceBeforeDiscountRub": "sellingPriceBeforeDiscount",
+          "areaSqm": "area",
+          "rooms": "roomsCount",
+          "bedrooms": "bedroomsCount",
+          "floor": "floor",
+          "unitNumber": "number",
+          "availabilityRaw": "status"
+        }
+      },
+      "sourceLotUuid": "e2ee0b97-ec20-11ee-8383-005056b5170a",
+      "unitNumber": "C-006",
+      "buildingName": "Башня C",
+      "floor": 2,
+      "floorsTotal": 24,
+      "rooms": 1,
+      "bedrooms": 0,
+      "areaSqm": 32.6,
+      "unitType": "studio",
+      "finish": "без отделки",
+      "priceRub": 20139791,
+      "priceBeforeDiscountRub": 21199780,
+      "pricePerSqm": 617785,
+      "priceBasis": "sellingPrice reported by official site; payment conditions require confirmation",
+      "discountPercent": 5,
+      "availabilityRaw": 1,
+      "completionYear": 2027,
+      "address": "Москва, Гастелло, 32",
+      "features": [
+        "Увеличенные окна",
+        "Этаж 2 из 24",
+        "Секция 3"
+      ],
+      "view": [
+        "Вид на благоустроенный двор"
+      ],
+      "ceilingHeightM": 3.1,
+      "planImageUrl": "https://storage.yandexcloud.net/feeder/cache/ObjectModels/ObjectModel17776/portal_interior_plan_text_aceace_portal.png",
+      "floorPlanImageUrl": "https://storage.yandexcloud.net/feeder/cache/ObjectModels/ObjectModel17776/plan_on_floor_text_a6b61a_portal.png",
+      "sourceUpdatedAt": "2026-10-20T09:13:39.000000Z",
+      "planSha256": "0caecd7a8ec0473f578c1440c59b63c9f462ea7c852c9188ed0d1cf4471248e0",
+      "planImageSrc": "/images/plans/stone-sokolniki-3487.webp"
+    },
+    {
+      "id": "stone-sokolniki:3443",
+      "projectSlug": "stone-sokolniki",
+      "sourceType": "public_site",
+      "sourceId": "3443",
+      "sourceUrl": "https://stone.ru/catalog/residential/sokolniki/c-050",
+      "fetchedAt": "2026-10-21T16:22:39.691589+00:00",
+      "salesStatus": "UNKNOWN",
+      "proof": {
+        "rawHtmlSha256": "7e76b68c96ec76bdbba6d5238ad315ff10dfc18144b65356eda2a313236ab921",
+        "statePath": "self.__next_f[1d]$[3][\"value\"][\"lot\"]",
+        "fields": {
+          "priceRub": "sellingPrice",
+          "priceBeforeDiscountRub": "sellingPriceBeforeDiscount",
+          "areaSqm": "area",
+          "rooms": "roomsCount",
+          "bedrooms": "bedroomsCount",
+          "floor": "floor",
+          "unitNumber": "number",
+          "availabilityRaw": "status"
+        }
+      },
+      "sourceLotUuid": "f4e3713d-ec20-11ee-8383-005056b5170a",
+      "unitNumber": "C-050",
+      "buildingName": "Башня C",
+      "floor": 6,
+      "floorsTotal": 24,
+      "rooms": 1,
+      "bedrooms": 0,
+      "areaSqm": 32.8,
+      "unitType": "studio",
+      "finish": "без отделки",
+      "priceRub": 20752560,
+      "priceBeforeDiscountRub": 21844800,
+      "pricePerSqm": 632700,
+      "priceBasis": "sellingPrice reported by official site; payment conditions require confirmation",
+      "discountPercent": 5,
+      "availabilityRaw": 1,
+      "completionYear": 2027,
+      "address": "Москва, Гастелло, 32",
+      "features": [
+        "Увеличенные окна",
+        "Этаж 6 из 24",
+        "Секция 3"
+      ],
+      "view": [
+        "Вид на благоустроенный двор",
+        "Вид на историческую застройку"
+      ],
+      "ceilingHeightM": 3.1,
+      "planImageUrl": "https://storage.yandexcloud.net/feeder/cache/ObjectModels/ObjectModel17864/portal_interior_plan_text_b76b9c_portal.png",
+      "floorPlanImageUrl": "https://storage.yandexcloud.net/feeder/cache/ObjectModels/ObjectModel17864/plan_on_floor_text_b6febd_portal.png",
+      "sourceUpdatedAt": "2026-10-20T09:13:39.000000Z",
+      "planSha256": "7bfbee15935d23e8560068b9f2c6b8bfda9ea907c6e28cf487b98fdacacd0e4d",
+      "planImageSrc": "/images/plans/stone-sokolniki-3443.webp"
+    }
+  ]
+}

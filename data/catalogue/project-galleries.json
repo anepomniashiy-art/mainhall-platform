@@ -1,0 +1,52 @@
+{
+  "high-life": [
+    {
+      "src": "/images/projects/gallery/high-life-1.webp",
+      "caption": "Визуализация интерьера из материалов проекта",
+      "width": 1167,
+      "height": 698
+    },
+    {
+      "src": "/images/projects/gallery/high-life-2.webp",
+      "caption": "Панорама из материалов проекта",
+      "width": 1200,
+      "height": 675
+    }
+  ],
+  "stone-sokolniki": [
+    {
+      "src": "/images/projects/gallery/stone-sokolniki-1.webp",
+      "caption": "Архитектура комплекса · визуализация",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "stone-blik": [
+    {
+      "src": "/images/projects/gallery/stone-blik-1.webp",
+      "caption": "Архитектура комплекса · визуализация",
+      "width": 1200,
+      "height": 683
+    },
+    {
+      "src": "/images/projects/gallery/stone-blik-2.webp",
+      "caption": "Окружение набережной · материалы проекта",
+      "width": 697,
+      "height": 1000
+    }
+  ],
+  "enigmia": [
+    {
+      "src": "/images/projects/gallery/enigmia-1.webp",
+      "caption": "Визуализация лобби",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "src": "/images/projects/gallery/enigmia-2.webp",
+      "caption": "Визуализация лобби",
+      "width": 1200,
+      "height": 800
+    }
+  ]
+}

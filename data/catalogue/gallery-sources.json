@@ -1,0 +1,51 @@
+[
+  {
+    "path": "public/images/projects/gallery/high-life-1.webp",
+    "sourceUrl": "https://highlife.ru/upload/iblock/ead/e1t7k8887e642icii745w9k074e5bnho.webp",
+    "pageUrl": "https://highlife.ru/",
+    "collectedAt": "2026-10-21T16:10:51.773478+00:00",
+    "sha256Original": "e60aa9e282c7c4f163ef6099ecab77cd3ab7ebc2b2bbfe0c7d2f3d1d3a6533ae"
+  },
+  {
+    "path": "public/images/projects/gallery/high-life-2.webp",
+    "sourceUrl": "https://highlife.ru/upload/iblock/296/vqjq0zz0twfasy94pz26x8gq07riwpcb.webp",
+    "pageUrl": "https://highlife.ru/",
+    "collectedAt": "2026-10-21T16:10:51.773478+00:00",
+    "sha256Original": "23e722387ed0dbf97bec21d60f64157d2c5cc2c919fa9293c0bd076fd3f57d55"
+  },
+  {
+    "path": "public/images/projects/gallery/stone-sokolniki-1.webp",
+    "sourceUrl": "https://cms.stonehedgecompany.com/uploads/Kvartiry_12x_a3e18818db.webp",
+    "pageUrl": "https://stone.ru/residential/sokolniki",
+    "collectedAt": "2026-10-21T16:11:32.702133+00:00",
+    "sha256Original": "6bb2bf7518d8862ba89f93ed624d04b6e131d384f8274aa3111037f5fc773ec7"
+  },
+  {
+    "path": "public/images/projects/gallery/stone-blik-1.webp",
+    "sourceUrl": "https://cms.stonehedgecompany.com/uploads/Frame_1948756188_9699fa8ab4_ac27539c6e.webp",
+    "pageUrl": "https://stone.ru/residential/blik",
+    "collectedAt": "2026-10-21T16:11:39.616787+00:00",
+    "sha256Original": "45277774471d3854505b4abec03ed114a6788fa28a8e0fa653af75f743925fec"
+  },
+  {
+    "path": "public/images/projects/gallery/stone-blik-2.webp",
+    "sourceUrl": "https://cms.stonehedgecompany.com/uploads/Location_2_e6effec934_9da113fc6b.webp",
+    "pageUrl": "https://stone.ru/residential/blik",
+    "collectedAt": "2026-10-21T16:11:39.616787+00:00",
+    "sha256Original": "024a0d4b6ed73054a1925c85d5f438994d529a00b00ae40e739a5f21fb98dbaa"
+  },
+  {
+    "path": "public/images/projects/gallery/enigmia-1.webp",
+    "sourceUrl": "https://enigmiya.ru/images/desktop/lobby/gallery_1.webp",
+    "pageUrl": "https://enigmiya.ru/",
+    "collectedAt": "2026-10-21T16:11:56.009879+00:00",
+    "sha256Original": "d1ba0e246bd44e727df0367ef40b808fa3122527867f7779c77a4111ba995e40"
+  },
+  {
+    "path": "public/images/projects/gallery/enigmia-2.webp",
+    "sourceUrl": "https://enigmiya.ru/images/desktop/lobby/gallery_2.webp",
+    "pageUrl": "https://enigmiya.ru/",
+    "collectedAt": "2026-10-21T16:11:56.009879+00:00",
+    "sha256Original": "7f7d72711c0a5c928c429d28d1ea3f96e2e2346d4d2ca47eed1efc5864972096"
+  }
+]
