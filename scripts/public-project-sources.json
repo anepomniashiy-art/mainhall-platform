@@ -1,0 +1,317 @@
+[
+  {
+    "slug": "high-life",
+    "url": "https://highlife.ru/",
+    "allowedHosts": [
+      "highlife.ru",
+      "www.highlife.ru"
+    ],
+    "allowedMediaHosts": [
+      "highlife.ru",
+      "www.highlife.ru"
+    ],
+    "mediaUrls": [
+      "https://highlife.ru/upload/iblock/ead/e1t7k8887e642icii745w9k074e5bnho.webp",
+      "https://highlife.ru/upload/iblock/296/vqjq0zz0twfasy94pz26x8gq07riwpcb.webp"
+    ]
+  },
+  {
+    "slug": "opus",
+    "url": "https://pioneer.ru/project/opus",
+    "allowedHosts": [
+      "pioneer.ru",
+      "www.pioneer.ru"
+    ],
+    "allowedMediaHosts": [
+      "pioneer.ru",
+      "www.pioneer.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "badaevsky",
+    "url": "https://www.capitalgroup.ru/ru/objects/136",
+    "allowedHosts": [
+      "www.capitalgroup.ru",
+      "capitalgroup.ru"
+    ],
+    "allowedMediaHosts": [
+      "www.capitalgroup.ru",
+      "capitalgroup.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "vesper-kutuzovsky",
+    "url": "https://vesper-kutuzovsky.ru/",
+    "allowedHosts": [
+      "vesper-kutuzovsky.ru",
+      "www.vesper-kutuzovsky.ru"
+    ],
+    "allowedMediaHosts": [
+      "vesper-kutuzovsky.ru",
+      "www.vesper-kutuzovsky.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "shagal",
+    "url": "https://old.etalongroup.ru/msk/objects/moscow/shagal/",
+    "allowedHosts": [
+      "old.etalongroup.ru",
+      "www.old.etalongroup.ru"
+    ],
+    "allowedMediaHosts": [
+      "old.etalongroup.ru",
+      "www.old.etalongroup.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "level-yuzhnoportovaya",
+    "url": "https://level.ru/projects/southport/",
+    "allowedHosts": [
+      "level.ru",
+      "www.level.ru"
+    ],
+    "allowedMediaHosts": [
+      "level.ru",
+      "www.level.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "symphony-34",
+    "url": "https://symphony34.com/",
+    "allowedHosts": [
+      "symphony34.com",
+      "www.symphony34.com"
+    ],
+    "allowedMediaHosts": [
+      "symphony34.com",
+      "www.symphony34.com"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "nicole",
+    "url": "https://nicole.ru/",
+    "allowedHosts": [
+      "nicole.ru",
+      "www.nicole.ru"
+    ],
+    "allowedMediaHosts": [
+      "nicole.ru",
+      "www.nicole.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "lumin",
+    "url": "https://luminhouse.ru/",
+    "allowedHosts": [
+      "luminhouse.ru",
+      "www.luminhouse.ru"
+    ],
+    "allowedMediaHosts": [
+      "luminhouse.ru",
+      "www.luminhouse.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "lunar",
+    "url": "https://lunar.moscow/",
+    "allowedHosts": [
+      "lunar.moscow",
+      "www.lunar.moscow"
+    ],
+    "allowedMediaHosts": [
+      "lunar.moscow",
+      "www.lunar.moscow"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "stone-sokolniki",
+    "url": "https://stone.ru/residential/sokolniki",
+    "allowedHosts": [
+      "stone.ru",
+      "www.stone.ru"
+    ],
+    "allowedMediaHosts": [
+      "stone.ru",
+      "www.stone.ru",
+      "cms.stonehedgecompany.com"
+    ],
+    "mediaUrls": [
+      "https://cms.stonehedgecompany.com/uploads/Glavnyj_4dfb75b7b5.webp"
+    ]
+  },
+  {
+    "slug": "stone-blik",
+    "url": "https://stone.ru/residential/blik",
+    "allowedHosts": [
+      "stone.ru",
+      "www.stone.ru"
+    ],
+    "allowedMediaHosts": [
+      "stone.ru",
+      "www.stone.ru",
+      "cms.stonehedgecompany.com"
+    ],
+    "mediaUrls": [
+      "https://cms.stonehedgecompany.com/uploads/Frame_1948756188_9699fa8ab4_ac27539c6e.webp",
+      "https://cms.stonehedgecompany.com/uploads/Location_2_e6effec934_9da113fc6b.webp"
+    ]
+  },
+  {
+    "slug": "king-and-sons",
+    "url": "https://octobergroup.ru/news?slug=october-group-poluchil-razreshenie-na-stroitelstvo-novogo-zhilogo-doma-premium-klassa-king-sons",
+    "allowedHosts": [
+      "octobergroup.ru",
+      "www.octobergroup.ru"
+    ],
+    "allowedMediaHosts": [
+      "octobergroup.ru",
+      "www.octobergroup.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "stories-mosfilmovskaya",
+    "url": "https://octobergroup.ru/news?slug=stories-na-mosfilmovskoy-poluchil-dve-nagrady-premii-repa-2025",
+    "allowedHosts": [
+      "octobergroup.ru",
+      "www.octobergroup.ru"
+    ],
+    "allowedMediaHosts": [
+      "octobergroup.ru",
+      "www.octobergroup.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "dom-7-danilovsky",
+    "url": "https://www.7danilovsky.ru/",
+    "allowedHosts": [
+      "www.7danilovsky.ru",
+      "7danilovsky.ru"
+    ],
+    "allowedMediaHosts": [
+      "www.7danilovsky.ru",
+      "7danilovsky.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "upside-towers",
+    "url": "https://upside-towers.ru/",
+    "allowedHosts": [
+      "upside-towers.ru",
+      "www.upside-towers.ru"
+    ],
+    "allowedMediaHosts": [
+      "upside-towers.ru",
+      "www.upside-towers.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "enigmia",
+    "url": "https://enigmiya.ru/",
+    "allowedHosts": [
+      "enigmiya.ru",
+      "www.enigmiya.ru"
+    ],
+    "allowedMediaHosts": [
+      "enigmiya.ru",
+      "www.enigmiya.ru"
+    ],
+    "mediaUrls": [
+      "https://enigmiya.ru/images/desktop/lobby/gallery_1.webp",
+      "https://enigmiya.ru/images/desktop/lobby/gallery_2.webp"
+    ]
+  },
+  {
+    "slug": "high-life-penthouse",
+    "url": "https://highlife.ru/penthouse",
+    "allowedHosts": [
+      "highlife.ru",
+      "www.highlife.ru"
+    ],
+    "allowedMediaHosts": [
+      "highlife.ru",
+      "www.highlife.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "high-life-flat-405",
+    "url": "https://highlife.ru/flats/405",
+    "allowedHosts": [
+      "highlife.ru",
+      "www.highlife.ru"
+    ],
+    "allowedMediaHosts": [
+      "highlife.ru",
+      "www.highlife.ru"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "stone-blik-a-157",
+    "url": "https://stone.ru/catalog/residential/blik/a-157",
+    "allowedHosts": [
+      "stone.ru",
+      "www.stone.ru"
+    ],
+    "allowedMediaHosts": [
+      "stone.ru",
+      "www.stone.ru",
+      "cms.stonehedgecompany.com"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "stone-sokolniki-c-006",
+    "url": "https://stone.ru/catalog/residential/sokolniki/c-006",
+    "allowedHosts": [
+      "stone.ru",
+      "www.stone.ru"
+    ],
+    "allowedMediaHosts": [
+      "stone.ru",
+      "www.stone.ru",
+      "cms.stonehedgecompany.com"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "stone-sokolniki-c-050",
+    "url": "https://stone.ru/catalog/residential/sokolniki/c-050",
+    "allowedHosts": [
+      "stone.ru",
+      "www.stone.ru"
+    ],
+    "allowedMediaHosts": [
+      "stone.ru",
+      "www.stone.ru",
+      "cms.stonehedgecompany.com"
+    ],
+    "mediaUrls": []
+  },
+  {
+    "slug": "enigmia-search",
+    "url": "https://enigmiya.ru/search",
+    "allowedHosts": [
+      "enigmiya.ru",
+      "www.enigmiya.ru"
+    ],
+    "allowedMediaHosts": [
+      "enigmiya.ru",
+      "www.enigmiya.ru"
+    ],
+    "mediaUrls": []
+  }
+]
