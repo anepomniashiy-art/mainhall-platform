@@ -45,7 +45,7 @@ else:
     api('ftp/add',{'suffix':suffix,'homedir':'/main-hall.ru/public_html','password':ftp_password})
 probe=subprocess.run(['openssl','s_client','-starttls','ftp','-connect',host+':21','-servername',host],input=b'',stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,timeout=20,check=False)
 certinfo=subprocess.run(['openssl','x509','-noout','-ext','subjectAltName'],input=probe.stdout,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,check=True).stdout.decode()
-sans=[part.strip().split()[0] for part in certinfo.split('DNS:')[1:]]
+sans=[part.split(',')[0].strip().split()[0] for part in certinfo.split('DNS:')[1:]]
 print('FTP certificate names:',sans,flush=True)
 original_ips=set(socket.gethostbyname_ex(host)[2])
 candidates=[host,login+'.beget.tech']+[name.replace('*',host.split('.')[0]) for name in sans if name.endswith(('.beget.com','.beget.ru','.beget.tech'))]
