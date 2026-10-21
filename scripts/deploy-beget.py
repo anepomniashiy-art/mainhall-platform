@@ -1,6 +1,7 @@
 import os,json,urllib.request,urllib.parse,hmac,hashlib,ftplib,ssl,socket,time
 from pathlib import Path
-import subprocess,re
+import subprocess,re,threading
+from concurrent.futures import ThreadPoolExecutor
 login='wellton'
 password=os.environ['BEGET_API_PASSWORD']
 if not password: raise SystemExit('Missing BEGET_API_PASSWORD')
@@ -70,20 +71,41 @@ base=Path('out')
 if not (base/'index.html').is_file(): raise SystemExit('Export missing')
 (base/'.htaccess').write_text('DirectoryIndex index.html\nErrorDocument 404 /404.html\nOptions -Indexes\n')
 files=sorted((p for p in base.rglob('*') if p.is_file()),key=lambda p:(p.suffix=='.html',p.name=='index.html',str(p)))
-made={''}
-for number,path in enumerate(files,1):
+ftp.quit()
+local=threading.local()
+def connection():
+    if not hasattr(local,'ftp'):
+        client=ReusingFTP_TLS(context=tls_context,timeout=45)
+        client.connect(host,21)
+        client.host=tls_name
+        client.login(ftp_login,ftp_password)
+        client.prot_p()
+        local.ftp=client
+        local.made={''}
+    return local.ftp
+def upload(path):
+    client=connection()
     relative=path.relative_to(base).as_posix()
     parts=relative.split('/')[:-1]
     for i in range(1,len(parts)+1):
         folder='/'.join(parts[:i])
-        if folder not in made:
-            try: ftp.mkd(folder)
+        if folder not in local.made:
+            try: client.mkd(folder)
             except ftplib.error_perm as error:
                 if not str(error).startswith('550'): raise
-            made.add(folder)
-    with path.open('rb') as stream: ftp.storbinary('STOR '+relative,stream,blocksize=262144)
-    if number%100==0: print('Uploaded',number,'/',len(files),flush=True)
-ftp.quit()
+            local.made.add(folder)
+    with path.open('rb') as stream:
+        client.storbinary('STOR '+relative,stream,blocksize=262144)
+    return relative
+assets=[p for p in files if p.suffix!='.html']
+pages=[p for p in files if p.suffix=='.html' and p!=base/'index.html']
+count=0
+with ThreadPoolExecutor(max_workers=8) as pool:
+    for group in [assets,pages]:
+        for result in pool.map(upload,group):
+            count+=1
+            if count%100==0: print('Uploaded',count,'/',len(files),flush=True)
+    upload(base/'index.html')
 ip=socket.gethostbyname(login+'.beget.tech')
 print('UPLOAD_COMPLETE files='+str(len(files))+' host='+host+' ip='+ip,flush=True)
 Path('/tmp/beget-ip').write_text(ip)
