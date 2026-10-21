@@ -113,7 +113,7 @@ jobs:
             Never claim a deployment, API feed, pricing, rights or result without evidence.
             Never expose secrets. Report proof with commit/PR URL and test logs.
             If blocked, report exact missing access on the issue; do not fabricate completion.
-          claude_args: '--max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep,Bash"'
+          claude_args: '--max-turns 80 --allowedTools "Read,Write,Edit,Glob,Grep,Bash,WebFetch,WebSearch"'
 
       - name: Verify deliverable and report back to issue
         if: always() && steps.coordinator.outputs.issue != ''
