@@ -59,3 +59,10 @@ Object.assign(projectImages, {
   "caption": "KING & SONS · October Group · визуализация"
  }
 });
+
+Object.assign(projectImages, {
+ "lavrushinsky": {
+  "src": "/images/projects/lavrushinsky.jpg",
+  "caption": "Лаврушинский · Sminex · фотография фасада"
+ }
+});

@@ -47,5 +47,19 @@
     "pageUrl": "https://enigmiya.ru/",
     "collectedAt": "2026-10-21T16:11:56.009879+00:00",
     "sha256Original": "7f7d72711c0a5c928c429d28d1ea3f96e2e2346d4d2ca47eed1efc5864972096"
+  },
+  {
+    "path": "public/images/projects/gallery/lavrushinsky-1.webp",
+    "sourceUrl": "https://www.sminex.com/media/prod/mocks/public/images/sites/lavrushinskiy/about/facad-vid-na-kreml_3840xroh_cvt_jpg.webp",
+    "pageUrl": "https://www.sminex.com/lavrushinskiy",
+    "collectedAt": "2026-10-21T20:28:58+00:00",
+    "sha256Original": "632119dc51a0710e14f63eaa544f25dab9262f3591e7a68ceb034101f039e91b"
+  },
+  {
+    "path": "public/images/projects/gallery/lavrushinsky-2.webp",
+    "sourceUrl": "https://www.sminex.com/media/prod/mocks/public/images/main/before-after-slider/lavrushinskiy/new/7-2_820xroh_cvt_jpg.webp",
+    "pageUrl": "https://www.sminex.com/lavrushinskiy",
+    "collectedAt": "2026-10-21T20:28:58+00:00",
+    "sha256Original": "8081927522aeba43e76a44b4752af5f41ca40515fd1263720818da69754a83f2"
   }
 ]
