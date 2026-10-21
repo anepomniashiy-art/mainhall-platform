@@ -1,0 +1,38 @@
+name: Deploy MAINHALL to Beget
+on:
+  push:
+    branches: [main]
+    paths: [src/**, public/**, scripts/**, package.json, package-lock.json, next.config.ts, .github/workflows/deploy-beget.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: beget-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build:host
+      - name: Configure Beget and upload current export
+        env:
+          BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
+        run: python3 scripts/deploy-beget.py
+      - name: Verify Beget origin before DNS change
+        run: |
+          ip="$(cat /tmp/beget-ip)"
+          curl --retry 6 --retry-delay 10 --retry-all-errors --max-time 20 --fail --resolve "main-hall.ru:80:$ip" http://main-hall.ru/ -o /tmp/beget-home.html
+          python3 - <<'PY'
+          from pathlib import Path
+          html=Path('/tmp/beget-home.html').read_text()
+          for marker in ['Павел Евтеев','Евгений Прохоров','evgeny-portrait.jpg']:
+              assert marker in html, 'Missing current content: '+marker
+          print('Beget origin serves current MAINHALL homepage and both portraits')
+          PY
