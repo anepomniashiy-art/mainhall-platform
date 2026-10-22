@@ -48,5 +48,19 @@
       "width": 1200,
       "height": 800
     }
+  ],
+  "lavrushinsky": [
+    {
+      "src": "/images/projects/gallery/lavrushinsky-1.webp",
+      "caption": "Вид на Кремль с балкона дома · фотография из материалов проекта",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "src": "/images/projects/gallery/lavrushinsky-2.webp",
+      "caption": "Детская площадка во дворе-парке · визуализация",
+      "width": 820,
+      "height": 379
+    }
   ]
 }
