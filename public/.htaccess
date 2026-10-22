@@ -1,0 +1,9 @@
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.main-hall\.ru$ [NC]
+RewriteRule ^ https://main-hall.ru%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://main-hall.ru%{REQUEST_URI} [R=301,L,NE]
