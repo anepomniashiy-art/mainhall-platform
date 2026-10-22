@@ -1,0 +1,55 @@
+name: MAINHALL HTTPS activation
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/enable-https.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  activate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify installed certificate and align DNS
+        env:
+          BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.parse,subprocess,ipaddress
+          password=os.environ['BEGET_API_PASSWORD']
+          def beget(method,args):
+              data=urllib.parse.urlencode({'login':'wellton','passwd':password,'input_format':'json','output_format':'json','input_data':json.dumps(args)}).encode()
+              result=json.load(urllib.request.urlopen(urllib.request.Request('https://api.beget.com/api/'+method,data=data),timeout=30))
+              assert result.get('status')=='success' and result['answer'].get('status')=='success','Beget failed'
+              return result['answer']['result']
+          sites=beget('site/getList',{})
+          target=next(s for s in sites if s['path']=='main-hall.ru/public_html')
+          domain=next(d for d in target['domains'] if d['fqdn']=='main-hall.ru')
+          assert domain['ssl'] is True,'Certificate not installed'
+          dns=beget('dns/getData',{'fqdn':'main-hall.ru'})
+          addresses=[r['address'] for r in dns['records']['A']]
+          assert len(addresses)==1,'Ambiguous origin'
+          ip=str(ipaddress.IPv4Address(addresses[0]))
+          print('SSL_ORIGIN',ip,domain['ssl_status'],flush=True)
+          for host in ['main-hall.ru','www.main-hall.ru']:
+              subprocess.run(['curl','--fail','--max-time','20','--resolve',host+':443:'+ip,'https://'+host+'/','-o','/tmp/https-home.html','-w',host+' TLS=%{ssl_verify_result} HTTP=%{http_code}\n'],check=True)
+              assert 'MAINHALL' in open('/tmp/https-home.html').read(),'Wrong origin content'
+          token=os.environ['CLOUDFLARE_API_TOKEN']
+          def cf(path,method='GET',payload=None):
+              req=urllib.request.Request('https://api.cloudflare.com/client/v4/'+path,data=None if payload is None else json.dumps(payload).encode(),headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'},method=method)
+              result=json.load(urllib.request.urlopen(req,timeout=30))
+              assert result.get('success'),'Cloudflare request failed'
+              return result['result']
+          zones=cf('zones?name=main-hall.ru')
+          assert len(zones)==1,'Expected one zone'
+          zone=zones[0]['id']
+          records=cf('zones/'+zone+'/dns_records?name=main-hall.ru&type=A')
+          assert len(records)==1,'Expected one apex A record'
+          record=records[0]
+          print('DNS_CHANGE',record['content'],'->',ip,flush=True)
+          if record['content']!=ip:
+              cf('zones/'+zone+'/dns_records/'+record['id'],'PATCH',{'content':ip,'proxied':False})
+          print('DNS_CONFIRMED',cf('zones/'+zone+'/dns_records/'+record['id'])['content'])
+          PY
