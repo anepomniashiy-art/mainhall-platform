@@ -1,3 +1,5 @@
+import { sminexProjectImages } from "./sminex-projects";
+
 export const projectImages:Record<string,{src:string;caption:string}>={
  "high-life":{src:"/images/projects/high-life.jpg",caption:"HIGH LIFE · PIONEER · фотография"},
  opus:{src:"/images/projects/opus.jpg",caption:"OPUS · PIONEER · визуализация"},
@@ -66,3 +68,8 @@ Object.assign(projectImages, {
   "caption": "Лаврушинский · Sminex · фотография фасада"
  }
 });
+
+
+for (const [slug, entry] of Object.entries(sminexProjectImages)) {
+ if (!projectImages[slug]) projectImages[slug] = entry;
+}

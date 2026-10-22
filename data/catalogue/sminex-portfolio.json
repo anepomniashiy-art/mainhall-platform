@@ -1,0 +1,3230 @@
+{
+  "developer": "Sminex",
+  "scope": "30 карточек официального брендового портфеля Sminex; не весь исторический портфель приобретённых компаний и не Ingrad",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+  "extraction": "direct HTTPS HTML, decode self.__next_f.push RSC payload; JSONDecoder raw_decode project objects with name,status,photos",
+  "sourceHtmlSha256": "5cd0dd4a601f9e5a942eacc97a3bf18eabfd160ef59c32669800f89403173420",
+  "officialAllProjectsCounter": 30,
+  "extractedUniqueProjects": 30,
+  "statusCounts": {
+    "selling": 13,
+    "coming_soon": 4,
+    "managed": 12,
+    "not_classified_in_source": 1
+  },
+  "typeCounts": {
+    "residential": 19,
+    "commercial": 9,
+    "mixed_residential_commercial": 2
+  },
+  "galleryAssetCount": 151,
+  "priceFilterApplied": false,
+  "completeness": {
+    "registryMatched": true,
+    "dedicatedProjectPagesMissing": 9,
+    "districtsIndividuallyVerified": false,
+    "galleryAssetHttpChecksComplete": true,
+    "photosVsRendersVerified": false,
+    "unitInventoryVerified": false,
+    "noMainRepoChanges": true,
+    "dedicatedProjectPageChecksComplete": true
+  },
+  "projects": [
+    {
+      "sourceOrder": 1,
+      "name": "Фрунзенский",
+      "officialNameRaw": "Фрунзенский",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/frunzenskiy",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Фрунзенская наб., д. 30",
+      "districtOfficial": "Хамовники",
+      "coordinates": {
+        "lat": 55.724591,
+        "lon": 37.584658
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya1.jpg",
+          "alt": "Фрунзенский 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya1.jpg",
+            "initialError": "HTTP Error 503: Service Unavailable",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "475742",
+            "retryMethod": "GET"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya2.jpg",
+          "alt": "Фрунзенский 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "667931"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya3.jpg",
+          "alt": "Фрунзенский 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya3.jpg",
+            "initialError": "HTTP Error 503: Service Unavailable",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "714657",
+            "retryMethod": "GET"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya4.jpg",
+          "alt": "Фрунзенский 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya4.jpg",
+            "initialError": "HTTP Error 503: Service Unavailable",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "734773",
+            "retryMethod": "GET"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya5.jpg",
+          "alt": "Фрунзенский 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "553963"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya6.jpg",
+          "alt": "Фрунзенский 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "555670"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgFrunzenskaya.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoFrunzenskaya.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Фрунзенский",
+        "url": "https://www.sminex.com/frunzenskiy",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/frunzenskiy",
+        "title": "Клубный квартал «Фрунзенский» — Элитные квартиры в Хамовниках на Фрунзенской набережной — Sminex",
+        "htmlBytes": 571324
+      },
+      "slug": "frunzenskiy",
+      "localImage": "/images/projects/sminex/frunzenskiy.webp",
+      "editorial": {
+        "name": "Фрунзенский",
+        "className": "Элитная",
+        "summary": "Клубный квартал на Фрунзенской набережной в Хамовниках.",
+        "format": "Клубный квартал",
+        "thesis": "Для выбора квартиры на набережной сравниваем открытость вида и положение корпуса относительно дороги."
+      }
+    },
+    {
+      "sourceOrder": 2,
+      "name": "Лужнецкий",
+      "officialNameRaw": "Единственный новый<br/>деловой центр<br/>в Хамовниках",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/luzhnetskiy-dc",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём офисы и ретейл",
+      "statusNormalized": "selling",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Лужнецкая набережная, 10А",
+      "districtOfficial": "Хамовники",
+      "coordinates": {
+        "lat": 55.716414,
+        "lon": 37.57062
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/luzhneckiy/main/new/images/luzhnetsky-portfolio-background.jpg",
+          "alt": "Деловой центр «Лужнецкий»",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/luzhneckiy/main/new/images/luzhnetsky-portfolio-background.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "326465"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/1.jpeg",
+          "alt": "Деловой центр «Лужнецкий» — изображение 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/1.jpeg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "209688"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/3.jpeg",
+          "alt": "Деловой центр «Лужнецкий» — изображение 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/3.jpeg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "217876"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/1.jpeg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/luzhneckiy/main/new/images/luzhnetsky-logo-white.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Единственный новый<br/>деловой центр<br/>в Хамовниках",
+        "url": "https://www.sminex.com/luzhnetskiy-dc",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/luzhnetskiy-dc",
+        "title": "Деловой центр «Лужнецкий» — единственный новый деловой центр в Хамовниках — Sminex",
+        "htmlBytes": 263158
+      },
+      "slug": "luzhnetskiy",
+      "localImage": "/images/projects/sminex/luzhnetskiy.webp"
+    },
+    {
+      "sourceOrder": 3,
+      "name": "Палашёвский 11",
+      "officialNameRaw": "Палашёвский 11",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/palashevskiy-11",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Большой Палашёвский переулок, вл. 11",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.765015,
+        "lon": 37.599484
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_1.jpg",
+          "alt": "Палашёвский 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "208100"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_2.jpg",
+          "alt": "Палашёвский 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "135084"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_3.jpg",
+          "alt": "Палашёвский 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "171007"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_4.jpg",
+          "alt": "Палашёвский 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "133722"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_1.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/logo_p.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Палашёвский 11",
+        "url": "https://www.sminex.com/palashevskiy-11",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/palashevskiy-11",
+        "title": "Дом на Патриарших «Палашёвский 11» — Самый насыщенный дом в тихой части Патриарших — Sminex",
+        "htmlBytes": 388880
+      },
+      "slug": "palashevskiy-11",
+      "localImage": "/images/projects/sminex/palashevskiy-11.webp",
+      "editorial": {
+        "name": "Палашёвский 11",
+        "className": "Не указан",
+        "summary": "Дом в тихой части Патриарших, в Большом Палашёвском переулке.",
+        "format": "Городской дом",
+        "thesis": "В переулках Патриарших важны шум под окнами, подъезд к дому и приватность квартиры; проверяем их для конкретного лота."
+      }
+    },
+    {
+      "sourceOrder": 4,
+      "name": "Лаврушинский",
+      "officialNameRaw": "Лаврушинский",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/lavrushinskiy",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Б. Толмачёвский пер., 5",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.739822201431,
+        "lon": 37.620712242151
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky1.jpg",
+          "alt": "Лаврушинский 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "656121"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky2.jpg",
+          "alt": "Лаврушинский 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky2.jpg",
+            "initialError": "HTTP Error 503: Service Unavailable",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "396960",
+            "retryMethod": "GET"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky3.jpg",
+          "alt": "Лаврушинский 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "683671"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky4.jpg",
+          "alt": "Лаврушинский 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "755042"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky5.jpg",
+          "alt": "Лаврушинский 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "606874"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky6.jpg",
+          "alt": "Лаврушинский 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "579835"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky7.jpg",
+          "alt": "Лаврушинский 7",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky7.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "657754"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky8.jpg",
+          "alt": "Лаврушинский 8",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky8.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "460921"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky9.jpg",
+          "alt": "Лаврушинский 9",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky9.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "439462"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky10.jpg",
+          "alt": "Лаврушинский 10",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky10.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "772091"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky11.jpg",
+          "alt": "Лаврушинский 11",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky11.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "583405"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgLavrushinsky.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoLavrushinsky.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Лаврушинский",
+        "url": "https://www.sminex.com/lavrushinskiy",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/lavrushinskiy",
+        "title": "Дом с видом на Кремль «Лаврушинский» | Квартиры возле Красной Площади в Москве",
+        "htmlBytes": 368209
+      },
+      "slug": "lavrushinsky",
+      "localImage": "/images/projects/sminex/lavrushinsky.webp",
+      "editorial": {
+        "name": "Лаврушинский",
+        "className": "Элитная",
+        "summary": "Дом с видами на Кремль в Большом Толмачёвском переулке.",
+        "format": "Жилой дом",
+        "thesis": "Вид на Кремль оцениваем по конкретной квартире, а не по рекламному ракурсу дома."
+      }
+    },
+    {
+      "sourceOrder": 5,
+      "name": "Тишинский бульвар",
+      "officialNameRaw": "Тишинский бульвар",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/tishinskiy-b",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Электрический переулок, 1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.772375,
+        "lon": 37.574687
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky1.jpg",
+          "alt": "Тишинский бульвар 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "736944"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky2.png",
+          "alt": "Тишинский бульвар 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky2.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "1965595"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky3.png",
+          "alt": "Тишинский бульвар 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky3.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "1957068"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky4.jpg",
+          "alt": "Тишинский бульвар 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "959244"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky5.png",
+          "alt": "Тишинский бульвар 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky5.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "1658989"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky6.jpg",
+          "alt": "Тишинский бульвар 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "754585"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky7.jpg",
+          "alt": "Тишинский бульвар 7",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky7.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "473923"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky8.jpg",
+          "alt": "Тишинский бульвар 8",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky8.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "500108"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky9.jpg",
+          "alt": "Тишинский бульвар 9",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky9.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "359785"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgTishinsky.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoTishinsky.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Тишинский бульвар",
+        "url": "https://www.sminex.com/tishinskiy-b",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/tishinskiy-b",
+        "title": "Квартал «Тишинский бульвар» — Элитные квартиры в жилом квартале на Пресне — Sminex",
+        "htmlBytes": 400244
+      },
+      "slug": "tishinskiy-bulvar",
+      "localImage": "/images/projects/sminex/tishinskiy-bulvar.webp",
+      "editorial": {
+        "name": "Тишинский бульвар",
+        "className": "Элитная",
+        "summary": "Жилой квартал на Пресне, в Электрическом переулке.",
+        "format": "Жилой квартал",
+        "thesis": "Сопоставляем расположение выбранного корпуса и маршрут от квартиры к повседневной инфраструктуре Пресни."
+      }
+    },
+    {
+      "sourceOrder": 6,
+      "name": "Life Time",
+      "officialNameRaw": "Life Time",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/life-time",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Сергея Макеева, вл. 11",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.762575970744,
+        "lon": 37.549462711639
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime1.jpg",
+          "alt": "LifeTime 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "98611"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime2.jpg",
+          "alt": "LifeTime 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "92742"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime3.jpg",
+          "alt": "LifeTime 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "76688"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime4.jpg",
+          "alt": "LifeTime 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "85941"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime5.jpg",
+          "alt": "LifeTime 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "311898"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime6.jpg",
+          "alt": "LifeTime 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "375573"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime7.jpg",
+          "alt": "LifeTime 7",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime7.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "270786"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgLifeTime.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoLifeTime.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Life Time",
+        "url": "https://www.sminex.com/life-time",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/life-time",
+        "title": "Роскошный квартал Life Time — квартиры в центре Москвы — купить квартиру премиум класса в ЦАО от Sminex",
+        "htmlBytes": 382137
+      },
+      "slug": "life-time",
+      "localImage": "/images/projects/sminex/life-time.webp",
+      "editorial": {
+        "name": "Life Time",
+        "className": "Премиум",
+        "summary": "Жилой квартал на улице Сергея Макеева. На официальном сайте представлены квартиры премиум-класса.",
+        "format": "Жилой квартал",
+        "thesis": "Для жизни на улице Сергея Макеева проверяем окружение конкретного корпуса, виды и условия покупки выбранной квартиры."
+      }
+    },
+    {
+      "sourceOrder": 7,
+      "name": "Ильинка 3/8",
+      "officialNameRaw": "Ильинка 3/8",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/ilyinka",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Ильинка, 3/8",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.755569,
+        "lon": 37.624115
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka1.jpg",
+          "alt": "Ilyinka 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "555804"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka2.jpg",
+          "alt": "Ilyinka 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "590688"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka3.jpg",
+          "alt": "Ilyinka 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "765248"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka4.jpg",
+          "alt": "Ilyinka 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "719084"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka5.jpg",
+          "alt": "Ilyinka 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "596735"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgIlyinka.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoIlyinka.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Ильинка 3/8",
+        "url": "https://www.sminex.com/ilyinka",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/ilyinka",
+        "title": "Сервисные резиденции «Ильинка 3/8» — Купить резиденцию с видом на Кремль и Красную площадь — Sminex",
+        "htmlBytes": 374130
+      },
+      "slug": "ilyinka-3-8",
+      "localImage": "/images/projects/sminex/ilyinka-3-8.webp",
+      "editorial": {
+        "name": "Ильинка 3/8",
+        "className": "Не указан",
+        "summary": "Сервисные резиденции на Ильинке. В проекте заявлены виды на Кремль и Красную площадь.",
+        "format": "Сервисные резиденции",
+        "thesis": "Для сервисной резиденции особенно важны юридический статус помещения, состав сервиса и регулярные платежи."
+      }
+    },
+    {
+      "sourceOrder": 8,
+      "name": "Обыденский №1",
+      "officialNameRaw": "Обыденский №1",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/obydenskiy-1",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "3-ий Обыденский пер., д. 1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.742128,
+        "lon": 37.604495
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy1.jpg",
+          "alt": "Обыденский 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "502738"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy2.jpg",
+          "alt": "Обыденский 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "508304"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy3.jpg",
+          "alt": "Обыденский 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "816728"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy4.jpg",
+          "alt": "Обыденский 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "729645"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy5.jpg",
+          "alt": "Обыденский 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "716805"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy6.jpg",
+          "alt": "Обыденский 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "606078"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgObydenskiy.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoObydenskiy.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Обыденский №1",
+        "url": "https://www.sminex.com/obydenskiy-1",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/obydenskiy-1",
+        "title": "Клубный дом «Обыденский №1» — купить квартиру на Остоженке | Элитные квартиры в Москве",
+        "htmlBytes": 367827
+      },
+      "slug": "obydenskiy-1",
+      "localImage": "/images/projects/sminex/obydenskiy-1.webp",
+      "editorial": {
+        "name": "Обыденский №1",
+        "className": "Элитная",
+        "summary": "Клубный дом в третьем Обыденском переулке, в районе Остоженки.",
+        "format": "Клубный дом",
+        "thesis": "Проверяем приватность входа и окон в камерном переулке, затем сравниваем квартиру с другими клубными домами Остоженки."
+      }
+    },
+    {
+      "sourceOrder": 9,
+      "name": "Фон Дессин",
+      "officialNameRaw": "Фон Дессин",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/fon-dessin",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Потаповский переулок, 5, стр. 4",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.7616986,
+        "lon": 37.6411615
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy1.jpg",
+          "alt": "ChistyePrudy 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "533758"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy2.jpg",
+          "alt": "ChistyePrudy 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "519919"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy3.jpg",
+          "alt": "ChistyePrudy 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "727388"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy4.png",
+          "alt": "ChistyePrudy 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy4.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "1375022"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy5.jpg",
+          "alt": "ChistyePrudy 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "333305"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgChistyePrudy.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoFonDessin.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Фон Дессин",
+        "url": "https://www.sminex.com/fon-dessin",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/fon-dessin",
+        "title": "Дом на Чистых прудах «Фон Дессин» — элитные квартиры в центре Москвы",
+        "htmlBytes": 286061
+      },
+      "slug": "fon-dessin",
+      "localImage": "/images/projects/sminex/fon-dessin.webp",
+      "editorial": {
+        "name": "Фон Дессин",
+        "className": "Элитная",
+        "summary": "Дом на Чистых прудах, в Потаповском переулке.",
+        "format": "Жилой дом",
+        "thesis": "Для дома в Потаповском переулке сравниваем ориентацию окон, доступ к дому и характер соседних зданий."
+      }
+    },
+    {
+      "sourceOrder": 10,
+      "name": "Городская усадьба в Орлово-Давыдовском",
+      "officialNameRaw": "Городская усадьба <br/>в Орлово-Давыдовском",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://gorodskaya-usadba.ru/",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "пер. Орлово-Давыдовский, 2",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.782732384583,
+        "lon": 37.637036888451
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba1.jpg",
+          "alt": "GorodskayaUsadba 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "989243"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba2.jpg",
+          "alt": "GorodskayaUsadba 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "746724"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba3.jpg",
+          "alt": "GorodskayaUsadba 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "976541"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba4.jpg",
+          "alt": "GorodskayaUsadba 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "861015"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba5.jpg",
+          "alt": "GorodskayaUsadba 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "508846"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba6.jpg",
+          "alt": "GorodskayaUsadba 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "327419"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgGorodskayaUsadba.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoGorodskayaUsadba.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Городская усадьба <br/>в Орлово-Давыдовском",
+        "url": "https://gorodskaya-usadba.ru/",
+        "httpStatus": 200,
+        "finalUrl": "https://gorodskaya-usadba.ru/",
+        "title": "«Городская усадьба в Орлово-Давыдовском» — Купить историческую усадьбу в центре Москвы — Sminex",
+        "htmlBytes": 918493
+      },
+      "slug": "orlovo-davydovskiy",
+      "localImage": "/images/projects/sminex/orlovo-davydovskiy.webp",
+      "editorial": {
+        "name": "Городская усадьба в Орлово-Давыдовском",
+        "className": "Не указан",
+        "summary": "Историческая городская усадьба в Орлово-Давыдовском переулке.",
+        "format": "Историческая усадьба",
+        "thesis": "При покупке исторической усадьбы изучаем охранные обязательства, допустимые изменения и расходы на содержание здания."
+      }
+    },
+    {
+      "sourceOrder": 11,
+      "name": "Foriver",
+      "officialNameRaw": "Foriver",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/foriver",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый дом",
+      "statusNormalized": "selling",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Эдуарда Стрельцова, д. 2, корп. 1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.715999,
+        "lon": 37.651044
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-1.png",
+          "alt": "Foriver 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-1.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "95881"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-2.png",
+          "alt": "Foriver 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-2.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "80280"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-3.png",
+          "alt": "Foriver 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-3.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "101014"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-4.png",
+          "alt": "Foriver 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-4.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "99632"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-5.png",
+          "alt": "Foriver 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-5.png",
+            "httpStatus": 200,
+            "contentType": "image/png",
+            "contentLength": "80932"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-1.png",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logo-foriver.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Foriver",
+        "url": "https://www.sminex.com/foriver",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/foriver",
+        "title": "Жилой квартал Foriver бизнес-класса возле метро Автозаводская в ЮАО Москвы — Sminex",
+        "htmlBytes": 407204
+      },
+      "slug": "foriver",
+      "localImage": "/images/projects/sminex/foriver.webp",
+      "editorial": {
+        "name": "Foriver",
+        "className": "Бизнес",
+        "summary": "Жилой квартал бизнес-класса на улице Эдуарда Стрельцова, рядом с Автозаводской.",
+        "format": "Жилой квартал",
+        "thesis": "Сравниваем корпуса по расположению в квартале и видам; маршрут до метро проверяем от конкретного подъезда."
+      }
+    },
+    {
+      "sourceOrder": 12,
+      "name": "Twist",
+      "officialNameRaw": "Twist",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://twist-office.ru/",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": "Продаём новый офис",
+      "statusNormalized": "selling",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Бутырская, уч. 1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.793286,
+        "lon": 37.585469
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist1.jpg",
+          "alt": "Twist 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "447996"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist2.jpg",
+          "alt": "Twist 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "468561"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist3.jpg",
+          "alt": "Twist 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "767994"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist4.jpg",
+          "alt": "Twist 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "667876"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist5.jpg",
+          "alt": "Twist 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "639982"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgTwist.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoTwist.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Twist",
+        "url": "https://twist-office.ru/",
+        "httpStatus": 200,
+        "finalUrl": "https://twist-office.ru/",
+        "title": "Деловой центр Twist — Купить офис от девелопера Sminex у метро Савёловская в СВАО",
+        "htmlBytes": 473306
+      },
+      "slug": "twist",
+      "localImage": "/images/projects/sminex/twist.webp"
+    },
+    {
+      "sourceOrder": 13,
+      "name": "Мануфактура XIX",
+      "officialNameRaw": "Мануфактура XIX",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/manufaktura",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Продаём",
+      "statusDetailOfficial": null,
+      "statusNormalized": "selling",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Петра Алексеева, д. 12, стр. 1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.717066,
+        "lon": 37.428755
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/tyltip_card.jpg",
+          "alt": "Мануфактура XIX 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/tyltip_card.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "132147"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/tyltip_card.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/logo_manufactory.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Мануфактура XIX",
+        "url": "https://www.sminex.com/manufaktura",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/manufaktura",
+        "title": "«Мануфактура XIX» — креативный деловой центр на Кутузовском проспекте — Sminex",
+        "htmlBytes": 168001
+      },
+      "slug": "manufaktura-xix",
+      "localImage": "/images/projects/sminex/manufaktura-xix.webp"
+    },
+    {
+      "sourceOrder": 14,
+      "name": "Новый архитектурный проект на Лужнецкой набережной",
+      "officialNameRaw": "Новый архитектурный проект на Лужнецкой набережной",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/luzhnetskaya",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Скоро в продаже",
+      "statusDetailOfficial": "Скоро в продаже",
+      "statusNormalized": "coming_soon",
+      "propertyType": "mixed_residential_commercial",
+      "propertyTypeBasis": "dedicated official project page explicitly describes residential and office volumes",
+      "addressOfficial": "Лужнецкая наб.",
+      "districtOfficial": "Хамовники",
+      "coordinates": {
+        "lat": 55.716001,
+        "lon": 37.569664
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/1.jpg",
+          "alt": "Luzhnetskaya 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "167030"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/2.jpg",
+          "alt": "Luzhnetskaya 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "246764"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/3.jpg",
+          "alt": "Luzhnetskaya 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "160177"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/1.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/logo_luzhnetskaya.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Новый архитектурный проект на Лужнецкой набережной",
+        "url": "https://www.sminex.com/luzhnetskaya",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/luzhnetskaya",
+        "title": "Новый архитектурный проект на Лужнецкой набережной — Sminex",
+        "htmlBytes": 168013
+      },
+      "slug": "luzhnetskaya",
+      "localImage": "/images/projects/sminex/luzhnetskaya.webp",
+      "editorial": {
+        "name": "Проект на Лужнецкой набережной",
+        "className": "Не указан",
+        "summary": "Новый архитектурный проект на Лужнецкой набережной в Хамовниках. В реестре Sminex отнесён к будущим проектам.",
+        "format": "Жилая и коммерческая недвижимость",
+        "thesis": "До выбора объекта на Лужнецкой набережной нужно дождаться состава предложения и документов по жилой и коммерческой частям."
+      }
+    },
+    {
+      "sourceOrder": 15,
+      "name": "Шикарный дом в центре роскоши",
+      "officialNameRaw": "Шикарный дом<br/>в центре роскоши",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/rozhdestvenka-8",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Скоро в продаже",
+      "statusDetailOfficial": "Скоро в продаже",
+      "statusNormalized": "coming_soon",
+      "propertyType": "residential",
+      "propertyTypeBasis": "dedicated official page contact form explicitly refers to an apartment in the house",
+      "addressOfficial": "ул. Рождественка",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.762809,
+        "lon": 37.62404
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_1.jpg",
+          "alt": "Новый архитектурный проект 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "164538"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_2.jpg",
+          "alt": "Новый архитектурный проект 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "144823"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_3.jpg",
+          "alt": "Новый архитектурный проект 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "125879"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_4.jpg",
+          "alt": "Новый архитектурный проект 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "191256"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/1_portfolio-tyltip.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/logo_header.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Шикарный дом<br/>в центре роскоши",
+        "url": "https://www.sminex.com/rozhdestvenka-8",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/rozhdestvenka-8",
+        "title": "Рождественка 8 — Новый архитектурный проект — Sminex",
+        "htmlBytes": 160574
+      },
+      "slug": "rozhdestvenka-8",
+      "localImage": "/images/projects/sminex/rozhdestvenka-8.webp",
+      "editorial": {
+        "name": "Рождественка 8",
+        "className": "Не указан",
+        "summary": "Новый архитектурный проект на Рождественке. В официальном портфеле указан как будущий дом.",
+        "format": "Будущий жилой проект",
+        "thesis": "В историческом центре заранее изучаем ограничения участка и окружение; условия покупки оцениваем после раскрытия предложения."
+      }
+    },
+    {
+      "sourceOrder": 16,
+      "name": "Новый архитектурный проект с фасадами из металла и каскадом террас",
+      "officialNameRaw": "Новый архитектурный проект с фасадами из металла и каскадом террас",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/novoostapovskaya",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Скоро в продаже",
+      "statusDetailOfficial": "Скоро в продаже",
+      "statusNormalized": "coming_soon",
+      "propertyType": "residential",
+      "propertyTypeBasis": "dedicated official page describes resident-only spaces and services",
+      "addressOfficial": "ул. Новоостаповская, д. 3, стр. 4",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.720413,
+        "lon": 37.669199
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/1.jpg",
+          "alt": "Announce 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "64174"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/2.jpg",
+          "alt": "Announce 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "59883"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/3.jpg",
+          "alt": "Announce 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "55212"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/1.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/logo.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Новый архитектурный проект с фасадами из металла и каскадом террас",
+        "url": "https://www.sminex.com/novoostapovskaya",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/novoostapovskaya",
+        "title": "Новый архитектурный проект с каскадом террас на Новоостаповской улице — Sminex",
+        "htmlBytes": 171438
+      },
+      "slug": "novoostapovskaya",
+      "localImage": "/images/projects/sminex/novoostapovskaya.webp",
+      "editorial": {
+        "name": "Проект на Новоостаповской",
+        "className": "Не указан",
+        "summary": "Новый архитектурный проект на Новоостаповской улице с металлическими фасадами и каскадом террас.",
+        "format": "Будущий жилой проект",
+        "thesis": "Террасы оцениваем по ориентации, приватности и правилам эксплуатации; окончательные параметры потребуют документации проекта."
+      }
+    },
+    {
+      "sourceOrder": 17,
+      "name": "Новый архитектурный проект горизонтальных небоскрёбов",
+      "officialNameRaw": "Новый архитектурный проект горизонтальных небоскрёбов",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/avtozavodskaya",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Скоро в продаже",
+      "statusDetailOfficial": "Скоро в продаже",
+      "statusNormalized": "coming_soon",
+      "propertyType": "mixed_residential_commercial",
+      "propertyTypeBasis": "dedicated official project page explicitly describes residential and office volumes",
+      "addressOfficial": "Даниловский район",
+      "districtOfficial": "Даниловский",
+      "coordinates": {
+        "lat": 55.703489,
+        "lon": 37.629887
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/1.jpg",
+          "alt": "Автозаводская 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "550331"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/2.jpg",
+          "alt": "Автозаводская 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "211402"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/3.jpg",
+          "alt": "Автозаводская 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "191427"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/4.jpg",
+          "alt": "Автозаводская 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "205154"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/1.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/logo.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Новый архитектурный проект горизонтальных небоскрёбов",
+        "url": "https://www.sminex.com/avtozavodskaya",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/avtozavodskaya",
+        "title": "Новый архитектурный проект в Даниловском районе — Sminex",
+        "htmlBytes": 168807
+      },
+      "slug": "avtozavodskaya",
+      "localImage": "/images/projects/sminex/avtozavodskaya.webp",
+      "editorial": {
+        "name": "Проект в Даниловском районе",
+        "className": "Не указан",
+        "summary": "Будущий архитектурный проект горизонтальных небоскрёбов в Даниловском районе. В портфеле есть жилая и коммерческая составляющие.",
+        "format": "Жилая и коммерческая недвижимость",
+        "thesis": "Для смешанного проекта важно разделить жилые и деловые потоки и проверить инфраструктуру каждой части после публикации документации."
+      }
+    },
+    {
+      "sourceOrder": 18,
+      "name": "West Garden",
+      "officialNameRaw": "West Garden",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/west-garden",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Продаём машино-места",
+      "statusNormalized": "managed",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "просп. Генерала Дорохова, д. 39, корп. 2И",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.716326,
+        "lon": 37.497953
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden1.jpg",
+          "alt": "Westgarden 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "477835"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden2.jpg",
+          "alt": "Westgarden 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "745708"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden3.jpg",
+          "alt": "Westgarden 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "735486"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden4.jpg",
+          "alt": "Westgarden 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1035818"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden5.jpg",
+          "alt": "Westgarden 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "795957"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgWestgarden.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoWestgarden.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "West Garden",
+        "url": "https://www.sminex.com/west-garden",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/west-garden",
+        "title": "West Garden — собрание клубных домов в своём парке 16 га вдоль реки",
+        "htmlBytes": 208444
+      },
+      "slug": "west-garden",
+      "localImage": "/images/projects/sminex/west-garden.webp",
+      "editorial": {
+        "name": "West Garden",
+        "className": "Не указан",
+        "summary": "Собрание клубных домов в собственном парке площадью 16 га вдоль реки. Адрес в портфеле: проспект Генерала Дорохова.",
+        "format": "Клубные дома в парке",
+        "thesis": "Сравниваем удалённость корпуса от реки, прогулочных маршрутов и въезда; проверяем фактический вид выбранной квартиры."
+      }
+    },
+    {
+      "sourceOrder": 19,
+      "name": "Достижение",
+      "officialNameRaw": "Достижение",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/dostizhenie",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Продаём машино-места",
+      "statusNormalized": "managed",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Академика Королёва, д. 21",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.820023634087,
+        "lon": 37.602411510173
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie1.jpg",
+          "alt": "Dostigenie 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "512367"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie2.jpg",
+          "alt": "Dostigenie 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "648355"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie3.jpg",
+          "alt": "Dostigenie 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "375584"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie4.jpg",
+          "alt": "Dostigenie 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "848831"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie5.jpg",
+          "alt": "Dostigenie 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "342460"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie6.jpg",
+          "alt": "Dostigenie 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie6.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "594264"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie7.jpg",
+          "alt": "Dostigenie 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie7.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1036745"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie8.jpg",
+          "alt": "Dostigenie 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie8.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1184608"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie9.jpg",
+          "alt": "Dostigenie 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie9.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "237522"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie10.jpg",
+          "alt": "Dostigenie 6",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie10.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "511507"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgDostigenie.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoDostigenie.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Достижение",
+        "url": "https://www.sminex.com/dostizhenie",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/dostizhenie",
+        "title": "Выдающийся дом «Достижение» — квартиры с каминами и видами на Останкино и ВДНХ",
+        "htmlBytes": 223947
+      },
+      "slug": "dostizhenie",
+      "localImage": "/images/projects/sminex/dostizhenie.webp",
+      "editorial": {
+        "name": "Достижение",
+        "className": "Не указан",
+        "summary": "Жилой дом на улице Академика Королёва. На сайте проекта представлены квартиры с каминами и видами на Останкино и ВДНХ.",
+        "format": "Жилой дом",
+        "thesis": "Возможность устройства камина и виды на Останкино проверяем для выбранной квартиры, включая технические условия."
+      }
+    },
+    {
+      "sourceOrder": 20,
+      "name": "Малая Ордынка, 19",
+      "officialNameRaw": "Малая Ордынка, 19",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем домом",
+      "statusNormalized": "managed",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Малая Ордынка, д. 19",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.736994458053,
+        "lon": 37.625954775058
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka1.jpg",
+          "alt": "Малая Ордынка 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1186148"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka2.jpg",
+          "alt": "Малая Ордынка 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "282258"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka3.jpg",
+          "alt": "Малая Ордынка 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "563470"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka4.jpg",
+          "alt": "Малая Ордынка 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "573823"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka5.jpg",
+          "alt": "Малая Ордынка 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "386552"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgOrdynka.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoOrdynka.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "malaya-ordynka-19",
+      "localImage": "/images/projects/sminex/malaya-ordynka-19.webp",
+      "editorial": {
+        "name": "Малая Ордынка, 19",
+        "className": "Не указан",
+        "summary": "Жилой проект Sminex по адресу Малая Ордынка, 19. В официальном портфеле находится среди управляемых объектов.",
+        "format": "Жилой проект в управлении",
+        "thesis": "Для объекта на Малой Ордынке проверяем действующую управляющую компанию, состояние общих зон и документы конкретного помещения."
+      }
+    },
+    {
+      "sourceOrder": 21,
+      "name": "JAZZ",
+      "officialNameRaw": "JAZZ",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем домом",
+      "statusNormalized": "managed",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Сущёвский Вал, д. 49",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.793461902147,
+        "lon": 37.61169790323
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz1.jpg",
+          "alt": "JAZZ 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "699418"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz2.jpg",
+          "alt": "JAZZ 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "901266"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz3.jpg",
+          "alt": "JAZZ 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "937208"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz4.jpg",
+          "alt": "JAZZ 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "250165"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz5.jpg",
+          "alt": "JAZZ 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1066963"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgJazz.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/main/portfolio-proyectov/logo-jazz.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "jazz",
+      "localImage": "/images/projects/sminex/jazz.webp",
+      "editorial": {
+        "name": "JAZZ",
+        "className": "Не указан",
+        "summary": "Жилой проект на улице Сущёвский Вал, 49. Sminex включает JAZZ в управляемую часть портфеля.",
+        "format": "Жилой проект в управлении",
+        "thesis": "На Сущёвском Валу сравниваем квартиры по ориентации окон относительно дороги и изучаем фактические эксплуатационные платежи."
+      }
+    },
+    {
+      "sourceOrder": 22,
+      "name": "Врубеля, 4",
+      "officialNameRaw": "Врубеля, 4",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://www.sminex.com/vrubel-4",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем домом",
+      "statusNormalized": "managed",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Врубеля, 4",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.806277,
+        "lon": 37.502076
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel1.jpg",
+          "alt": "Vrubel 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "482962"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel2.jpg",
+          "alt": "Vrubel 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "330198"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgVrubel.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoVrubel.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "Врубеля, 4",
+        "url": "https://www.sminex.com/vrubel-4",
+        "httpStatus": 200,
+        "finalUrl": "https://www.sminex.com/vrubel-4",
+        "title": "Авторский дом на Соколе «Врубеля 4» — дом, который создал Sminex",
+        "htmlBytes": 202926
+      },
+      "slug": "vrubelya-4",
+      "localImage": "/images/projects/sminex/vrubelya-4.webp",
+      "editorial": {
+        "name": "Врубеля, 4",
+        "className": "Не указан",
+        "summary": "Авторский дом на Соколе, на улице Врубеля, 4. Проект включён в управляемый портфель Sminex.",
+        "format": "Авторский жилой дом",
+        "thesis": "У дома на Соколе проверяем окружение выбранной квартиры и текущие условия эксплуатации; статус в портфеле не означает наличие квартир в продаже."
+      }
+    },
+    {
+      "sourceOrder": 23,
+      "name": "Хамелеон",
+      "officialNameRaw": "Хамелеон",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем офисом",
+      "statusNormalized": "managed",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Рязанский проспект, д.10, стр. 18",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.725370074932,
+        "lon": 37.760317419238
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon1.jpg",
+          "alt": "Хамелеон 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "637825"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon2.jpg",
+          "alt": "Хамелеон 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "624566"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon3.jpg",
+          "alt": "Хамелеон 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "716824"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon4.jpg",
+          "alt": "Хамелеон 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "568525"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon5.jpg",
+          "alt": "Хамелеон 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "491427"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgKhameleon.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoKhameleon.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "chameleon",
+      "localImage": "/images/projects/sminex/chameleon.webp"
+    },
+    {
+      "sourceOrder": 24,
+      "name": "Seasons",
+      "officialNameRaw": "Seasons",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем офисом",
+      "statusNormalized": "managed",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Шарикоподшипниковская ул., 4к4А",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.719688974314,
+        "lon": 37.669673474721
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons1.jpg",
+          "alt": "Seasons 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "331008"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons2.jpg",
+          "alt": "Seasons 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "289607"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons3.jpg",
+          "alt": "Seasons 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "386956"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgSeasons.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoSeasons.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "seasons",
+      "localImage": "/images/projects/sminex/seasons.webp"
+    },
+    {
+      "sourceOrder": 25,
+      "name": "The Yard",
+      "officialNameRaw": "The Yard",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем офисом",
+      "statusNormalized": "managed",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "1-й Магистральный тупик, д.11",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.766283382534,
+        "lon": 37.526541778129
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard1.jpeg",
+          "alt": "Yard 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard1.jpeg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "308388"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard2.jpeg",
+          "alt": "Yard 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard2.jpeg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "391374"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard3.jpg",
+          "alt": "Yard 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "283820"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard4.jpg",
+          "alt": "Yard 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "283624"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgYard.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoYard.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "the-yard",
+      "localImage": "/images/projects/sminex/the-yard.webp"
+    },
+    {
+      "sourceOrder": 26,
+      "name": "Smart Park",
+      "officialNameRaw": "Smart Park",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем офисом",
+      "statusNormalized": "managed",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Научный проезд, д.14А",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.656368300965,
+        "lon": 37.556097455407
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark1.jpg",
+          "alt": "Smartpark 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1006989"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark2.jpg",
+          "alt": "Smartpark 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1151620"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark3.jpg",
+          "alt": "Smartpark 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "568304"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark4.jpg",
+          "alt": "Smartpark 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "496688"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark5.jpg",
+          "alt": "Smartpark 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "388082"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgSmartpark.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoSmartpark.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "smart-park",
+      "localImage": "/images/projects/sminex/smart-park.webp"
+    },
+    {
+      "sourceOrder": 27,
+      "name": "Атмосфера",
+      "officialNameRaw": "Атмосфера",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем офисом",
+      "statusNormalized": "managed",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "ул. Сущёвская, д.25, стр.1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.783096378116,
+        "lon": 37.60132776324
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere1.jpg",
+          "alt": "Atmosphere 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "1115409"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere2.jpg",
+          "alt": "Atmosphere 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "287240"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere3.jpg",
+          "alt": "Atmosphere 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "598049"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere4.jpg",
+          "alt": "Atmosphere 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "548615"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere5.jpg",
+          "alt": "Atmosphere 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "429128"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgAtmosphere.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoAtmosphere.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "atmosfera",
+      "localImage": "/images/projects/sminex/atmosfera.webp"
+    },
+    {
+      "sourceOrder": 28,
+      "name": "BankSide",
+      "officialNameRaw": "BankSide",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем офисом",
+      "statusNormalized": "managed",
+      "propertyType": "commercial",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Наставнический пер., д.17, стр.1",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.749106948901,
+        "lon": 37.666186671368
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside1.jpg",
+          "alt": "Bankside 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "346558"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside2.jpg",
+          "alt": "Bankside 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "350426"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside3.jpg",
+          "alt": "Bankside 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "834740"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside4.jpg",
+          "alt": "Bankside 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "400451"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside5.jpg",
+          "alt": "Bankside 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "379138"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgBankside.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoBankside.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "bankside",
+      "localImage": "/images/projects/sminex/bankside.webp"
+    },
+    {
+      "sourceOrder": 29,
+      "name": "Парк Мира",
+      "officialNameRaw": "Парк Мира",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": null,
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": "Управляем",
+      "statusDetailOfficial": "Управляем домом",
+      "statusNormalized": "managed",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "проспект Мира, 102",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.800595,
+        "lon": 37.63668
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira1.jpg",
+          "alt": "ParkMira 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "550630"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira2.jpeg",
+          "alt": "ParkMira 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira2.jpeg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "440100"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira3.jpg",
+          "alt": "ParkMira 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "897131"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira4.jpg",
+          "alt": "ParkMira 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "445586"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira5.jpg",
+          "alt": "ParkMira 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "753795"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgparkMira.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoparkMira.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "Отдельная страница проекта в официальном массиве не указана.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "skipped": "no_dedicated_url_in_official_registry"
+      },
+      "slug": "park-mira",
+      "localImage": "/images/projects/sminex/park-mira.webp",
+      "editorial": {
+        "name": "Парк Мира",
+        "className": "Не указан",
+        "summary": "Жилой проект на проспекте Мира, 102. В официальном реестре Sminex он относится к объектам в управлении.",
+        "format": "Жилой проект в управлении",
+        "thesis": "Для объекта на проспекте Мира важно проверить назначение конкретного помещения, ориентацию окон и действующие расходы на содержание."
+      }
+    },
+    {
+      "sourceOrder": 30,
+      "name": "Westerdam",
+      "officialNameRaw": "westerdam",
+      "developer": "Sminex",
+      "brand": "Sminex",
+      "officialProjectUrl": "https://westerdam.ru/",
+      "officialRegistryUrl": "https://www.sminex.com/portfolio-proyectov",
+      "statusOfficial": null,
+      "statusDetailOfficial": "Продаём машино-место",
+      "statusNormalized": "not_classified_in_source",
+      "propertyType": "residential",
+      "propertyTypeBasis": "official status text and/or portfolio card product type; not price-filtered",
+      "addressOfficial": "Аминьевское шоссе, д. 4А",
+      "districtOfficial": null,
+      "coordinates": {
+        "lat": 55.699548,
+        "lon": 37.462541
+      },
+      "galleryImages": [
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam1.jpg",
+          "alt": "Westerdam 1",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam1.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "789772"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam2.jpg",
+          "alt": "Westerdam 2",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam2.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "397735"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam3.jpg",
+          "alt": "Westerdam 3",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam3.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "760764"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam4.jpg",
+          "alt": "Westerdam 4",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam4.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "607449"
+          }
+        },
+        {
+          "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam5.jpg",
+          "alt": "Westerdam 5",
+          "assetClassification": "official_portfolio_visual",
+          "photographVsRender": "not_verified",
+          "httpVerification": {
+            "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam5.jpg",
+            "httpStatus": 200,
+            "contentType": "image/jpeg",
+            "contentLength": "580869"
+          }
+        }
+      ],
+      "mapImageUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/imgWesterdam.jpg",
+      "logoUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/logoWesterdam.svg",
+      "sourceCheckedAt": "2026-10-21",
+      "isCompleteProjectCard": false,
+      "unitInventoryVerified": false,
+      "priceVerified": false,
+      "completionVerified": false,
+      "notes": [
+        "В официальном реестре статус пуст; продаётся машино-место. Не считать продажей квартир.",
+        "В галерее сохранены оригинальные официальные URL. Не установлено, где фотография, а где рендер."
+      ],
+      "projectPageVerification": {
+        "project": "westerdam",
+        "url": "https://westerdam.ru/",
+        "httpStatus": 200,
+        "finalUrl": "https://westerdam.ru/",
+        "title": "ЖК Вестердам: официальный сайт проекта",
+        "htmlBytes": 112030
+      },
+      "slug": "westerdam",
+      "localImage": "/images/projects/sminex/westerdam.webp",
+      "editorial": {
+        "name": "Westerdam",
+        "className": "Не указан",
+        "summary": "Жилой комплекс на Аминьевском шоссе, 4А. В официальном портфеле Sminex указан с отдельным сайтом проекта.",
+        "format": "Жилой комплекс",
+        "thesis": "На Аминьевском шоссе сравниваем корпуса по транспортному шуму и пешим маршрутам; актуальное предложение запрашиваем отдельно."
+      }
+    }
+  ],
+  "projectPageHttp200Count": 21,
+  "galleryHttp200Count": 151,
+  "galleryUniqueAssetCount": 151
+}

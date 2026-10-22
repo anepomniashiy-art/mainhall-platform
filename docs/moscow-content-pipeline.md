@@ -44,7 +44,7 @@ python3 -m unittest tests/test_moscow_content.py
 ```
 
 Optional: `--topics` (default `data/editorial/topics.json`) and `--model`
-(env `MAINHALL_CONTENT_MODEL`, default `claude-sonnet-5-5`).
+(env `MAINHALL_CONTENT_MODEL`, default `claude-sonnet-4-6`).
 Exit codes: `0` for ok, skip or dry-run; `1` when validation fails; `2` for a bad source pack or bad usage.
 
 ## Inputs
@@ -84,13 +84,13 @@ The source pack is built by a person or collector before the run and is not comm
   "publishedAt": "2026-10-22T09:00:00+03:00", "updatedAt": "2026-10-22T09:00:00+03:00",
   "author": "Редакция MAINHALL",
   "sections": [{"title": "H2", "paragraphs": ["…"], "points": ["…"],
-                "subsections": [{"title": "H3", "paragraphs": ["…"], "points": ["…"]}]}],
+                "subheadings": [{"title": "H3", "paragraphs": ["…"], "points": ["…"]}]}],
   "sources": [{"name": "…", "url": "https://…"}],
-  "articleLinks": [{"name": "Проект в каталоге MAINHALL", "url": "/projects/high-life"}]
+  "links": [{"name": "Проект в каталоге MAINHALL", "url": "/projects/high-life"}]
 }
 ```
 
-- `points`, `subsections` (H3) and `articleLinks` are optional.
+- `points`, `subheadings` (H3) and `links` are optional.
 - Plain `related` entries must be existing project slugs. The `developer:` and `district:` prefixes
   only get a format check, because those pages are Codex's area.
 - Dates are set to the run time in Moscow time (UTC+3). Existing files are never overwritten.
@@ -104,7 +104,7 @@ The source pack is built by a person or collector before the run and is not comm
 - HTML tags, entities, `javascript:`, `on*=` handlers; raw URLs in the text.
 - Outbound developer CTAs ("звоните", "забронируйте", "на сайте застройщика", …), phone numbers,
   "гарантированный доход/рост", "без риска".
-- `articleLinks` pointing outside MAINHALL (only `/…` or `https://main-hall.ru/…` are allowed).
+- `links` pointing outside MAINHALL (only `/…` or `https://main-hall.ru/…` are allowed).
 - **Unsafe facts**: any number in the text (price, %, year, law number, area, deadline) that does
   not literally appear in the source excerpts or the topic title.
 - Duplicates: the same slug, or a title with ≥60% word overlap with an existing article.

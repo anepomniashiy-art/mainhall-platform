@@ -1,3 +1,5 @@
+import { sminexProjectDossiers } from "./sminex-projects";
+
 /** Verified product facts + clearly labelled MAINHALL editorial analysis.
  * Source URLs are research metadata, never lead-out CTAs. No invented inventory.
  */
@@ -272,7 +274,7 @@ Object.assign(projectDossiers, {
    "Фитнес и спа с бассейном 25 м только для жителей"
   ],
   "location": "Якиманка, в 50 м от Третьяковской галереи и в 1 км от Кремля, рядом «ГЭС-2» и набережная Москвы-реки. Вид из окна зависит от корпуса, этажа и ориентации, поэтому проверяем его по конкретной квартире.",
-  "thesis": "Дом сдан, поэтому строительного риска нет. Важнее цена выбранного лота относительно элитных домов Замоскворечья, реальный вид из окон и полная стоимость владения.",
+  "thesis": "Дом сдан. При выборе проверяем фактическую готовность квартиры, документы и условия передачи. Важнее цена выбранного лота относительно элитных домов Замоскворечья, реальный вид из окон и полная стоимость владения.",
   "checks": [
    "Цена выбранного лота и условия оплаты",
    "Фактический вид и этаж выбранной квартиры",
@@ -282,3 +284,8 @@ Object.assign(projectDossiers, {
   "checkedAt": "21.10.2026"
  }
 });
+
+
+for (const [slug, entry] of Object.entries(sminexProjectDossiers)) {
+ if (!projectDossiers[slug]) projectDossiers[slug] = entry;
+}

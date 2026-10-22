@@ -47,11 +47,11 @@ KINDS = DATA_KINDS | {'evergreen'}
 SOURCE_MAX_AGE_DAYS = {'news': 14, 'prices': 30, 'law': 365, 'evergreen': 730}
 MAX_ATTEMPTS = 3
 CLOCK_SKEW = timedelta(minutes=5)
-DEFAULT_MODEL = 'claude-sonnet-5-5'
+DEFAULT_MODEL = 'claude-sonnet-4-6'
 
 ARTICLE_KEYS = {'slug', 'title', 'description', 'category', 'image', 'related', 'publishedAt',
                 'updatedAt', 'author', 'sections', 'sources'}
-OPTIONAL_ARTICLE_KEYS = {'articleLinks'}
+OPTIONAL_ARTICLE_KEYS = {'links'}
 SLUG_RE = re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 RELATED_RE = re.compile(r'^(?:(developer|district):)?([a-z0-9]+(?:-[a-z0-9]+)*)$')
 ISO_RE = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$')
@@ -63,7 +63,7 @@ FORBIDDEN_PATTERNS = [
     (re.compile(r'\+7[\s(-]*\d|8\s?\(?800', re.I), 'phone number'),
     (re.compile(r'гарантированн\w*\s+(доход|рост|прибыл)|без\s+риск|100\s*%\s*(доход|гарант)', re.I), 'unverifiable promise'),
     (re.compile(r'андре[йяюе]\b|непомнящ', re.I), 'unverified personal signature'),
-    (re.compile(r'https?://|www\.', re.I), 'raw URL in text (use sources/articleLinks)'),
+    (re.compile(r'https?://|www\.', re.I), 'raw URL in text (use sources/links)'),
 ]
 
 
@@ -126,10 +126,10 @@ def iter_text(article):
         if not isinstance(section, dict):
             continue
         yield from _section_text(section)
-        for sub in section.get('subsections') or []:
+        for sub in section.get('subheadings') or []:
             if isinstance(sub, dict):
                 yield from _section_text(sub)
-    for link in article.get('articleLinks') or []:
+    for link in article.get('links') or []:
         if isinstance(link, dict):
             yield link.get('name', '')
 
@@ -172,7 +172,7 @@ def _check_block(block, where, errors, allow_sub):
     if not isinstance(block, dict):
         errors.append(f'{where}: must be an object')
         return
-    allowed = {'title', 'paragraphs', 'points'} | ({'subsections'} if allow_sub else set())
+    allowed = {'title', 'paragraphs', 'points'} | ({'subheadings'} if allow_sub else set())
     extra = set(block) - allowed
     if extra:
         errors.append(f'{where}: unexpected keys {sorted(extra)}')
@@ -187,13 +187,13 @@ def _check_block(block, where, errors, allow_sub):
         if not isinstance(points, list) or not 1 <= len(points) <= 10 \
                 or not all(isinstance(p, str) and p.strip() for p in points):
             errors.append(f'{where}.points: 1–10 non-empty strings when present')
-    if allow_sub and 'subsections' in block:
-        subs = block['subsections']
+    if allow_sub and 'subheadings' in block:
+        subs = block['subheadings']
         if not isinstance(subs, list) or not 1 <= len(subs) <= 6:
-            errors.append(f'{where}.subsections: 1–6 items when present')
+            errors.append(f'{where}.subheadings: 1–6 items when present')
         else:
             for j, sub in enumerate(subs):
-                _check_block(sub, f'{where}.subsections[{j}]', errors, allow_sub=False)
+                _check_block(sub, f'{where}.subheadings[{j}]', errors, allow_sub=False)
 
 
 def validate_article(article, *, now=None, project_slugs=None, existing=(), topic=None, pack_sources=None):
@@ -281,17 +281,17 @@ def validate_article(article, *, now=None, project_slugs=None, existing=(), topi
                 errors.append(f'sources[{i}].url: duplicate')
             urls.add(src['url'])
 
-    links = article.get('articleLinks')
+    links = article.get('links')
     if links is not None:
         if not isinstance(links, list) or len(links) > 10:
-            errors.append('articleLinks: list of ≤10 items')
+            errors.append('links: list of ≤10 items')
         else:
             for i, link in enumerate(links):
                 if not isinstance(link, dict) or set(link) != {'name', 'url'} \
                         or not isinstance(link.get('name'), str) or not link['name'].strip():
-                    errors.append(f'articleLinks[{i}]: exactly {{name,url}}')
+                    errors.append(f'links[{i}]: exactly {{name,url}}')
                 elif not is_internal_link(link['url']):
-                    errors.append(f'articleLinks[{i}].url: only internal MAINHALL links allowed')
+                    errors.append(f'links[{i}].url: only internal MAINHALL links allowed')
 
     texts = [t for t in iter_text(article) if isinstance(t, str)]
     for text in texts + [str(s.get('name', '')) for s in sources or [] if isinstance(s, dict)]:
@@ -429,7 +429,7 @@ PROMPT = """Ты — редактор MAINHALL, независимого гид�
 - Ответ — только JSON-объект без пояснений:
   {{"title": str (10–120 симв.), "description": str (50–220 симв.),
     "sections": [{{"title": str, "paragraphs": [str, ...], "points": [str, ...] (необязательно),
-                   "subsections": [{{"title": str, "paragraphs": [str]}}] (необязательно)}}, ...] (3–6 разделов),
+                   "subheadings": [{{"title": str, "paragraphs": [str]}}] (необязательно)}}, ...] (3–6 разделов),
     "sourceIndexes": [номера использованных источников, начиная с 1]}}
 
 ТЕМА: {title}
@@ -489,7 +489,7 @@ def assemble_article(topic, draft, now):
     links = [{'name': 'Проект в каталоге MAINHALL', 'url': f'/projects/{s}'}
              for s in article['related'] if RELATED_RE.match(s) and ':' not in s]
     if links:
-        article['articleLinks'] = links
+        article['links'] = links
     return article
 
 

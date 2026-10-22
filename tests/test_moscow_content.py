@@ -52,7 +52,7 @@ def draft(title, number_text=''):
         'sections': [
             {'title': 'Что это такое', 'paragraphs': [PARA + number_text]},
             {'title': 'Что проверить', 'paragraphs': [PARA], 'points': ['Разрешение на строительство', 'Права на участок'],
-             'subsections': [{'title': 'Вопросы застройщику', 'paragraphs': [PARA]}]},
+             'subheadings': [{'title': 'Вопросы застройщику', 'paragraphs': [PARA]}]},
             {'title': 'Итог', 'paragraphs': [PARA]},
         ],
         'sourceIndexes': [1],
@@ -68,7 +68,7 @@ def valid_article():
         'sections': [{'title': 'Как работает эскроу', 'paragraphs': [PARA]},
                      {'title': 'Сроки', 'paragraphs': ['Срок депонирования не может превышать срок ввода более чем на 6 месяцев.']}],
         'sources': [{'name': 'КонсультантПлюс', 'url': 'https://www.consultant.ru/document/cons_doc_LAW_51038/'}],
-        'articleLinks': [{'name': 'HIGH LIFE', 'url': '/projects/high-life'}],
+        'links': [{'name': 'HIGH LIFE', 'url': '/projects/high-life'}],
     }
 
 
@@ -137,10 +137,10 @@ class ValidatorTests(unittest.TestCase):
 
     def test_external_article_links_are_rejected(self):
         article = valid_article()
-        article['articleLinks'] = [{'name': 'Купить у застройщика', 'url': 'https://pioneer.ru/'}]
+        article['links'] = [{'name': 'Купить у застройщика', 'url': 'https://pioneer.ru/'}]
         self.assertTrue(any('internal' in e for e in self.errors(article)))
-        article['articleLinks'] = [{'name': 'Каталог', 'url': 'https://main-hall.ru/projects'}]
-        self.assertFalse(any('articleLinks' in e for e in self.errors(article)))
+        article['links'] = [{'name': 'Каталог', 'url': 'https://main-hall.ru/projects'}]
+        self.assertFalse(any('links' in e for e in self.errors(article)))
 
     def test_numbers_not_in_source_pack_are_unsafe_facts(self):
         topic = {'title': QUEUE[1]['title'], 'sources': PACK['topics'][0]['sources']}

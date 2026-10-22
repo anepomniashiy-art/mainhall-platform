@@ -2,7 +2,7 @@ name: Deploy MAINHALL to Beget
 on:
   push:
     branches: [main]
-    paths: [src/**, public/**, scripts/**, package.json, package-lock.json, next.config.ts, .github/workflows/deploy-beget.yml]
+    paths: [data/**, src/**, public/**, scripts/**, package.json, package-lock.json, next.config.ts, .github/workflows/deploy-beget.yml]
   workflow_dispatch:
 permissions:
   contents: read

@@ -1,0 +1,602 @@
+[
+  {
+    "slug": "frunzenskiy",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya1.jpg",
+    "sourcePage": "https://www.sminex.com/frunzenskiy",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:32.660154+00:00",
+    "localPath": "/images/projects/sminex/frunzenskiy.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "e11b54c45528e824b336392cb1dfc04d6ab12b7aed53efd5d5bbc0c5b2b51ff1",
+    "outputSha256": "837e8a8f8517229e657e2840ea378684b14a7f5f5414b169c74430af1fb5fb6e",
+    "original": {
+      "width": 2500,
+      "height": 1406,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 900,
+    "bytes": 118222
+  },
+  {
+    "slug": "luzhnetskiy",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/luzhneckiy/main/new/images/luzhnetsky-portfolio-background.jpg",
+    "sourcePage": "https://www.sminex.com/luzhnetskiy-dc",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:32.427869+00:00",
+    "localPath": "/images/projects/sminex/luzhnetskiy.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "1cc49ca46ebb8d4b9d8ea47165aac4b4fc81781143ab7b948094a1b4a7c21fe9",
+    "outputSha256": "d47e761e70503f242b26fa64567f785cfb91b80d6770d5c17b427ce3731cca46",
+    "original": {
+      "width": 923,
+      "height": 640,
+      "format": "JPEG"
+    },
+    "width": 923,
+    "height": 640,
+    "bytes": 95490
+  },
+  {
+    "slug": "palashevskiy-11",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_1.jpg",
+    "sourcePage": "https://www.sminex.com/palashevskiy-11",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:32.660705+00:00",
+    "localPath": "/images/projects/sminex/palashevskiy-11.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "808ec776f51c384cd4a040056948d439641b557b92309538e8d021ca0804244d",
+    "outputSha256": "ebdbc68ab451d0e082cd5637d45ecc1f78bd1dfa03efcc49b4e5e136a533a90b",
+    "original": {
+      "width": 1228,
+      "height": 838,
+      "format": "JPEG"
+    },
+    "width": 1228,
+    "height": 838,
+    "bytes": 164524
+  },
+  {
+    "slug": "lavrushinsky",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky1.jpg",
+    "sourcePage": "https://www.sminex.com/lavrushinskiy",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:32.885585+00:00",
+    "localPath": "/images/projects/sminex/lavrushinsky.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "8d2e2bbdc855669b3e6a4dff3d85fd4b7cf0fb27bd10b5cae6c0e94e2e2262f3",
+    "outputSha256": "4478c59ad6f0e767c12bac33d1213c317944f5f3f2d3ea17e221607386a16c98",
+    "original": {
+      "width": 2400,
+      "height": 1350,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 900,
+    "bytes": 190862
+  },
+  {
+    "slug": "tishinskiy-bulvar",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky1.jpg",
+    "sourcePage": "https://www.sminex.com/tishinskiy-b",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:32.976880+00:00",
+    "localPath": "/images/projects/sminex/tishinskiy-bulvar.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "03191f6a3440fcebaac1d8affe519264e80cc60164a9c0d0bff2f4893be4ab77",
+    "outputSha256": "f73d6970d16dc160a3d4bc1c81eee1e4b10182354947ae92aa32a24cd5abfaf8",
+    "original": {
+      "width": 2500,
+      "height": 1156,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 740,
+    "bytes": 229380
+  },
+  {
+    "slug": "life-time",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime1.jpg",
+    "sourcePage": "https://www.sminex.com/life-time",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:33.551054+00:00",
+    "localPath": "/images/projects/sminex/life-time.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "9a7d6e81087220d685c5c757a2a2bd22af103d3bff9121388fa75205f7ba40da",
+    "outputSha256": "d06b0e5a3bed2d43dfe8635ddd67fe83a5f4ffa645710b0a1dc117df1f2eada9",
+    "original": {
+      "width": 700,
+      "height": 350,
+      "format": "JPEG"
+    },
+    "width": 700,
+    "height": 350,
+    "bytes": 31388
+  },
+  {
+    "slug": "ilyinka-3-8",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka1.jpg",
+    "sourcePage": "https://www.sminex.com/ilyinka",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:39.978632+00:00",
+    "localPath": "/images/projects/sminex/ilyinka-3-8.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "b4d20df99e452468308098d4480f17f1bb241d1387cfc2c0bc07f471716e430d",
+    "outputSha256": "b19cad4857d7174c5e0a5f7176470c4d88eac325c74b67c360558e996d1dd04a",
+    "original": {
+      "width": 2500,
+      "height": 1406,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 900,
+    "bytes": 122088
+  },
+  {
+    "slug": "obydenskiy-1",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy1.jpg",
+    "sourcePage": "https://www.sminex.com/obydenskiy-1",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:40.020059+00:00",
+    "localPath": "/images/projects/sminex/obydenskiy-1.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "7f6a7975ac950f953281f990c4450ed143a3a710aa6c3617784ac75804f58b15",
+    "outputSha256": "7cdf17c30f09720badfe77fa7f9e32925b8192585d24bbf983b3320d8df29207",
+    "original": {
+      "width": 2492,
+      "height": 1042,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 669,
+    "bytes": 199628
+  },
+  {
+    "slug": "fon-dessin",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy1.jpg",
+    "sourcePage": "https://www.sminex.com/fon-dessin",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:40.109990+00:00",
+    "localPath": "/images/projects/sminex/fon-dessin.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "49b30f34ba38dc02cedd0c2792b57d3f996b67db051342bc06aa87b5590f2291",
+    "outputSha256": "8cdc3b9cef0cc7e460493229d854d829612fa63496f8900dcee0fc8ea8e714a2",
+    "original": {
+      "width": 2500,
+      "height": 1250,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 800,
+    "bytes": 129368
+  },
+  {
+    "slug": "orlovo-davydovskiy",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba1.jpg",
+    "sourcePage": "https://gorodskaya-usadba.ru/",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:40.179059+00:00",
+    "localPath": "/images/projects/sminex/orlovo-davydovskiy.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "5ff27c09ccb7ca172c9c4df7005e6d5f77d31f53716fb2a9419d7ffb1ae22aa1",
+    "outputSha256": "cc91032f94098db844afc89b532a9ade5e6e826015945a8bc7485cf74b254308",
+    "original": {
+      "width": 2500,
+      "height": 1406,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 900,
+    "bytes": 394668
+  },
+  {
+    "slug": "foriver",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-1.png",
+    "sourcePage": "https://www.sminex.com/foriver",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:39.759427+00:00",
+    "localPath": "/images/projects/sminex/foriver.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "879f2e3fb3e07f6327d87a36b5cd367f7adfee3b175aa51ed053e9d30e549680",
+    "outputSha256": "b8d587b1a8b0a81345d491feaf929604bcb99d94abf1a3d5b6fe007034ced0cb",
+    "original": {
+      "width": 508,
+      "height": 328,
+      "format": "PNG"
+    },
+    "width": 508,
+    "height": 328,
+    "bytes": 40066
+  },
+  {
+    "slug": "twist",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist1.jpg",
+    "sourcePage": "https://twist-office.ru/",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:40.031426+00:00",
+    "localPath": "/images/projects/sminex/twist.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "527c0abc641e37e951ca9eed12579aad016a7d8719b8de9b2260a46c495d920c",
+    "outputSha256": "2bdadc8a46aa3582a67390e5d317f65ee3410a41b8ce3b35239a808706fa016b",
+    "original": {
+      "width": 2500,
+      "height": 1250,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 800,
+    "bytes": 117344
+  },
+  {
+    "slug": "manufaktura-xix",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/tyltip_card.jpg",
+    "sourcePage": "https://www.sminex.com/manufaktura",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:47.067485+00:00",
+    "localPath": "/images/projects/sminex/manufaktura-xix.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "5f40b459ca705848747ba223b756bc3caaaf9994cd2077006a1eb75069a13890",
+    "outputSha256": "0bcbb2aaa04694689ebc2309df27912d9d26bb4d7642de423deba9e17b00252c",
+    "original": {
+      "width": 792,
+      "height": 540,
+      "format": "JPEG"
+    },
+    "width": 792,
+    "height": 540,
+    "bytes": 120878
+  },
+  {
+    "slug": "luzhnetskaya",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/1.jpg",
+    "sourcePage": "https://www.sminex.com/luzhnetskaya",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:47.025185+00:00",
+    "localPath": "/images/projects/sminex/luzhnetskaya.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "f80a0678e1131153e347f472ea97c73b95c276bc0def6b01a915dc8d4014fbcf",
+    "outputSha256": "56f002cf8e9e8a16bf955e5c31981bec0efe30f5da844485d8a4bd37067aff79",
+    "original": {
+      "width": 1016,
+      "height": 656,
+      "format": "JPEG"
+    },
+    "width": 1016,
+    "height": 656,
+    "bytes": 148318
+  },
+  {
+    "slug": "rozhdestvenka-8",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_1.jpg",
+    "sourcePage": "https://www.sminex.com/rozhdestvenka-8",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:46.758776+00:00",
+    "localPath": "/images/projects/sminex/rozhdestvenka-8.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "8549efd4d297547df822eb613677b95a2952c6926c3e43c96543d0dc66636ecc",
+    "outputSha256": "400e65cf2f5a13352b3d096355f332dde1690cd4e37673f9567fbc3f05329272",
+    "original": {
+      "width": 1016,
+      "height": 656,
+      "format": "JPEG"
+    },
+    "width": 1016,
+    "height": 656,
+    "bytes": 137464
+  },
+  {
+    "slug": "novoostapovskaya",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/1.jpg",
+    "sourcePage": "https://www.sminex.com/novoostapovskaya",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:46.909456+00:00",
+    "localPath": "/images/projects/sminex/novoostapovskaya.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "7f1ffa6a38ef092373fba0708be7c3bcf26066a1277bc2ea96738589bbe4a790",
+    "outputSha256": "ae9730aca6065a79c70109afd9f1eddb598f1d96c5b3af428a094f800de80325",
+    "original": {
+      "width": 528,
+      "height": 360,
+      "format": "JPEG"
+    },
+    "width": 528,
+    "height": 360,
+    "bytes": 34090
+  },
+  {
+    "slug": "avtozavodskaya",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/1.jpg",
+    "sourcePage": "https://www.sminex.com/avtozavodskaya",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:47.163143+00:00",
+    "localPath": "/images/projects/sminex/avtozavodskaya.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "a79f0241e151f0a427858cd19f6a9cbe5dee0e3b1cee0cdfade67be2e3f772aa",
+    "outputSha256": "d9a199f9a97fd8cb64ba74161d1cdd4cfffb0bd331c5c9166d72c5049b53bda2",
+    "original": {
+      "width": 1016,
+      "height": 656,
+      "format": "JPEG"
+    },
+    "width": 1016,
+    "height": 656,
+    "bytes": 83246
+  },
+  {
+    "slug": "west-garden",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden1.jpg",
+    "sourcePage": "https://www.sminex.com/west-garden",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:47.148057+00:00",
+    "localPath": "/images/projects/sminex/west-garden.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "aa4dfa5b438681e0f5854711087e83e11b14de0d29001882ee089695ae5b71bb",
+    "outputSha256": "76503837ce972b999ff9249e775c39038a88b1525c2f27e3fb572c59e99dd48a",
+    "original": {
+      "width": 2500,
+      "height": 1668,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 1068,
+    "bytes": 106032
+  },
+  {
+    "slug": "dostizhenie",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie1.jpg",
+    "sourcePage": "https://www.sminex.com/dostizhenie",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:54.267561+00:00",
+    "localPath": "/images/projects/sminex/dostizhenie.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "950fb69690d8574cc3ee5f57047174cbffefc6715103915ce3bea48470c77e24",
+    "outputSha256": "1a760071b5eec77199d3778bbcfafcd45e335d65d668bd77475fd8f183b92795",
+    "original": {
+      "width": 2500,
+      "height": 1406,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 900,
+    "bytes": 134438
+  },
+  {
+    "slug": "malaya-ordynka-19",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:54.612085+00:00",
+    "localPath": "/images/projects/sminex/malaya-ordynka-19.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "5e2f4b36e1f75d7fa0827b1688dcee47f6aa9c56b5a9240450930eb3f44cf547",
+    "outputSha256": "e84f14a1a7eea299d90d64879c8a880883f212f056689bb362f61765bd7ed884",
+    "original": {
+      "width": 2406,
+      "height": 2000,
+      "format": "JPEG"
+    },
+    "width": 1444,
+    "height": 1200,
+    "bytes": 339764
+  },
+  {
+    "slug": "jazz",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:54.211299+00:00",
+    "localPath": "/images/projects/sminex/jazz.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "51d2423fe78e4059f8712160101c8b89e3b9fedf6c4ad9a657ef04acdfafedc8",
+    "outputSha256": "75a2c31b168068a46ba27ac209407b46a989c183df17b73249b7a1f55c8e267f",
+    "original": {
+      "width": 2500,
+      "height": 1875,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 1200,
+    "bytes": 169438
+  },
+  {
+    "slug": "vrubelya-4",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel1.jpg",
+    "sourcePage": "https://www.sminex.com/vrubel-4",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:54.029703+00:00",
+    "localPath": "/images/projects/sminex/vrubelya-4.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "60995f09501fbc9b974615cb72a102458a7d5ed03a2554a454f2c6e1b76b5ee1",
+    "outputSha256": "4e13edb2befbd426a5b56d943ce4d81782e0caee2b2b256f3b45a0261a487e0b",
+    "original": {
+      "width": 2333,
+      "height": 1080,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 741,
+    "bytes": 178218
+  },
+  {
+    "slug": "chameleon",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:54.403897+00:00",
+    "localPath": "/images/projects/sminex/chameleon.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "08f70b92cbeebb9dad5f7dbb43bbf38d493eb4d4ef53ea300b96bf7a9848e23a",
+    "outputSha256": "bcaa2d1913d0c1fe029107b19696ba1fadc2037f07e51bf6bcd1106a4dd16f2d",
+    "original": {
+      "width": 2125,
+      "height": 1450,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 1092,
+    "bytes": 225860
+  },
+  {
+    "slug": "seasons",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:45:54.394156+00:00",
+    "localPath": "/images/projects/sminex/seasons.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "3a965810568c58b9a319254ae5b25f05e8204a0801a4d95a01d62d0bd09cb895",
+    "outputSha256": "c41b8c29e3270896d40418393a319d11a9f30cd448bea2642869e81c255e1f7f",
+    "original": {
+      "width": 1849,
+      "height": 770,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 666,
+    "bytes": 173188
+  },
+  {
+    "slug": "the-yard",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard1.jpeg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:46:01.416854+00:00",
+    "localPath": "/images/projects/sminex/the-yard.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "56cc89e035317f5d3b8ac2cabd965f4f43b7246a666c5b4a0c85f272d963d1e3",
+    "outputSha256": "dbd5bebfb6c54ae2c001d426bbafa361778c8831bec90cd5bfa8706d5c36f176",
+    "original": {
+      "width": 2342,
+      "height": 1027,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 702,
+    "bytes": 115468
+  },
+  {
+    "slug": "smart-park",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:46:01.829510+00:00",
+    "localPath": "/images/projects/sminex/smart-park.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "fe4bbc4ce0930b856f6bb95b9a4a385dfb919b03ac1f24861d614aa067af2e38",
+    "outputSha256": "bae7cda539421675042e8482611d784870de20bf67d301b7c2487e9e7617975b",
+    "original": {
+      "width": 2247,
+      "height": 1498,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 1067,
+    "bytes": 400538
+  },
+  {
+    "slug": "atmosfera",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:46:01.818485+00:00",
+    "localPath": "/images/projects/sminex/atmosfera.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "0cd9d131385371bfda375ce02dc6e3c10d70e1e81bd837e12c8e83a41390d1cb",
+    "outputSha256": "09dda7f8805313193f58a7707c789900661db347ecdf772cfda8ae52aa11b301",
+    "original": {
+      "width": 2447,
+      "height": 1632,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 1067,
+    "bytes": 353734
+  },
+  {
+    "slug": "bankside",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:46:01.267151+00:00",
+    "localPath": "/images/projects/sminex/bankside.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "e4ad4ae1f4516b873c19d905d85ca01a69adf2e9a1aa2bc6deea664e4a742233",
+    "outputSha256": "48501707a16a9d340481c8d9d8cb1e52127bc6ab61064e4caf7a99dc74950201",
+    "original": {
+      "width": 2437,
+      "height": 1005,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 660,
+    "bytes": 120766
+  },
+  {
+    "slug": "park-mira",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira1.jpg",
+    "sourcePage": "https://www.sminex.com/portfolio-proyectov",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:46:01.313066+00:00",
+    "localPath": "/images/projects/sminex/park-mira.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "13d5b536cc9737d2f907d69fe2b06ca72496b86b752edcbbef073f9efc5097b3",
+    "outputSha256": "25a828585b1878b2a57ad5be9f10b7336813d81fa5a1cc0d74354369082607e1",
+    "original": {
+      "width": 2500,
+      "height": 1375,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 880,
+    "bytes": 199196
+  },
+  {
+    "slug": "westerdam",
+    "sourceUrl": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam1.jpg",
+    "sourcePage": "https://westerdam.ru/",
+    "sourceCheckedAt": "2026-10-21",
+    "downloadedAt": "2026-10-22T09:46:01.382015+00:00",
+    "localPath": "/images/projects/sminex/westerdam.webp",
+    "assetClassification": "official_portfolio_visual",
+    "photographVsRender": "not_verified",
+    "sourceSha256": "49fcb4c070798ebe6c74771945c5066617506d436c4b3740805816a0917141a0",
+    "outputSha256": "ac0fa58fbef80078d86316fe62d5b4f4188ed357927b3348981604381bd10fa2",
+    "original": {
+      "width": 2500,
+      "height": 1218,
+      "format": "JPEG"
+    },
+    "width": 1600,
+    "height": 780,
+    "bytes": 254230
+  }
+]

@@ -1,11 +1,15 @@
+import { sminexEditorialProjects } from "./sminex-projects";
+
 /** Editorial registry only. This is NOT an inventory of available apartments.
  * Prices, photos, status and promised returns must not be inferred from names.
  * Unit-level prices enter the public catalog only after source verification.
  */
 export type ProjectEntry = {
  slug: string; name: string; developer: string; area: string;
- className: "Бизнес+" | "Премиум" | "Элитная" | "Комфорт"; sourceUrl: string;
+ className: "Бизнес+" | "Бизнес" | "Премиум" | "Элитная" | "Комфорт" | "Не указан"; sourceUrl: string;
  summary: string; thesis: string; dueDiligence: string[];
+ statusNormalized?: "selling" | "coming_soon" | "managed" | "not_classified_in_source";
+ statusOfficial?: string; propertyType?: "residential" | "commercial" | "mixed_residential_commercial";
 };
 export const editorialProjects: ProjectEntry[] = [
  // ── PIONEER ──
@@ -50,3 +54,14 @@ export const editorialProjects: ProjectEntry[] = [
  // ── Sminex ──
  {slug:"lavrushinsky",name:"Лаврушинский",developer:"Sminex",area:"Якиманка",className:"Элитная",sourceUrl:"https://www.sminex.com/lavrushinskiy",summary:"Сданный дом в 1 км от Кремля, у Третьяковской галереи, в глубине собственного двора-парка площадью 1,4 га.",thesis:"Оцениваем премию за прямые виды на Кремль и приватный двор-парк относительно других элитных домов Якиманки и Замоскворечья.",dueDiligence:["Фактический вид из выбранной квартиры","Цена конкретного лота на дату запроса","Эксплуатационные платежи готового дома"]},
 ];
+
+
+// Keep existing richer dossiers and canonical URLs (including Lavrushinsky).
+for (const entry of sminexEditorialProjects) {
+ const existing = editorialProjects.find(p => p.slug === entry.slug);
+ if (existing) {
+  existing.statusNormalized = entry.statusNormalized;
+  existing.statusOfficial = entry.statusOfficial;
+  existing.propertyType = entry.propertyType;
+ } else editorialProjects.push(entry);
+}
