@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "note": "Очередь редакционных тем MAINHALL. Здесь только формулировки тем и связи с существующими проектами — без фактов. Факты, цифры, ссылки на законы и новости берутся исключительно из source pack (см. docs/moscow-content-pipeline.md). Тема без источников в source pack пропускается генератором.",
+  "topics": [
+    {
+      "slug": "kak-chitat-proektnuyu-deklaraciyu",
+      "title": "Как читать проектную декларацию новостройки",
+      "category": "Гид покупателя",
+      "kind": "evergreen",
+      "angle": "Какие разделы проектной декларации проверить до брони и какие вопросы задать по каждому из них.",
+      "image": "shagal",
+      "related": ["shagal", "level-yuzhnoportovaya"]
+    },
+    {
+      "slug": "escrow-schet-pri-pokupke-novostroyki",
+      "title": "Эскроу-счёт при покупке квартиры в новостройке",
+      "category": "Право",
+      "kind": "law",
+      "angle": "Как устроены расчёты через эскроу по ДДУ и что покупателю проверить в договоре. Только нормы из источников.",
+      "image": "high-life",
+      "related": ["high-life", "opus"]
+    },
+    {
+      "slug": "klubnyy-dom-chto-proverit",
+      "title": "Клубный дом в центре Москвы: что проверить до покупки",
+      "category": "Гид покупателя",
+      "kind": "evergreen",
+      "angle": "Камерный формат: число лотов, эксплуатация, состав соседей, юридическая чистота участка.",
+      "image": "enigmia",
+      "related": ["enigmia", "lumin"]
+    },
+    {
+      "slug": "vysotnyy-format-likvidnost",
+      "title": "Высотный жилой формат: от чего зависит ликвидность квартиры",
+      "category": "Аналитика",
+      "kind": "evergreen",
+      "angle": "Этаж, виды, эксплуатационные расходы и очередность корпусов как факторы ликвидности — без прогнозов цены.",
+      "image": "upside-towers",
+      "related": ["upside-towers", "symphony-34", "high-life"]
+    },
+    {
+      "slug": "otdelka-ot-zastroyshchika-ili-bez",
+      "title": "Отделка от застройщика или без: как сравнивать предложения",
+      "category": "Гид покупателя",
+      "kind": "evergreen",
+      "angle": "Как сопоставлять лоты с отделкой и без, какие документы запросить, какие риски у каждого варианта.",
+      "image": "stone-sokolniki",
+      "related": ["stone-sokolniki", "stone-blik"]
+    }
+  ]
+}
