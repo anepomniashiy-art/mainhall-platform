@@ -27,7 +27,9 @@ urls=[e.text for e in ET.parse(root/'sitemap.xml').findall('{*}url/{*}loc')]
 assert urls and len(urls)==len(set(urls))
 robots=(root/'robots.txt').read_text()
 assert not re.search(r'^Disallow:\s*/\s*$',robots,re.M),robots
-assert 'Sitemap: http://main-hall.ru/sitemap.xml' in robots
+assert 'Sitemap: https://main-hall.ru/sitemap.xml' in robots, robots
+assert 'Sitemap: http://main-hall.ru/sitemap.xml' not in robots, robots
+assert all(url.startswith('https://main-hall.ru/') for url in urls), urls
 seen_titles={};seen_desc={};count=0
 for url in urls:
  path=urlsplit(url).path;file=root/path.lstrip('/')/'index.html'
