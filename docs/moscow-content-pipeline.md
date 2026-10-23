@@ -1,7 +1,7 @@
 # Moscow editorial pipeline (daily articles)
 
-Status: the generator, validator and tests are in place. **The scheduled run is not set up yet.**
-Codex wires the workflow after review. Nothing here publishes anything by itself.
+Status: the generator, validator, static renderer and daily editorial task are configured.
+Each editorial run checks official sources, records a source pack, validates and reviews the article, builds the site, then verifies the production deployment. The generator script alone does not publish.
 
 ## Origin: how north-cyprus does it
 
@@ -52,7 +52,7 @@ Exit codes: `0` for ok, skip or dry-run; `1` when validation fails; `2` for a ba
 `data/editorial/topics.json` is the topic queue: `slug, title, category, kind, angle, image, related`.
 It holds wording only, with no facts. The test enforces that titles and angles contain no digits.
 
-The source pack is built by a person or collector before the run and is not committed:
+The source pack is checked before publication and saved in `data/editorial/source-packs/` with source URLs, timestamps and verified excerpts or explicitly labelled summaries:
 
 ```json
 {

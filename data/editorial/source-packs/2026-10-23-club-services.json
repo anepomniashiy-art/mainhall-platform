@@ -1,0 +1,43 @@
+{
+  "packId": "2026-10-23-club-services",
+  "checkedAt": "2026-10-23T05:51:41+00:00",
+  "projects": [
+    {
+      "slug": "lavrushinsky",
+      "name": "Лаврушинский"
+    },
+    {
+      "slug": "stone-blik",
+      "name": "STONE Блик"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "klubnaya-infrastruktura-rashody-na-soderzhanie",
+      "title": "Клубная инфраструктура: как проверить расходы на содержание квартиры",
+      "category": "Аналитика",
+      "kind": "evergreen",
+      "image": "lavrushinsky",
+      "related": [
+        "lavrushinsky",
+        "stone-blik"
+      ],
+      "sources": [
+        {
+          "name": "Sminex: инфраструктура дома «Лаврушинский»",
+          "url": "https://www.sminex.com/lavrushinskiy",
+          "checkedAt": "2026-10-23T05:51:41+00:00",
+          "text": "На официальной странице «Лаврушинского» Sminex описывает Clubhouse, фитнес с бассейном длиной 25 метров и спа. Это описание состава инфраструктуры; оно не является расчётом платежей для выбранной квартиры.",
+          "evidenceType": "verified_summary"
+        },
+        {
+          "name": "STONE: двор и общественные пространства Блика",
+          "url": "https://stone.ru/residential/blik",
+          "checkedAt": "2026-10-23T05:51:41+00:00",
+          "text": "На официальной странице STONE Блик заявлены прогулочные маршруты, озеленённый склон, детская площадка, спортивное пространство и места отдыха во дворе. Также показаны лаунж-зона на стилобате и бизнес-гостиная с кофейней.",
+          "evidenceType": "verified_summary"
+        }
+      ]
+    }
+  ]
+}
