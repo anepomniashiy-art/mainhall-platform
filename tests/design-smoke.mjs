@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 await mkdir('design-proof', { recursive: true });
+const sitemap=await readFile('out/sitemap.xml','utf8');
+const expectedProjects=[...sitemap.matchAll(/https:\/\/main-hall\.ru\/projects\/[^/<>]+\//g)].length;
 for(const person of ['pavel','evgeny']) {
  const jpeg=await readFile('public/images/team/'+person+'.jpg');
  assert.equal(jpeg.subarray(-2).toString('hex'),'ffd9',person+' JPEG is complete');
@@ -50,19 +52,27 @@ try {
   }
   await page.screenshot({path:'design-proof/home-'+viewport.width+'.png',fullPage:true});
   await page.goto('http://127.0.0.1:8091/projects/',{waitUntil:'networkidle'});
-  assert.equal(await page.locator('.mh-project-row').count(),17);
+  assert.equal(await page.locator('.mh-project-row').count(),expectedProjects);
   await page.getByRole('textbox',{name:'Поиск проектов'}).fill('HIGH LIFE');
   assert.equal(await page.locator('.mh-project-row').count(),1);
   await page.locator('.mh-project-row').click();
   await page.getByRole('heading',{level:1,name:'HIGH LIFE'}).waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:'design-proof/project-'+viewport.width+'.png',fullPage:true});
-  for(const route of ['/districts/paveletskaya/','/analytics/rassrochka-ot-zastroishchika/','/collections/u-vody/','/about/','/installments/']){
+  for(const route of ['/districts/paveletskaya/','/analytics/rassrochka-ot-zastroishchika/','/collections/u-vody/','/about/','/installments/','/investments/','/projects/level-yuzhnoportovaya/','/projects/kvartal-serebryany-bor/']){
    await page.goto('http://127.0.0.1:8091'+route,{waitUntil:'networkidle'});
    assert.equal(await page.getByRole('heading',{level:1}).count(),1);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true,'overflow '+route+' '+viewport.width);
    await page.screenshot({path:'design-proof/'+route.split('/')[1]+'-'+viewport.width+'.png',fullPage:true});
   }
+  await page.goto('http://127.0.0.1:8091/projects/level-yuzhnoportovaya/',{waitUntil:'networkidle'});
+  await page.getByLabel('Цена покупки, млн ₽',{exact:true}).fill('30');
+  await page.getByLabel('Взнос в цену, млн ₽',{exact:true}).fill('3');
+  await page.getByLabel('Прочие расходы, млн ₽',{exact:true}).fill('2');
+  await page.waitForTimeout(100);
+  assert.match(await page.locator('.mh-invest-scenario').first().innerText(),/121,6%/);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true,'investment calculation overflow '+viewport.width);
+  await page.locator('.mh-invest-calculator').screenshot({path:'design-proof/investment-calculator-'+viewport.width+'.png'});
   assert.deepEqual(errors,[]);
   await page.close();
   console.log('PASS layout/menu/catalogue/project '+viewport.width);
