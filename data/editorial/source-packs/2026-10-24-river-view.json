@@ -1,0 +1,30 @@
+{
+  "packId": "2026-10-24-river-view",
+  "projects": [
+    {
+      "slug": "stone-blik",
+      "name": "STONE Блик"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "vid-na-reku-proverka-pered-pokupkoy",
+      "title": "Квартира с видом на реку: что проверить до покупки",
+      "kind": "evergreen",
+      "category": "Гид покупателя",
+      "image": "stone-blik",
+      "related": [
+        "stone-blik"
+      ],
+      "sources": [
+        {
+          "name": "STONE: виды из окон проекта Блик",
+          "url": "https://stone.ru/residential/blik",
+          "checkedAt": "2026-10-24T05:48:27.418069+00:00",
+          "text": "На официальной странице STONE Блик в разделе видов из окон представлены направления на реку, Москву-Сити и город. Этот материал описывает проект, но не является подтверждением панорамы конкретной квартиры.",
+          "evidenceType": "verified_summary"
+        }
+      ]
+    }
+  ]
+}
