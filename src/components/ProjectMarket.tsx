@@ -9,7 +9,7 @@ const date=(value:string)=>new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:
 export function ProjectGallery({slug,name}:{slug:string;name:string}){
  const photos=(galleries as Record<string,Photo[]>)[slug]||[];
  if(!photos.length)return null;
- return <div data-project-gallery={slug} style={{marginTop:40,display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,320px),1fr))",gap:20}}>{photos.map((photo,i)=><figure key={photo.src} style={{margin:0}}><a href={photo.src} target="_blank" rel="noopener" aria-label={name+": открыть изображение "+(i+1)}><img src={photo.src} alt={name+" — "+photo.caption+", изображение "+(i+1)} width={photo.width} height={photo.height} loading="lazy" style={{display:"block",width:"100%",height:"auto",aspectRatio:"4 / 3",objectFit:"cover"}}/></a><figcaption className="mh-content-caption">{name} · {photo.caption}</figcaption></figure>)}</div>;
+ return <div data-project-gallery={slug} style={{marginTop:40,display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,320px),1fr))",gap:20}}>{photos.map((photo,i)=><figure key={photo.src} style={{margin:0}}><a href={photo.src} target="_blank" rel="noopener" aria-label={name+": открыть изображение "+(i+1)}><img src={photo.src} alt={name+": "+photo.caption+", изображение "+(i+1)} width={photo.width} height={photo.height} loading="lazy" style={{display:"block",width:"100%",height:"auto",aspectRatio:"4 / 3",objectFit:"cover"}}/></a><figcaption className="mh-content-caption">{name} · {photo.caption}</figcaption></figure>)}</div>;
 }
 export function ProjectMarketUnits({slug,name,unitIds}:{slug:string;name:string;unitIds?:string[]}){
  const units=(unitsData.units as Unit[]).filter(unit=>unit.projectSlug===slug&&(!unitIds||unitIds.includes(unit.id)));

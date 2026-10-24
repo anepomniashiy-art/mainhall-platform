@@ -1,0 +1,157 @@
+{
+  "checkedAt": "2026-10-24T18:49:21.999722+00:00",
+  "images": [
+    {
+      "slug": "level-yuzhnoportovaya",
+      "sourcePage": "https://level.ru/projects/southport/",
+      "sourceUrl": "https://cdn.level.ru/media/CACHE/images/project/images/d64336d0fb710f91839ddd19d9aadfde11a81481/ea0b6ec891e35dcf9ddc21ec56888a22.jpg",
+      "checkedAt": "2026-10-24T18:49:13.926219+00:00",
+      "sourceSha256": "63aa6e18a5d7f91bc3634084805558e41a3e5e0e43b5c590d56c11cc74202601",
+      "sourceBytes": 243018,
+      "originalSize": [
+        1920,
+        1041
+      ],
+      "src": "/images/projects/gallery/research-level-1.webp",
+      "width": 1600,
+      "height": 868,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "b31e700c01b317a8681169ec278242fd0e41336eba8aaba354fe0f876ca4c179",
+      "outputBytes": 194656
+    },
+    {
+      "slug": "level-yuzhnoportovaya",
+      "sourcePage": "https://level.ru/projects/southport/",
+      "sourceUrl": "https://cdn.level.ru/media/CACHE/images/project/images/9df25a91102840d019341bebf96b43bb78196b23/8e9701fc0558d94c9f6ba40b8c9e86e7.jpg",
+      "checkedAt": "2026-10-24T18:49:13.805587+00:00",
+      "sourceSha256": "73ba8b66bb5e2c80017e815acaf31179080c1419a0f642b73d9a3a9c50173816",
+      "sourceBytes": 241932,
+      "originalSize": [
+        1920,
+        1080
+      ],
+      "src": "/images/projects/gallery/research-level-2.webp",
+      "width": 1600,
+      "height": 900,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "7f62bb1d65b0131c4b80af71936755ebbc346e73d898059e442483f8efb8e500",
+      "outputBytes": 180908
+    },
+    {
+      "slug": "level-yuzhnoportovaya",
+      "sourcePage": "https://level.ru/projects/southport/",
+      "sourceUrl": "https://cdn.level.ru/media/CACHE/images/project/images/9dd1f65ccc4f6db4cc33d08de1a9373172562bbd/45b36beddd27223a2fe3c7bcdc9f0c55.jpg",
+      "checkedAt": "2026-10-24T18:49:14.211996+00:00",
+      "sourceSha256": "86b2f28bc01d0af6a7ec864bac4ac873a5b6144efe0a9abe25ccfa138ef4e48b",
+      "sourceBytes": 510562,
+      "originalSize": [
+        1920,
+        1281
+      ],
+      "src": "/images/projects/gallery/research-level-4.webp",
+      "width": 1600,
+      "height": 1068,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "da09a8fca9d35818f8c9e1f3ca22581f33c15adb13a9b1f4d15f9e4ff5053b69",
+      "outputBytes": 452372
+    },
+    {
+      "slug": "level-yuzhnoportovaya",
+      "sourcePage": "https://level.ru/projects/southport/",
+      "sourceUrl": "https://cdn.level.ru/media/CACHE/images/project/images/68ed6c0a93e05d25f6a2a61ff4cf18f4801ad70a/8e480747d891e2f7352e9abcbc16e41c.jpg",
+      "checkedAt": "2026-10-24T18:49:19.249452+00:00",
+      "sourceSha256": "f8829730a005c45413b5be897da370daf09212386d61bece71872ee3cbd7e11a",
+      "sourceBytes": 360995,
+      "originalSize": [
+        1920,
+        1080
+      ],
+      "src": "/images/projects/gallery/research-level-5.webp",
+      "width": 1600,
+      "height": 900,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "f987f0ca07b449913779c6d69be3f8660dadd08c1f3322f32201915bfbaa1a9f",
+      "outputBytes": 313666
+    },
+    {
+      "slug": "kvartal-serebryany-bor",
+      "sourcePage": "https://stmichael.ru/projects/kvartal-serebryanyj-bor",
+      "sourceUrl": "https://s3.twcstorage.ru/78e92784-7b15-49d6-a490-464f4b38bdad/media/p/p/i/21dc0d4315bac4be6f2778d5d024a212ce8fa721.jpg",
+      "checkedAt": "2026-10-24T18:49:21.017831+00:00",
+      "sourceSha256": "61b51a585fd82324373a4d2ffeacde20c0a3d7b53a2fbc1c5d5d637f624717db",
+      "sourceBytes": 1987920,
+      "originalSize": [
+        1920,
+        1080
+      ],
+      "src": "/images/projects/gallery/research-serebryany-1.webp",
+      "width": 1600,
+      "height": 900,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "8dc37fd2a8dff0fb13063ac0e9e9a55bdde96010202139e1c6013277a0c9334c",
+      "outputBytes": 313110
+    },
+    {
+      "slug": "kvartal-serebryany-bor",
+      "sourcePage": "https://stmichael.ru/projects/kvartal-serebryanyj-bor",
+      "sourceUrl": "https://s3.twcstorage.ru/78e92784-7b15-49d6-a490-464f4b38bdad/media/p/p/i/0bd04558b4dff82751ab3cb6ab5003c9f110da8f.jpg",
+      "checkedAt": "2026-10-24T18:49:21.113570+00:00",
+      "sourceSha256": "dd3101e8c45c29ba8cee3d5861bd61b7be5f0a265fc7f9bf0a85cdeff0fc8c04",
+      "sourceBytes": 1485849,
+      "originalSize": [
+        6000,
+        4000
+      ],
+      "src": "/images/projects/gallery/research-serebryany-2.webp",
+      "width": 1600,
+      "height": 1067,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "cba031f463056ada8363f13e85fd1a432c6c81ff4b646e0f42e45ea0304f190d",
+      "outputBytes": 190632
+    },
+    {
+      "slug": "kvartal-serebryany-bor",
+      "sourcePage": "https://stmichael.ru/projects/kvartal-serebryanyj-bor",
+      "sourceUrl": "https://s3.twcstorage.ru/78e92784-7b15-49d6-a490-464f4b38bdad/media/p/p/i/9473d20e9cabce9e80ff3137b727d945df8f6fa8.jpg",
+      "checkedAt": "2026-10-24T18:49:21.991190+00:00",
+      "sourceSha256": "74498beaeda8505a682d517db3d7dbe21c6432b6f0b815869f2800ddbe5b16ba",
+      "sourceBytes": 8575827,
+      "originalSize": [
+        6000,
+        3000
+      ],
+      "src": "/images/projects/gallery/research-serebryany-3.webp",
+      "width": 1600,
+      "height": 800,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "outputSha256": "c7387bd54ce38a63ba5a86eb000761a3cf532f16054fa66862c2ff75700c6313",
+      "outputBytes": 143046
+    },
+    {
+      "slug": "level-yuzhnoportovaya",
+      "sourcePage": "https://level.ru/projects/southport/",
+      "sourceUrl": "https://cdn.level.ru/media/CACHE/images/project/images/646bb64b7a27ae297df899089925c17047e7e06b/c78d2c99277452a4712900e423d52908.jpg",
+      "checkedAt": "2026-10-24T18:50:03.679063+00:00",
+      "sourceSha256": "97530ca836d7f4a7dd0ab05e068711e9f97163b2530477ebe106b97531238724",
+      "sourceBytes": 415106,
+      "originalSize": [
+        1920,
+        1080
+      ],
+      "src": "/images/projects/gallery/research-level-3.webp",
+      "width": 1600,
+      "height": 900,
+      "rightsStatus": "Официальные материалы проекта; открытая лицензия или отдельное разрешение на перепубликацию не найдены.",
+      "caption": "Архитектура комплекса · визуализация Level Group",
+      "outputSha256": "bc34022e8afdaa3a792c342d790f4fa521ca75984a2eacdeb58531ebbfba89d5",
+      "outputBytes": 348280
+    }
+  ]
+}

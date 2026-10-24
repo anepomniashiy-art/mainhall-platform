@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import "@/app/investment.css";
 import {TeamSection} from "./TeamSection";
 import {InvestmentDesk} from "./InvestmentDesk";
 import { useRef, useState } from "react";
@@ -45,7 +46,7 @@ export function MainhallExperience() {
     <div className="hero-bottom hero-caption"><p>Увидеть перспективу.<br/>Выбрать свой адрес.<br/>Сохранить и приумножить.</p><Link href="#selection" className="mh-pill">Найти свой проект <span>↗</span></Link></div>
    </div>
    <div className="hero-image-panel">
-    {heroProjects.map((p,i)=><img key={p.slug} className={"hero-image"+(hero===i?" is-active":"")} src={"/images/projects/"+p.slug+".jpg"} alt={p.name+" — дневная архитектурная визуализация, "+p.developer} fetchPriority={i===0?"high":"low"} width="2000" height="1181" aria-hidden={hero!==i}/>)}
+    {heroProjects.map((p,i)=><img key={p.slug} className={"hero-image"+(hero===i?" is-active":"")} src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": дневная архитектурная визуализация, "+p.developer} fetchPriority={i===0?"high":"low"} width="2000" height="1181" aria-hidden={hero!==i}/>)}
     <div className="hero-project-label"><span className="hero-project-number">0{hero+1} / 03</span><div><p>{heroProjects[hero].place}</p><Link href={"/projects/"+heroProjects[hero].slug+"/"}>{heroProjects[hero].name} <span>↗</span></Link></div></div>
     <span className="mh-image-credit">{heroProjects[hero].developer} · визуализация</span>
    </div>
@@ -67,18 +68,22 @@ export function MainhallExperience() {
   <section id="selection" className="mh-selection mh-pad">
    <div className="mh-section-head" data-reveal><p className="mh-eyebrow">02 / ПРОЕКТЫ В ФОКУСЕ</p><span>Москва · {editorialProjects.length} проектов в обзоре</span></div>
    <div className="mh-editorial-head" data-reveal><h2>Разные адреса.<br/><span>Разная логика покупки.</span></h2><p>Выбираем не название на фасаде. Разбираемся, почему именно здесь, почему сейчас и для какой задачи.</p></div>
-   <div className="mh-featured-projects">{["high-life","opus","nicole"].map((slug,i)=>{const p=editorialProjects.find(p=>p.slug===slug)!;return <Link data-reveal href={"/projects/"+p.slug+"/"} key={p.slug} className="mh-featured-project"><div className="mh-photo-frame"><img className="mh-featured-photo" src={"/images/projects/"+p.slug+".jpg"} alt={p.name+" — "+p.developer} width="1200" height="900" loading="lazy"/><span className="mh-photo-explore" aria-hidden="true">Смотреть проект ↗</span></div><div className="mh-featured-copy"><div className="mh-project-meta"><span>0{i+1} / {p.developer}</span><span>{p.className}</span></div><h3>{p.name}</h3><p className="mh-project-location">{p.area}, Москва</p><p className="mh-project-thesis">{p.thesis}</p><span className="mh-text-link">Расположение, продукт, инвестиционная логика ↗</span></div></Link>})}</div>
+   <div className="mh-featured-projects">{["high-life","opus","nicole"].map((slug,i)=>{const p=editorialProjects.find(p=>p.slug===slug)!;return <Link data-reveal href={"/projects/"+p.slug+"/"} key={p.slug} className="mh-featured-project"><div className="mh-photo-frame"><img className="mh-featured-photo" src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": "+p.developer} width="1200" height="900" loading="lazy"/><span className="mh-photo-explore" aria-hidden="true">Смотреть проект ↗</span></div><div className="mh-featured-copy"><div className="mh-project-meta"><span>0{i+1} / {p.developer}</span><span>{p.className}</span></div><h3>{p.name}</h3><p className="mh-project-location">{p.area}, Москва</p><p className="mh-project-thesis">{p.thesis}</p><span className="mh-text-link">Расположение, продукт, инвестиционная логика ↗</span></div></Link>})}</div>
    <div className="mh-list-bottom"><span>Проекты для изучения. Актуальные лоты и условия уточняем перед подбором.</span><Link href="/projects/" className="mh-text-link">Весь обзор проектов ↗</Link></div>
   </section>
   <section className="mh-architecture mh-pad" aria-label="Архитектурные акценты">
    <div className="mh-section-head"><p className="mh-eyebrow">ЭСТЕТИКА, В КОТОРОЙ ХОЧЕТСЯ ЖИТЬ</p><span>Камерные дома и высотные проекты</span></div>
    <div className="mh-architecture-grid">
-    <Link href="/projects/lumin/" className="mh-architecture-item" data-reveal><div className="mh-photo-frame"><img src="/images/projects/lumin.jpg" alt="LUMIN — светлая геометрия фасада клубного дома" width="1640" height="938" loading="lazy"/></div><span>01 / Деталь</span><h3>LUMIN</h3><p>Камерный масштаб в центре Москвы ↗</p></Link>
+    <Link href="/projects/lumin/" className="mh-architecture-item" data-reveal><div className="mh-photo-frame"><img src="/images/projects/lumin.jpg" alt="LUMIN: светлая геометрия фасада клубного дома" width="1640" height="938" loading="lazy"/></div><span>01 / Деталь</span><h3>LUMIN</h3><p>Камерный масштаб в центре Москвы ↗</p></Link>
     <div className="mh-architecture-title" data-reveal><h2>Больше,<br/>чем квадратные<br/><span>метры.</span></h2><p>Свет в окнах. Маршрут к воде. Тишина своего двора. То, что определяет ценность каждый день.</p></div>
-    <Link href="/projects/king-and-sons/" className="mh-architecture-item" data-reveal><div className="mh-photo-frame"><img src="/images/projects/king-and-sons.jpg" alt="King & Sons — архитектурная визуализация дома с террасами" width="1591" height="896" loading="lazy"/></div><span>02 / Характер</span><h3>King &amp; Sons</h3><p>Террасы и пластика современной архитектуры ↗</p></Link>
+    <Link href="/projects/king-and-sons/" className="mh-architecture-item" data-reveal><div className="mh-photo-frame"><img src="/images/projects/king-and-sons.jpg" alt="King & Sons: архитектурная визуализация дома с террасами" width="1591" height="896" loading="lazy"/></div><span>02 / Характер</span><h3>King &amp; Sons</h3><p>Террасы и пластика современной архитектуры ↗</p></Link>
    </div>
   </section>
   <div className="mh-home-directory"><Link href="/collections/">Все подборки проектов ↗</Link><Link href="/districts/">Районы Москвы ↗</Link><Link href="/analytics/">Аналитика и условия покупки ↗</Link></div>
+  <section className="mh-invest-home mh-pad">
+   <div><p className="mh-eyebrow">АНАЛИТИКА ПЕРЕД СДЕЛКОЙ</p><h2>10 проектов.<br/>Где искать рост?</h2><p>Южный порт, набережные, парки и редкие адреса. Сравниваем основания для покупки, цену входа и риски. Сильная локация не делает выгодной любую квартиру.</p><Link href="/investments/" className="mh-text-link">Открыть инвестиционное сравнение ↗</Link></div>
+   <Link href="/projects/level-yuzhnoportovaya/#investment" className="mh-invest-home-image"><img src="/images/projects/level-yuzhnoportovaya.jpg" alt="Level Южнопортовая: визуализация проекта" width="1200" height="800" loading="lazy"/><span>Южный порт: что действительно меняет цену ↗</span></Link>
+  </section>
   <InvestmentDesk/>
   <section className="mh-decision mh-pad">
    <div data-reveal><p className="mh-eyebrow">03 / ВАША ЗАДАЧА</p><h2>Сначала цель.<br/><span>Потом адрес.</span></h2></div>
@@ -86,7 +91,7 @@ export function MainhallExperience() {
     {[["Купить раньше роста","Ищем недооценённые характеристики и изменения локации. Сопоставляем потенциал со сроком, на который вы готовы вложить деньги."],["Получать арендный доход","Считаем доход после отделки, простоя и содержания. Смотрим на спрос арендаторов и конкурирующее предложение."],["Жить. И сохранить капитал.","Подбираем под ваш образ жизни, но не выключаем расчёт: качество дома, окружение и возможность продать через несколько лет."]].map(([t,d])=><article data-reveal key={t}><h3>{t}</h3><p>{d}</p></article>)}
    </div>
   </section>
-  <section className="mh-city-interlude"><div className="mh-city-title"><p className="mh-eyebrow">ДРУГОЙ ВЗГЛЯД НА ПРИВЫЧНЫЙ ГОРОД</p><h2>Москва.<br/>Следующая глава.</h2></div><img src="/images/badaevsky-day-02.jpg" alt="Бадаевский, Capital Group — дневная архитектурная визуализация квартала" width="1920" height="1080" loading="lazy"/><span className="mh-image-credit">Бадаевский · Capital Group · визуализация</span></section>
+  <section className="mh-city-interlude"><div className="mh-city-title"><p className="mh-eyebrow">ДРУГОЙ ВЗГЛЯД НА ПРИВЫЧНЫЙ ГОРОД</p><h2>Москва.<br/>Следующая глава.</h2></div><img src="/images/badaevsky-day-02.jpg" alt="Бадаевский, Capital Group: дневная архитектурная визуализация квартала" width="1920" height="1080" loading="lazy"/><span className="mh-image-credit">Бадаевский · Capital Group · визуализация</span></section>
   <section className="mh-partner mh-pad">
    <div data-reveal><p className="mh-eyebrow">04 / ЛИЧНАЯ ЭКСПЕРТИЗА</p><h2>За решением<br/><span>стоит человек.</span></h2></div>
    <div className="mh-partner-copy" data-reveal><p className="mh-partner-name">Андрей Непомнящий</p><p className="mh-partner-role">Управляющий партнёр MAINHALL</p><p>В недвижимости с 2004 года. Опыт работы с московскими проектами, в числе которых башня «Федерация» и премиальный жилой комплекс ELEVEN на Пресне.</p><p>Мне важно не провести экскурсию по красивым квартирам. Мне важно объяснить, где в покупке есть смысл и где его нет.</p><a href={COMPANY.telegram} target="_blank" rel="noopener noreferrer" className="mh-text-link">Обсудить задачу лично ↗</a></div>

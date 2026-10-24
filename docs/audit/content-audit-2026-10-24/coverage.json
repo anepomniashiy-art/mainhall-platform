@@ -1,0 +1,1383 @@
+{
+  "checkedAt": "2026-10-24T18:47:55.813297+00:00",
+  "commit": "45a48fb16b2fa13a2f8901513448806b9499d9b2",
+  "pages": [
+    {
+      "url": "https://main-hall.ru/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/nicole.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/nicole.jpg",
+        "/images/projects/lumin.jpg",
+        "/images/projects/king-and-sons.jpg",
+        "/images/projects/level-yuzhnoportovaya.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/team/andrey.jpg",
+        "/images/team/margarita.jpg",
+        "/images/team/igor.jpg",
+        "/images/team/marina.jpg",
+        "/images/team/pavel.jpg",
+        "/images/team/evgeny-portrait.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/level-yuzhnoportovaya.jpg",
+        "/images/projects/symphony-34.jpg",
+        "/images/projects/nicole.jpg",
+        "/images/projects/lumin.jpg",
+        "/images/projects/lunar.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/king-and-sons.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg",
+        "/images/projects/dom-7-danilovsky.jpg",
+        "/images/projects/upside-towers.jpg",
+        "/images/projects/enigmia.jpg",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp",
+        "/images/projects/sminex/tishinskiy-bulvar.webp",
+        "/images/projects/sminex/life-time.webp",
+        "/images/projects/sminex/ilyinka-3-8.webp",
+        "/images/projects/sminex/obydenskiy-1.webp",
+        "/images/projects/sminex/fon-dessin.webp",
+        "/images/projects/sminex/orlovo-davydovskiy.webp",
+        "/images/projects/sminex/foriver.webp",
+        "/images/projects/sminex/luzhnetskaya.webp",
+        "/images/projects/sminex/rozhdestvenka-8.webp",
+        "/images/projects/sminex/novoostapovskaya.webp",
+        "/images/projects/sminex/avtozavodskaya.webp",
+        "/images/projects/sminex/west-garden.webp",
+        "/images/projects/sminex/dostizhenie.webp",
+        "/images/projects/sminex/malaya-ordynka-19.webp",
+        "/images/projects/sminex/jazz.webp",
+        "/images/projects/sminex/vrubelya-4.webp",
+        "/images/projects/sminex/park-mira.webp",
+        "/images/projects/sminex/westerdam.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/units/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/plans/high-life-405.webp",
+        "/images/plans/stone-blik-13805.webp",
+        "/images/plans/stone-sokolniki-3487.webp",
+        "/images/plans/stone-sokolniki-3443.webp"
+      ],
+      "unitCount": 4
+    },
+    {
+      "url": "https://main-hall.ru/districts/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/opus.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/level-yuzhnoportovaya.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/nicole.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/collections/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/lumin.jpg",
+        "/images/projects/upside-towers.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/nicole.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/level-yuzhnoportovaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/installments/",
+      "status": 200,
+      "h1": 1,
+      "images": [],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/",
+      "status": 200,
+      "h1": 1,
+      "images": [],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/about/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/team/andrey.jpg",
+        "/images/team/margarita.jpg",
+        "/images/team/igor.jpg",
+        "/images/team/marina.jpg",
+        "/images/team/pavel.jpg",
+        "/images/team/evgeny-portrait.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/contacts/",
+      "status": 200,
+      "h1": 1,
+      "images": [],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/commercial/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/legacy-mainhall/assets/8d05131603a28e92-Wildberries_Logo.png",
+        "/legacy-mainhall/assets/751b7e955000f4a5-Ozon_logo_clearsvg.png",
+        "/legacy-mainhall/assets/4aa711bd25c10433-CDEK_logosvg.png",
+        "/legacy-mainhall/assets/25d66d18b2cfa109-Yandex_Market_cropp_.png",
+        "/legacy-mainhall/assets/bd06a376c195f009-logo-boxberry.png",
+        "/legacy-mainhall/assets/6a535e5b6788dfe4-logo-samokat.png",
+        "/legacy-mainhall/assets/c65d8c470bd97868-Yandex_lavka_new_log.jpg",
+        "/legacy-mainhall/assets/952e5cc31cb4fcc9-___.png",
+        "/legacy-mainhall/assets/c19e555bffba592e-VkusVill_textlogo.png",
+        "/legacy-mainhall/assets/80d1fb1a159bd349-Magnit_logosvg.png",
+        "/legacy-mainhall/assets/3159e07e57ebcc9a-logo-sber.png",
+        "/legacy-mainhall/assets/48d5634915e8309d-logo-tbank.png",
+        "/legacy-mainhall/assets/9ca3b2d6449616b7-logo-alfa-bank.jpg",
+        "/legacy-mainhall/assets/00337e4466b3f542-logo-invitro.png",
+        "/legacy-mainhall/assets/c88fe96fea323055-photo.svg",
+        "/legacy-mainhall/assets/14fcb7fd56d36037-01_pervomayskaya_ren.jpg",
+        "/legacy-mainhall/assets/454d2dc005a54871-01_pervomayskaya_roo.jpg",
+        "/legacy-mainhall/assets/86377ef41902f547-01_pervomayskaya_bat.jpg",
+        "/legacy-mainhall/assets/7adc368b6e51d108-02_seligerskaya_faca.jpg",
+        "/legacy-mainhall/assets/0870e93f4a7b4837-02_seligerskaya_inte.jpg",
+        "/legacy-mainhall/assets/6fc6dc3853212cd4-03_volokolamskoe_fac.jpg",
+        "/legacy-mainhall/assets/6ddd87224613cc98-03_volokolamskoe_sho.jpg",
+        "/legacy-mainhall/assets/476e0618db76e1ee-03_volokolamskoe_fac.jpg",
+        "/legacy-mainhall/assets/2be4bc4f600d8a58-04_kazakova_loft1.jpg",
+        "/legacy-mainhall/assets/c178aad57ac6d1ca-04_kazakova_loft2.jpg",
+        "/legacy-mainhall/assets/948ebb85268e88e5-04_kazakova_loft3.jpg",
+        "/legacy-mainhall/assets/3205d81ecd6777c8-05_babaevskaya_facad.jpg",
+        "/legacy-mainhall/assets/84cf21ddf58ec618-05_babaevskaya_plan.jpg",
+        "/legacy-mainhall/assets/c2e5968110879cc8-06_olonetskiy_corrid.jpg",
+        "/legacy-mainhall/assets/3ecf83010ee94e53-06_olonetskiy_window.jpg",
+        "/legacy-mainhall/assets/07946881fbbc4a74-06_olonetskiy_build.jpg",
+        "/legacy-mainhall/assets/6eb04e5b5cd60be3-IMG_6163_2.jpg",
+        "/legacy-mainhall/assets/75543ff3f8d2bc96-IMG_6145.JPG",
+        "/legacy-mainhall/assets/59426f858b465503-_.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/pioneer/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/capital-group/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/badaevsky-day-02.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/vesper/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/vesper-kutuzovsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/etalon/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/shagal.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/level-group/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/level-yuzhnoportovaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/mr-group/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/symphony-34.jpg",
+        "/images/projects/nicole.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/hutton/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lumin.jpg",
+        "/images/projects/lunar.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/stone/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/stone-blik.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/october-group/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/king-and-sons.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/coldy/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/dom-7-danilovsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/upside-development/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/upside-towers.jpg",
+        "/images/projects/enigmia.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/developers/sminex/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp",
+        "/images/projects/sminex/tishinskiy-bulvar.webp",
+        "/images/projects/sminex/life-time.webp",
+        "/images/projects/sminex/ilyinka-3-8.webp",
+        "/images/projects/sminex/obydenskiy-1.webp",
+        "/images/projects/sminex/fon-dessin.webp",
+        "/images/projects/sminex/orlovo-davydovskiy.webp",
+        "/images/projects/sminex/foriver.webp",
+        "/images/projects/sminex/luzhnetskaya.webp",
+        "/images/projects/sminex/rozhdestvenka-8.webp",
+        "/images/projects/sminex/novoostapovskaya.webp",
+        "/images/projects/sminex/avtozavodskaya.webp",
+        "/images/projects/sminex/west-garden.webp",
+        "/images/projects/sminex/dostizhenie.webp",
+        "/images/projects/sminex/malaya-ordynka-19.webp",
+        "/images/projects/sminex/jazz.webp",
+        "/images/projects/sminex/vrubelya-4.webp",
+        "/images/projects/sminex/park-mira.webp",
+        "/images/projects/sminex/westerdam.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/high-life/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/high-life.jpg",
+        "/images/projects/gallery/high-life-1.webp",
+        "/images/projects/gallery/high-life-2.webp",
+        "/images/plans/high-life-405.webp",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg",
+        "/images/projects/nicole.jpg"
+      ],
+      "unitCount": 1
+    },
+    {
+      "url": "https://main-hall.ru/projects/opus/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/opus.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/symphony-34.jpg",
+        "/images/projects/nicole.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/badaevsky/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/king-and-sons.jpg",
+        "/images/projects/lavrushinsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/vesper-kutuzovsky/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/king-and-sons.jpg",
+        "/images/projects/lavrushinsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/shagal/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/shagal.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg",
+        "/images/projects/upside-towers.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/level-yuzhnoportovaya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/level-yuzhnoportovaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/symphony-34/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/symphony-34.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/nicole.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/nicole/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/nicole.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/lumin/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lumin.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/lunar/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lunar.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/stone-sokolniki/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/gallery/stone-sokolniki-1.webp",
+        "/images/plans/stone-sokolniki-3487.webp",
+        "/images/plans/stone-sokolniki-3443.webp",
+        "/images/projects/shagal.jpg",
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg"
+      ],
+      "unitCount": 2
+    },
+    {
+      "url": "https://main-hall.ru/projects/stone-blik/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/gallery/stone-blik-1.webp",
+        "/images/projects/gallery/stone-blik-2.webp",
+        "/images/plans/stone-blik-13805.webp",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 1
+    },
+    {
+      "url": "https://main-hall.ru/projects/king-and-sons/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/king-and-sons.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/stories-mosfilmovskaya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stories-mosfilmovskaya.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/king-and-sons.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/dom-7-danilovsky/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/dom-7-danilovsky.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/upside-towers/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/upside-towers.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/enigmia/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/enigmia.jpg",
+        "/images/projects/gallery/enigmia-1.webp",
+        "/images/projects/gallery/enigmia-2.webp",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/lavrushinsky/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/gallery/lavrushinsky-1.webp",
+        "/images/projects/gallery/lavrushinsky-2.webp",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/king-and-sons.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/frunzenskiy/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/king-and-sons.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/palashevskiy-11/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/palashevskiy-11.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/tishinskiy-bulvar.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/tishinskiy-bulvar/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/tishinskiy-bulvar.webp",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/king-and-sons.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/life-time/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/life-time.webp",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/symphony-34.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/ilyinka-3-8/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/ilyinka-3-8.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/obydenskiy-1/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/obydenskiy-1.webp",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/king-and-sons.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/fon-dessin/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/fon-dessin.webp",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg",
+        "/images/projects/king-and-sons.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/orlovo-davydovskiy/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/orlovo-davydovskiy.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/foriver/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/foriver.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/luzhnetskaya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/luzhnetskaya.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/rozhdestvenka-8/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/rozhdestvenka-8.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/novoostapovskaya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/novoostapovskaya.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/avtozavodskaya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/avtozavodskaya.webp",
+        "/images/projects/shagal.jpg",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/west-garden/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/west-garden.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/dostizhenie/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/dostizhenie.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/malaya-ordynka-19/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/malaya-ordynka-19.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/jazz/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/jazz.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/vrubelya-4/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/vrubelya-4.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/park-mira/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/park-mira.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/projects/westerdam/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/sminex/westerdam.webp",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/sminex/frunzenskiy.webp",
+        "/images/projects/sminex/palashevskiy-11.webp"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/districts/paveletskaya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/opus.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/districts/danilovsky/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/shagal.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/dom-7-danilovsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/districts/yuzhny-port/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/level-yuzhnoportovaya.jpg",
+        "/images/projects/level-yuzhnoportovaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/districts/kutuzovsky/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/badaevsky-day-02.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/vesper-kutuzovsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/districts/historic-center/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/nicole.jpg",
+        "/images/projects/nicole.jpg",
+        "/images/projects/lumin.jpg",
+        "/images/projects/enigmia.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/collections/u-vody/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/opus.jpg",
+        "/images/badaevsky-day-02.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/stone-blik.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/collections/klubnye-doma/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lumin.jpg",
+        "/images/projects/lumin.jpg",
+        "/images/projects/opus.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/collections/neboskreby/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/upside-towers.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/symphony-34.jpg",
+        "/images/projects/upside-towers.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/vid-na-reku-proverka-pered-pokupkoy/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/stone-blik.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/klubnaya-infrastruktura-rashody-na-soderzhanie/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/lavrushinsky.jpg",
+        "/images/projects/stone-blik.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/gotovyy-dom-ili-stroyashchiysya/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/high-life.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/stone-blik.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/planirovka-premium-kvartiry/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/stone-blik.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/stone-sokolniki.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/rassrochka-ili-polnaya-oplata/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/stone-sokolniki.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/stone-blik.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/kak-sravnit-novostroyki/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/nicole.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/lumin.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/rassrochka-ot-zastroishchika/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/opus.jpg",
+        "/images/projects/opus.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/dom-7-danilovsky.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/kvartira-dlya-arendy/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/high-life.jpg",
+        "/images/projects/high-life.jpg",
+        "/images/projects/shagal.jpg",
+        "/images/projects/stories-mosfilmovskaya.jpg"
+      ],
+      "unitCount": 0
+    },
+    {
+      "url": "https://main-hall.ru/analytics/rassrochki-oktyabr-2026/",
+      "status": 200,
+      "h1": 1,
+      "images": [
+        "/images/projects/level-yuzhnoportovaya.jpg",
+        "/images/projects/level-yuzhnoportovaya.jpg",
+        "/images/projects/shagal.jpg"
+      ],
+      "unitCount": 0
+    }
+  ],
+  "projects": [
+    {
+      "slug": "high-life",
+      "name": "HIGH LIFE",
+      "coverCount": 1,
+      "galleryCount": 2,
+      "pricedUnits": 1,
+      "floorPlans": 1,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "opus",
+      "name": "OPUS",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "badaevsky",
+      "name": "Бадаевский",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "vesper-kutuzovsky",
+      "name": "Vesper Кутузовский",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "shagal",
+      "name": "Шагал",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "level-yuzhnoportovaya",
+      "name": "Level Южнопортовая",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "symphony-34",
+      "name": "Symphony 34",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "nicole",
+      "name": "Николь",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "lumin",
+      "name": "LUMIN",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "lunar",
+      "name": "Lunar",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "stone-sokolniki",
+      "name": "STONE Сокольники",
+      "coverCount": 1,
+      "galleryCount": 1,
+      "pricedUnits": 2,
+      "floorPlans": 2,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "stone-blik",
+      "name": "STONE Блик",
+      "coverCount": 1,
+      "galleryCount": 2,
+      "pricedUnits": 1,
+      "floorPlans": 1,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "king-and-sons",
+      "name": "KING & SONS",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "stories-mosfilmovskaya",
+      "name": "Stories на Мосфильмовской",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "dom-7-danilovsky",
+      "name": "Дом 7 Даниловский",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "upside-towers",
+      "name": "Upside Towers",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "enigmia",
+      "name": "Энигмия",
+      "coverCount": 1,
+      "galleryCount": 2,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "lavrushinsky",
+      "name": "Лаврушинский",
+      "coverCount": 1,
+      "galleryCount": 2,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "frunzenskiy",
+      "name": "Фрунзенский",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "palashevskiy-11",
+      "name": "Палашёвский 11",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "tishinskiy-bulvar",
+      "name": "Тишинский бульвар",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "life-time",
+      "name": "Life Time",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "ilyinka-3-8",
+      "name": "Ильинка 3/8",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "obydenskiy-1",
+      "name": "Обыденский №1",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "fon-dessin",
+      "name": "Фон Дессин",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "orlovo-davydovskiy",
+      "name": "Городская усадьба в Орлово-Давыдовском",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "foriver",
+      "name": "Foriver",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "luzhnetskaya",
+      "name": "Проект на Лужнецкой набережной",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "rozhdestvenka-8",
+      "name": "Рождественка 8",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "novoostapovskaya",
+      "name": "Проект на Новоостаповской",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "avtozavodskaya",
+      "name": "Проект в Даниловском районе",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "west-garden",
+      "name": "West Garden",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "dostizhenie",
+      "name": "Достижение",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "malaya-ordynka-19",
+      "name": "Малая Ордынка, 19",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "jazz",
+      "name": "JAZZ",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "vrubelya-4",
+      "name": "Врубеля, 4",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "park-mira",
+      "name": "Парк Мира",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    },
+    {
+      "slug": "westerdam",
+      "name": "Westerdam",
+      "coverCount": 1,
+      "galleryCount": 0,
+      "pricedUnits": 0,
+      "floorPlans": 0,
+      "availabilityConfirmed": 0,
+      "numericInvestmentModels": 0
+    }
+  ]
+}

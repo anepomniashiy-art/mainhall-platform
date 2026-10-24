@@ -62,5 +62,57 @@
       "width": 820,
       "height": 379
     }
+  ],
+  "level-yuzhnoportovaya": [
+    {
+      "src": "/images/projects/gallery/research-level-1.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 868
+    },
+    {
+      "src": "/images/projects/gallery/research-level-2.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "src": "/images/projects/gallery/research-level-3.webp",
+      "caption": "Архитектура комплекса · визуализация Level Group",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "src": "/images/projects/gallery/research-level-4.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 1068
+    },
+    {
+      "src": "/images/projects/gallery/research-level-5.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 900
+    }
+  ],
+  "kvartal-serebryany-bor": [
+    {
+      "src": "/images/projects/gallery/research-serebryany-1.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "src": "/images/projects/gallery/research-serebryany-2.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/images/projects/gallery/research-serebryany-3.webp",
+      "caption": "Материалы застройщика · визуализация проекта",
+      "width": 1600,
+      "height": 800
+    }
   ]
 }

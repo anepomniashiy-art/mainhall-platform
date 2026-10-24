@@ -289,3 +289,7 @@ Object.assign(projectDossiers, {
 for (const [slug, entry] of Object.entries(sminexProjectDossiers)) {
  if (!projectDossiers[slug]) projectDossiers[slug] = entry;
 }
+
+projectDossiers["kvartal-serebryany-bor"]={address:"Москва, улица Берзарина, 37",format:"Премиальный жилой проект ST MICHAEL",features:["Архитектура Apex","Разные форматы квартир, включая террасы и пентхаусы","Гранд-лобби, фитнес и SPA заявлены застройщиком"],location:"Хорошёво-Мнёвники. При выборе важны положение корпуса, вид и реальный маршрут к транспорту. Будущую станцию нельзя учитывать как уже работающую инфраструктуру.",thesis:"Метро может поддержать спрос, но эффект зависит от цены входа. В прежнем разборе некоторые уступки конкурировали с прайсом застройщика; красивый прогноз по району не компенсирует переплату за конкретную квартиру.",checks:["Сопоставить цену лота с уступками того же корпуса","Уточнить срок передачи по ДДУ: план ввода II квартал 2027 не означает выдачу ключей в эту дату","Проверить окно, шум и постоянство вида","Получить смету отделки и тариф содержания"],source:"https://stmichael.ru/projects/kvartal-serebryanyj-bor",checkedAt:"24.10.2026"};
+projectDossiers["level-yuzhnoportovaya"].source="https://level.ru/projects/southport/";
+projectDossiers["level-yuzhnoportovaya"].checkedAt="24.10.2026";

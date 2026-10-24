@@ -73,3 +73,5 @@ Object.assign(projectImages, {
 for (const [slug, entry] of Object.entries(sminexProjectImages)) {
  if (!projectImages[slug]) projectImages[slug] = entry;
 }
+
+projectImages["kvartal-serebryany-bor"]={src:"/images/projects/kvartal-serebryany-bor.jpg",caption:"Квартал Серебряный бор · ST MICHAEL · визуализация проекта"};

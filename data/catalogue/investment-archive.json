@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "compiledAt": "2026-10-24T18:47:39.060Z",
+  "status": "historical_research",
+  "title": "Архив инвестиционных разборов MAINHALL",
+  "notice": "Цены и условия относятся к указанным датам. Сценарии отражают допущения прежних расчётов и не являются актуальным прогнозом или подтверждением наличия.",
+  "sourceCommit": "541b21df39af72a019fd6b56f9bda27657277339",
+  "sourceDataUrl": "https://github.com/anepomniashiy-art/north-cyprus/blob/541b21df39af72a019fd6b56f9bda27657277339/flip/reports/zk10/zk10.json",
+  "projects": [
+    {
+      "slug": "level-yuzhnoportovaya",
+      "name": "Level Южнопортовая",
+      "snapshot": {
+        "asOf": "2026-10-16",
+        "medianPricePerM2": 440367,
+        "offers": 41,
+        "minPricePerM2": 334522,
+        "maxPricePerM2": 597205,
+        "source": "https://github.com/anepomniashiy-art/north-cyprus/blob/541b21df39af72a019fd6b56f9bda27657277339/flip/reports/zk10/zk10.json",
+        "meaning": "Архив цен предложений; не сделки и не актуальное наличие."
+      },
+      "models": [
+        {
+          "date": "2026-10-17",
+          "lot": "8-121",
+          "area": 48.1,
+          "entryPriceMillion": 22.71,
+          "term": "II квартал 2029 по прежнему расчёту",
+          "source": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6231881440",
+          "consensusSource": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6231886212",
+          "assumptions": [
+            {
+              "label": "Базовый рост цены",
+              "annualMin": 0.05,
+              "annualMax": 0.06
+            },
+            {
+              "label": "Слабый рынок",
+              "annualMin": 0,
+              "annualMax": 0.02
+            },
+            {
+              "label": "Реализация драйверов",
+              "annualMin": 0.08,
+              "annualMax": 0.09
+            }
+          ],
+          "conclusion": "В прежней модели покупку на предложенных условиях не поддержали: длительное финансирование до ключей и неподтверждённый вид ухудшали результат."
+        },
+        {
+          "date": "2026-10-17",
+          "lot": "10-515",
+          "area": 33.9,
+          "entryPriceMillion": 16.73,
+          "term": "IV квартал 2029 по прежнему расчёту",
+          "source": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6232733000",
+          "consensusSource": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6232738463",
+          "assumptions": [
+            {
+              "label": "Базовый рост цены",
+              "annualMin": 0.05,
+              "annualMax": 0.06
+            },
+            {
+              "label": "Слабый рынок",
+              "annualMin": 0,
+              "annualMax": 0.02
+            }
+          ],
+          "conclusion": "Команда считала Level относительно доступным входом в кластер, но конкретный лот считали покупкой по рынку. Для решения нужны цена выбранной схемы оплаты, вид и полный график расходов. Кратный рост за несколько лет не подтверждён."
+        }
+      ],
+      "factors": [
+        "Преобразование территории Южного порта",
+        "Развитие деловой функции и транспортной инфраструктуры",
+        "Большой объём конкурирующего предложения"
+      ],
+      "conditions": [
+        "Не приравнивать планы района к сроку сдачи конкретного корпуса.",
+        "Не переносить предположения модели на все квартиры.",
+        "Пересчитать финансирование и расходы по актуальному предложению."
+      ],
+      "conclusion": "Развитие локации рассматриваем как инвестиционную гипотезу. Цена входа и срок удержания важнее рекламной скидки.",
+      "sourceComment": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6232738463"
+    },
+    {
+      "slug": "shagal",
+      "name": "Шагал",
+      "snapshot": {
+        "asOf": "2026-10-16",
+        "medianPricePerM2": 724015,
+        "offers": 105,
+        "minPricePerM2": 485341,
+        "maxPricePerM2": 987968,
+        "source": "https://github.com/anepomniashiy-art/north-cyprus/blob/541b21df39af72a019fd6b56f9bda27657277339/flip/reports/zk10/zk10.json",
+        "meaning": "Архив цен предложений; не сделки и не актуальное наличие."
+      },
+      "models": [
+        {
+          "date": "2026-10-17",
+          "area": 23,
+          "entryPriceMillion": 18.76,
+          "term": "IV квартал 2026 по прежнему разбору",
+          "source": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6232966206",
+          "conclusion": "В позднем сравнении студию рассматривали как вариант с близкими ключами, но высокая цена за квадратный метр ограничивала запас роста."
+        }
+      ],
+      "conditions": [
+        "Сверить окончание рассрочки со сроком передачи: разрыв потребует дополнительного финансирования.",
+        "Проверить промежуточные платежи по конкретному корпусу.",
+        "Сравнить цену с готовыми квартирами аналогичной площади."
+      ],
+      "conclusion": "Поздний разбор связывал привлекательность с близкими ключами, а не с обещанием высокой доходности.",
+      "sourceComment": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6232966206"
+    },
+    {
+      "slug": "serebryanyy-bor",
+      "name": "Квартал Серебряный бор",
+      "catalogueMatch": false,
+      "snapshot": {
+        "asOf": "2026-10-16",
+        "medianPricePerM2": 848135,
+        "offers": 60,
+        "minPricePerM2": 727651,
+        "maxPricePerM2": 1112107,
+        "source": "https://github.com/anepomniashiy-art/north-cyprus/blob/541b21df39af72a019fd6b56f9bda27657277339/flip/reports/zk10/zk10.json",
+        "meaning": "Архив цен предложений; не сделки и не актуальное наличие."
+      },
+      "initialModel": {
+        "status": "not_verified_primary_document",
+        "label": "Ранний ориентир, ожидающий сверки исходного отчёта",
+        "area": 36.03,
+        "entryPriceMillion": 30.33,
+        "exitPriceMillion": 37,
+        "growthPctRecalculated": 21.99,
+        "exitCostPct": 4,
+        "conclusion": "Пара 30,33 → 37 млн математически означает около 22% роста цены. Это условие модели, а не подтверждённая перспектива каждого лота. Первичный документ и дата расчёта пока не восстановлены; публичную рекомендацию на этой основе не формируем."
+      },
+      "models": [
+        {
+          "date": "2026-10-15",
+          "area": 25.46,
+          "entryPriceMillion": 25.957082,
+          "source": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6189076016",
+          "marketComparisonSource": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6188493818",
+          "conclusion": "Более поздний разбор другой студии не поддержал покупку на предложенных условиях: архивные переуступки в том же ЖК предлагались дешевле прайса застройщика. Сначала требуется проверить цену выхода и запас дисконта."
+        }
+      ],
+      "conditions": [
+        "Ранний расчёт и поздняя оценка относятся к разным квартирам; их результаты нельзя смешивать.",
+        "Рост цены не равен доходности собственного капитала.",
+        "Актуальные уступки, наличие и условия нужно перепроверить."
+      ],
+      "conclusion": "Единого подтверждённого прогноза +22% по всем квартирам комплекса нет.",
+      "sourceComment": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6189076016"
+    }
+  ],
+  "excluded": [
+    {
+      "slug": "upside-towers",
+      "reason": "В архиве зафиксирована коллизия newobject id48030 с несколькими чужими проектами; цены и число72 не публикуем.",
+      "source": "https://github.com/anepomniashiy-art/north-cyprus/issues/93#issuecomment-6184623567"
+    }
+  ]
+}

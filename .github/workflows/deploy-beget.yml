@@ -20,7 +20,10 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: node tests/test-investment-model.cjs
       - run: npm run build:host
+      - run: python3 tests/seo-export.py
       - name: Configure Beget and upload current export
         env:
           BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
