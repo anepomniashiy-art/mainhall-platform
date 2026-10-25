@@ -28,6 +28,13 @@ try{
   await page.goto('http://127.0.0.1:8091/investments/',{waitUntil:'domcontentloaded'});
   assert.equal(await page.locator('.mh-invest-selection-card').count(),10);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'selection overflow '+width);
+  await page.locator('[data-compare-add="level-yuzhnoportovaya"]').click();
+  await page.locator('[data-compare-add="high-life"]').click();
+  await page.locator('[data-compare-open]').click();
+  await page.locator('[data-project-comparison]').waitFor({state:'visible'});
+  assert.match(await page.locator('[data-project-comparison]').innerText(),/16,73/);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'comparison document overflow '+width);
+  await page.locator('[data-project-comparison]').screenshot({path:`investment-proof/comparison-${width}.png`});
   await page.screenshot({path:`investment-proof/selection-${width}.png`});
   checks.push({width,path:'/investments/',status:'pass'});await page.close();
  }
