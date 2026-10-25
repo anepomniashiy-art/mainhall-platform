@@ -12,7 +12,13 @@
 .mh-page-faq{margin:65px 0}.mh-editorial-page .mh-page-faq h2{font-size:36px;margin-bottom:30px}.mh-page-faq details{border-top:1px solid var(--rule);padding:24px 0}.mh-page-faq summary{cursor:pointer;font-size:20px;line-height:1.6}.mh-page-faq details p{max-width:850px;font-size:16px;line-height:1.85;margin:20px 0 0;color:#4b5740}
 .mh-selection-contact{display:flex;justify-content:space-between;align-items:center;gap:45px;padding:45px;background:#eceee6;margin:70px 0 35px}.mh-selection-contact>div{max-width:700px}.mh-editorial-page .mh-selection-contact h2{font-size:clamp(30px,3vw,46px);line-height:1.25;margin:20px 0}.mh-selection-contact p:not(.mh-eyebrow){font-size:16px;line-height:1.8;color:#4b5740}.mh-selection-contact .mh-pill{flex-shrink:0;font-size:15px;line-height:1.6;min-width:210px}
 .mh-editorial-page .mh-calculator{padding:35px 0 50px;margin:0 0 45px}.mh-editorial-page .mh-calculator h2{font-size:clamp(32px,3.4vw,50px)}
-.mh-author{font-size:14px;line-height:1.7;color:#626d57;margin:-20px 0 35px}.mh-article-sources{margin:45px 0}.mh-editorial-page .mh-article-sources h2{font-size:24px;margin-bottom:20px}.mh-article-sources a{display:block;font-size:15px;line-height:1.8;text-decoration:underline;text-underline-offset:4px}
+.mh-author{font-size:14px;line-height:1.7;color:#626d57;margin:-20px 0 35px}
+/* Listing bylines follow the description in normal flow; the article-header
+   negative margin must not pull them over a multi-line card description. */
+.mh-topic-card>p{margin:0}
+.mh-topic-card>p.mh-author{margin:16px 0 0;font-size:14px;line-height:1.7}
+.mh-topic-card .mh-text-link{display:inline-block;margin-top:24px}
+.mh-article-sources{margin:45px 0}.mh-editorial-page .mh-article-sources h2{font-size:24px;margin-bottom:20px}.mh-article-sources a{display:block;font-size:15px;line-height:1.8;text-decoration:underline;text-underline-offset:4px}
 .mh-editorial-page .mh-team-section{padding:55px 0}.mh-editorial-page .mh-team-section .mh-editorial-head h2{font-size:42px}
 .mh-contact-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin:65px 0}.mh-contact-directory a{display:flex;flex-direction:column;gap:22px;border-top:1px solid var(--rule);padding:27px 0}.mh-contact-directory span{font-size:14px;color:#626d57}.mh-contact-directory strong{font-size:clamp(22px,2.2vw,32px);line-height:1.5;font-weight:400;overflow-wrap:anywhere}
 .mh-developer-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:45px}.mh-developer-directory section{border-top:1px solid var(--rule);padding:25px 0}.mh-editorial-page .mh-developer-directory h2{font-size:30px;margin-bottom:25px}.mh-developer-directory a{display:block;font-size:18px;line-height:1.6;padding:15px 0}.mh-developer-directory a span{display:block;font-size:13px;color:#626d57;margin-top:7px}
