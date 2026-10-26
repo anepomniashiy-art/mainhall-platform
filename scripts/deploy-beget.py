@@ -71,41 +71,50 @@ base=Path('out')
 if not (base/'index.html').is_file(): raise SystemExit('Export missing')
 (base/'.htaccess').write_text(Path('public/.htaccess').read_text())
 files=sorted((p for p in base.rglob('*') if p.is_file()),key=lambda p:(p.suffix=='.html',p.name=='index.html',str(p)))
-ftp.quit()
-local=threading.local()
-def connection():
-    if not hasattr(local,'ftp'):
-        client=ReusingFTP_TLS(context=tls_context,timeout=45)
-        client.connect(host,21)
-        client.host=tls_name
-        client.login(ftp_login,ftp_password)
-        client.prot_p()
-        local.ftp=client
-        local.made={''}
-    return local.ftp
-def upload(path):
-    client=connection()
-    relative=path.relative_to(base).as_posix()
-    parts=relative.split('/')[:-1]
-    for i in range(1,len(parts)+1):
-        folder='/'.join(parts[:i])
-        if folder not in local.made:
-            try: client.mkd(folder)
-            except ftplib.error_perm as error:
-                if not str(error).startswith('550'): raise
-            local.made.add(folder)
-    with path.open('rb') as stream:
-        client.storbinary('STOR '+relative,stream,blocksize=262144)
-    return relative
-assets=[p for p in files if p.suffix!='.html']
-pages=[p for p in files if p.suffix=='.html' and p!=base/'index.html']
-count=0
-with ThreadPoolExecutor(max_workers=8) as pool:
-    for group in [assets,pages]:
-        for result in pool.map(upload,group):
-            count+=1
-            if count%100==0: print('Uploaded',count,'/',len(files),flush=True)
-    upload(base/'index.html')
+# Transfer a single archive: per-file FTP round trips do not scale to a catalogue.
+import secrets,zipfile,io
+nonce=secrets.token_hex(16)
+token=secrets.token_hex(32)
+print('::add-mask::'+token,flush=True)
+archive_name='.mh-release-'+nonce+'.zip'
+runner_name='mh-release-'+nonce+'.php'
+archive=Path('/tmp')/archive_name
+with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+    for path in files:
+        if path!=base/'index.html': z.write(path,path.relative_to(base).as_posix())
+    z.write(base/'index.html','index.html')
+php = r'''<?php
+header('Content-Type: application/json');
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !hash_equals('TOKEN_HASH', hash('sha256', $_SERVER['HTTP_X_MAINHALL_DEPLOY'] ?? ''))) { http_response_code(403); exit; }
+set_time_limit(300);
+if (!class_exists('ZipArchive')) { http_response_code(500); echo json_encode(['error'=>'ZipArchive unavailable']); exit; }
+$z = new ZipArchive();
+if ($z->open(__DIR__ . '/ARCHIVE_NAME') !== true) { http_response_code(500); exit; }
+$count = $z->numFiles;
+for ($i=0; $i<$count; $i++) {
+ $name=$z->getNameIndex($i);
+ if (!$name || $name[0]=='/' || strpos($name, '..')!==false || strpos($name, chr(92))!==false || strpos($name, chr(0))!==false) { http_response_code(400); exit; }
+ $opsys=0; $attr=0; $z->getExternalAttributesIndex($i,$opsys,$attr);
+ if ((($attr >> 16) & 0170000) === 0120000) { http_response_code(400); exit; }
+}
+for ($i=0; $i<$count; $i++) { if (!$z->extractTo(__DIR__, [$z->getNameIndex($i)])) { http_response_code(500); exit; } }
+$z->close();
+echo json_encode(['files'=>$count]);
+?>'''
+php=php.replace('TOKEN_HASH',hashlib.sha256(token.encode()).hexdigest()).replace('ARCHIVE_NAME',archive_name)
+try:
+    with archive.open('rb') as stream: ftp.storbinary('STOR '+archive_name,stream,blocksize=262144)
+    ftp.storbinary('STOR '+runner_name,io.BytesIO(php.encode()))
+    print('Archive uploaded:',archive.stat().st_size,'bytes',flush=True)
+    request=urllib.request.Request('https://main-hall.ru/'+runner_name,data=b'deploy',headers={'X-Mainhall-Deploy':token},method='POST')
+    with urllib.request.urlopen(request,timeout=360) as response: result=json.load(response)
+    if result.get('files')!=len(files): raise SystemExit('Archive extraction count mismatch')
+    print('UPLOAD_COMPLETE files='+str(result['files']),flush=True)
+finally:
+    for remote in [runner_name,archive_name]:
+        try: ftp.delete(remote)
+        except ftplib.all_errors: pass
+    ftp.quit()
+    archive.unlink(missing_ok=True)
 ip=socket.gethostbyname(login+'.beget.tech')
-print('UPLOAD_COMPLETE files='+str(len(files))+' host='+host+' ip='+ip,flush=True)
 Path('/tmp/beget-ip').write_text(ip)
