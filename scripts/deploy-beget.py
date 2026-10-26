@@ -87,7 +87,21 @@ php = r'''<?php
 header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !hash_equals('TOKEN_HASH', hash('sha256', $_SERVER['HTTP_X_MAINHALL_DEPLOY'] ?? ''))) { http_response_code(403); exit; }
 set_time_limit(300);
-if (!class_exists('ZipArchive')) { http_response_code(500); echo json_encode(['error'=>'ZipArchive unavailable']); exit; }
+if (!class_exists('ZipArchive')) {
+ try {
+  $archive=__DIR__ . '/ARCHIVE_NAME'; $phar=new PharData($archive);
+  $prefix='phar://' . $archive . '/'; $count=0;
+  foreach (new RecursiveIteratorIterator($phar) as $entry) {
+   $name=substr($entry->getPathname(),strlen($prefix));
+   if (!$name || $name[0]=='/' || strpos($name,'..')!==false || strpos($name,chr(92))!==false || $entry->isLink()) { http_response_code(400); exit; }
+   $target=__DIR__ . '/' . $name;
+   if (!is_dir(dirname($target))) mkdir(dirname($target),0755,true);
+   if (file_put_contents($target,$entry->getContent())===false) throw new Exception('write failed');
+   $count++;
+  }
+  echo json_encode(['files'=>$count]); exit;
+ } catch (Throwable $e) { http_response_code(500); echo json_encode(['error'=>'archive extraction failed','type'=>get_class($e)]); exit; }
+}
 $z = new ZipArchive();
 if ($z->open(__DIR__ . '/ARCHIVE_NAME') !== true) { http_response_code(500); exit; }
 $count = $z->numFiles;
@@ -107,7 +121,11 @@ try:
     ftp.storbinary('STOR '+runner_name,io.BytesIO(php.encode()))
     print('Archive uploaded:',archive.stat().st_size,'bytes',flush=True)
     request=urllib.request.Request('https://main-hall.ru/'+runner_name,data=b'deploy',headers={'X-Mainhall-Deploy':token},method='POST')
-    with urllib.request.urlopen(request,timeout=360) as response: result=json.load(response)
+    try:
+        with urllib.request.urlopen(request,timeout=360) as response: result=json.load(response)
+    except urllib.error.HTTPError as error:
+        print('Archive extraction HTTP',error.code,error.read(500).decode('utf8',errors='replace'),flush=True)
+        raise SystemExit('Archive extraction failed')
     if result.get('files')!=len(files): raise SystemExit('Archive extraction count mismatch')
     print('UPLOAD_COMPLETE files='+str(result['files']),flush=True)
 finally:
