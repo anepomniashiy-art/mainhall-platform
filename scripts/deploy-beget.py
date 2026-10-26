@@ -85,7 +85,7 @@ with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=
     z.write(base/'index.html','index.html')
 php = r'''<?php
 header('Content-Type: application/json');
-if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !hash_equals('TOKEN_HASH', hash('sha256', $_SERVER['HTTP_X_MAINHALL_DEPLOY'] ?? ''))) { http_response_code(403); exit; }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !hash_equals('TOKEN_HASH', hash('sha256', (isset($_SERVER['HTTP_X_MAINHALL_DEPLOY']) ? $_SERVER['HTTP_X_MAINHALL_DEPLOY'] : '')))) { http_response_code(403); exit; }
 set_time_limit(300);
 if (!class_exists('ZipArchive')) {
  try {
@@ -100,7 +100,7 @@ if (!class_exists('ZipArchive')) {
    $count++;
   }
   echo json_encode(['files'=>$count]); exit;
- } catch (Throwable $e) { http_response_code(500); echo json_encode(['error'=>'archive extraction failed','type'=>get_class($e)]); exit; }
+ } catch (Exception $e) { http_response_code(500); echo json_encode(['error'=>'archive extraction failed','type'=>get_class($e)]); exit; }
 }
 $z = new ZipArchive();
 if ($z->open(__DIR__ . '/ARCHIVE_NAME') !== true) { http_response_code(500); exit; }
