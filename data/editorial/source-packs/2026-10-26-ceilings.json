@@ -1,0 +1,42 @@
+{
+  "packId": "2026-10-26-ceilings",
+  "projects": [
+    {
+      "slug": "opus",
+      "name": "OPUS"
+    },
+    {
+      "slug": "lavrushinsky",
+      "name": "Лаврушинский"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "vysokie-potolki-chto-ostanetsya-posle-remonta",
+      "title": "Высокие потолки: что останется после ремонта",
+      "kind": "evergreen",
+      "category": "Гид покупателя",
+      "image": "opus",
+      "related": [
+        "opus",
+        "lavrushinsky"
+      ],
+      "sources": [
+        {
+          "name": "OPUS: архитектура и высота потолков",
+          "url": "https://opus-home.ru/architecture",
+          "checkedAt": "2026-10-26T06:08:44.500996+00:00",
+          "text": "Проверенный пересказ: официальный сайт OPUS указывает высоту потолков от 3,5 м; отдельно описывает пентхаусы с высотой потолков до 7,4 метров.",
+          "evidenceType": "verified-summary"
+        },
+        {
+          "name": "Sminex: коллекционные форматы квартир",
+          "url": "https://www.sminex.com/collection",
+          "checkedAt": "2026-10-26T06:08:44.500996+00:00",
+          "text": "Проверенный пересказ: Sminex описывает высокие потолки в пентхаусах и ситихаусах. В разделе двухэтажных квартир представлены второй свет и антресоли.",
+          "evidenceType": "verified-summary"
+        }
+      ]
+    }
+  ]
+}
