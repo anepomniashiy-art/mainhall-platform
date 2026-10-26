@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-10-26T11:02:30.736086+00:00",
+  "selectedSource": "https://feeds.sminex.com/xml/All_Sminex_Full_YandexRealty.xml",
+  "selectionReason": "Same 2895 IDs across full formats. Yandex preserves residential/commercial classification; CIAN and Avito misclassify offices as apartments. CIAN enriches bedrooms, house name and booking status by exact source ID only.",
+  "sources": [
+    {
+      "filename": "Commercial-YandexRealty.xml",
+      "sha256": "b3a908f805c41b71e5e284ef29a433a602e0412b6262abdec6b13e6692dec513",
+      "bytes": 187491,
+      "offers": 75
+    },
+    {
+      "filename": "Commercial_YandexRealty.xml",
+      "sha256": "b3a908f805c41b71e5e284ef29a433a602e0412b6262abdec6b13e6692dec513",
+      "bytes": 187491,
+      "offers": 75
+    },
+    {
+      "filename": "Full-Avito.xml",
+      "sha256": "3c36fd0560d58f759d5dc12f1410a814f16c19d2e53d06085e6ade47a5cf599d",
+      "bytes": 4215163,
+      "offers": 2895
+    },
+    {
+      "filename": "Full-CIAN.xml",
+      "sha256": "4cd04e28d2dfa6465e609cc990c117142918bf4d9731a17d8b4c53f17859899a",
+      "bytes": 8886962,
+      "offers": 2895
+    },
+    {
+      "filename": "Full-Domclick.xml",
+      "sha256": "3fdc3af244920666c5289ca94945a2618329894ca91948d5e216e5f242ce4240",
+      "bytes": 8161163,
+      "offers": 2895
+    },
+    {
+      "filename": "Full_Avito.xml",
+      "sha256": "3c36fd0560d58f759d5dc12f1410a814f16c19d2e53d06085e6ade47a5cf599d",
+      "bytes": 4215163,
+      "offers": 2895
+    },
+    {
+      "filename": "Full_CIAN.xml",
+      "sha256": "4cd04e28d2dfa6465e609cc990c117142918bf4d9731a17d8b4c53f17859899a",
+      "bytes": 8886962,
+      "offers": 2895
+    },
+    {
+      "filename": "Full_Domclick.xml",
+      "sha256": "3fdc3af244920666c5289ca94945a2618329894ca91948d5e216e5f242ce4240",
+      "bytes": 8161163,
+      "offers": 2895
+    },
+    {
+      "filename": "Living_YandexRealty.xml",
+      "sha256": "3d752994b4436be9246f3ac55d8ca3f5f18b5a0e5f7531250a153ead3eca111a",
+      "bytes": 7940426,
+      "offers": 2820
+    },
+    {
+      "filename": "full-yandex.xml",
+      "sha256": "ff422e762f70e94924fd06de15b1f2a6f807281869534757a9dce2c78b46985d",
+      "bytes": 8163458,
+      "offers": 2895
+    }
+  ],
+  "coverage": {
+    "unitCount": 2895,
+    "projectCount": 16,
+    "categories": {
+      "office": 39,
+      "apartment": 2814,
+      "house": 6,
+      "free_purpose": 36
+    },
+    "uniqueImages": 5808,
+    "unitsWithPlan": 2888
+  }
+}

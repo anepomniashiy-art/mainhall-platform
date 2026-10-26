@@ -5,6 +5,7 @@ export const dynamic="force-static";
 export function GET(){
  let source=readFileSync(join(process.cwd(),"public/legacy-mainhall/index.html"),"utf8");
  source=source.replaceAll("https://main-hall.ru",SITE_URL);
+ source=source.replace(/<link[^>]+rel="canonical"[^>]*>/g,'<link rel="canonical" href="'+SITE_URL+'/commercial/strategy/">');
  const description="Коммерческая недвижимость Москвы: подход MAINHALL к выбору объектов, инвестиционным сценариям и работе с инвесторами.";
  let descriptions=0;
  source=source.replace(/<meta\s+name="description"[^>]*>/g,()=>descriptions++?"":`<meta name="description" content="${description}">`);

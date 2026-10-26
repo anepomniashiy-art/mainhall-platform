@@ -47,3 +47,18 @@ export const sminexProjectDossiers = Object.fromEntries(sminexResidentialPortfol
   checkedAt: "21.10.2026",
  }];
 }));
+
+// Additional residential projects disclosed by the authorised Sminex unit feed.
+// Address fields take precedence over the feed's generic locality label.
+import feedEditorial from "../../data/catalogue/sminex-feed-project-editorial.json";
+for (const p of feedEditorial.projects) {
+ if (!sminexEditorialProjects.some(e=>e.slug===p.slug)) sminexEditorialProjects.push({
+  slug:p.slug,name:p.name,developer:"Sminex",area:p.area,className:"Не указан",
+  sourceUrl:p.url,summary:p.summary,thesis:p.thesis,
+  dueDiligence:["Адрес, корпус и документы выбранного помещения","Наличие и цена на дату бронирования","Состояние квартиры и расходы на ремонт"],propertyType:"residential"
+ });
+ sminexProjectDossiers[p.slug]={address:p.address,format:"Жилой проект с предложениями в официальном фиде Sminex",
+  features:[p.summary,"Цены, площади и этажи приведены для конкретных лотов."],location:p.location,thesis:p.thesis,
+  checks:["Действующее предложение и условия оплаты","Фактическое состояние и комплектация","Маршрут до транспорта и эксплуатационные платежи"],
+  source:"https://feeds.sminex.com/xml/All_Sminex_Full_YandexRealty.xml",checkedAt:"26.10.2026"};
+}

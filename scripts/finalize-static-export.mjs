@@ -2,13 +2,21 @@ import {readFileSync, statSync, rmSync, mkdirSync, writeFileSync, existsSync} fr
 
 // Next exports GET route handlers as extensionless files, even with trailingSlash.
 // Directory indexes are required for GitHub Pages to serve HTML at /commercial/.
-const route = 'out/commercial';
+const route = existsSync('out/commercial/strategy') ? 'out/commercial/strategy' : 'out/commercial';
 if (statSync(route).isFile()) {
   const html = readFileSync(route, 'utf8');
   if (!html.toLowerCase().startsWith('<!doctype html')) throw Error('Invalid commercial export');
   rmSync(route);
   mkdirSync(route);
   writeFileSync(`${route}/index.html`, html);
+}
+// Cached static route handlers can leave an empty export directory.
+if (!existsSync(`${route}/index.html`)) {
+ const body = '.next/server/app/commercial/strategy.body';
+ if (route !== 'out/commercial/strategy' || !existsSync(body)) throw Error('Missing commercial route export');
+ const cached = readFileSync(body, 'utf8');
+ if (!cached.toLowerCase().startsWith('<!doctype html') || !cached.includes('/commercial/strategy/')) throw Error('Invalid cached strategy export');
+ writeFileSync(`${route}/index.html`, cached);
 }
 const html = readFileSync(`${route}/index.html`, 'utf8');
 // A Pages CNAME makes the site root-mounted. Project-path asset URLs would 404.

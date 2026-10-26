@@ -1,0 +1,1212 @@
+{
+  "images": [
+    {
+      "projectSlug": "frunzenskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya1.jpg",
+      "sourceUrl": "https://www.sminex.com/frunzenskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "frunzenskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya2.jpg",
+      "sourceUrl": "https://www.sminex.com/frunzenskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "frunzenskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya3.jpg",
+      "sourceUrl": "https://www.sminex.com/frunzenskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "frunzenskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya4.jpg",
+      "sourceUrl": "https://www.sminex.com/frunzenskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "frunzenskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya5.jpg",
+      "sourceUrl": "https://www.sminex.com/frunzenskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "frunzenskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya6.jpg",
+      "sourceUrl": "https://www.sminex.com/frunzenskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "luzhnetskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/luzhneckiy/main/new/images/luzhnetsky-portfolio-background.jpg",
+      "sourceUrl": "https://www.sminex.com/luzhnetskiy-dc",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "luzhnetskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/1.jpeg",
+      "sourceUrl": "https://www.sminex.com/luzhnetskiy-dc",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "luzhnetskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/3.jpeg",
+      "sourceUrl": "https://www.sminex.com/luzhnetskiy-dc",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "palashevskiy-11",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_1.jpg",
+      "sourceUrl": "https://www.sminex.com/palashevskiy-11",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "palashevskiy-11",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_2.jpg",
+      "sourceUrl": "https://www.sminex.com/palashevskiy-11",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "palashevskiy-11",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_3.jpg",
+      "sourceUrl": "https://www.sminex.com/palashevskiy-11",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "palashevskiy-11",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_4.jpg",
+      "sourceUrl": "https://www.sminex.com/palashevskiy-11",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky1.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky2.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky3.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky4.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky5.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky6.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky7.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky8.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky9.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky10.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "lavrushinsky",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky11.jpg",
+      "sourceUrl": "https://www.sminex.com/lavrushinskiy",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky1.jpg",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky2.png",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky3.png",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky4.jpg",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky5.png",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky6.jpg",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky7.jpg",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky8.jpg",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "tishinskiy-bulvar",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky9.jpg",
+      "sourceUrl": "https://www.sminex.com/tishinskiy-b",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime1.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime2.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime3.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime4.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime5.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime6.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "life-time",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime7.jpg",
+      "sourceUrl": "https://www.sminex.com/life-time",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "ilyinka-3-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka1.jpg",
+      "sourceUrl": "https://www.sminex.com/ilyinka",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "ilyinka-3-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka2.jpg",
+      "sourceUrl": "https://www.sminex.com/ilyinka",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "ilyinka-3-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka3.jpg",
+      "sourceUrl": "https://www.sminex.com/ilyinka",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "ilyinka-3-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka4.jpg",
+      "sourceUrl": "https://www.sminex.com/ilyinka",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "ilyinka-3-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka5.jpg",
+      "sourceUrl": "https://www.sminex.com/ilyinka",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "obydenskiy-1",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy1.jpg",
+      "sourceUrl": "https://www.sminex.com/obydenskiy-1",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "obydenskiy-1",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy2.jpg",
+      "sourceUrl": "https://www.sminex.com/obydenskiy-1",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "obydenskiy-1",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy3.jpg",
+      "sourceUrl": "https://www.sminex.com/obydenskiy-1",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "obydenskiy-1",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy4.jpg",
+      "sourceUrl": "https://www.sminex.com/obydenskiy-1",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "obydenskiy-1",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy5.jpg",
+      "sourceUrl": "https://www.sminex.com/obydenskiy-1",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "obydenskiy-1",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy6.jpg",
+      "sourceUrl": "https://www.sminex.com/obydenskiy-1",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "fon-dessin",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy1.jpg",
+      "sourceUrl": "https://www.sminex.com/fon-dessin",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "fon-dessin",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy2.jpg",
+      "sourceUrl": "https://www.sminex.com/fon-dessin",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "fon-dessin",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy3.jpg",
+      "sourceUrl": "https://www.sminex.com/fon-dessin",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "fon-dessin",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy4.png",
+      "sourceUrl": "https://www.sminex.com/fon-dessin",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "fon-dessin",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy5.jpg",
+      "sourceUrl": "https://www.sminex.com/fon-dessin",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "orlovo-davydovskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba1.jpg",
+      "sourceUrl": "https://gorodskaya-usadba.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "orlovo-davydovskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba2.jpg",
+      "sourceUrl": "https://gorodskaya-usadba.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "orlovo-davydovskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba3.jpg",
+      "sourceUrl": "https://gorodskaya-usadba.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "orlovo-davydovskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba4.jpg",
+      "sourceUrl": "https://gorodskaya-usadba.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "orlovo-davydovskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba5.jpg",
+      "sourceUrl": "https://gorodskaya-usadba.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "orlovo-davydovskiy",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba6.jpg",
+      "sourceUrl": "https://gorodskaya-usadba.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "foriver",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-1.png",
+      "sourceUrl": "https://www.sminex.com/foriver",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "foriver",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-2.png",
+      "sourceUrl": "https://www.sminex.com/foriver",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "foriver",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-3.png",
+      "sourceUrl": "https://www.sminex.com/foriver",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "foriver",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-4.png",
+      "sourceUrl": "https://www.sminex.com/foriver",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "foriver",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-5.png",
+      "sourceUrl": "https://www.sminex.com/foriver",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "twist",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist1.jpg",
+      "sourceUrl": "https://twist-office.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "twist",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist2.jpg",
+      "sourceUrl": "https://twist-office.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "twist",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist3.jpg",
+      "sourceUrl": "https://twist-office.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "twist",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist4.jpg",
+      "sourceUrl": "https://twist-office.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "twist",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist5.jpg",
+      "sourceUrl": "https://twist-office.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "manufaktura-xix",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/tyltip_card.jpg",
+      "sourceUrl": "https://www.sminex.com/manufaktura",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "luzhnetskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/1.jpg",
+      "sourceUrl": "https://www.sminex.com/luzhnetskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "luzhnetskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/2.jpg",
+      "sourceUrl": "https://www.sminex.com/luzhnetskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "luzhnetskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/3.jpg",
+      "sourceUrl": "https://www.sminex.com/luzhnetskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "rozhdestvenka-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_1.jpg",
+      "sourceUrl": "https://www.sminex.com/rozhdestvenka-8",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "rozhdestvenka-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_2.jpg",
+      "sourceUrl": "https://www.sminex.com/rozhdestvenka-8",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "rozhdestvenka-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_3.jpg",
+      "sourceUrl": "https://www.sminex.com/rozhdestvenka-8",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "rozhdestvenka-8",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_4.jpg",
+      "sourceUrl": "https://www.sminex.com/rozhdestvenka-8",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "novoostapovskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/1.jpg",
+      "sourceUrl": "https://www.sminex.com/novoostapovskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "novoostapovskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/2.jpg",
+      "sourceUrl": "https://www.sminex.com/novoostapovskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "novoostapovskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/3.jpg",
+      "sourceUrl": "https://www.sminex.com/novoostapovskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "avtozavodskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/1.jpg",
+      "sourceUrl": "https://www.sminex.com/avtozavodskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "avtozavodskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/2.jpg",
+      "sourceUrl": "https://www.sminex.com/avtozavodskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "avtozavodskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/3.jpg",
+      "sourceUrl": "https://www.sminex.com/avtozavodskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "avtozavodskaya",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/4.jpg",
+      "sourceUrl": "https://www.sminex.com/avtozavodskaya",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "west-garden",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden1.jpg",
+      "sourceUrl": "https://www.sminex.com/west-garden",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "west-garden",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden2.jpg",
+      "sourceUrl": "https://www.sminex.com/west-garden",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "west-garden",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden3.jpg",
+      "sourceUrl": "https://www.sminex.com/west-garden",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "west-garden",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden4.jpg",
+      "sourceUrl": "https://www.sminex.com/west-garden",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "west-garden",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden5.jpg",
+      "sourceUrl": "https://www.sminex.com/west-garden",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie1.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie2.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie3.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie4.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie5.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie6.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie7.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie8.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie9.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "dostizhenie",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie10.jpg",
+      "sourceUrl": "https://www.sminex.com/dostizhenie",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "malaya-ordynka-19",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "malaya-ordynka-19",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "malaya-ordynka-19",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "malaya-ordynka-19",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "malaya-ordynka-19",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "jazz",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "jazz",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "jazz",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "jazz",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "jazz",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "vrubelya-4",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel1.jpg",
+      "sourceUrl": "https://www.sminex.com/vrubel-4",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "vrubelya-4",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel2.jpg",
+      "sourceUrl": "https://www.sminex.com/vrubel-4",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "chameleon",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "chameleon",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "chameleon",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "chameleon",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "chameleon",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "seasons",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "seasons",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "seasons",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "the-yard",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard1.jpeg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "the-yard",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard2.jpeg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "the-yard",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "the-yard",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "smart-park",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "smart-park",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "smart-park",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "smart-park",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "smart-park",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "atmosfera",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "atmosfera",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "atmosfera",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "atmosfera",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "atmosfera",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "bankside",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "bankside",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside2.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "bankside",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "bankside",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "bankside",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "park-mira",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira1.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "park-mira",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira2.jpeg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "park-mira",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira3.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "park-mira",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira4.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "park-mira",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira5.jpg",
+      "sourceUrl": "https://www.sminex.com/portfolio-proyectov",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "westerdam",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam1.jpg",
+      "sourceUrl": "https://westerdam.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "westerdam",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam2.jpg",
+      "sourceUrl": "https://westerdam.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "westerdam",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam3.jpg",
+      "sourceUrl": "https://westerdam.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "westerdam",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam4.jpg",
+      "sourceUrl": "https://westerdam.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    },
+    {
+      "projectSlug": "westerdam",
+      "url": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam5.jpg",
+      "sourceUrl": "https://westerdam.ru/",
+      "checkedAt": "2026-10-21",
+      "classification": "official_project_visual",
+      "photographVsRender": "not_verified"
+    }
+  ]
+}

@@ -61,6 +61,72 @@
       "caption": "Детская площадка во дворе-парке · визуализация",
       "width": 820,
       "height": 379
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky7.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky8.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky9.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky10.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLavrushinsky11.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
     }
   ],
   "level-yuzhnoportovaya": [
@@ -113,6 +179,904 @@
       "caption": "Материалы застройщика · визуализация проекта",
       "width": 1600,
       "height": 800
+    }
+  ],
+  "frunzenskiy": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoFrunzenskaya6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "luzhnetskiy": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/projects/luzhneckiy/main/new/images/luzhnetsky-portfolio-background.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/1.jpeg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya-office/cards/3.jpeg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "palashevskiy-11": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/palashevskiy/card_4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "tishinskiy-bulvar": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky2.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky3.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky5.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky7.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky8.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTishinsky9.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "life-time": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoLifeTime7.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "ilyinka-3-8": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoIlyinka5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "obydenskiy-1": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoObydenskiy6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "fon-dessin": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy4.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoChistyePrudy5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "orlovo-davydovskiy": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoGorodskayaUsadba6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "foriver": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-1.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-2.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-3.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-4.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/foriver-5.png",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "twist": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoTwist5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "manufaktura-xix": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/manufactory/tyltip_card.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "luzhnetskaya": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/luzhnetskaya/portfolio-proektov/3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "rozhdestvenka-8": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/rozhdestvenka-8/portfolio/Project_4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "novoostapovskaya": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/novoostapovskaya/project%20cards/3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "avtozavodskaya": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/preview/avtozavodskaya/cards/4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "west-garden": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWestgarden5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "dostizhenie": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie6.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie7.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie8.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie9.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoDostigenie10.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "malaya-ordynka-19": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoOrdynka5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "jazz": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoJazz5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "vrubelya-4": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoVrubel2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "chameleon": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoKhameleon5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "seasons": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSeasons3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "the-yard": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard1.jpeg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard2.jpeg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoYard4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "smart-park": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoSmartpark5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "atmosfera": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoAtmosphere5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "bankside": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoBankside5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "park-mira": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira2.jpeg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoparkMira5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "westerdam": [
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam1.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam2.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam3.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam4.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "https://storage.yandexcloud.net/s3smx-site-sminex-media/prod/mocks/public/images/main/portfolio/photoWesterdam5.jpg",
+      "caption": "Официальный материал Sminex. Фотография или визуализация проекта.",
+      "width": 1600,
+      "height": 1000
     }
   ]
 }
