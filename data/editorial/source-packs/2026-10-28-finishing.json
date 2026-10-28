@@ -1,0 +1,42 @@
+{
+  "packId": "2026-10-28-finishing",
+  "projects": [
+    {
+      "slug": "stone-sokolniki",
+      "name": "СТОУН Сокольники"
+    },
+    {
+      "slug": "stone-blik",
+      "name": "STONE Блик"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "otdelka-ot-zastroyshchika-ili-bez",
+      "title": "Отделка от застройщика или без: как сравнивать предложения",
+      "kind": "evergreen",
+      "category": "Гид покупателя",
+      "image": "stone-sokolniki",
+      "related": [
+        "stone-sokolniki",
+        "stone-blik"
+      ],
+      "sources": [
+        {
+          "name": "STONE: презентация СТОУН Сокольники",
+          "url": "https://stone-s3.storage.yandexcloud.net/STOUN_Sokolniki_vash_dom_ryadom_s_parkom_a99d77c524.pdf",
+          "checkedAt": "2026-10-28T06:10:21.578300+00:00",
+          "text": "Проверенный пересказ: в официальной презентации СТОУН Сокольники в разделе об отделке указаны квартиры без отделки, установка входной двери и приборов отопления. Цены и наличие из презентации не используются.",
+          "evidenceType": "verified-summary"
+        },
+        {
+          "name": "Level: детализация отделки в презентации Нижегородской",
+          "url": "https://cdn.level.ru/media/files/e07752c25abcb525c95cbda2b8d4df4dbfcf4bee.pdf",
+          "checkedAt": "2026-10-28T06:10:21.578300+00:00",
+          "text": "Проверенный пересказ опубликованной презентации Level Нижегородская: в детализации white box потолки без отделки, межкомнатные двери не устанавливаются; пол санузла описан отдельно, со слоем гидроизоляции без стяжки. Документ назван Презентация Нижегородская февраль 2024; не используется для утверждения актуальных условий лота.",
+          "evidenceType": "verified-summary"
+        }
+      ]
+    }
+  ]
+}
