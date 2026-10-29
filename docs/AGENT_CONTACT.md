@@ -9,7 +9,8 @@ GitHub can delay scheduled jobs, so this is not a real-time SLA.
 
 Each request posts RECEIVED to its original issue before contacting either model.
 Claude Messages API reviewer is clearly labelled as an API session. A separate actual
-Claude Code action reads repository evidence and writes a local report. It has no code
+Claude Code CLI runs in bare mode with only Read/Glob/Grep tools. Its structured
+result is checked and saved as a local report. It has no code
 publication role in this workflow. Results and failures return to the original issue.
 Bot replies do not trigger further calls. A finished request is never automatically repeated;
 submit a new ID for an intentional retry. An abandoned receipt may be retried once after
