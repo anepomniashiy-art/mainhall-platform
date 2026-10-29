@@ -3,13 +3,13 @@
 This is a durable, read-only contact queue, separate from the coding/PR pipeline.
 
 Add a unique `{ "id": "lowercase-request-id", "issue": 28 }` to
-`.github/agent-triggers/contact.json` on main. The issue must belong to the repository owner.
+`.github/agent-triggers/contact.json` on main. An optional `question` narrows the request to one exact question instead of the full issue body. The issue must belong to the repository owner.
 The commit starts `agent-contact.yml`; a fifteen-minute scheduled sweep recovers missed events.
 GitHub can delay scheduled jobs, so this is not a real-time SLA.
 
 Each request posts RECEIVED to its original issue before contacting either model.
 Claude Messages API reviewer is clearly labelled as an API session. A separate actual
-Claude Code CLI runs in bare mode with only Read/Glob/Grep tools. Its structured
+Claude Code CLI runs in bare mode with only Read/Glob/Grep tools. Actual Read/Glob/Grep tool events are verified in its stream-json trace. Its structured
 result is checked and saved as a local report. It has no code
 publication role in this workflow. Results and failures return to the original issue.
 Bot replies do not trigger further calls. A finished request is never automatically repeated;
