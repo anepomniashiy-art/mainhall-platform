@@ -3,7 +3,15 @@
 import {useId, useState} from "react";
 import "@/app/investment.css";
 
+/** A dated MAINHALL forecast, supplied only with a complete project model.
+ * Entry/exit are millions of RUB; growth is the total price change over horizon.
+ */
+export type InvestmentForecast = {
+ growthPct: number; asOf: string; horizon: string; entry: number; exit: number; basis: string[];
+};
+
 export type InvestmentProfile = {
+ forecast?: InvestmentForecast;
  title: string;
  verdict: string;
  horizon: string;
@@ -40,14 +48,22 @@ export function InvestmentCase({profile}:{profile:InvestmentProfile}) {
  const started=entryText.trim()!=="" && capitalText.trim()!=="";
  const valid=started && [entry,ownCapital,cost,years,other].every(Number.isFinite) && entry>0 && ownCapital>0 && ownCapital<=entry && cost>=0 && cost<=100 && years>0 && other>=0 && costText.trim()!=="" && yearsText.trim()!=="" && otherText.trim()!=="";
  const hist=profile.historical;
+ const f=profile.forecast;
+ const forecast=f && [f.growthPct,f.entry,f.exit].every(Number.isFinite) && f.entry>0 && f.exit>0 && f.asOf.trim() && f.horizon.trim() && f.basis.length>0 && Math.abs((f.exit/f.entry-1)*100-f.growthPct)<0.15 ? f : null;
  const historicalResults=hist?[hist.downsideExit,hist.exit].map(exit=>({exit,growth:(exit/hist.entry-1)*100,profit:exit*(1-hist.exitCostPct/100)-hist.entry,roi:(exit*(1-hist.exitCostPct/100)-hist.entry)/hist.ownCapital*100})):[];
  return <div className="mh-invest-case">
-  <header className="mh-invest-heading"><p className="mh-invest-kicker">ИНВЕСТИЦИОННЫЙ РАЗБОР / MAINHALL</p><h2>{profile.title}</h2><p className="mh-invest-verdict">{profile.verdict}</p><p className="mh-invest-note">Редакция MAINHALL · 24 октября 2026. </p></header>
-  <div className="mh-invest-metrics"><div><span>Горизонт анализа</span><strong>{profile.horizon}</strong></div><div><span>Основания для оценки</span><strong>{profile.drivers.length} {profile.drivers.length===1?"фактор":profile.drivers.length>1&&profile.drivers.length<5?"фактора":"факторов"}</strong></div><div><span>Формат расчёта</span><strong>{hist?"Есть архивный расчёт":"Сценарии покупки и продажи"}</strong></div></div>
+  <header className="mh-invest-heading"><p className="mh-invest-kicker">ИНВЕСТИЦИОННЫЙ РАЗБОР / MAINHALL</p><h2>{profile.title}</h2><p className="mh-invest-verdict">{profile.verdict}</p><p className="mh-invest-note">Редакция MAINHALL{forecast?` · Оценка от ${forecast.asOf}`:""}</p></header>
+  {forecast&&<section className="mh-invest-forecast" aria-labelledby={id+"-forecast"}>
+   <div><p className="mh-invest-kicker">ПРОГНОЗ MAINHALL</p><h3 id={id+"-forecast"}>{forecast.growthPct>=0?"Ожидаем рост цены на":"Ожидаем снижение цены на"} {money(Math.abs(forecast.growthPct))}%</h3><p className="mh-invest-forecast-horizon">{forecast.horizon}</p><p className="mh-invest-note">Дата оценки: {forecast.asOf}. Рост за весь указанный период.</p></div>
+   <dl><div><dt>Цена входа в модели</dt><dd>{money(forecast.entry)} млн ₽</dd></div><div><dt>Прогнозная цена выхода</dt><dd>{money(forecast.exit)} млн ₽</dd></div></dl>
+   <div className="mh-invest-forecast-basis"><h4>На чём основан прогноз</h4><ul>{forecast.basis.map(item=><li key={item}>{item}</li>)}</ul></div>
+  </section>}
+  <div className="mh-invest-metrics"><div><span>Горизонт анализа</span><strong>{forecast?.horizon||profile.horizon}</strong></div><div><span>Основания для оценки</span><strong>{profile.drivers.length} {profile.drivers.length===1?"фактор":profile.drivers.length>1&&profile.drivers.length<5?"фактора":"факторов"}</strong></div><div><span>Оценка MAINHALL</span><strong>{forecast?"Прогноз цены":hist?"Разбор и архивная модель":"Инвестиционные факторы"}</strong></div></div>
   <div className="mh-invest-driver-heading"><h3>Что может повлиять на цену</h3><p>Оцениваем влияние транспорта, окружения и характеристик квартиры на спрос.</p></div>
   <div className="mh-invest-drivers">{profile.drivers.map((driver,index)=><article key={driver.title}><span className="mh-invest-driver-index">{String(index+1).padStart(2,"0")}</span><div><p className="mh-invest-status">{driver.status}</p><h4>{driver.title}</h4><p>{driver.mechanism}</p>{driver.sourceUrl&&<a className="mh-invest-source-link" href={driver.sourceUrl} target="_blank" rel="noopener noreferrer">Источник факта ↗</a>}</div></article>)}</div>
   <div className="mh-invest-risks"><h3>Что может изменить результат</h3><ul>{profile.risks.map(risk=><li key={risk}>{risk}</li>)}</ul></div>
   {hist&&<section className="mh-invest-archive" aria-labelledby={id+"-archive"}><p className="mh-invest-kicker">АРХИВНЫЙ СЦЕНАРИЙ</p><h3 id={id+"-archive"}>{hist.label}</h3><p>Условия исходного обзора: {hist.asOf}. Это историческая модель, цена и доступность квартиры сегодня не подтверждены.</p><dl className="mh-invest-archive-facts"><div><dt>Цена входа</dt><dd>{money(hist.entry)} млн ₽</dd></div><div><dt>Площадь</dt><dd>{money(hist.area)} м²</dd></div><div><dt>Собственный капитал</dt><dd>{money(hist.ownCapital)} млн ₽</dd></div><div><dt>Остаток платежей</dt><dd>{money(hist.debt)} млн ₽</dd></div></dl><div className="mh-invest-archive-scenarios">{historicalResults.map((result,index)=><article key={result.exit}><p>{index===0?"Пессимистичный сценарий отчёта":"Базовый сценарий отчёта"}</p><strong>{percent(result.growth)} <small>к цене входа</small></strong><dl><div><dt>Цена выхода</dt><dd>{money(result.exit)} млн ₽</dd></div><div><dt>Результат после расходов выхода</dt><dd>{money(result.profit)} млн ₽</dd></div><div><dt>Результат / собственный капитал</dt><dd>{percent(result.roi)}</dd></div></dl></article>)}</div><p className="mh-invest-note">В исходной модели расходы выхода составляют {money(hist.exitCostPct)}% цены продажи. Расчёт не учитывает неизвестные налоги, отделку, содержание и стоимость финансирования. Доходность на собственный капитал зависит от графика платежей; показанный процент не является годовой доходностью.</p></section>}
+  <details className="mh-invest-calculator-disclosure"><summary><span>Проверить другие условия покупки</span><span aria-hidden="true">+</span></summary>
   <section className="mh-invest-calculator" aria-labelledby={id+"-calculator"}><div className="mh-invest-calculator-heading"><div><p className="mh-invest-kicker">ЧУВСТВИТЕЛЬНОСТЬ РЕЗУЛЬТАТА</p><h3 id={id+"-calculator"}>Сколько остаётся после продажи?</h3></div><p>Введите условия своего лота. Изменения цены ниже заданы для сравнения и не являются прогнозом MAINHALL для этого ЖК.</p></div>
    <div className="mh-invest-inputs">
     <label htmlFor={id+"-entry"}>Цена покупки, млн ₽<input id={id+"-entry"} type="text" inputMode="decimal" placeholder="Введите цену" value={entryText} onChange={e=>setEntry(e.target.value)}/></label>
@@ -64,6 +80,7 @@ export function InvestmentCase({profile}:{profile:InvestmentProfile}) {
    })}</div>
    <details className="mh-invest-formula"><summary>Как устроен расчёт</summary><p>Цена продажи = цена покупки × (1 + изменение цены). Чистый результат = цена продажи − расходы продажи − прочие расходы − цена покупки. Результат на все свои вложения = чистый результат / (взнос в цену + прочие расходы).</p><p>Непогашенный остаток = цена покупки − собственный капитал. Капитал после выхода = цена продажи − расходы продажи − непогашенный остаток. Прочие расходы уже оплачены своими деньгами и включены в общий объём вложений. Если часть долга будет погашена раньше, включите эти платежи в свой капитал.</p><p>* Годовой темп на полную цену покупки = (выручка после всех указанных расходов / цена покупки) в степени 1 / срок владения, минус 1. Это расчёт для единого вложения в начале срока. График рассрочки здесь не задан, поэтому IRR и годовая доходность на собственный капитал не рассчитываются.</p></details>
   </section>
+  </details>
   {!!profile.sources?.length&&<div className="mh-invest-sources"><h3>Источники и основания</h3><ul>{profile.sources.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name} ↗</a></li>)}</ul></div>}
  <p className="mh-invest-note">Материал не является индивидуальной инвестиционной рекомендацией. Сценарии основаны на указанных допущениях и не гарантируют доходность.</p></div>;
 }

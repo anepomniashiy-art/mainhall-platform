@@ -66,3 +66,6 @@ for (const entry of sminexEditorialProjects) {
   existing.propertyType = entry.propertyType;
  } else editorialProjects.push(entry);
 }
+
+import {researchEditorialProjects} from "./research-projects";
+for(const p of researchEditorialProjects) if(!editorialProjects.some(x=>x.slug===p.slug)) editorialProjects.push(p);

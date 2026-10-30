@@ -94,3 +94,6 @@ export function getInvestmentProfile(slug:string):InvestmentProfile {
   sources:[{name:`Официальные материалы ${project.name}`,url:dossier?.source||project.sourceUrl}],
  };
 }
+
+/** New research records are not promoted to a forecast until an individual model exists. */
+export const hasInvestmentProfile=(slug:string)=>Boolean(verifiedProfiles[slug]||theses[slug]);
