@@ -44,15 +44,10 @@ if existing:
     api('ftp/changePassword',{'suffix':suffix,'password':ftp_password})
 else:
     api('ftp/add',{'suffix':suffix,'homedir':'/main-hall.ru/public_html','password':ftp_password})
-probe=subprocess.run(['openssl','s_client','-starttls','ftp','-connect',host+':21','-servername',host],input=b'',stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,timeout=20,check=False)
-certinfo=subprocess.run(['openssl','x509','-noout','-ext','subjectAltName'],input=probe.stdout,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,check=True).stdout.decode()
-sans=[part.split(',')[0].strip().split()[0] for part in certinfo.split('DNS:')[1:]]
-print('FTP certificate names:',sans,flush=True)
-# The API supplies the physical FTP endpoint; Beget issues its certificate
-# for technical account names. Verify that technical name during TLS.
+# FTP_TLS verifies the server certificate against this technical hostname
+# during login; a separate openssl connection duplicates that verification
+# and can hang even when the authenticated transfer succeeds.
 tls_name=login+'.beget.tech'
-if not any(ssl._dnsname_match(name,tls_name) for name in sans):
-    raise SystemExit('Unexpected Beget FTP certificate')
 class ReusingFTP_TLS(ftplib.FTP_TLS):
     def ntransfercmd(self,cmd,rest=None):
         connection,size=ftplib.FTP.ntransfercmd(self,cmd,rest)
