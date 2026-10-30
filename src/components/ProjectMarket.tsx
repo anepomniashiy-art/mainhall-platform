@@ -1,15 +1,16 @@
+import {ProjectPhotoGallery} from "./ProjectPhotoGallery";
 import unitsData from "../../data/catalogue/public-units.json";
 import galleries from "../../data/catalogue/project-galleries.json";
 import {COMPANY} from "@/lib/constants";
 
 type Unit = {id:string;projectSlug:string;unitNumber:string;buildingName:string;floor:number;floorsTotal?:number;rooms:number;bedrooms?:number|null;areaSqm:number;finish?:string;type?:string;unitType?:string;priceRub:number;priceBeforeDiscountRub?:number;pricePerSqm?:number;ceilingHeightM?:number;completionYear?:number;fetchedAt:string;features?:string[];planImageSrc?:string};
-type Photo = {src:string;caption:string;width:number;height:number};
+type Photo = {src:string;caption:string;width:number;height:number;category?:string};
 const number=(value:number)=>new Intl.NumberFormat("ru-RU",{maximumFractionDigits:2}).format(value);
 const date=(value:string)=>new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:"2-digit",year:"numeric",timeZone:"Europe/Moscow"}).format(new Date(value));
 export function ProjectGallery({slug,name}:{slug:string;name:string}){
  const photos=(galleries as Record<string,Photo[]>)[slug]||[];
  if(!photos.length)return null;
- return <div data-project-gallery={slug} className="mh-gallery-strip">{photos.map((photo,i)=><figure key={photo.src} style={{margin:0}}><a href={photo.src} target="_blank" rel="noopener" aria-label={name+": открыть изображение "+(i+1)}><img src={photo.src} alt={name+": "+photo.caption+", изображение "+(i+1)} width={photo.width} height={photo.height} loading="lazy" style={{display:"block",width:"100%",height:"100%",aspectRatio:"4 / 3",objectFit:"cover"}}/></a><figcaption className="mh-content-caption">{name} · {photo.caption}</figcaption></figure>)}</div>;
+ return <ProjectPhotoGallery photos={photos} name={name} slug={slug}/>;
 }
 export function ProjectMarketUnits({slug,name,unitIds}:{slug:string;name:string;unitIds?:string[]}){
  const units=(unitsData.units as Unit[]).filter(unit=>unit.projectSlug===slug&&(!unitIds||unitIds.includes(unit.id)));

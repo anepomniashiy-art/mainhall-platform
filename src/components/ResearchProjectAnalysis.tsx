@@ -7,7 +7,7 @@ export function ResearchProjectAnalysis({slug}:{slug:string}){
  const metrics=[
   ["Ценовой ориентир",`${number(p.priceThousandPerSqm)} тыс. ₽/м²`],
   ["К цене района",signed(p.districtPriceDifferencePercent)],
-  ...(p.score===null?[]:[["Оценка MAINHALL",`${number(p.score/10)} / 10`]]),
+  ...(p.score===null?[]:[["Инвестрейтинг MAINHALL",`${number(p.score/10)} / 10`]]),
   ...(p.maximumAdvertisedDiscountPercent===null?[]:[["Скидка в срезе",`до ${number(p.maximumAdvertisedDiscountPercent)}%`]]),
  ];
  const conclusion=p.districtPriceDifferencePercent<0
@@ -17,7 +17,7 @@ export function ResearchProjectAnalysis({slug}:{slug:string}){
    : `Ценовой ориентир ${p.name} выше районного на ${number(p.districtPriceDifferencePercent)}%. Проверяем, оправдывают ли доплату расположение квартиры, её характеристики и условия покупки.`;
  return <section className="mh-dossier-section" aria-labelledby="research-analysis-title">
   <p className="mh-eyebrow">MAINHALL / ЦЕНА И ОТБОР</p>
-  <h2 id="research-analysis-title">Позиция проекта на рынке</h2>
+  <h2 id="research-analysis-title">Позиция проекта на рынке</h2><Link href="/investment-rating/" className="mh-text-link">Как устроен инвестиционный рейтинг ↗</Link>
   <dl style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:1,background:"#d7ddd5",border:"1px solid #d7ddd5",margin:"1.5rem 0"}}>
    {metrics.map(([label,value])=><div key={label} style={{background:"#f1f2ec",padding:"1.2rem"}}><dt style={{fontSize:".8rem",color:"#606b61"}}>{label}</dt><dd style={{fontSize:"clamp(1.4rem,2.2vw,2rem)",lineHeight:1.25,margin:".6rem 0 0"}}>{value}</dd></div>)}
   </dl>
