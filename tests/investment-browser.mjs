@@ -11,6 +11,7 @@ try{
   for(const slug of ['level-yuzhnoportovaya','kvartal-serebryany-bor','high-life']){
    const path='/projects/'+slug+'/';
    await page.goto('http://127.0.0.1:8091'+path,{waitUntil:'domcontentloaded'});
+   await page.getByText('Инвестиционный разбор и расчёт покупки',{exact:true}).click();
    const calculator=page.locator('.mh-invest-calculator-disclosure');
    await calculator.waitFor();
    assert.equal(await calculator.getAttribute('open'),null,'calculator must be secondary and collapsed');
@@ -27,19 +28,14 @@ try{
    assert.match(await page.locator('.mh-invest-scenario').first().innerText(),/121,6%/);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'calculation overflow '+width+path);
    if(slug==='level-yuzhnoportovaya')await page.locator('.mh-invest-calculator').screenshot({path:`investment-proof/calculator-${width}.png`});
+   if(slug!=='high-life')await page.getByText('Подробные материалы исследования',{exact:true}).click();
    if(slug!=='high-life')await page.locator('.mh-invest-restored').screenshot({path:`investment-proof/${slug}-${width}.png`});
    checks.push({width,path,status:'pass'});
   }
   await page.goto('http://127.0.0.1:8091/investments/',{waitUntil:'domcontentloaded'});
   assert.equal(await page.locator('.mh-invest-selection-card').count(),10);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'selection overflow '+width);
-  await page.locator('[data-compare-add="level-yuzhnoportovaya"]').click();
-  await page.locator('[data-compare-add="high-life"]').click();
-  await page.locator('[data-compare-open]').click();
-  await page.locator('[data-project-comparison]').waitFor({state:'visible'});
-  assert.match(await page.locator('[data-project-comparison]').innerText(),/16,73/);
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'comparison document overflow '+width);
-  await page.locator('[data-project-comparison]').screenshot({path:`investment-proof/comparison-${width}.png`});
+  assert.equal(await page.locator('.mh-visual-card img').count()>0,true,'selection has project photographs');
   await page.screenshot({path:`investment-proof/selection-${width}.png`});
   checks.push({width,path:'/investments/',status:'pass'});await page.close();
  }

@@ -294,11 +294,11 @@ projectDossiers["kvartal-serebryany-bor"]={address:"Москва, улица Б�
 projectDossiers["level-yuzhnoportovaya"].source="https://level.ru/projects/southport/";
 projectDossiers["level-yuzhnoportovaya"].checkedAt="24.10.2026";
 
-import {researchProjects,researchSource} from "./research-projects";
+import {researchProjects} from "./research-projects";
 for(const p of researchProjects) if(!projectDossiers[p.slug]) projectDossiers[p.slug]={
- address:`Москва, район ${p.district}`,format:`${p.name}: исходные данные исследования`,
- features:[`Девелопер: ${p.developer}`,`Класс в аналитической выгрузке: ${p.className}`,p.priceReference],
- location:`Проект находится в районе ${p.district} по аналитической выгрузке. Точный адрес корпуса, положение входа и маршрут до транспорта проверяем по документам выбранного лота.`,
- thesis:"Инвестиционную оценку строим по цене конкретной квартиры, конкурентам и денежному потоку. Архивный балл скрининга не заменяет расчёт цены выхода.",
+ address:`Москва, район ${p.district}`,format:`${p.name}: расположение и условия покупки`,
+ features:[`Девелопер: ${p.developer}`,`Район: ${p.district}`,`Класс: ${p.className}`],
+ location:`${p.name} расположен в районе ${p.district}. При выборе квартиры сравниваем корпуса, окружение окон и маршрут до нужного транспорта.`,
+ thesis:"Сравниваем стоимость квартиры с предложениями соседних проектов и переуступками. Считаем полную сумму покупки с учётом отделки, платежей и расходов на продажу.",
  checks:["Проверить цену и наличие на дату подбора","Сверить адрес и корпус с документами","Сопоставить прайс с переуступками","Рассчитать расходы и срок выхода"],source:p.source,checkedAt:p.slug==="vern"?"24.10.2026":p.priceReference.includes("26.10")?"26.10.2026":"30.09.2026"
 };

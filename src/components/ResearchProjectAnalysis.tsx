@@ -1,23 +1,43 @@
 import Link from "next/link";
-import {researchProjects,researchBySlug,researchSource,researchMethodology} from "@/lib/research-projects";
-const number=(v:number|null)=>v===null?"не указан":new Intl.NumberFormat("ru-RU",{maximumFractionDigits:1}).format(v);
-const signed=(v:number|null)=>v===null?"не указан":`${v>0?"+":""}${number(v)}%`;
+import {researchBySlug,researchMethodology} from "@/lib/research-projects";
+const number=(value:number)=>new Intl.NumberFormat("ru-RU",{maximumFractionDigits:1}).format(value);
+const signed=(value:number)=>`${value>0?"+":""}${number(value)}%`;
 export function ResearchProjectAnalysis({slug}:{slug:string}){
  const p=researchBySlug(slug);if(!p)return null;
  const metrics=[
-  ["Ориентир прайса",number(p.priceThousandPerSqm)+" тыс. ₽/м²"],
-  ["К ориентиру района",signed(p.districtPriceDifferencePercent)],
-  ["Балл скрининга",p.score===null?"не указан":p.score+" / 100"],
-  ["Лотов в выгрузке",number(p.listings)],
+  ["Ценовой ориентир",`${number(p.priceThousandPerSqm)} тыс. ₽/м²`],
+  ["К цене района",signed(p.districtPriceDifferencePercent)],
+  ...(p.score===null?[]:[["Оценка MAINHALL",`${number(p.score/10)} / 10`]]),
+  ...(p.maximumAdvertisedDiscountPercent===null?[]:[["Скидка в срезе",`до ${number(p.maximumAdvertisedDiscountPercent)}%`]]),
  ];
+ const conclusion=p.districtPriceDifferencePercent<0
+  ? `Ценовой ориентир ${p.name} ниже районного на ${number(Math.abs(p.districtPriceDifferencePercent))}%. Для отбора квартиры сравниваем этот разрыв с разницей в сроках, отделке и условиях оплаты.`
+  : p.districtPriceDifferencePercent===0
+   ? `Ценовой ориентир ${p.name} соответствует районному. При выборе решают условия конкретной квартиры: планировка, вид, срок передачи и полная сумма покупки.`
+   : `Ценовой ориентир ${p.name} выше районного на ${number(p.districtPriceDifferencePercent)}%. Проверяем, оправдывают ли доплату расположение квартиры, её характеристики и условия покупки.`;
  return <section className="mh-dossier-section" aria-labelledby="research-analysis-title">
-  <p className="mh-eyebrow">АНАЛИТИКА MAINHALL / ИСХОДНЫЙ СРЕЗ</p><h2 id="research-analysis-title">Цена входа и конкуренция.</h2>
-  <p>{p.priceReference}. Показатели {p.name} из исследования MAINHALL. Это архивная выборка, а не предложение купить конкретную квартиру по указанной цене.</p>
-  <dl style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(210px,1fr))",gap:"1px",background:"#d7ddd5",border:"1px solid #d7ddd5",margin:"2rem 0"}}>{metrics.map(([label,value])=><div key={label} style={{background:"#f1f2ec",padding:"1.3rem"}}><dt style={{fontSize:".8rem",color:"#606b61"}}>{label}</dt><dd style={{fontSize:"clamp(1.5rem,2.4vw,2.2rem)",lineHeight:1.25,margin:".7rem 0 0"}}>{value}</dd></div>)}</dl>
-  <div className="mh-dossier-columns"><div><h3>Что поддерживает отбор</h3><p>{(p.districtPriceDifferencePercent??0)<0?`Ориентир прайса ниже районного на ${number(Math.abs(p.districtPriceDifferencePercent??0))}%. Этот разрыв стоит проверить на сопоставимых корпусах, площадях и условиях оплаты.`:`Ориентир прайса ${p.districtPriceDifferencePercent===0?"соответствует районному":`выше районного на ${number(p.districtPriceDifferencePercent)}%`}. Для покупки нужна проверка, какими характеристиками конкретный лот отличается от конкурентов.`}</p><p>{p.score===null?"Для проекта в переданном срезе балл не указан.":`В архивном расчёте проект получил ${p.score} баллов из 100. Балл помогает выбрать объекты для дальнейшего разбора; это не процент будущего роста.`}</p></div><div><h3>Где проверить запас по цене</h3><p>{p.maximumAdvertisedDiscountPercent===null?"Условия скидки для этого проекта в переданной таблице не приведены.":`Максимальная скидка в выгрузке: ${number(p.maximumAdvertisedDiscountPercent)}%. Она может относиться к отдельному пулу и способу оплаты.`} Условия выбранной квартиры проверяем отдельно.</p><p>{p.olderThan180DaysPercent===null?"Срок нахождения лотов в прайсе и изменение цены с первого появления в этой выборке не приведены.":`Доля лотов, находившихся в прайсе более 180 дней: ${number(p.olderThan180DaysPercent)}%. Изменение прайса лота с появления в выборке: ${signed(p.askingPriceChangeSinceListingPercent)}. Это наблюдение за запрашиваемой ценой, не доходность инвестора.`}</p></div></div>
-  <h3>От исходных данных к решению</h3><p>Для расчёта MAINHALL фиксируем конкретный лот и цену входа после скидок, горизонт продажи, сопоставимые уступки, график платежей и расходы на выход. Архивные показатели выше помогают выбрать предмет проверки. Сами по себе они не задают цену будущей сделки.</p>
-  <p className="mh-content-caption">{researchMethodology} Исходные данные: {p.priceReference}; редакционный разбор: 30.10.2026. Показатели распроданности и срока передачи требуют отдельной проверки. <a href={p.source} target="_blank" rel="noopener noreferrer">Источник аналитического среза ↗</a></p>
-  <Link className="mh-text-link" href="/contacts/">Получить расчёт выбранной квартиры в MAINHALL ↗</Link>
+  <p className="mh-eyebrow">MAINHALL / ЦЕНА И ОТБОР</p>
+  <h2 id="research-analysis-title">Позиция проекта на рынке</h2>
+  <dl style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:1,background:"#d7ddd5",border:"1px solid #d7ddd5",margin:"1.5rem 0"}}>
+   {metrics.map(([label,value])=><div key={label} style={{background:"#f1f2ec",padding:"1.2rem"}}><dt style={{fontSize:".8rem",color:"#606b61"}}>{label}</dt><dd style={{fontSize:"clamp(1.4rem,2.2vw,2rem)",lineHeight:1.25,margin:".6rem 0 0"}}>{value}</dd></div>)}
+  </dl>
+  <p>{conclusion}</p>
+  <p className="mh-content-caption">{p.priceReference}. Актуальные условия уточняем для выбранной квартиры.</p>
+  <details style={{margin:"1.4rem 0",borderTop:"1px solid #d7ddd5",borderBottom:"1px solid #d7ddd5",padding:"1rem 0"}}>
+   <summary style={{cursor:"pointer",fontSize:".9rem"}}>Источники и состав оценки</summary>
+   <div style={{paddingTop:"1rem",fontSize:".9rem",lineHeight:1.65}}>
+    <p>{researchMethodology} Оценка по шкале 10 получена делением исходного балла на 10; она не является прогнозом доходности.</p>
+    <dl style={{display:"grid",gridTemplateColumns:"minmax(0,1fr) minmax(0,1.3fr)",gap:".7rem 1rem"}}>
+     <dt>Дата и выборка</dt><dd style={{margin:0,textAlign:"right"}}>{p.priceReference}</dd>
+     {p.listings!==null&&<><dt>Лотов в выборке</dt><dd style={{margin:0}}>{number(p.listings)}</dd></>}
+     {p.equityContractsSixMonths!==null&&<><dt>ДДУ за шесть месяцев</dt><dd style={{margin:0}}>{number(p.equityContractsSixMonths)}</dd></>}
+     {p.olderThan180DaysPercent!==null&&<><dt>Лотов в прайсе более 180 дней</dt><dd style={{margin:0}}>{number(p.olderThan180DaysPercent)}%</dd></>}
+     {p.askingPriceChangeSinceListingPercent!==null&&<><dt>Изменение прайса с появления лота</dt><dd style={{margin:0}}>{signed(p.askingPriceChangeSinceListingPercent)}</dd></>}
+    </dl>
+    <p>Скидка может относиться к отдельному пулу и способу оплаты. Прайс не равен цене сделки; число лотов в выборке не подтверждает сегодняшнее наличие. История изменения цены не задаёт будущий рост.</p>
+    <a href={p.source} target="_blank" rel="noopener noreferrer">Источник исследования ↗</a>
+   </div>
+  </details>
+  <Link className="mh-text-link" href="/contacts/">Обсудить покупку с MAINHALL ↗</Link>
  </section>;
 }
-export function ResearchProjectsComparison(){return <section className="mh-dossier-section" aria-labelledby="research-comparison-title"><p className="mh-eyebrow">ИССЛЕДОВАНИЕ MAINHALL / {researchProjects.length} ПРОЕКТОВ</p><h2 id="research-comparison-title">Сравните цифры до открытия карточки.</h2><p>Ценовые ориентиры из исследования 29 октября 2026 года. Срез прайс-листов на 26 октября показан для основной таблицы; более ранние выборки отмечены под названием проекта. Балл скрининга не является прогнозом роста. Наличие, скидку и цену конкретной квартиры проверяем на дату подбора.</p><div style={{overflowX:"auto",marginTop:"1.5rem"}}><table style={{width:"100%",minWidth:730,borderCollapse:"collapse",textAlign:"left",fontSize:".9rem"}}><thead><tr>{["Проект / район","Прайс, тыс. ₽/м²","К району","Балл / 100","Лотов","Скидка до"].map(x=><th key={x} style={{padding:"1rem .8rem",borderBottom:"1px solid #798477",fontWeight:500}}>{x}</th>)}</tr></thead><tbody>{researchProjects.map(p=><tr key={p.slug}><td style={{padding:"1rem .8rem",borderBottom:"1px solid #d7ddd5"}}><Link href={`/projects/${p.slug}/`} style={{fontWeight:500}}>{p.name} ↗</Link><div style={{fontSize:".75rem",color:"#6c756a",marginTop:".3rem"}}>{p.district} · {p.developer}<br/>{p.priceReference}</div></td>{[number(p.priceThousandPerSqm),signed(p.districtPriceDifferencePercent),p.score??"—",p.listings??"—",p.maximumAdvertisedDiscountPercent===null?"—":number(p.maximumAdvertisedDiscountPercent)+"%"].map((v,i)=><td key={i} style={{padding:"1rem .8rem",borderBottom:"1px solid #d7ddd5",whiteSpace:"nowrap"}}>{v}</td>)}</tr>)}</tbody></table></div><p className="mh-content-caption">{researchMethodology}</p></section>}
