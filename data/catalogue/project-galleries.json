@@ -1230,6 +1230,69 @@
       "width": 1200,
       "height": 675,
       "category": "Дворы"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-061e29dce8f7.webp",
+      "caption": "ВЭРИ на Ботанической · лобби · официальный материал",
+      "width": 960,
+      "height": 675,
+      "category": "Лобби"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-61e45c9ff8e8.webp",
+      "caption": "ВЭРИ на Ботанической · первая очередь · фотография",
+      "width": 1330,
+      "height": 720,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-06f2632df3e5.webp",
+      "caption": "ВЭРИ на Ботанической · архитектура · официальный материал",
+      "width": 1200,
+      "height": 675,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-455fdc2c38d7.webp",
+      "caption": "ВЭРИ на Ботанической · общественные интерьеры · официальный материал",
+      "width": 960,
+      "height": 675,
+      "category": "Лобби"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-c34ffb2c856c.webp",
+      "caption": "ВЭРИ на Ботанической · общественные интерьеры · официальный материал",
+      "width": 675,
+      "height": 675,
+      "category": "Лобби"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-b5063603d42d.webp",
+      "caption": "ВЭРИ на Ботанической · общественные интерьеры · официальный материал",
+      "width": 675,
+      "height": 675,
+      "category": "Лобби"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-f2ea3849cb37.webp",
+      "caption": "ВЭРИ на Ботанической · первая очередь · фотография",
+      "width": 1330,
+      "height": 720,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-301caf20aa76.webp",
+      "caption": "ВЭРИ на Ботанической · первая очередь · фотография",
+      "width": 1330,
+      "height": 720,
+      "category": "Дворы"
+    },
+    {
+      "src": "/images/projects/collected/very-botanicheskaya-8ee943c20c3e.webp",
+      "caption": "ВЭРИ на Ботанической · первая очередь · фотография",
+      "width": 1330,
+      "height": 720,
+      "category": "Дворы"
     }
   ],
   "dom-na-dzhalilya": [
@@ -1281,6 +1344,13 @@
       "width": 1800,
       "height": 675,
       "category": "Дворы"
+    },
+    {
+      "src": "/images/projects/collected/dom-na-dzhalilya-57b5b65cb6f5.webp",
+      "caption": "Дом на Джалиля · А101 · визуализация архитектуры",
+      "width": 1800,
+      "height": 1125,
+      "category": "Архитектура"
     }
   ],
   "monblan": [
@@ -1326,6 +1396,333 @@
       "caption": "Южные сады · визуализация А101",
       "width": 1800,
       "height": 1233,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-5187ee618f92.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1620,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-20c9d3fea0d9.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1727,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-fd80a6d3e4b2.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1727,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-46d9aa8fee2d.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1800,
+      "height": 1013,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-2fd8d8786261.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1728,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-d9a8c1bd522e.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1727,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-a1ae8f9ce2b4.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1800,
+      "height": 1013,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-f76e4677cb18.webp",
+      "caption": "Южные сады · Подъезды, паркинг и кладовые · официальный материал А101",
+      "width": 1215,
+      "height": 1350,
+      "category": "Инфраструктура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-9eb9323b99d4.webp",
+      "caption": "Южные сады · Подъезды, паркинг и кладовые · официальный материал А101",
+      "width": 1215,
+      "height": 1350,
+      "category": "Инфраструктура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-094a014e148f.webp",
+      "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+      "width": 1800,
+      "height": 1200,
+      "category": "Расположение"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-a9fcb255350e.webp",
+      "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+      "width": 1386,
+      "height": 1350,
+      "category": "Расположение"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-be6bc6505225.webp",
+      "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+      "width": 1386,
+      "height": 1350,
+      "category": "Расположение"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-91cc0e5d30cf.webp",
+      "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+      "width": 1800,
+      "height": 1013,
+      "category": "Расположение"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-a3d2bc899421.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1620,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-a9dc8d957fbc.webp",
+      "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+      "width": 1728,
+      "height": 1080,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-99953df4a661.webp",
+      "caption": "Южные сады · Метро «Бунинская аллея» · официальный материал А101",
+      "width": 1800,
+      "height": 1200,
+      "category": "Расположение"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-1a9edd93df7b.webp",
+      "caption": "Южные сады · Парк «Южное Бутово» · официальный материал А101",
+      "width": 1800,
+      "height": 1200,
+      "category": "Расположение"
+    },
+    {
+      "src": "/images/projects/collected/yuzhnye-sady-37ec7c741fd9.webp",
+      "caption": "Южные сады · Подъезды, паркинг и кладовые · официальный материал А101",
+      "width": 1215,
+      "height": 1350,
+      "category": "Инфраструктура"
+    }
+  ],
+  "secret-garden": [
+    {
+      "src": "/images/projects/collected/secret-garden-0b363e138457.webp",
+      "caption": "Сикрет Гарден · архитектура · визуализация",
+      "width": 1800,
+      "height": 1013,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-4e20bce605a4.webp",
+      "caption": "Сикрет Гарден · архитектура · визуализация",
+      "width": 690,
+      "height": 410,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-a250195456a2.webp",
+      "caption": "Сикрет Гарден · архитектура · визуализация",
+      "width": 755,
+      "height": 1050,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-364183fc0df6.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1013,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-9d538402862b.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1013,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-b90ddc831aef.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1005,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-844c04db3e61.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1005,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-6c7d3f35ff26.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1005,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-3c0dac059ca3.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1005,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-7db06b52cc68.webp",
+      "caption": "Сикрет Гарден · форматы квартир · визуализация",
+      "width": 1800,
+      "height": 1013,
+      "category": "Интерьеры"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-9e06216b5a2a.webp",
+      "caption": "Сикрет Гарден · общественные пространства · визуализация",
+      "width": 1800,
+      "height": 1045,
+      "category": "Лобби"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-f2091ee71791.webp",
+      "caption": "Сикрет Гарден · общественные пространства · визуализация",
+      "width": 980,
+      "height": 980,
+      "category": "Лобби"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-8c937a66b1d4.webp",
+      "caption": "Сикрет Гарден · паркинг · визуализация",
+      "width": 1105,
+      "height": 846,
+      "category": "Паркинг"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-1c543cee2678.webp",
+      "caption": "Сикрет Гарден · парки и сады · официальный материал",
+      "width": 1019,
+      "height": 1350,
+      "category": "Дворы"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-df376b41481f.webp",
+      "caption": "Сикрет Гарден · сад · визуализация",
+      "width": 1724,
+      "height": 1350,
+      "category": "Дворы"
+    },
+    {
+      "src": "/images/projects/collected/secret-garden-a0a1229cc90c.webp",
+      "caption": "Сикрет Гарден · сад · визуализация",
+      "width": 1200,
+      "height": 1350,
+      "category": "Дворы"
+    }
+  ],
+  "kvartal-mit": [
+    {
+      "src": "/images/projects/collected/kvartal-mit-465ca9988e01.webp",
+      "caption": "Квартал Мит · ПИК · визуализация архитектуры",
+      "width": 1800,
+      "height": 1206,
+      "category": "Архитектура"
+    }
+  ],
+  "onezhskiy-val": [
+    {
+      "src": "/images/projects/collected/onezhskiy-val-d938e1a5f20a.webp",
+      "caption": "Онежский вал · ПИК · визуализация архитектуры",
+      "width": 686,
+      "height": 686,
+      "category": "Архитектура"
+    }
+  ],
+  "kavkazskiy-bulvar-51": [
+    {
+      "src": "/images/projects/collected/kavkazskiy-bulvar-51-f924b9c69cd3.webp",
+      "caption": "Кавказский бульвар 51 · ПИК · Архитектура новых корпусов",
+      "width": 1800,
+      "height": 1206,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/kavkazskiy-bulvar-51-c733a7b5ccb3.webp",
+      "caption": "Кавказский бульвар 51 · ПИК · Фасад и терраса",
+      "width": 1800,
+      "height": 1206,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/kavkazskiy-bulvar-51-35e1cd81e526.webp",
+      "caption": "Кавказский бульвар 51 · ПИК · Пешеходный бульвар",
+      "width": 1800,
+      "height": 1206,
+      "category": "Дворы"
+    },
+    {
+      "src": "/images/projects/collected/kavkazskiy-bulvar-51-8df9b9ff719e.webp",
+      "caption": "Кавказский бульвар 51 · ПИК · Проект пешеходного бульвара",
+      "width": 1800,
+      "height": 1206,
+      "category": "Дворы"
+    }
+  ],
+  "altufevskoe-53": [
+    {
+      "src": "/images/projects/collected/altufevskoe-53-56f8d24dff49.webp",
+      "caption": "Алтуфьевское 53 · ПИК · Визуализация архитектуры",
+      "width": 1800,
+      "height": 1125,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/altufevskoe-53-27e6107d6694.webp",
+      "caption": "Алтуфьевское 53 · ПИК · Ход строительства, архивный снимок",
+      "width": 1075,
+      "height": 704,
+      "category": "Ход строительства"
+    },
+    {
+      "src": "/images/projects/collected/altufevskoe-53-1e8587161c00.webp",
+      "caption": "Алтуфьевское 53 · ПИК · Ход строительства, архивный снимок",
+      "width": 1800,
+      "height": 1013,
+      "category": "Ход строительства"
+    }
+  ],
+  "narvin": [
+    {
+      "src": "/images/projects/collected/narvin-b5cc95efdc71.webp",
+      "caption": "Нарвин · ПИК · визуализация архитектуры",
+      "width": 1800,
+      "height": 1125,
+      "category": "Архитектура"
+    },
+    {
+      "src": "/images/projects/collected/narvin-8f481eba4fc0.webp",
+      "caption": "Нарвин · ПИК · визуализация архитектуры",
+      "width": 1800,
+      "height": 1220,
       "category": "Архитектура"
     }
   ]

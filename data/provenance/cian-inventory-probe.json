@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Public Cian inventory probe for three non-Sminex MAINHALL projects. Not a complete inventory export.",
+  "projects": [
+    {
+      "projectSlug": "high-life",
+      "name": "HIGH LIFE",
+      "cianNewbuildingId": 3202206,
+      "projectUrl": "https://zhk-high-life-letnikovskaya-11-i.cian.ru/",
+      "listingUrl": "https://www.cian.ru/kupit-kvartiru-zhiloy-kompleks-high-life-3202206/",
+      "evidence": [
+        {
+          "url": "https://www.cian.ru/kupit-kvartiru-zhiloy-kompleks-high-life-3202206/",
+          "checkedAt": "2026-10-30",
+          "retrieval": "web search indexed excerpt",
+          "fact": "Search index reports 297 advertisements; alternate indexed aliases report 296–298. This is not a live verified total."
+        },
+        {
+          "url": "https://www.cian.ru/kupit-kvartiru-zhiloy-kompleks-hay-layf-high-life-3202206-ot-zastroyschika-OTZ/",
+          "checkedAt": "2026-10-30",
+          "retrieval": "web search indexed excerpt",
+          "fact": "Developer-only indexed page reports 191 advertisements; another alias reports 188. Do not use as current availability."
+        }
+      ],
+      "directHttp": {
+        "status": "timeout",
+        "method": "ordinary GET",
+        "timeoutSeconds": 12
+      },
+      "publishableUnits": []
+    },
+    {
+      "projectSlug": "level-yuzhnoportovaya",
+      "name": "Level Южнопортовая",
+      "cianNewbuildingId": 3914205,
+      "projectUrl": "https://zhk-level-yuzhnoportovaya-i.cian.ru/",
+      "listingUrl": "https://www.cian.ru/kupit-kvartiru-vtorichka-zhiloy-kompleks-level-yuzhnoportovaya-3914205/",
+      "evidence": [
+        {
+          "url": "https://zhk-level-yuzhnoportovaya-i.cian.ru/",
+          "checkedAt": "2026-10-30",
+          "retrieval": "web search indexed excerpt",
+          "fact": "Indexed developer project page reports 586 apartments and serviced apartments. Snapshot only, not verified current stock."
+        },
+        {
+          "url": "https://www.cian.ru/sale/flat/323233830/",
+          "checkedAt": "2026-10-30",
+          "retrieval": "web search indexed excerpt",
+          "fact": "Individual listing identified: 1-room apartment, 33.6 sq m. Price, floor, availability and plan were not verified; insufficient for publication."
+        }
+      ],
+      "directHttp": {
+        "status": "captcha",
+        "httpStatus": 200,
+        "redirectPath": "/tmgrdfrend/showcaptcha",
+        "responseBytes": 11683,
+        "method": "ordinary GET",
+        "captchaBypassed": false
+      },
+      "publishableUnits": []
+    },
+    {
+      "projectSlug": "very-botanicheskaya",
+      "name": "ВЭРИ на Ботанической",
+      "cianNewbuildingId": 2998964,
+      "projectUrl": "https://zhk-very-i.cian.ru/",
+      "listingUrl": "https://www.cian.ru/kupit-kvartiru-zhiloy-kompleks-very-2998964/",
+      "evidence": [
+        {
+          "url": "https://zhk-very-i.cian.ru/",
+          "checkedAt": "2026-10-30",
+          "retrieval": "web search indexed excerpt",
+          "fact": "Indexed developer project page reports 165 developer apartments."
+        },
+        {
+          "url": "https://www.cian.ru/kupit-kvartiru-zhiloy-kompleks-very-2998964/",
+          "checkedAt": "2026-10-30",
+          "retrieval": "web search indexed excerpt",
+          "fact": "Indexed all-sellers page reports 197 advertisements. Count includes a different seller scope and is not a complete export."
+        }
+      ],
+      "directHttp": {
+        "status": "timeout",
+        "method": "ordinary GET",
+        "timeoutSeconds": 12
+      },
+      "publishableUnits": []
+    }
+  ],
+  "conclusion": {
+    "completeExportVerified": false,
+    "priceAvailabilityVerified": false,
+    "paginationVerified": false,
+    "apiAccessVerified": false,
+    "captchaBypassed": false,
+    "blocker": "Public search index can identify projects, but direct listing access is CAPTCHA-protected or times out. No complete unit-level export can be asserted from snippets.",
+    "nextSafeSteps": [
+      "Obtain authorized Cian inventory export/feed or a developer inventory feed.",
+      "Import official developer inventories into a source-neutral unit schema.",
+      "Deduplicate developer and broker records using source IDs plus project/building/unit, area/floor and plan; do not collapse separate lots merely because area and price match.",
+      "Do not import search aggregate counts as real apartment cards."
+    ]
+  }
+}

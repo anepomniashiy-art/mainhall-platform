@@ -22,5 +22,29 @@
   "yuzhnye-sady": {
     "src": "/images/projects/collected/yuzhnye-sady-86d738836277.webp",
     "caption": "Южные сады · визуализация А101"
+  },
+  "secret-garden": {
+    "src": "/images/projects/collected/secret-garden-0b363e138457.webp",
+    "caption": "Сикрет Гарден · архитектура · визуализация"
+  },
+  "kvartal-mit": {
+    "src": "/images/projects/collected/kvartal-mit-465ca9988e01.webp",
+    "caption": "Квартал Мит · ПИК · визуализация архитектуры"
+  },
+  "onezhskiy-val": {
+    "src": "/images/projects/collected/onezhskiy-val-d938e1a5f20a.webp",
+    "caption": "Онежский вал · ПИК · визуализация архитектуры"
+  },
+  "kavkazskiy-bulvar-51": {
+    "src": "/images/projects/collected/kavkazskiy-bulvar-51-f924b9c69cd3.webp",
+    "caption": "Кавказский бульвар 51 · ПИК · Архитектура новых корпусов"
+  },
+  "altufevskoe-53": {
+    "src": "/images/projects/collected/altufevskoe-53-56f8d24dff49.webp",
+    "caption": "Алтуфьевское 53 · ПИК · Визуализация архитектуры"
+  },
+  "narvin": {
+    "src": "/images/projects/collected/narvin-b5cc95efdc71.webp",
+    "caption": "Нарвин · ПИК · визуализация архитектуры"
   }
 }
