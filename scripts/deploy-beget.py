@@ -56,12 +56,24 @@ class ReusingFTP_TLS(ftplib.FTP_TLS):
         return connection,size
 tls_context=ssl.create_default_context()
 tls_context.maximum_version=ssl.TLSVersion.TLSv1_2
-ftp=ReusingFTP_TLS(context=tls_context,timeout=45)
-ftp.connect(host,21)
-ftp.host=tls_name
-print('FTP TLS identity:',tls_name,flush=True)
-ftp.login(ftp_login,ftp_password)
-ftp.prot_p()
+# Both endpoints are documented Beget addresses. Preserve certificate
+# verification and retry transient network failures on the technical domain.
+ftp=None
+for endpoint in dict.fromkeys([host,tls_name]):
+    candidate=ReusingFTP_TLS(context=tls_context,timeout=25)
+    try:
+        candidate.connect(endpoint,21)
+        candidate.host=tls_name
+        candidate.login(ftp_login,ftp_password)
+        candidate.prot_p()
+        ftp=candidate
+        print('FTP TLS connected:',endpoint,flush=True)
+        break
+    except OSError as error:
+        candidate.close()
+        print('FTP endpoint unavailable:',endpoint,type(error).__name__,flush=True)
+if ftp is None:
+    raise SystemExit('Beget FTP endpoints unavailable; no export files uploaded')
 base=Path('out')
 if not (base/'index.html').is_file(): raise SystemExit('Export missing')
 (base/'.htaccess').write_text(Path('public/.htaccess').read_text())

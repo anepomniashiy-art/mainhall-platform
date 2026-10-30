@@ -8,7 +8,7 @@ import "../investment.css";
 export const metadata=pageMetadata("10 ЖК Москвы для инвестиционного сравнения: аргументы и расчёты","Десять проектов с разной инвестиционной логикой. Драйверы цены, риски, архивные расчёты и калькулятор сценариев покупки MAINHALL.","/investments/");
 export default function InvestmentsPage(){return <EditorialShell>
  <Breadcrumbs items={[{name:"Инвестиционное сравнение",href:"/investments/"}]}/>
- <EditorialHeader eyebrow="ИНВЕСТИЦИОННАЯ РЕДАКЦИЯ" title="Сравнение 10 жилых комплексов." description="Цена, дата проверки, инвестиционная идея и риски видны сразу. Выберите от двух до четырёх проектов, чтобы сравнить их рядом."/>
+ <EditorialHeader eyebrow="ИНВЕСТИЦИОННАЯ РЕДАКЦИЯ" title="Сравнение 10 жилых комплексов." description="Выберите проект по фотографиям и расположению. Внутри — характеристики дома, инвестиционные аргументы и расчёт покупки MAINHALL."/>
  <p className="mh-author">Редакция MAINHALL · <time dateTime="2026-10-24">24 октября 2026</time></p>
  <p className="mh-content-caption">Подборка не ранжирована по доходности. Архивные цены и допущения отмечены отдельно; наличие квартир подтверждаем перед подбором.</p>
  <ProjectsCatalogue slugs={investmentSelection.map(p=>p.slug)} investmentMode/>
