@@ -11,6 +11,11 @@ try{
   for(const slug of ['level-yuzhnoportovaya','kvartal-serebryany-bor','high-life']){
    const path='/projects/'+slug+'/';
    await page.goto('http://127.0.0.1:8091'+path,{waitUntil:'domcontentloaded'});
+   const calculator=page.locator('.mh-invest-calculator-disclosure');
+   await calculator.waitFor();
+   assert.equal(await calculator.getAttribute('open'),null,'calculator must be secondary and collapsed');
+   assert.equal(await page.locator('.mh-invest-inputs input').first().isVisible(),false);
+   await calculator.locator(':scope > summary').click();
    await page.locator('.mh-invest-inputs input').first().waitFor();
    await page.waitForTimeout(700);
    assert.equal(await page.locator('h1').count(),1);
