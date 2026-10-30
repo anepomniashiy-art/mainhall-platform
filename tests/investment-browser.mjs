@@ -42,7 +42,7 @@ try{
   await page.waitForTimeout(700);
   assert.equal(await page.locator('.mh-commercial-card').count(),24);
   assert.ok(await page.locator('.mh-commercial-card[href^="/units/public-"]').count()>0,'first page includes other developers');
-  await page.getByLabel('Жилой комплекс',{exact:true}).selectOption('high-life');
+  await page.getByLabel('Жилой комплекс').selectOption('high-life');
   await page.waitForFunction(()=>document.querySelectorAll('.mh-commercial-card').length===1);
   assert.match(await page.locator('.mh-commercial-card').getAttribute('href'),/public-high-life-405/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'unified apartments overflow '+width);
