@@ -1,3 +1,4 @@
+import collectedImages from "../../data/catalogue/collected-project-images.json";
 import { sminexProjectImages } from "./sminex-projects";
 
 export const projectImages:Record<string,{src:string;caption:string}>={
@@ -75,3 +76,5 @@ for (const [slug, entry] of Object.entries(sminexProjectImages)) {
 }
 
 projectImages["kvartal-serebryany-bor"]={src:"/images/projects/kvartal-serebryany-bor.jpg",caption:"Квартал Серебряный бор · ST MICHAEL · визуализация проекта"};
+
+for(const [slug,photo] of Object.entries(collectedImages)){if(!projectImages[slug])projectImages[slug]=photo;}

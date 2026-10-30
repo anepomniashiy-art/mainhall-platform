@@ -102,5 +102,245 @@
     "caption": "Южные сады · визуализация А101",
     "category": "exterior",
     "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "kvartal-mit",
+    "src": "https://content.storage-cdn.ru/news/f/GSi1u.jpg",
+    "source": "https://www.pik.ru/news/74243",
+    "caption": "Квартал Мит · ПИК · визуализация архитектуры",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "onezhskiy-val",
+    "src": "https://content.cdn.pik-service.ru/different/2025/12/25/2-686x686_kAx4m5W1zCwpW6th.jpg",
+    "source": "https://www.pik.ru/onezhskiy",
+    "caption": "Онежский вал · ПИК · визуализация архитектуры",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "kavkazskiy-bulvar-51",
+    "src": "https://content.storage-cdn.ru/news/f/2JKPH.jpg",
+    "source": "https://www.pik.ru/news/74137",
+    "caption": "Кавказский бульвар 51 · ПИК · Архитектура новых корпусов",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "kavkazskiy-bulvar-51",
+    "src": "https://content.storage-cdn.ru/news/f/biaff.jpg",
+    "source": "https://www.pik.ru/news/74137",
+    "caption": "Кавказский бульвар 51 · ПИК · Фасад и терраса",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "kavkazskiy-bulvar-51",
+    "src": "https://content.storage-cdn.ru/news/f/c70Xw.jpg",
+    "source": "https://www.pik.ru/news/74335",
+    "caption": "Кавказский бульвар 51 · ПИК · Пешеходный бульвар",
+    "category": "courtyard",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "kavkazskiy-bulvar-51",
+    "src": "https://content.storage-cdn.ru/news/f/dHoqI.jpg",
+    "source": "https://www.pik.ru/news/73829",
+    "caption": "Кавказский бульвар 51 · ПИК · Проект пешеходного бульвара",
+    "category": "courtyard",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "altufevskoe-53",
+    "src": "https://content.cdn.pik-service.ru/different/2025/01/28/2432x1520_cucG7VRV4Ye9hh4s.jpg",
+    "source": "https://www.pik.ru/alt53",
+    "caption": "Алтуфьевское 53 · ПИК · Визуализация архитектуры",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "altufevskoe-53",
+    "src": "https://0.db-estate.cdn.pik-service.ru/attachment_pikru/preview/ba0b8b3f-04a2-11eb-9138-0050568dfbb1/preview.jpg",
+    "source": "https://www.pik.ru/alt53",
+    "caption": "Алтуфьевское 53 · ПИК · Ход строительства, архивный снимок",
+    "category": "construction",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "altufevskoe-53",
+    "src": "https://content.storage-cdn.ru/const-p/cerebro/v/019e6903-5366-7d4d-8bb1-49e7faa42be1.jpg",
+    "source": "https://www.pik.ru/alt53",
+    "caption": "Алтуфьевское 53 · ПИК · Ход строительства, архивный снимок",
+    "category": "construction",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "narvin",
+    "src": "https://content.cdn.pik-service.ru/different/2024/12/24/2432x1520_5_SPpSd2haFyvFrFJF.jpg",
+    "source": "https://www.pik.ru/narvin",
+    "caption": "Нарвин · ПИК · визуализация архитектуры",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "narvin",
+    "src": "https://content.storage-cdn.ru/custom/vitrina/projects/1165-narvin/video-360/oblozka-2880h1952-vcht.jpg",
+    "source": "https://www.pik.ru/narvin",
+    "caption": "Нарвин · ПИК · визуализация архитектуры",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/e51c6b6915.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/5999c7c951.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/346a24be5d.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/c2f53deef1.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/a0151217d4.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/915f30d995.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/f168fa82e6.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/ao/ai/i/6358216cfe.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Подъезды, паркинг и кладовые · официальный материал А101",
+    "category": "amenities",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/ao/ai/i/6e35425b73.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Подъезды, паркинг и кладовые · официальный материал А101",
+    "category": "amenities",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/a/f/i/2448b17ba6.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+    "category": "location",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/a/f/i/7dfe2114fd.png",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+    "category": "location",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/a/f/i/62008ef29f.png",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+    "category": "location",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/a/f/i/06688e2d61.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Окружение и инфраструктура · официальный материал А101",
+    "category": "location",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/6ae9733482.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/i/ab94a4e8dd.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Материалы галереи проекта · официальный материал А101",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/ao/ai/i/4a91582835.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Метро «Бунинская аллея» · официальный материал А101",
+    "category": "location",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/ao/ai/i/9bfb7fe1d5.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Парк «Южное Бутово» · официальный материал А101",
+    "category": "location",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "yuzhnye-sady",
+    "src": "https://cdn.a101.ru/mmedia/ao/ai/i/6d21b8718b.jpg",
+    "source": "https://a101.ru/projects/yujnie-sadi/",
+    "caption": "Южные сады · Подъезды, паркинг и кладовые · официальный материал А101",
+    "category": "amenities",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "slug": "dom-na-dzhalilya",
+    "src": "https://cdn.a101.ru/mmedia/p/pag/pi/b5014ae1ac.jpg",
+    "source": "https://a101.ru/projects/dom-na-dzhalilya/",
+    "caption": "Дом на Джалиля · А101 · визуализация архитектуры",
+    "category": "exterior",
+    "checkedAt": "2026-10-30"
   }
 ]

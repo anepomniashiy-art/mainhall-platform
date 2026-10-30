@@ -1,0 +1,244 @@
+{
+  "checkedAt": "2026-10-30",
+  "basis": "Built catalogue HTML before photo collection",
+  "catalogueCount": 98,
+  "missingCoverCount": 59,
+  "projects": [
+    {
+      "slug": "belyy-grad",
+      "name": "Белый Град"
+    },
+    {
+      "slug": "novoe-medvedkovo",
+      "name": "Новое Медведково"
+    },
+    {
+      "slug": "riversky",
+      "name": "RiverSky"
+    },
+    {
+      "slug": "level-voykovskaya",
+      "name": "Левел Войковская"
+    },
+    {
+      "slug": "very-botanicheskaya",
+      "name": "ВЭРИ на Ботанической / VERY"
+    },
+    {
+      "slug": "secret-garden",
+      "name": "Сикрет Гарден"
+    },
+    {
+      "slug": "level-paveletskaya-city",
+      "name": "Левел Павелецкая Сити"
+    },
+    {
+      "slug": "lyublinskiy-park",
+      "name": "Люблинский парк"
+    },
+    {
+      "slug": "kazachiy",
+      "name": "Казачий"
+    },
+    {
+      "slug": "amurskiy-park",
+      "name": "Амурский парк"
+    },
+    {
+      "slug": "c5",
+      "name": "С5"
+    },
+    {
+      "slug": "strogino-360",
+      "name": "Строгино 360"
+    },
+    {
+      "slug": "kvartal-mit",
+      "name": "Квартал Мит"
+    },
+    {
+      "slug": "mypriority-mnevniki",
+      "name": "Мнёвники от Гранель / MYPRIORITY Мневники"
+    },
+    {
+      "slug": "dom-na-dzhalilya",
+      "name": "Дом на Джалиля"
+    },
+    {
+      "slug": "sezar-city",
+      "name": "СЕЗАР СИТИ / SEZAR CITY"
+    },
+    {
+      "slug": "yuzhnye-sady",
+      "name": "Южные сады"
+    },
+    {
+      "slug": "zelenyy-park",
+      "name": "Зеленый Парк"
+    },
+    {
+      "slug": "kvartal-na-vode",
+      "name": "Квартал на воде / Графика на воде"
+    },
+    {
+      "slug": "kvartal-izdanie",
+      "name": "Квартал Издание"
+    },
+    {
+      "slug": "aristarkhovskiy",
+      "name": "Аристарховский"
+    },
+    {
+      "slug": "admiral",
+      "name": "Адмирал"
+    },
+    {
+      "slug": "evopark-izmaylovo",
+      "name": "Эвопарк Измайлово / EvoPark Измайлово"
+    },
+    {
+      "slug": "orient-express",
+      "name": "Ориент Экспресс"
+    },
+    {
+      "slug": "sobytie",
+      "name": "Событие"
+    },
+    {
+      "slug": "twelve",
+      "name": "Твелв / Twelve"
+    },
+    {
+      "slug": "monblan",
+      "name": "Монблан"
+    },
+    {
+      "slug": "emotion",
+      "name": "Эмоушн / Emotion"
+    },
+    {
+      "slug": "beregovoy-2",
+      "name": "Береговой 2"
+    },
+    {
+      "slug": "2-irtyshskiy",
+      "name": "2-й Иртышский"
+    },
+    {
+      "slug": "michurinskiy-park",
+      "name": "Мичуринский парк"
+    },
+    {
+      "slug": "26-parkview",
+      "name": "26 Парквью"
+    },
+    {
+      "slug": "svet",
+      "name": "Свет"
+    },
+    {
+      "slug": "kvartal-domashniy",
+      "name": "Квартал Домашний"
+    },
+    {
+      "slug": "pyatnitskoe-58",
+      "name": "Пятницкое 58 / Перец"
+    },
+    {
+      "slug": "moskvoreche",
+      "name": "Москворечье"
+    },
+    {
+      "slug": "shift",
+      "name": "Shift"
+    },
+    {
+      "slug": "sreda-na-kutuzovskom",
+      "name": "Индиво / Среда на Кутузовском"
+    },
+    {
+      "slug": "altufevskoe-53",
+      "name": "Алтуфьевское 53"
+    },
+    {
+      "slug": "kronshtadtskiy-9",
+      "name": "Кронштадтский 9"
+    },
+    {
+      "slug": "onezhskiy-val",
+      "name": "Онежский вал"
+    },
+    {
+      "slug": "prime-park",
+      "name": "Prime Park / Прайм Парк"
+    },
+    {
+      "slug": "narvin",
+      "name": "Нарвин"
+    },
+    {
+      "slug": "kavkazskiy-bulvar-51",
+      "name": "Кавказский бульвар 51"
+    },
+    {
+      "slug": "ultima-city",
+      "name": "УЛЬТИМА Сити / UltimaCity"
+    },
+    {
+      "slug": "zilart",
+      "name": "ЗИЛАРТ"
+    },
+    {
+      "slug": "mypriority-dubrovka",
+      "name": "Дубровка от Гранель / MYPRIORITY Дубровка"
+    },
+    {
+      "slug": "muza",
+      "name": "Муза"
+    },
+    {
+      "slug": "veer",
+      "name": "Веер / VEER"
+    },
+    {
+      "slug": "soul",
+      "name": "Соул / Soul"
+    },
+    {
+      "slug": "kvartal-mons",
+      "name": "Квартал МОНС"
+    },
+    {
+      "slug": "tatum",
+      "name": "Татум / Обручева 27"
+    },
+    {
+      "slug": "set",
+      "name": "Сет / SET"
+    },
+    {
+      "slug": "trinity",
+      "name": "Гранель Тринити"
+    },
+    {
+      "slug": "city-bay",
+      "name": "Сити Бэй / City Bay"
+    },
+    {
+      "slug": "one",
+      "name": "ONE"
+    },
+    {
+      "slug": "dom-dau",
+      "name": "Дом Дау"
+    },
+    {
+      "slug": "nachalo",
+      "name": "Начало"
+    },
+    {
+      "slug": "vern",
+      "name": "ВЕРН"
+    }
+  ]
+}
