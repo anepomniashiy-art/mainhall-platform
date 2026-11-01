@@ -19,7 +19,11 @@ export function MainhallExperience() {
   {slug:"nicole",name:"Николь",developer:"MR Group",place:"Центр. История. Новый масштаб."},
   {slug:"opus",name:"OPUS",developer:"PIONEER",place:"Река. Приватность. Другой ритм."},
   {slug:"stone-blik",name:"STONE Блик",developer:"STONE",place:"Вода. Свет. Новая перспектива."},
+  {slug:"high-life",name:"HIGH LIFE",developer:"PIONEER",place:"Павелецкая. Высота. Деловой центр."},
+  {slug:"level-yuzhnoportovaya",name:"Level Южнопортовая",developer:"Level Group",place:"Новый городской центр у воды."},
+  {slug:"kvartal-serebryany-bor",name:"Квартал Серебряный Бор",developer:"Sminex",place:"Редкая природная локация Москвы."},
  ];
+ const featuredSlugs = ["high-life","opus","nicole","stone-blik","level-yuzhnoportovaya","kvartal-serebryany-bor"];
  useGSAP(() => {
   const media = gsap.matchMedia();
   media.add("(prefers-reduced-motion: no-preference)", () => {
@@ -47,13 +51,19 @@ export function MainhallExperience() {
    </div>
    <div className="hero-image-panel">
     {heroProjects.map((p,i)=><img key={p.slug} className={"hero-image"+(hero===i?" is-active":"")} src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": дневная архитектурная визуализация, "+p.developer} fetchPriority={i===0?"high":"low"} width="2000" height="1181" aria-hidden={hero!==i}/>)}
-    <div className="hero-project-label"><span className="hero-project-number">0{hero+1} / 03</span><div><p>{heroProjects[hero].place}</p><Link href={"/projects/"+heroProjects[hero].slug+"/"}>{heroProjects[hero].name} <span>↗</span></Link></div></div>
+    <div className="hero-project-label"><span className="hero-project-number">{String(hero+1).padStart(2,"0")} / {String(heroProjects.length).padStart(2,"0")}</span><div><p>{heroProjects[hero].place}</p><Link href={"/projects/"+heroProjects[hero].slug+"/"}>{heroProjects[hero].name} <span>↗</span></Link></div></div>
     <span className="mh-image-credit">{heroProjects[hero].developer} · визуализация</span>
    </div>
-   <div className="hero-gallery-nav"><span>Сравниваем цену, спрос и риски.</span><div role="group" aria-label="Проекты на первом экране">{heroProjects.map((p,i)=><button type="button" key={p.slug} aria-pressed={hero===i} onClick={()=>setHero(i)}><span>0{i+1}</span> {p.name}</button>)}</div><a href="#approach" className="hero-scroll" aria-label="Наш подход">Листайте вниз ↓</a></div>
+   <div className="hero-gallery-nav"><span>Сравниваем цену, спрос и риски.</span><div role="group" aria-label="Проекты на первом экране">{heroProjects.map((p,i)=><button type="button" key={p.slug} aria-pressed={hero===i} onClick={()=>setHero(i)}><span>{String(i+1).padStart(2,"0")}</span> {p.name}</button>)}</div><a href="#selection" className="hero-scroll" aria-label="Проекты в фокусе">Выбор MAINHALL ↓</a></div>
+  </section>
+  <section id="selection" className="mh-selection mh-pad">
+   <div className="mh-section-head" data-reveal><p className="mh-eyebrow">01 / ПРОЕКТЫ В ФОКУСЕ</p><span>Москва · {editorialProjects.length} проектов в обзоре</span></div>
+   <div className="mh-editorial-head" data-reveal><h2>Разные адреса.<br/><span>Разная логика покупки.</span></h2><p>Выбираем не название на фасаде. Разбираемся, почему именно здесь, почему сейчас и для какой задачи.</p></div>
+   <div className="mh-featured-projects">{featuredSlugs.map((slug,i)=>{const p=editorialProjects.find(p=>p.slug===slug)!;return <Link data-reveal href={"/projects/"+p.slug+"/"} key={p.slug} className="mh-featured-project"><div className="mh-photo-frame"><img className="mh-featured-photo" src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": "+p.developer} width="1200" height="900" loading="lazy"/><span className="mh-photo-explore" aria-hidden="true">Смотреть проект ↗</span></div><div className="mh-featured-copy"><div className="mh-project-meta"><span>{String(i+1).padStart(2,"0")} / {p.developer}</span><span>{p.className}</span></div><h3>{p.name}</h3><p className="mh-project-location">{p.area}, Москва</p><p className="mh-project-thesis">{p.thesis}</p><span className="mh-text-link">Расположение, продукт, инвестиционная логика ↗</span></div></Link>})}</div>
+   <div className="mh-list-bottom"><span>Шесть разных сценариев покупки. В полном каталоге — {editorialProjects.length} проектов Москвы.</span><Link href="/projects/" className="mh-text-link">Смотреть все {editorialProjects.length} проектов ↗</Link></div>
   </section>
   <section className="mh-intro mh-pad" id="approach">
-   <div className="mh-section-head" data-reveal><p className="mh-eyebrow">01 / СМОТРИМ ГЛУБЖЕ</p><span>Бизнес+ · Премиум · Элитная недвижимость</span></div>
+   <div className="mh-section-head" data-reveal><p className="mh-eyebrow">02 / СМОТРИМ ГЛУБЖЕ</p><span>Бизнес+ · Премиум · Элитная недвижимость</span></div>
    <div className="mh-editorial-head" data-reveal><h2>Красивый дом<br/><span>ещё не инвестиция.</span></h2><p>Хорошая покупка начинается там, где заканчивается презентация застройщика. Мы разбираем цену входа, будущий спрос и то, как вы выйдете из сделки.</p></div>
    <div className="mh-approach-signature"><ArchitecturalMotion/><p>Нам мало, чтобы вы купили.<br/><strong>Нам нужно, чтобы вы заработали.</strong></p></div>
    <div className="mh-analysis-list">
@@ -64,12 +74,6 @@ export function MainhallExperience() {
       ["04","Что может пойти иначе","Сравниваем сценарии: сроки сдвинулись, цены не выросли, продажа заняла больше времени. Решение должно выдержать и такой рынок."]
     ].map(([n,t,d])=><article className="mh-analysis-row" data-reveal key={n}><span className="mh-index">{n}</span><h3>{t}</h3><p>{d}</p></article>)}
    </div>
-  </section>
-  <section id="selection" className="mh-selection mh-pad">
-   <div className="mh-section-head" data-reveal><p className="mh-eyebrow">02 / ПРОЕКТЫ В ФОКУСЕ</p><span>Москва · {editorialProjects.length} проектов в обзоре</span></div>
-   <div className="mh-editorial-head" data-reveal><h2>Разные адреса.<br/><span>Разная логика покупки.</span></h2><p>Выбираем не название на фасаде. Разбираемся, почему именно здесь, почему сейчас и для какой задачи.</p></div>
-   <div className="mh-featured-projects">{["high-life","opus","nicole"].map((slug,i)=>{const p=editorialProjects.find(p=>p.slug===slug)!;return <Link data-reveal href={"/projects/"+p.slug+"/"} key={p.slug} className="mh-featured-project"><div className="mh-photo-frame"><img className="mh-featured-photo" src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": "+p.developer} width="1200" height="900" loading="lazy"/><span className="mh-photo-explore" aria-hidden="true">Смотреть проект ↗</span></div><div className="mh-featured-copy"><div className="mh-project-meta"><span>0{i+1} / {p.developer}</span><span>{p.className}</span></div><h3>{p.name}</h3><p className="mh-project-location">{p.area}, Москва</p><p className="mh-project-thesis">{p.thesis}</p><span className="mh-text-link">Расположение, продукт, инвестиционная логика ↗</span></div></Link>})}</div>
-   <div className="mh-list-bottom"><span>Проекты для изучения. Актуальные лоты и условия уточняем перед подбором.</span><Link href="/projects/" className="mh-text-link">Весь обзор проектов ↗</Link></div>
   </section>
   <section className="mh-architecture mh-pad" aria-label="Архитектурные акценты">
    <div className="mh-section-head"><p className="mh-eyebrow">ЭСТЕТИКА, В КОТОРОЙ ХОЧЕТСЯ ЖИТЬ</p><span>Камерные дома и высотные проекты</span></div>
