@@ -1,0 +1,30 @@
+{
+  "packId": "2026-11-01-storage",
+  "projects": [
+    {
+      "slug": "life-time",
+      "name": "Life Time"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "keller-pri-pokupke-kvartiry",
+      "title": "Келлер к квартире: когда отдельная кладовая оправдывает покупку",
+      "kind": "evergreen",
+      "category": "Гид покупателя",
+      "image": "life-time",
+      "related": [
+        "life-time"
+      ],
+      "sources": [
+        {
+          "name": "Sminex: Life Time, келлеры для сезонного хранения",
+          "url": "https://www.sminex.com/life-time",
+          "checkedAt": "2026-11-01T06:18:17.783596+00:00",
+          "evidenceType": "verified-summary",
+          "text": "Официальная страница Life Time в разделе систем комфорта описывает подземный паркинг с премиальной отделкой, келлерами для хранения сезонных вещей и зарядкой для электромобилей. Цена, наличие конкретного келлера и тарифы содержания на проверенном фрагменте не установлены."
+        }
+      ]
+    }
+  ]
+}
