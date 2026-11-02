@@ -8,10 +8,20 @@ if not password: raise SystemExit('Missing BEGET_API_PASSWORD')
 def api(method,args=None):
     values={'login':login,'passwd':password,'input_format':'json','output_format':'json','input_data':json.dumps(args or {})}
     request=urllib.request.Request('https://api.beget.com/api/'+method,data=urllib.parse.urlencode(values).encode())
-    try:
-        result=json.load(urllib.request.urlopen(request,timeout=40))
-    except Exception as error:
-        raise SystemExit('Beget request failed: '+type(error).__name__)
+    result=None
+    last_error=None
+    for attempt in range(4):
+        try:
+            result=json.load(urllib.request.urlopen(request,timeout=40))
+            break
+        except (urllib.error.URLError,TimeoutError,socket.timeout) as error:
+            last_error=error
+            if attempt<3:
+                delay=5*(attempt+1)
+                print('Beget API unavailable; retrying in',delay,'seconds',flush=True)
+                time.sleep(delay)
+    if result is None:
+        raise SystemExit('Beget request failed after retries: '+type(last_error).__name__)
     answer=result.get('answer',{})
     if result.get('status')!='success' or answer.get('status')!='success':
         message=json.dumps(result,ensure_ascii=False).replace(password,'***')
@@ -143,3 +153,4 @@ finally:
     archive.unlink(missing_ok=True)
 ip=socket.gethostbyname(login+'.beget.tech')
 Path('/tmp/beget-ip').write_text(ip)
+
