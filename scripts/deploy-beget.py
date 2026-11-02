@@ -105,6 +105,41 @@ def resolve_a_direct(name):
                     return socket.inet_ntoa(value)
         except (OSError,IndexError):
             pass
+    # UDP DNS may be blocked on hosted runners. Use DNS-over-HTTPS through a
+    # pinned resolver IP, with normal certificate verification and SNI.
+    for ip,server,path in [
+        ('1.1.1.1','cloudflare-dns.com','/dns-query?name='+name+'&type=A'),
+        ('8.8.8.8','dns.google','/resolve?name='+name+'&type=A'),
+    ]:
+        try:
+            context=ssl.create_default_context()
+            raw=socket.create_connection((ip,443),timeout=10)
+            with context.wrap_socket(raw,server_hostname=server) as connection:
+                request=('GET '+path+' HTTP/1.1\r\nHost: '+server+'\r\nAccept: application/dns-json\r\nConnection: close\r\n\r\n')
+                connection.sendall(request.encode('ascii'))
+                response=b''
+                while True:
+                    part=connection.recv(65536)
+                    if not part: break
+                    response+=part
+            headers,body=response.split(b'\r\n\r\n',1)
+            if b' 200 ' not in headers.split(b'\r\n',1)[0]: continue
+            if b'transfer-encoding: chunked' in headers.lower():
+                decoded=b''
+                while body:
+                    line,body=body.split(b'\r\n',1)
+                    size=int(line.split(b';',1)[0],16)
+                    if size==0: break
+                    decoded+=body[:size]
+                    body=body[size+2:]
+                body=decoded
+            result=json.loads(body)
+            for answer in result.get('Answer',[]):
+                if answer.get('type')==1:
+                    socket.inet_aton(answer['data'])
+                    return answer['data']
+        except (OSError,ValueError,KeyError,json.JSONDecodeError):
+            pass
     return None
 tls_context=ssl.create_default_context()
 tls_context.maximum_version=ssl.TLSVersion.TLSv1_2
