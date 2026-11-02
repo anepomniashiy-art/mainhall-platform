@@ -69,12 +69,51 @@ class ReusingFTP_TLS(ftplib.FTP_TLS):
         if self._prot_p:
             connection=self.context.wrap_socket(connection,server_hostname=self.host,session=self.sock.session)
         return connection,size
+def resolve_a_direct(name):
+    # GitHub runners occasionally fail to reach their recursive resolver for
+    # Beget zones. Query Beget's published authoritative servers directly and
+    # still verify the FTPS certificate against the hostname below.
+    query_id=os.urandom(2)
+    qname=b''.join(bytes([len(part)])+part.encode('ascii') for part in name.split('.'))+b'\0'
+    packet=query_id+b'\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00'+qname+b'\x00\x01\x00\x01'
+    def skip_name(data,offset):
+        while True:
+            length=data[offset]
+            if length&0xc0==0xc0: return offset+2
+            offset+=1
+            if length==0: return offset
+            offset+=length
+    for server in ['93.92.81.0','185.50.27.12']:
+        try:
+            with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as dns:
+                dns.settimeout(5)
+                dns.sendto(packet,(server,53))
+                data=dns.recv(4096)
+            if data[:2]!=query_id: continue
+            questions=int.from_bytes(data[4:6],'big')
+            answers=int.from_bytes(data[6:8],'big')
+            offset=12
+            for _ in range(questions): offset=skip_name(data,offset)+4
+            for _ in range(answers):
+                offset=skip_name(data,offset)
+                record_type=int.from_bytes(data[offset:offset+2],'big')
+                record_class=int.from_bytes(data[offset+2:offset+4],'big')
+                length=int.from_bytes(data[offset+8:offset+10],'big')
+                value=data[offset+10:offset+10+length]
+                offset+=10+length
+                if record_type==1 and record_class==1 and length==4:
+                    return socket.inet_ntoa(value)
+        except (OSError,IndexError):
+            pass
+    return None
 tls_context=ssl.create_default_context()
 tls_context.maximum_version=ssl.TLSVersion.TLSv1_2
 # Both endpoints are documented Beget addresses. Preserve certificate
 # verification and retry transient network failures on the technical domain.
 ftp=None
-for endpoint in dict.fromkeys([host,tls_name]):
+direct_ip=resolve_a_direct(tls_name)
+endpoints=list(dict.fromkeys([host,tls_name]+([direct_ip] if direct_ip else [])))
+for endpoint in endpoints:
     candidate=ReusingFTP_TLS(context=tls_context,timeout=25)
     try:
         candidate.connect(endpoint,21)
