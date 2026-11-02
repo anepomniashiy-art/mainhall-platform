@@ -146,8 +146,9 @@ tls_context.maximum_version=ssl.TLSVersion.TLSv1_2
 # Both endpoints are documented Beget addresses. Preserve certificate
 # verification and retry transient network failures on the technical domain.
 ftp=None
+last_known_host='urdak.beget.com'
 direct_ip=resolve_a_direct(tls_name)
-endpoints=list(dict.fromkeys([host,tls_name]+([direct_ip] if direct_ip else [])))
+endpoints=list(dict.fromkeys([host,last_known_host,tls_name]+([direct_ip] if direct_ip else [])))
 for endpoint in endpoints:
     candidate=ReusingFTP_TLS(context=tls_context,timeout=25)
     try:
@@ -232,4 +233,3 @@ finally:
     archive.unlink(missing_ok=True)
 ip=socket.gethostbyname(login+'.beget.tech')
 Path('/tmp/beget-ip').write_text(ip)
-
