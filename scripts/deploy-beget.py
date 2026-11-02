@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 login='wellton'
 password=os.environ['BEGET_API_PASSWORD']
 if not password: raise SystemExit('Missing BEGET_API_PASSWORD')
+class BegetUnavailable(Exception): pass
 def api(method,args=None):
     values={'login':login,'passwd':password,'input_format':'json','output_format':'json','input_data':json.dumps(args or {})}
     request=urllib.request.Request('https://api.beget.com/api/'+method,data=urllib.parse.urlencode(values).encode())
@@ -21,43 +22,47 @@ def api(method,args=None):
                 print('Beget API unavailable; retrying in',delay,'seconds',flush=True)
                 time.sleep(delay)
     if result is None:
-        raise SystemExit('Beget request failed after retries: '+type(last_error).__name__)
+        raise BegetUnavailable('Beget request failed after retries: '+type(last_error).__name__)
     answer=result.get('answer',{})
     if result.get('status')!='success' or answer.get('status')!='success':
         message=json.dumps(result,ensure_ascii=False).replace(password,'***')
         raise SystemExit(method+': '+message)
     return answer.get('result')
-info=api('user/getAccountInfo')
-host=info['server_name']
-sites=api('site/getList')
-target=next((x for x in sites if x['path']=='main-hall.ru/public_html'),None)
-if target is None:
-    api('site/add',{'name':'main-hall.ru'})
-    target=next(x for x in api('site/getList') if x['path']=='main-hall.ru/public_html')
-domains=api('domain/getList')
-domain=next((x for x in domains if x['fqdn']=='main-hall.ru'),None)
-if domain is None:
-    api('domain/addVirtual',{'hostname':'main-hall','zone_id':1})
-    domain=next(x for x in api('domain/getList') if x['fqdn']=='main-hall.ru')
-linked=any(str(x['id'])==str(domain['id']) for x in target.get('domains',[]))
-if not linked:
-    api('site/linkDomain',{'domain_id':int(domain['id']),'site_id':int(target['id'])})
-print('Site configured:',target['path'],'site_id',target['id'],flush=True)
 suffix='mhdeploy'
 ftp_login=login+'_'+suffix
 ftp_password='Mh!'+hmac.new(password.encode(),b'mainhall-beget-deploy-v1',hashlib.sha256).hexdigest()[:32]
 print('::add-mask::'+ftp_password,flush=True)
-accounts=api('ftp/getList')
-existing=next((x for x in accounts if x['login']==ftp_login),None)
-if existing:
-    if existing['homedir'].rstrip('/')!='/main-hall.ru/public_html': raise SystemExit('Deploy account points to unexpected directory')
-    api('ftp/changePassword',{'suffix':suffix,'password':ftp_password})
-else:
-    api('ftp/add',{'suffix':suffix,'homedir':'/main-hall.ru/public_html','password':ftp_password})
+tls_name=login+'.beget.tech'
+try:
+    info=api('user/getAccountInfo')
+    host=info['server_name']
+    sites=api('site/getList')
+    target=next((x for x in sites if x['path']=='main-hall.ru/public_html'),None)
+    if target is None:
+        api('site/add',{'name':'main-hall.ru'})
+        target=next(x for x in api('site/getList') if x['path']=='main-hall.ru/public_html')
+    domains=api('domain/getList')
+    domain=next((x for x in domains if x['fqdn']=='main-hall.ru'),None)
+    if domain is None:
+        api('domain/addVirtual',{'hostname':'main-hall','zone_id':1})
+        domain=next(x for x in api('domain/getList') if x['fqdn']=='main-hall.ru')
+    linked=any(str(x['id'])==str(domain['id']) for x in target.get('domains',[]))
+    if not linked:
+        api('site/linkDomain',{'domain_id':int(domain['id']),'site_id':int(target['id'])})
+    print('Site configured:',target['path'],'site_id',target['id'],flush=True)
+    accounts=api('ftp/getList')
+    existing=next((x for x in accounts if x['login']==ftp_login),None)
+    if existing:
+        if existing['homedir'].rstrip('/')!='/main-hall.ru/public_html': raise SystemExit('Deploy account points to unexpected directory')
+        api('ftp/changePassword',{'suffix':suffix,'password':ftp_password})
+    else:
+        api('ftp/add',{'suffix':suffix,'homedir':'/main-hall.ru/public_html','password':ftp_password})
+except BegetUnavailable:
+    host=tls_name
+    print('Beget control API unavailable; using the existing restricted FTP account',flush=True)
 # FTP_TLS verifies the server certificate against this technical hostname
 # during login; a separate openssl connection duplicates that verification
 # and can hang even when the authenticated transfer succeeds.
-tls_name=login+'.beget.tech'
 class ReusingFTP_TLS(ftplib.FTP_TLS):
     def ntransfercmd(self,cmd,rest=None):
         connection,size=ftplib.FTP.ntransfercmd(self,cmd,rest)
