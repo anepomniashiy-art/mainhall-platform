@@ -1,0 +1,89 @@
+name: Switch MAINHALL DNS to Netherlands server
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/cf-nl-cutover.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cutover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Preflight tested release and update only MAINHALL web DNS
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,subprocess
+          token=os.environ['CLOUDFLARE_API_TOKEN']
+          if not token: raise SystemExit('CLOUDFLARE_API_TOKEN is missing')
+          def cf(method,path,data=None):
+              request=urllib.request.Request('https://api.cloudflare.com/client/v4/'+path,data=json.dumps(data).encode() if data is not None else None,headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'},method=method)
+              try:
+                  response=json.load(urllib.request.urlopen(request,timeout=30))
+              except urllib.error.HTTPError as error:
+                  body=error.read().decode()
+                  print('CLOUDFLARE_ERROR',error.code,body.replace(token,'***'))
+                  raise SystemExit('Cloudflare request rejected')
+              if not response.get('success'): raise SystemExit('Cloudflare returned unsuccessful response')
+              return response['result']
+          ip='72.56.84.90'
+          technical='https://mainhall.72-56-84-90.sslip.io'
+          checks=[('/', 'MAINHALL'),('/projects/','MAINHALL'),('/deploy-version.txt','b210eaa72f81b58e15470dbe96656396ab8d4c6c')]
+          for path,marker in checks:
+              result=subprocess.run(['curl','--max-time','30','--fail','-sS',technical+path],capture_output=True,text=True)
+              if result.returncode or marker not in result.stdout: raise SystemExit('NL preflight failed: '+path)
+          print('NL_PREFLIGHT_OK',flush=True)
+          zone=os.environ.get('CLOUDFLARE_ZONE_ID','').strip()
+          if not zone:
+              zones=[z for z in cf('GET','zones?name=main-hall.ru') if z['name']=='main-hall.ru']
+              if len(zones)!=1: raise SystemExit('Cannot resolve Cloudflare zone')
+              zone=zones[0]['id']
+          prefix='zones/'+zone+'/dns_records'
+          records=cf('GET',prefix+'?per_page=100')
+          web=[r for r in records if r['name'] in ['main-hall.ru','www.main-hall.ru']]
+          print('WEB_DNS_BEFORE',json.dumps([{k:r.get(k) for k in ['type','name','content','proxied']} for r in web]),flush=True)
+          allowed=['185.199.108.153','185.199.109.153','185.199.110.153','185.199.111.153','87.236.19.212',ip]
+          apex=[r for r in web if r['name']=='main-hall.ru' and r['type']=='A']
+          if any(r['content'] not in allowed for r in apex): raise SystemExit('Unexpected apex IP; no changes made')
+          if any(r['type']=='AAAA' for r in web): raise SystemExit('Unexpected IPv6 record; no changes made')
+          www=[r for r in web if r['name']=='www.main-hall.ru' and r['type'] in ['A','CNAME']]
+          if any(r['type']!='CNAME' or r['content'].rstrip('.') not in ['anepomniashiy-art.github.io','main-hall.ru'] for r in www):
+              raise SystemExit('Unexpected www target; no changes made')
+          data={'type':'A','name':'main-hall.ru','content':ip,'ttl':300,'proxied':False}
+          if apex:
+              cf('PUT',prefix+'/'+apex[0]['id'],data)
+              for extra in apex[1:]: cf('DELETE',prefix+'/'+extra['id'])
+          else: cf('POST',prefix,data)
+          data={'type':'CNAME','name':'www','content':'main-hall.ru','ttl':300,'proxied':False}
+          if www: cf('PUT',prefix+'/'+www[0]['id'],data)
+          else: cf('POST',prefix,data)
+          after=cf('GET',prefix+'?per_page=100')
+          print('WEB_DNS_AFTER',json.dumps([{k:r.get(k) for k in ['type','name','content','proxied']} for r in after if r['name'] in ['main-hall.ru','www.main-hall.ru']]),flush=True)
+          PY
+      - name: Wait for valid public HTTPS and verify twice
+        run: |
+          for attempt in $(seq 1 60); do
+            apex=$(dig @1.1.1.1 main-hall.ru A +short | tail -1)
+            if [ "$apex" = "72.56.84.90" ]; then
+              if curl --max-time 20 --fail --silent --show-error https://main-hall.ru/ -o /tmp/home.html \
+                && curl --max-time 20 --fail --silent --show-error https://main-hall.ru/projects/ -o /tmp/projects.html \
+                && grep -q MAINHALL /tmp/home.html \
+                && grep -q MAINHALL /tmp/projects.html; then
+                echo "HTTPS ready on attempt $attempt"
+                break
+              fi
+            fi
+            if [ "$attempt" = 60 ]; then exit 1; fi
+            sleep 10
+          done
+          for pass in 1 2; do
+            curl --max-time 20 --fail --silent --show-error https://main-hall.ru/ -o /tmp/home-$pass.html
+            curl --max-time 20 --fail --silent --show-error https://main-hall.ru/projects/ -o /tmp/projects-$pass.html
+            grep -q MAINHALL /tmp/home-$pass.html
+            grep -q MAINHALL /tmp/projects-$pass.html
+            echo "Public HTTPS pass $pass verified"
+          done
