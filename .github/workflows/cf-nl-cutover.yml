@@ -46,7 +46,7 @@ jobs:
           records=cf('GET',prefix+'?per_page=100')
           web=[r for r in records if r['name'] in ['main-hall.ru','www.main-hall.ru']]
           print('WEB_DNS_BEFORE',json.dumps([{k:r.get(k) for k in ['type','name','content','proxied']} for r in web]),flush=True)
-          allowed=['185.199.108.153','185.199.109.153','185.199.110.153','185.199.111.153','87.236.19.212',ip]
+          allowed=['185.199.108.153','185.199.109.153','185.199.110.153','185.199.111.153','87.236.19.212','45.130.41.213',ip]
           apex=[r for r in web if r['name']=='main-hall.ru' and r['type']=='A']
           if any(r['content'] not in allowed for r in apex): raise SystemExit('Unexpected apex IP; no changes made')
           if any(r['type']=='AAAA' for r in web): raise SystemExit('Unexpected IPv6 record; no changes made')
