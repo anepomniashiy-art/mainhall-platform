@@ -1,8 +1,5 @@
-name: Deploy MAINHALL to Beget
+name: Legacy manual deploy of MAINHALL to Beget
 on:
-  push:
-    branches: [main]
-    paths: [data/**, src/**, public/**, scripts/**, package.json, package-lock.json, next.config.ts, .github/workflows/deploy-beget.yml]
   workflow_dispatch:
 permissions:
   contents: read
