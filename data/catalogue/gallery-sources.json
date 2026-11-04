@@ -61,5 +61,26 @@
     "pageUrl": "https://www.sminex.com/lavrushinskiy",
     "collectedAt": "2026-10-21T20:28:58+00:00",
     "sha256Original": "8081927522aeba43e76a44b4752af5f41ca40515fd1263720818da69754a83f2"
+  },
+  {
+    "path": "public/images/projects/gallery/prime-park-architecture.webp",
+    "sourceUrl": "https://primepark.ru/local/templates/lp_promo/images/architecture/arch.jpg",
+    "pageUrl": "https://primepark.ru/gallery/",
+    "collectedAt": "2026-11-04",
+    "sha256Local": "2389c4c2dfa3a21410e22dcce017a623a53a933da76a4baa583c3afa455afafe"
+  },
+  {
+    "path": "public/images/projects/gallery/prime-park-lobby.webp",
+    "sourceUrl": "https://primepark.ru/local/templates/lp_promo/images/lobby-sets/01-lobby.jpg",
+    "pageUrl": "https://primepark.ru/gallery/",
+    "collectedAt": "2026-11-04",
+    "sha256Local": "677322618ac52677a8b7c5c06b5b6bda8e2d8d81631c2546971642fdb87f444f"
+  },
+  {
+    "path": "public/images/projects/gallery/prime-park-park.webp",
+    "sourceUrl": "https://primepark.ru/local/templates/lp_promo/images/park/park.jpg",
+    "pageUrl": "https://primepark.ru/gallery/",
+    "collectedAt": "2026-11-04",
+    "sha256Local": "664c45ca0aea65008cf1b7ec3b01eb7bd2ee2f660ed1dabeb36950bb3f5b6e8b"
   }
 ]

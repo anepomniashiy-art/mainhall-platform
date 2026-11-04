@@ -1725,5 +1725,19 @@
       "height": 1220,
       "category": "Архитектура"
     }
+  ],
+  "prime-park": [
+    {
+      "src": "/images/projects/gallery/prime-park-lobby.webp",
+      "caption": "Prime Park · лобби Regent’s Park Tower · визуализация",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "src": "/images/projects/gallery/prime-park-park.webp",
+      "caption": "Prime Park · внутренний двор · визуализация",
+      "width": 1600,
+      "height": 900
+    }
   ]
 }
