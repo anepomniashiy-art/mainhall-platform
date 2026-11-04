@@ -6,7 +6,6 @@ import {COMPANY} from "@/lib/constants";
 type Unit = {id:string;projectSlug:string;unitNumber:string;buildingName:string;floor:number;floorsTotal?:number;rooms:number;bedrooms?:number|null;areaSqm:number;finish?:string;type?:string;unitType?:string;priceRub:number;priceBeforeDiscountRub?:number;pricePerSqm?:number;ceilingHeightM?:number;completionYear?:number;fetchedAt:string;features?:string[];planImageSrc?:string};
 type Photo = {src:string;caption:string;width:number;height:number;category?:string};
 const number=(value:number)=>new Intl.NumberFormat("ru-RU",{maximumFractionDigits:2}).format(value);
-const date=(value:string)=>new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:"2-digit",year:"numeric",timeZone:"Europe/Moscow"}).format(new Date(value));
 export function ProjectGallery({slug,name}:{slug:string;name:string}){
  const photos=(galleries as Record<string,Photo[]>)[slug]||[];
  if(!photos.length)return null;
@@ -16,7 +15,7 @@ export function ProjectMarketUnits({slug,name,unitIds}:{slug:string;name:string;
  const units=(unitsData.units as Unit[]).filter(unit=>unit.projectSlug===slug&&(!unitIds||unitIds.includes(unit.id)));
  if(!units.length)return null;
  return <div style={{margin:"32px 0 48px"}}>
-  <p className="mh-content-caption">Прайс проверен {date(units[0].fetchedAt)}. Условия оплаты и наличие уточним при подборе.</p>
+  <p className="mh-content-caption">Наличие квартир и условия покупки уточним при подборе.</p>
   <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,290px),1fr))",gap:24}}>
    {units.map(unit=><article key={unit.id} data-market-unit={unit.id} style={{border:"1px solid #ddd8cd",padding:"clamp(20px,3vw,32px)",background:"#fffdfa",minWidth:0}}>
     {unit.planImageSrc&&<a href={unit.planImageSrc} target="_blank" rel="noopener" aria-label={"Открыть планировку "+unit.unitNumber}><img src={unit.planImageSrc} alt={"Планировка квартиры "+unit.unitNumber+", "+number(unit.areaSqm)+" м²"} width={700} height={700} loading="lazy" style={{width:"100%",height:"auto",aspectRatio:"1 / 1",objectFit:"contain",background:"#fff",marginBottom:24}}/></a>}
@@ -32,7 +31,7 @@ export function ProjectMarketUnits({slug,name,unitIds}:{slug:string;name:string;
      {unit.completionYear&&<div style={{display:"flex",justifyContent:"space-between",gap:16}}><dt>Срок в проекте</dt><dd style={{margin:0}}>{unit.completionYear}</dd></div>}
     </dl>
     {unit.features?.length?<p style={{fontSize:15,lineHeight:1.6,margin:"20px 0 0",color:"#62695d"}}>{unit.features.slice(0,2).join(" · ")}</p>:null}
-    <a href={COMPANY.whatsapp+"?text="+encodeURIComponent("Интересует "+name+", квартира № "+unit.unitNumber+", "+number(unit.areaSqm)+" м², этаж "+unit.floor+". Цена в опубликованном прайсе "+number(unit.priceRub)+" ₽. Уточните наличие и условия покупки.")} target="_blank" rel="noopener noreferrer" className="mh-text-link" style={{marginTop:24,display:"inline-block"}}>Обсудить эту квартиру ↗</a>
+    <a href={COMPANY.whatsapp+"?text="+encodeURIComponent("Интересует "+name+", квартира № "+unit.unitNumber+", "+number(unit.areaSqm)+" м², этаж "+unit.floor+". Цена на сайте — "+number(unit.priceRub)+" ₽. Уточните наличие и условия покупки.")} target="_blank" rel="noopener noreferrer" className="mh-text-link" style={{marginTop:24,display:"inline-block"}}>Обсудить эту квартиру ↗</a>
    </article>)}
   </div>
  </div>;
