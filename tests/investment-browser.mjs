@@ -40,16 +40,20 @@ try{
   checks.push({width,path:'/investments/',status:'pass'});
   await page.goto('http://127.0.0.1:8091/units/',{waitUntil:'domcontentloaded'});
   await page.waitForTimeout(700);
-  assert.equal(await page.locator('.mh-commercial-card').count(),24);
-  assert.ok(await page.locator('.mh-commercial-card[href^="/units/public-"]').count()>0,'first page includes other developers');
+  const projectCards=page.locator('.mh-project-result');
+  assert.ok(await projectCards.count()>1,'first page includes several project groups');
+  assert.equal(await projectCards.locator('.mh-commercial-photo').count(),await projectCards.count());
+  assert.ok(await projectCards.locator('.mh-unit-matches a[href^="/units/public-"]').count()>0,'first page includes other developers');
   await page.getByLabel('Жилой комплекс').selectOption('high-life');
   await page.waitForFunction(()=>document.querySelectorAll('.mh-commercial-card').length===1);
-  assert.match(await page.locator('.mh-commercial-card').getAttribute('href'),/public-high-life-405/);
+  const lot=projectCards.locator('.mh-unit-matches a');
+  assert.match(await lot.getAttribute('href'),/public-high-life-405/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'unified apartments overflow '+width);
-  await page.locator('.mh-commercial-card').click();
+  await lot.click();
   await page.locator('h1').waitFor();
   assert.equal(await page.locator('h1').count(),1);
-  assert.match(await page.locator('.mh-commercial-plan img').getAttribute('src'),/^\/images\//);
+  assert.match(await page.locator('#floor-plan img').getAttribute('src'),/^\/images\//);
+  assert.ok(await page.locator('.mh-unit-project-hero img').count()>0,'project cover is separate from the floor plan');
   checks.push({width,path:'/units/',status:'pass'});await page.close();
  }
 }finally{await browser.close();await writeFile('investment-proof/results.json',JSON.stringify(checks,null,2));}
