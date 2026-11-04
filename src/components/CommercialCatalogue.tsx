@@ -4,10 +4,45 @@ import Link from 'next/link';
 import {useMemo,useState} from 'react';
 import {categoryNames,rub,type SminexUnit} from '@/lib/sminex-catalogue-client';
 type CardUnit=SminexUnit&{detailPath?:string;fetchedAt?:string;sourceLabel?:string;developer?:string;district?:string};
-export function CommercialCatalogue({units,residential=false}:{units:CardUnit[];residential?:boolean}){
+type ProjectCard = {href:string;cover?:{src:string;caption:string}};
+
+function ResidentialProjectResults({units,project}:{units:CardUnit[];project?:ProjectCard}){
+ const [visible,setVisible]=useState(3);
+ const first=units[0];
+ const prices=units.flatMap(u=>u.priceRub===null?[]:[u.priceRub]);
+ const district=first.district||first.developer;
+ return <article className="mh-commercial-card">
+  {project?.cover&&<div className="mh-commercial-photo"><img src={project.cover.src} alt={project.cover.caption} width="700" height="500" loading="lazy" style={{objectFit:"cover"}}/></div>}
+  {district&&<p className="mh-eyebrow">{district}</p>}
+  <h2>{project?<Link href={project.href}>{first.projectName}</Link>:first.projectName}</h2>
+  <p>Подходит: {units.length}{prices.length>0&&<> · от {rub(Math.min(...prices))}</>}</p>
+  <ul className="mh-unit-matches">
+   {units.slice(0,visible).map(u=><li key={u.id}>
+    <Link href={u.detailPath||'/units/'+u.sourceId+'/'}>
+     <span>{u.isStudio?'Студия':u.rooms?u.rooms+'-комн.':'Квартира'} · {u.areaSqm} м²{u.floor!==null?' · этаж '+u.floor:''}</span>
+     <strong>{rub(u.priceRub)} ↗</strong>
+    </Link>
+   </li>)}
+  </ul>
+  {units.length>visible&&<button type="button" className="mh-text-link" onClick={()=>setVisible(visible+12)}>Ещё квартиры в этом ЖК</button>}
+  {project&&<Link className="mh-text-link" href={project.href}>О жилом комплексе ↗</Link>}
+ </article>;
+}
+
+export function CommercialCatalogue({units,residential=false,projects={}}:{units:CardUnit[];residential?:boolean;projects?:Record<string,ProjectCard>}){
  const [category,setCategory]=useState(''),[project,setProject]=useState(''),[price,setPrice]=useState(''),[area,setArea]=useState('');
  const [rooms,setRooms]=useState(''),[developer,setDeveloper]=useState(''),[district,setDistrict]=useState(''),[limit,setLimit]=useState(24);
  const matching=useMemo(()=>units.filter(u=>(!category||u.category===category)&&(!project||u.projectSlug===project)&&(!price||(u.priceRub!==null&&u.priceRub<=Number(price)*1e6))&&(!area||(u.areaSqm!==null&&u.areaSqm>=Number(area)))&&(!developer||u.developer===developer)&&(!district||u.district===district)&&(!rooms||(rooms==='studio'?u.isStudio===true:u.isStudio!==true&&u.rooms===Number(rooms)))),[units,category,project,price,area,rooms,developer,district]);
+ const matchingProjects=useMemo(()=>{
+  const groups=new Map<string,CardUnit[]>();
+  if(residential)for(const unit of matching){
+   const group=groups.get(unit.projectSlug);
+   if(group)group.push(unit);
+   else groups.set(unit.projectSlug,[unit]);
+  }
+  for(const group of groups.values())group.sort((a,b)=>(a.priceRub??Infinity)-(b.priceRub??Infinity));
+  return [...groups.entries()];
+ },[matching,residential]);
  const developers=[...new Set(units.map(u=>u.developer).filter((x):x is string=>Boolean(x)))].sort();
  const districts=[...new Set(units.map(u=>u.district).filter((x):x is string=>Boolean(x)))].sort();
  const roomCounts=[...new Set(units.filter(u=>!u.isStudio&&u.rooms!=null&&u.rooms>0).map(u=>u.rooms as number))].sort((a,b)=>a-b);
@@ -22,16 +57,16 @@ export function CommercialCatalogue({units,residential=false}:{units:CardUnit[];
    <label>Площадь от, м²<input type="number" min="0" value={area} onChange={e=>{setArea(e.target.value);setLimit(24);}} placeholder="Любая"/></label>
    <button className="mh-text-link" onClick={()=>{setCategory('');setProject('');setPrice('');setArea('');setRooms('');setDeveloper('');setDistrict('');setLimit(24);}}>Сбросить</button>
   </div>
-  <p role="status">Найдено {matching.length} из {units.length} предложений.</p>
-  <div className="mh-commercial-grid">{matching.slice(0,limit).map(u=><Link className="mh-commercial-card" key={u.id} href={u.detailPath||(residential?'/units/':'/commercial/')+u.sourceId+'/'}>
+  <p role="status">{residential?<>Найдено квартир: {matching.length} · ЖК: {matchingProjects.length}</>:<>Найдено {matching.length} из {units.length} предложений.</>}</p>
+  <div className="mh-commercial-grid">{residential?matchingProjects.slice(0,limit).map(([slug,group])=><ResidentialProjectResults key={slug} units={group} project={projects[slug]}/>):matching.slice(0,limit).map(u=><Link className="mh-commercial-card" key={u.id} href={u.detailPath||'/commercial/'+u.sourceId+'/'}>
    <div className="mh-commercial-photo">{(u.planImageUrl||u.images[0]?.url)?<img src={u.planImageUrl||u.images[0].url} alt={'Планировка: '+(categoryNames[u.category]||'помещение')+' в '+u.projectName} width="700" height="500" loading="lazy"/>:<span>Изображение не предоставлено</span>}</div>
-   <p className="mh-eyebrow">{residential?(u.isStudio?'Студия':u.rooms?u.rooms+'-комнатная квартира':categoryNames[u.category]||'Квартира'):categoryNames[u.category]||'Помещение'} · {u.projectName}</p>
+   <p className="mh-eyebrow">{categoryNames[u.category]||'Помещение'} · {u.projectName}</p>
    <h2>{u.areaSqm} м²</h2><strong>{rub(u.priceRub)}</strong>
    <p>{u.pricePerSqm!==null?rub(u.pricePerSqm)+'/м²':''}{u.floor!==null?' · Этаж '+u.floor:''}</p>
    {u.fetchedAt&&<p className="mh-content-caption">Проверено {new Date(u.fetchedAt).toLocaleDateString('ru-RU',{timeZone:'Europe/Moscow'})}</p>}
    <span className="mh-text-link">Планировка и условия ↗</span>
   </Link>)}</div>
   {!matching.length&&<p>По выбранным параметрам предложений нет. Измените фильтры или обратитесь в MAINHALL за подбором.</p>}
-  {matching.length>limit&&<button className="mh-pill" onClick={()=>setLimit(limit+24)}>Показать ещё</button>}
+  {(residential?matchingProjects.length:matching.length)>limit&&<button className="mh-pill" onClick={()=>setLimit(limit+24)}>Показать ещё</button>}
  </>;
 }
