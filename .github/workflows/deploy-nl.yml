@@ -1,17 +1,5 @@
 name: Deploy MAINHALL to Netherlands server
 on:
-  push:
-    branches: [main]
-    paths:
-      - data/**
-      - src/**
-      - public/**
-      - scripts/**
-      - tests/**
-      - package.json
-      - package-lock.json
-      - next.config.ts
-      - .github/workflows/deploy-nl.yml
   workflow_dispatch:
 permissions:
   contents: read

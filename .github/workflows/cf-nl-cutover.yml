@@ -1,8 +1,5 @@
 name: Switch MAINHALL DNS to Netherlands server
 on:
-  push:
-    branches: [main]
-    paths: [.github/workflows/cf-nl-cutover.yml]
   workflow_dispatch:
 permissions:
   contents: read
