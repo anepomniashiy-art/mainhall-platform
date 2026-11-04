@@ -25,6 +25,20 @@ try {
     await cards.first().screenshot({path:"design-proof/catalogue-"+slug+"-"+width+".png"});
    }else await gallery.screenshot({path:"design-proof/catalogue-"+slug+"-"+width+".png"});
   }
+  await page.goto("http://127.0.0.1:8091/units/",{waitUntil:"networkidle"});
+  const groups=page.locator("article").filter({has:page.locator(".mh-unit-matches")});
+  assert.ok(await groups.count()>1,"Apartment search starts with multiple project groups");
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"Apartment results horizontal overflow");
+  await page.getByLabel("Жилой комплекс").selectOption("high-life");
+  await page.getByLabel("Комнат").selectOption("3");
+  await page.getByLabel("Площадь от, м²").fill("140");
+  await page.getByLabel("Цена до, млн ₽").fill("150");
+  await page.getByText("Найдено квартир: 1 · ЖК: 1",{exact:true}).waitFor();
+  assert.equal(await groups.locator(".mh-unit-matches a").getAttribute("href"),"/units/public-high-life-405/");
+  await page.getByLabel("Цена до, млн ₽").fill("140");
+  await page.getByText("Найдено квартир: 0 · ЖК: 0",{exact:true}).waitFor();
+  await page.getByRole("button",{name:"Сбросить"}).click();
+  await groups.nth(1).waitFor();
   await page.close();
  }
 } finally {await browser.close();}
