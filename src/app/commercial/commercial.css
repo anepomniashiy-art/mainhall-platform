@@ -44,3 +44,56 @@
 .mh-commercial-grid > a.mh-commercial-card > .mh-eyebrow {
   min-block-size: 3.4em;
 }
+
+.mh-project-result {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.mh-project-result .mh-commercial-photo {
+  margin: 0;
+  background: #f3f1ec;
+}
+.mh-project-result-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(16px, 2vw, 24px);
+}
+.mh-project-result .mh-project-result-price {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.mh-project-result h2 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 8px 0 4px;
+}
+.mh-project-result p.mh-project-result-location {
+  min-block-size: 1.7em;
+  margin: 0;
+  color: #62695d;
+}
+.mh-project-result p.mh-project-result-count {
+  margin: 12px 0 0;
+  font-weight: 600;
+}
+.mh-project-result .mh-unit-matches {
+  margin-top: 8px;
+}
+.mh-project-result .mh-unit-matches strong {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.mh-project-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: auto;
+  padding-top: 8px;
+}

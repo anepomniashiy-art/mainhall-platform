@@ -11,23 +11,28 @@ function ResidentialProjectResults({units,project}:{units:CardUnit[];project?:Pr
  const first=units[0];
  const prices=units.flatMap(u=>u.priceRub===null?[]:[u.priceRub]);
  const district=first.district||first.developer;
- return <article className="mh-commercial-card">
+ return <article className="mh-commercial-card mh-project-result">
   <div className="mh-commercial-photo mh-commercial-photo--project">
    {project?.cover?<img src={project.cover.src} alt={project.cover.caption} width="700" height="500" loading="lazy"/>:<span>Фото готовится</span>}
   </div>
-  {district&&<p className="mh-eyebrow">{district}</p>}
+  <div className="mh-project-result-body">
+  <strong className="mh-project-result-price">{prices.length>0?'от '+rub(Math.min(...prices)):'Цена по запросу'}</strong>
   <h2>{project?<Link href={project.href}>{first.projectName}</Link>:first.projectName}</h2>
-  <p>Подходит: {units.length}{prices.length>0&&<> · от {rub(Math.min(...prices))}</>}</p>
+  <p className="mh-project-result-location">{district}</p>
+  <p className="mh-project-result-count">Подходящих предложений: {units.length}</p>
   <ul className="mh-unit-matches">
    {units.slice(0,visible).map(u=><li key={u.id}>
     <Link href={u.detailPath||'/units/'+u.sourceId+'/'}>
      <span>{u.isStudio?'Студия':u.rooms?u.rooms+'-комн.':'Квартира'} · {u.areaSqm} м²{u.floor!==null?' · этаж '+u.floor:''}</span>
-     <strong>{rub(u.priceRub)} ↗</strong>
+     <strong>{rub(u.priceRub)} <span aria-hidden="true">↗</span></strong>
     </Link>
    </li>)}
   </ul>
+  <div className="mh-project-result-actions">
   {units.length>visible&&<button type="button" className="mh-text-link" onClick={()=>setVisible(visible+12)}>Ещё квартиры в этом ЖК</button>}
   {project&&<Link className="mh-text-link" href={project.href}>О жилом комплексе ↗</Link>}
+  </div>
+  </div>
  </article>;
 }
 
