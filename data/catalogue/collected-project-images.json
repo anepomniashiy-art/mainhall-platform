@@ -46,5 +46,9 @@
   "narvin": {
     "src": "/images/projects/collected/narvin-b5cc95efdc71.webp",
     "caption": "Нарвин · ПИК · визуализация архитектуры"
+  },
+  "prime-park": {
+    "src": "/images/projects/gallery/prime-park-architecture.webp",
+    "caption": "Prime Park · архитектура · визуализация"
   }
 }
