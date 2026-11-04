@@ -18,9 +18,9 @@ export default async function ResidentialUnitPage({params}:{params:Promise<{id:s
   <Breadcrumbs items={[{name:'Квартиры',href:'/units/'},{name:u.projectName+' · '+(u.unitNumber||u.sourceId),href:u.detailPath}]}/>
   <EditorialHeader eyebrow={u.projectName+(u.developer?' / '+u.developer:'')} title={label+' '+u.areaSqm+' м²'} description={'Квартира в проекте '+u.projectName+'. Посмотрите планировку и характеристики. MAINHALL сравнит условия покупки и подготовит расчёт под вашу задачу.'}/>
   <div className="mh-commercial-facts"><div><span>Цена</span><strong>{rub(u.priceRub)}</strong></div><div><span>Стоимость метра</span><strong>{rub(u.pricePerSqm)}</strong></div><div><span>Этаж</span><strong>{u.floor??'Не указан'}{u.floorsTotal?' из '+u.floorsTotal:''}</strong></div><div><span>Номер квартиры</span><strong>{u.unitNumber||u.sourceId}</strong></div></div>
-  <p className="mh-content-caption">Проверено {feedDate(u.fetchedAt)} · {u.sourceLabel}. Наличие и условия оплаты уточняем для выбранной квартиры.</p>
+  <p className="mh-content-caption">Проверено {feedDate(u.fetchedAt)}. Наличие и условия оплаты уточняем для выбранной квартиры.</p>
   {u.planImageUrl&&<figure className="mh-commercial-plan"><img src={u.planImageUrl} alt={'Планировка квартиры '+(u.unitNumber||u.sourceId)+' в '+u.projectName} width="1200" height="900"/><figcaption>Планировка квартиры в проекте {u.projectName}.</figcaption></figure>}
-  <section className="mh-commercial-characteristics"><h2>Характеристики квартиры</h2><dl>{unitFeatures(u).map(f=><div key={f.label}><dt>{f.label.replace(' по фиду','')}</dt><dd>{f.value}</dd></div>)}</dl>
+  <section className="mh-commercial-characteristics"><h2>Характеристики квартиры</h2><dl>{unitFeatures(u).map(f=><div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl>
    {u.features?.length?<ul>{u.features.map(f=><li key={f}>{f}</li>)}</ul>:null}
    {editorialProjects.some(p=>p.slug===u.projectSlug)&&<Link className="mh-text-link" href={'/projects/'+u.projectSlug+'/'}>Подробнее о проекте {u.projectName} ↗</Link>}
   </section>
