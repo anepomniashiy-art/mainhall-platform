@@ -1,6 +1,6 @@
 import os,json,urllib.request,urllib.parse,hmac,hashlib,ftplib,ssl,socket,time
 from pathlib import Path
-import subprocess,re,threading
+import ipaddress, subprocess,re,threading
 from concurrent.futures import ThreadPoolExecutor
 login='wellton'
 password=os.environ['BEGET_API_PASSWORD']
@@ -33,9 +33,13 @@ ftp_login=login+'_'+suffix
 ftp_password='Mh!'+hmac.new(password.encode(),b'mainhall-beget-deploy-v1',hashlib.sha256).hexdigest()[:32]
 print('::add-mask::'+ftp_password,flush=True)
 tls_name=login+'.beget.tech'
+origin_ip='87.236.19.212'
 try:
     info=api('user/getAccountInfo')
     host=info['server_name']
+    addresses=api('dns/getData',{'fqdn':'main-hall.ru'})['records']['A']
+    if len(addresses)!=1: raise SystemExit('Expected a single Beget origin IPv4 address')
+    origin_ip=str(ipaddress.IPv4Address(addresses[0]['address']))
     sites=api('site/getList')
     target=next((x for x in sites if x['path']=='main-hall.ru/public_html'),None)
     if target is None:
@@ -217,12 +221,14 @@ try:
     with archive.open('rb') as stream: ftp.storbinary('STOR '+archive_name,stream,blocksize=262144)
     ftp.storbinary('STOR '+runner_name,io.BytesIO(php.encode()))
     print('Archive uploaded:',archive.stat().st_size,'bytes',flush=True)
-    request=urllib.request.Request('https://main-hall.ru/'+runner_name,data=b'deploy',headers={'X-Mainhall-Deploy':token},method='POST')
-    try:
-        with urllib.request.urlopen(request,timeout=360) as response: result=json.load(response)
-    except urllib.error.HTTPError as error:
-        print('Archive extraction HTTP',error.code,error.read(500).decode('utf8',errors='replace'),flush=True)
-        raise SystemExit('Archive extraction failed')
+    response=subprocess.run(
+        ['curl','--noproxy','*','--resolve',f'main-hall.ru:443:{origin_ip}',
+         '--fail','--silent','--show-error','--max-time','360',
+         '--config','-','--data','deploy','https://main-hall.ru/'+runner_name],
+        input=f'header = "X-Mainhall-Deploy: {token}"\n',
+        capture_output=True,text=True,check=True,
+    )
+    result=json.loads(response.stdout)
     if result.get('files')!=len(files): raise SystemExit('Archive extraction count mismatch')
     print('UPLOAD_COMPLETE files='+str(result['files']),flush=True)
 finally:
@@ -231,5 +237,4 @@ finally:
         except ftplib.all_errors: pass
     ftp.quit()
     archive.unlink(missing_ok=True)
-ip=socket.gethostbyname(login+'.beget.tech')
-Path('/tmp/beget-ip').write_text(ip)
+Path('/tmp/beget-ip').write_text(origin_ip)
