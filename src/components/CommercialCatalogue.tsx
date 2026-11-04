@@ -12,7 +12,9 @@ function ResidentialProjectResults({units,project}:{units:CardUnit[];project?:Pr
  const prices=units.flatMap(u=>u.priceRub===null?[]:[u.priceRub]);
  const district=first.district||first.developer;
  return <article className="mh-commercial-card">
-  {project?.cover&&<div className="mh-commercial-photo"><img src={project.cover.src} alt={project.cover.caption} width="700" height="500" loading="lazy" style={{objectFit:"cover"}}/></div>}
+  <div className="mh-commercial-photo mh-commercial-photo--project">
+   {project?.cover?<img src={project.cover.src} alt={project.cover.caption} width="700" height="500" loading="lazy"/>:<span>Фото готовится</span>}
+  </div>
   {district&&<p className="mh-eyebrow">{district}</p>}
   <h2>{project?<Link href={project.href}>{first.projectName}</Link>:first.projectName}</h2>
   <p>Подходит: {units.length}{prices.length>0&&<> · от {rub(Math.min(...prices))}</>}</p>
