@@ -2,7 +2,7 @@ name: Move MAINHALL to the Russian Timeweb server
 on:
   push:
     branches: [main]
-    paths: [.github/workflows/cutover-ru.yml]
+    paths: [.github/workflows/cutover-ru.yml, scripts/cutover-russian-host.py]
   workflow_dispatch:
 permissions:
   contents: read
