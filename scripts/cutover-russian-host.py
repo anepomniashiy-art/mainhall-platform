@@ -38,7 +38,7 @@ if not re.fullmatch('[0-9a-f]{40}',revision):
 checks=[('/','MAINHALL'),('/projects/','MAINHALL'),
         ('/units/','mh-project-result-price'),
         ('/units/public-high-life-405/','id="floor-plan"'),
-        ('/commercial/','legacy-mainhall/assets/')]
+        ('/commercial/','Коммерческая недвижимость Sminex')]
 for path,marker in checks:
     if marker not in fetch(TECHNICAL+path):
         raise RuntimeError('Russian preflight content mismatch: '+path)
