@@ -71,7 +71,10 @@ try:
     # Caddy obtains the public-domain certificate once DNS points here.
     for attempt in range(24):
         try:
-            if fetch('https://main-hall.ru/deploy-version.txt',pinned=True).strip()==revision:
+            candidate=fetch('https://main-hall.ru/deploy-version.txt',pinned=True).strip()
+            latest=fetch(TECHNICAL+'/deploy-version.txt').strip()
+            if re.fullmatch('[0-9a-f]{40}',candidate) and candidate==latest:
+                revision=candidate
                 break
         except RuntimeError:
             pass
