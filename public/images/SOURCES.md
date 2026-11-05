@@ -14,3 +14,8 @@ Both source pages identify free use under the Unsplash License, verified 2026-10
 - Official project: https://www.capitalgroup.ru/ru/objects/136
 
 Downloaded 2026-10-19 from the official developer site, at the owner's explicit request to use developer-project visuals for MAINHALL. These are architectural visualizations of Badaevsky, not photographs of completed buildings. Preserve credits in the original files. No price or availability is inferred from imagery.
+
+## Team portraits — MAINHALL's own site
+
+- team/andrey-nepomniashchiy.jpg, team/ivan-yachmenev.jpg, team/sergey-chernavin.jpg
+- Source: team section of main-hall.ru (local copy public/legacy-mainhall/index.html). Identity is taken from the card on the same site (alt text and name). EXIF removed 2026-10-20. Data: src/lib/team.mjs. Details: docs/RESEARCH_TEAM_RECOVERY_2026-10-20.md
