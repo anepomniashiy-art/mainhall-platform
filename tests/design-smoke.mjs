@@ -52,10 +52,10 @@ try {
   }
   await page.screenshot({path:'design-proof/home-'+viewport.width+'.png',fullPage:true});
   await page.goto('http://127.0.0.1:8091/projects/',{waitUntil:'networkidle'});
-  assert.equal(await page.locator('.mh-project-row').count(),expectedProjects);
+  assert.equal(await page.locator('.mh-visual-card').count(),expectedProjects);
   await page.getByRole('textbox',{name:'Поиск проектов'}).fill('HIGH LIFE');
-  assert.equal(await page.locator('.mh-project-row').count(),1);
-  await page.locator('.mh-project-row').click();
+  assert.equal(await page.locator('.mh-visual-card').count(),1);
+  await page.locator('.mh-visual-card').click();
   await page.getByRole('heading',{level:1,name:'HIGH LIFE'}).waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:'design-proof/project-'+viewport.width+'.png',fullPage:true});
@@ -66,6 +66,7 @@ try {
    await page.screenshot({path:'design-proof/'+route.split('/')[1]+'-'+viewport.width+'.png',fullPage:true});
   }
   await page.goto('http://127.0.0.1:8091/projects/level-yuzhnoportovaya/',{waitUntil:'networkidle'});
+  await page.getByText('Инвестиционный разбор и расчёт покупки',{exact:true}).click();
   await page.getByLabel('Цена покупки, млн ₽',{exact:true}).fill('30');
   await page.getByLabel('Взнос в цену, млн ₽',{exact:true}).fill('3');
   await page.getByLabel('Прочие расходы, млн ₽',{exact:true}).fill('2');

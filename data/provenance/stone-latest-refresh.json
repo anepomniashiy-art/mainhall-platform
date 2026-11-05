@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-11-05T07:24:10.723407+00:00",
+  "projects": [
+    {
+      "projectSlug": "stone-blik",
+      "listedCount": 201,
+      "pricedResidentialCount": 201,
+      "pages": [
+        {
+          "url": "https://stone.ru/catalog/residential/blik",
+          "sha256": "2bfd7b319ad669cf0eb41093f0240f2bd6580cd8779efa4c8f21d4019a328baf",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=12&per_page=12",
+          "sha256": "4128c322ff84a3eda955934b862989045683c1181b094564ad3c710970253cf9",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=24&per_page=12",
+          "sha256": "f910915795089d382f87771df21d03fb905432de8f59581a374a2893a5aa0edb",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=36&per_page=12",
+          "sha256": "6d650ee8f1082bb4d76a5c5cbb2ab3abd2d3a0e4e6ed36ffe26a1f2aa51f213e",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=48&per_page=12",
+          "sha256": "8ae0a3487b43f834bf97177562f932624741a194d24fcf12f5bbc416b07d551f",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=60&per_page=12",
+          "sha256": "6c7260eefa87dc392abeaf130b744ffbced59abe07200183ae23e0cc9ea00697",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=72&per_page=12",
+          "sha256": "f78d4dde7ab426d7f1ef10a38864d253abd57f6795cbce9de52c4bd648a5a73a",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=84&per_page=12",
+          "sha256": "29c18f83e880acab4ab034a51acc1d8221364b18f6276ab511d9ae5debdeeaa3",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=96&per_page=12",
+          "sha256": "e4d4de1c5cf40fe628e8747bee8fb931c520a09cac54aee6f61b4645740608a9",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=108&per_page=12",
+          "sha256": "0df4ced6e59868f7a236bc13498ac8674661b09d9fe81e97dab8a9c27e9be99c",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=120&per_page=12",
+          "sha256": "70dfd5e2fbaa074e868ddfaac1f1a3774ce632e5b10fd08798df6343a76a3544",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=132&per_page=12",
+          "sha256": "f5efa8e44d5073f13bd7b3e8d7afaa615add462b753f45d8de9100f782fecdc7",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=144&per_page=12",
+          "sha256": "a3259fe9c83a95be78ac38e40d0d36c251592762a8b031c84d944694fb9463b8",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=156&per_page=12",
+          "sha256": "515cbdf23769145332082058a8eeb4f1572faaaa3ba6473f9d3c64f09746393b",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=168&per_page=12",
+          "sha256": "4ad8ea1ea35000d6d63c3e6358638f2414cf9fa77ac05f971e483a62fc277736",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=180&per_page=12",
+          "sha256": "2f81f4199833b4855c13156d23aeb6898ceeb6c8178d94c07e0c1885596f32a1",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=blik&from=192&per_page=12",
+          "sha256": "c2671e5554a15837219d078c6b24e53d4882291ea2219bbf03c776fcd3b95ce3",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        }
+      ]
+    },
+    {
+      "projectSlug": "stone-sokolniki",
+      "listedCount": 181,
+      "pricedResidentialCount": 181,
+      "pages": [
+        {
+          "url": "https://stone.ru/catalog/residential/sokolniki",
+          "sha256": "0fc68cf922c691b02981d48107c54fec61d010f9af08ac39541c63dbbad4ce8b",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=12&per_page=12",
+          "sha256": "cc2519d6e8a70644c94722cb89eb140c1e8a6e973afc340442c8e6afcba699e7",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=24&per_page=12",
+          "sha256": "6fb6a367e77de8555733bc8d79626877e6b5e3011bd229fdc2679c21005afd19",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=36&per_page=12",
+          "sha256": "f2d3e20a4497f502f6dc5fa572b9e3cf424d771d62a6d751279c63a58dfeeb7f",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=48&per_page=12",
+          "sha256": "1692648dfafc44ac48f70abb5f6eb2ffe334066aef1f0ed1a76ef15db8480814",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=60&per_page=12",
+          "sha256": "fca8d77f8a82cc4dba119445042789bd0fde2fb7ae263c3634c766617099e09b",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=72&per_page=12",
+          "sha256": "9c7ecc5a1b62048446070eef86854639a070fa3fd7bb27883048d169cc6390c4",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=84&per_page=12",
+          "sha256": "25acfc0c3fbda20e74e3720349ffea462149ef605405c335705e9745ea9a24d5",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=96&per_page=12",
+          "sha256": "19c0dce2ac7f85ac4b10b61af9ade11feea4752a7f33da3a5cfbbd88dcf58c5f",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=108&per_page=12",
+          "sha256": "c22d74f83a473c92db8e0fd0054fe79acaf80fe1372a7c92af7e63da95786f4b",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=120&per_page=12",
+          "sha256": "e409c7be5389bcf312e9cd464b16f365468b03d43e0cd36f0d0f5048e82ae1fa",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=132&per_page=12",
+          "sha256": "f41c002acb7b39d76d63a1605a1f80da30f7af9811345f70208ddc52d9061b40",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=144&per_page=12",
+          "sha256": "054931623964ff859903517366e61be72811ab8d9bfb0e7bf56ae425b8c76c17",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=156&per_page=12",
+          "sha256": "e24eb70531fde79e8e61f399b4f7811eabf39f36a00f0137ce7d284fc6e83206",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=168&per_page=12",
+          "sha256": "2a299344473f83199b8ca94a6404076bf2040d9a491099c0f6b3a184795ffe03",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        },
+        {
+          "url": "https://stone.ru/catalog/residential?project_slug=sokolniki&from=180&per_page=12",
+          "sha256": "94b6d00f12e04ae409746f2c6f92dc4a01f6c8c3a4f2b0207baf423804dc7ba3",
+          "statePath": "self.__next_f[32]$[3][\"children\"][3][\"children\"][3][\"children\"][2][3][\"children\"][3][\"initialData\"]"
+        }
+      ]
+    }
+  ],
+  "availabilityMeaning": "Listed in the public catalogue at collection; availability is confirmed before booking."
+}

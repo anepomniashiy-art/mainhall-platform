@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import {Analytics} from "@/components/Analytics";
 import "./globals.css";
 import "./luxury.css";
 import "./editorial.css";
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics counterId={114082472}/>
       </body>
     </html>
   );

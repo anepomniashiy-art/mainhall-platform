@@ -1,0 +1,74 @@
+name: Complete MAINHALL catalogue and verify release
+on:
+  push:
+    branches: [codex/full-audit-20261105]
+    paths: [.github/workflows/complete-catalogue-audit.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mainhall-catalogue-completion-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DATABASE_URL: postgresql://build:build@localhost:5432/mainhall
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet pillow
+      - name: Materialize only visually reviewed project images
+        run: python3 scripts/materialize-project-media.py
+      - name: Refresh concrete apartments from official catalogues
+        run: |
+          python3 scripts/import-sminex.py --download
+          python3 scripts/import-highlife-catalogue.py
+          python3 scripts/import-stone-catalogue.py
+          python3 scripts/import-granelle-catalogue.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - name: Verify data and private CRM isolation
+        run: |
+          python3 -m unittest discover -s tests -p 'test_*.py'
+          node tests/test-investment-model.cjs
+          node --test tests/research-projects.test.cjs tests/official-feed.test.mjs
+      - run: npm run build:host
+      - name: Audit every exported page
+        run: |
+          python3 tests/seo-export.py
+          python3 tests/public-content-audit.py
+          python3 scripts/materialize-project-media.py --check-only
+      - run: npm install --no-save playwright @axe-core/playwright lighthouse
+      - run: npx playwright install --with-deps chromium
+      - name: Verify actual catalogue interactions and accessibility
+        run: |
+          python3 -m http.server 8091 --directory out > /tmp/mainhall-preview.log 2>&1 &
+          curl --retry 15 --retry-connrefused --retry-delay 1 -sf http://127.0.0.1:8091/ > /dev/null
+          node tests/catalogue-browser-smoke.mjs
+          node tests/accessibility-smoke.mjs
+          npx lighthouse http://127.0.0.1:8091/ --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility --output=json --output-path=design-proof/lighthouse-mobile.json --quiet
+          npx lighthouse http://127.0.0.1:8091/ --preset=desktop --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility --output=json --output-path=design-proof/lighthouse-desktop.json --quiet
+      - name: Commit verified media and live catalogue data
+        run: |
+          git config user.name 'MAINHALL catalogue'
+          git config user.email 'catalogue@main-hall.ru'
+          git add public/images/projects/collected data/catalogue data/provenance
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize reviewed project imagery and refresh verified apartment catalogues'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mainhall-completeness-proof
+          path: design-proof/

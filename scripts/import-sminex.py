@@ -6,7 +6,7 @@ import argparse, collections, datetime, hashlib, json, re, urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 SOURCE='https://feeds.sminex.com/xml/All_Sminex_Full_YandexRealty.xml'
-SLUGS={'Белый Град':'belyy-grad','Тишинский бульвар':'tishinskiy-bulvar','Life Time':'life-time','Фрунзенский':'frunzenskiy','Лаврушинский':'lavrushinsky','Палашёвский 11':'palashevskiy-11','Foriver':'foriver','Мануфактура XIX':'manufaktura-xix','Ильинка 3/8':'ilyinka-3-8','Фон Дессин':'fon-dessin','Обыденский №1':'obydenskiy-1','Новое Медведково':'novoe-medvedkovo','Достижение':'dostizhenie','Новое Пушкино':'novoe-pushkino','Twist':'twist','RiverSky':'riversky'}
+SLUGS={'Белый Град':'belyy-grad','Тишинский бульвар':'tishinskiy-bulvar','Life Time':'life-time','Фрунзенский':'frunzenskiy','Лаврушинский':'lavrushinsky','Палашёвский 11':'palashevskiy-11','Foriver':'foriver','Мануфактура XIX':'manufaktura-xix','Ильинка 3/8':'ilyinka-3-8','Фон Дессин':'fon-dessin','Обыденский №1':'obydenskiy-1','Новое Медведково':'novoe-medvedkovo','Достижение':'dostizhenie','Новое Пушкино':'novoe-pushkino','Twist':'twist','RiverSky':'riversky','Лужнецкий':'luzhnetskiy'}
 def text(e,p):return (e.findtext(p) or '').strip() or None
 def number(v,integer=False):
  try:
@@ -42,7 +42,7 @@ def normalize(raw,cian_raw=None,source_url=SOURCE,fetched_at=None):
    url=(im.text or '').strip()
    if url.startswith('https://') and not any(z['url']==url for z in images):images.append({'url':url,'tag':im.get('tag') or 'image'})
   c=supplemental.get(sid); getc=lambda p:text(c,p) if c is not None else None
-  u=dict(id='sminex:'+sid,sourceId=sid,projectName=name,projectSlug=slug,category=cat,propertyType=typ,categoryRaw=text(x,'category'),propertyTypeRaw=text(x,'property-type'),areaSqm=area,priceRub=price,pricePerSqm=round(price/area) if price and area else None,currency='RUB',floor=number(text(x,'floor'),True),unitNumber=text(x,'location/apartment'),rooms=number(text(x,'rooms'),True),bedrooms=number(getc('BedroomsCount'),True),buildingName=getc('JKSchema/House/Name'),buildingSection=text(x,'building-section'),description=('Офис' if cat=='office' else 'Помещение свободного назначения' if cat=='free_purpose' else 'Дом' if cat=='house' else 'Квартира')+' в проекте «'+name+'». '+('Площадь '+str(area).replace('.',',')+' м². ' if area else '')+('Этаж '+str(number(text(x,'floor'),True))+'. ' if number(text(x,'floor'),True) is not None else '')+'Цена и характеристики приведены по официальному фиду Sminex.',images=images,planImageUrl=next((z['url'] for z in images if z['tag']=='plan'),None),finishRaw=text(x,'renovation'),ceilingHeight=number(text(x,'ceiling-height')),isStudio=text(x,'studio')=='true',isApartments=text(x,'apartments')=='true',isPenthouse=getc('IsPenthouse')=='true',addressRaw=text(x,'location/address'),locality=text(x,'location/locality-name'),deliveryYear=number(text(x,'built-year'),True),deliveryQuarter=number(text(x,'ready-quarter'),True),buildingStateRaw=text(x,'building-state'),updatedAt=text(x,'last-update-date'),fetchedAt=fetched_at,salesStatus='IN_FEED',bookingStatusRaw=getc('Booking/Status'),sourceUrl=source_url)
+  u=dict(id='sminex:'+sid,sourceId=sid,projectName=name,projectSlug=slug,category=cat,propertyType=typ,categoryRaw=text(x,'category'),propertyTypeRaw=text(x,'property-type'),areaSqm=area,priceRub=price,pricePerSqm=round(price/area) if price and area else None,currency='RUB',floor=number(text(x,'floor'),True),unitNumber=text(x,'location/apartment'),rooms=number(text(x,'rooms'),True),bedrooms=number(getc('BedroomsCount'),True),buildingName=getc('JKSchema/House/Name'),buildingSection=text(x,'building-section'),description=('Офис' if cat=='office' else 'Помещение свободного назначения' if cat=='free_purpose' else 'Дом' if cat=='house' else 'Квартира')+' в проекте «'+name+'». '+('Площадь '+str(area).replace('.',',')+' м². ' if area else '')+('Этаж '+str(number(text(x,'floor'),True))+'. ' if number(text(x,'floor'),True) is not None else '')+'Наличие и условия уточняются для выбранного лота.',images=images,planImageUrl=next((z['url'] for z in images if z['tag']=='plan'),None),finishRaw=text(x,'renovation'),ceilingHeight=number(text(x,'ceiling-height')),isStudio=text(x,'studio')=='true',isApartments=text(x,'apartments')=='true',isPenthouse=getc('IsPenthouse')=='true',addressRaw=text(x,'location/address'),locality=text(x,'location/locality-name'),deliveryYear=number(text(x,'built-year'),True),deliveryQuarter=number(text(x,'ready-quarter'),True),buildingStateRaw=text(x,'building-state'),updatedAt=text(x,'last-update-date'),fetchedAt=fetched_at,salesStatus='IN_FEED',bookingStatusRaw=getc('Booking/Status'),sourceUrl=source_url)
   if sid in seen:
    if seen[sid]!=u:raise ValueError('Conflicting duplicate ID '+sid)
    continue
@@ -60,13 +60,28 @@ def main():
  input_file=Path(a.input) if a.input else directory/'Full_YandexRealty.xml'
  raw=input_file.read_bytes();cian_file=Path(a.cian) if a.cian else directory/'Full_CIAN.xml'
  result=normalize(raw,cian_file.read_bytes() if cian_file.exists() else None)
- out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(result,ensure_ascii=False,separators=(',',':'))+'\n')
+ out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
+ previous=json.loads(out.read_text()) if out.exists() else {'units':[]}
+ out.write_text(json.dumps(result,ensure_ascii=False,separators=(',',':'))+'\n')
  texts={x.get('internal-id'):text(x,'description') for x in ET.fromstring(raw).findall('offer')}
  out.with_name('sminex-feed-source-texts.json').write_text(json.dumps(dict(sourceUrl=SOURCE,fetchedAt=result['fetchedAt'],sourceSha256=result['sourceSha256'],descriptions=texts),ensure_ascii=False,separators=(',',':'))+'\n')
  manifests=[]
  for file in sorted(directory.glob('*.xml')):
   b=file.read_bytes();r=ET.fromstring(b);tag='object' if r.tag=='feed' else 'Ad' if r.tag=='Ads' else 'offer';rows=r.findall(tag)
   manifests.append(dict(filename=file.name,sha256=hashlib.sha256(b).hexdigest(),bytes=len(b),offers=len(rows)))
- out.with_name('sminex-feed-manifest.json').write_text(json.dumps(dict(checkedAt=result['fetchedAt'],selectedSource=SOURCE,selectionReason='Same 2895 IDs across full formats. Yandex preserves residential/commercial classification; CIAN and Avito misclassify offices as apartments. CIAN enriches bedrooms, house name and booking status by exact source ID only.',sources=manifests,coverage=result['coverage']),ensure_ascii=False,indent=2)+'\n')
+ out.with_name('sminex-feed-manifest.json').write_text(json.dumps(dict(checkedAt=result['fetchedAt'],selectedSource=SOURCE,selectionReason='Yandex preserves residential/commercial classification. CIAN enriches bedrooms, house name and booking status by exact source ID only. Offer counts and hashes for each downloaded format are recorded below; they are not assumed equal.',sources=manifests,coverage=result['coverage']),ensure_ascii=False,indent=2)+'\n')
+ summary={}
+ for project in result['projects']:
+  rows=[u for u in result['units'] if u['projectSlug']==project['slug'] and u['propertyType']=='residential' and u['priceRub'] and u['areaSqm']]
+  if not rows:continue
+  lowest=min(rows,key=lambda u:u['priceRub'])
+  summary[project['slug']]={'price':lowest['priceRub'],'area':lowest['areaSqm'],'perM2':lowest['pricePerSqm'],'number':lowest['unitNumber'],'date':result['fetchedAt'],'count':len(rows)}
+ out.with_name('sminex-price-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
+ before={u['sourceId']:u for u in previous['units']};after={u['sourceId']:u for u in result['units']}
+ changes={'checkedAt':result['fetchedAt'],'generatedAt':result['generatedAt'],'previousFetchedAt':previous.get('fetchedAt'),
+  'beforeCount':len(before),'afterCount':len(after),'added':sorted(after.keys()-before.keys()),
+  'removedFromFeed':sorted(before.keys()-after.keys()),'removalMeaning':'No longer present in the feed; not inferred sold.',
+  'priceChanges':[{'sourceId':k,'beforeRub':before[k].get('priceRub'),'afterRub':after[k].get('priceRub')} for k in sorted(before.keys()&after.keys()) if before[k].get('priceRub')!=after[k].get('priceRub')]}
+ report=Path('data/provenance/sminex-latest-refresh.json');report.parent.mkdir(parents=True,exist_ok=True);report.write_text(json.dumps(changes,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps(result['coverage'],ensure_ascii=False))
 if __name__=='__main__':main()

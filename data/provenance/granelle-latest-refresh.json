@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-05T07:25:47.724802+00:00",
+  "projects": [
+    {
+      "projectSlug": "mypriority-mnevniki",
+      "url": "https://www.granelle.ru/flats/?project=mypriority-mnevniki",
+      "verifiedCards": 24,
+      "scope": "Concrete cards rendered on the first public catalogue page; partial project coverage."
+    },
+    {
+      "projectSlug": "mypriority-dubrovka",
+      "url": "https://www.granelle.ru/flats/?project=mypriority-dubrovka",
+      "verifiedCards": 24,
+      "scope": "Concrete cards rendered on the first public catalogue page; partial project coverage."
+    },
+    {
+      "projectSlug": "trinity",
+      "url": "https://www.granelle.ru/flats/?project=triniti",
+      "verifiedCards": 24,
+      "scope": "Concrete cards rendered on the first public catalogue page; partial project coverage."
+    }
+  ]
+}

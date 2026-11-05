@@ -19,9 +19,9 @@ const publicUnits=publicData.units.map((u):ResidentialUnit=>{
  return {
   id:u.id,sourceId:u.sourceId,routeId,detailPath:'/units/'+routeId+'/',
   projectName:p?.name||u.projectSlug,projectSlug:u.projectSlug,developer:p?.developer||'',district:p?.area||'',
-  category:'apartment',propertyType:'residential',areaSqm:u.areaSqm,priceRub:u.priceRub,
-  priceBeforeDiscountRub:u.priceBeforeDiscountRub,pricePerSqm:u.pricePerSqm??null,
-  floor:u.floor??null,floorsTotal:'floorsTotal' in u?u.floorsTotal:undefined,
+  category:'apartment',propertyType:'residential',areaSqm:u.areaSqm,priceRub:u.priceRub,priceIsFrom:('priceIsFrom' in u&&u.priceIsFrom===true),
+  priceBeforeDiscountRub:u.priceBeforeDiscountRub??undefined,pricePerSqm:u.pricePerSqm??null,
+  floor:u.floor??null,floorsTotal:'floorsTotal' in u?(u.floorsTotal??undefined):undefined,
   unitNumber:u.unitNumber||null,description:'',images:plan?[{url:plan,tag:'plan'}]:[],
   planImageUrl:plan,sourcePlanImageUrl:u.planImageUrl||null,updatedAt:('sourceUpdatedAt' in u?u.sourceUpdatedAt:undefined)||u.fetchedAt,
   salesStatus:u.salesStatus,rooms:u.rooms,bedrooms:u.bedrooms,buildingName:u.buildingName,

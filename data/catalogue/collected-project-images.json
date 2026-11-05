@@ -1,15 +1,15 @@
 {
   "level-paveletskaya-city": {
     "src": "/images/projects/collected/level-paveletskaya-city-f8f936b12b7d.webp",
-    "caption": "Левел Павелецкая Сити · официальный материал проекта"
+    "caption": "Левел Павелецкая Сити"
   },
   "level-voykovskaya": {
     "src": "/images/projects/collected/level-voykovskaya-dc1ea3b1113f.webp",
-    "caption": "Левел Войковская · официальный материал проекта"
+    "caption": "Левел Войковская"
   },
   "very-botanicheskaya": {
     "src": "/images/projects/collected/very-botanicheskaya-d6c42533e96e.webp",
-    "caption": "ВЭРИ на Ботанической · двор и инфраструктура · официальный материал"
+    "caption": "ВЭРИ на Ботанической · двор и инфраструктура"
   },
   "dom-na-dzhalilya": {
     "src": "/images/projects/collected/dom-na-dzhalilya-ba9eaebd546d.webp",
@@ -17,7 +17,7 @@
   },
   "monblan": {
     "src": "/images/projects/collected/monblan-487a88b4e9be.webp",
-    "caption": "Монблан · Расположение · официальный материал Галс"
+    "caption": "Монблан · Расположение Галс"
   },
   "yuzhnye-sady": {
     "src": "/images/projects/collected/yuzhnye-sady-86d738836277.webp",
@@ -50,5 +50,153 @@
   "prime-park": {
     "src": "/images/projects/gallery/prime-park-architecture.webp",
     "caption": "Prime Park · архитектура · визуализация"
+  },
+  "26-parkview": {
+    "src": "/images/projects/collected/26-parkview-551982318860.webp",
+    "caption": "26 Парквью · архитектура и территория"
+  },
+  "kazachiy": {
+    "src": "/images/projects/collected/kazachiy-21ea987ead15.webp",
+    "caption": "Казачий · архитектура и территория"
+  },
+  "kvartal-izdanie": {
+    "src": "/images/projects/collected/kvartal-izdanie-25280ee52233.webp",
+    "caption": "Квартал Издание · архитектура и территория"
+  },
+  "kvartal-mons": {
+    "src": "/images/projects/collected/kvartal-mons-fa8fc4d74328.webp",
+    "caption": "Квартал МОНС · архитектура и территория"
+  },
+  "soul": {
+    "src": "/images/projects/collected/soul-d38fd7fdfced.webp",
+    "caption": "Соул / Soul · архитектура и территория"
+  },
+  "sreda-na-kutuzovskom": {
+    "src": "/images/projects/collected/sreda-na-kutuzovskom-9b2e3bd0c7ab.webp",
+    "caption": "Индиво / Среда на Кутузовском · архитектура и территория"
+  },
+  "tatum": {
+    "src": "/images/projects/collected/tatum-c0969669704b.webp",
+    "caption": "Татум / Обручева 27 · архитектура и территория"
+  },
+  "twelve": {
+    "src": "/images/projects/collected/twelve-8982463b08f5.webp",
+    "caption": "Твелв / Twelve · архитектура и территория"
+  },
+  "vern": {
+    "src": "/images/projects/collected/vern-69fda3b19f0d.webp",
+    "caption": "ВЕРН · архитектура и территория"
+  },
+  "mypriority-mnevniki": {
+    "src": "/images/projects/collected/mypriority-mnevniki-42216aa91733.webp",
+    "caption": "Мнёвники от Гранель / MYPRIORITY Мневники · архитектура и территория"
+  },
+  "mypriority-dubrovka": {
+    "src": "/images/projects/collected/mypriority-dubrovka-57ae849ca6ba.webp",
+    "caption": "Дубровка от Гранель / MYPRIORITY Дубровка · архитектура и территория"
+  },
+  "trinity": {
+    "src": "/images/projects/collected/trinity-762e95effc75.webp",
+    "caption": "Гранель Тринити · архитектура и территория"
+  },
+  "emotion": {
+    "src": "/images/projects/collected/emotion-be07a54849f6.webp",
+    "caption": "Эмоушн / Emotion · архитектура и территория"
+  },
+  "nachalo": {
+    "src": "/images/projects/collected/nachalo-0d4c70690a61.webp",
+    "caption": "Начало · архитектура и территория"
+  },
+  "belyy-grad": {
+    "src": "/images/projects/collected/belyy-grad-c7061012932d.webp",
+    "caption": "Белый Град · архитектура и территория"
+  },
+  "novoe-medvedkovo": {
+    "src": "/images/projects/collected/novoe-medvedkovo-042a4bfffe63.webp",
+    "caption": "Новое Медведково · архитектура и территория"
+  },
+  "admiral": {
+    "src": "/images/projects/collected/admiral-d0a13d84930b.webp",
+    "caption": "Адмирал · архитектура и территория"
+  },
+  "sezar-city": {
+    "src": "/images/projects/collected/sezar-city-6d3145c21dfb.webp",
+    "caption": "СЕЗАР СИТИ / SEZAR CITY · архитектура и территория"
+  },
+  "one": {
+    "src": "/images/projects/collected/one-f5c48381b04a.webp",
+    "caption": "ONE · архитектура и территория"
+  },
+  "muza": {
+    "src": "/images/projects/collected/muza-dead21f2208a.webp",
+    "caption": "Муза · архитектура и территория"
+  },
+  "beregovoy-2": {
+    "src": "/images/projects/collected/beregovoy-2-2e8cfbd1e3d4.webp",
+    "caption": "Береговой 2 · архитектура и территория"
+  },
+  "shift": {
+    "src": "/images/projects/collected/shift-a4873742c6a3.webp",
+    "caption": "Shift · архитектура и территория"
+  },
+  "svet": {
+    "src": "/images/projects/collected/svet-7e03d7c32280.webp",
+    "caption": "Свет · архитектура и территория"
+  },
+  "orient-express": {
+    "src": "/images/projects/collected/orient-express-8238c7a38f68.webp",
+    "caption": "Ориент Экспресс · архитектура и территория"
+  },
+  "lyublinskiy-park": {
+    "src": "/images/projects/collected/lyublinskiy-park-a68e6aed708e.webp",
+    "caption": "Люблинский парк · архитектура и территория"
+  },
+  "strogino-360": {
+    "src": "/images/projects/collected/strogino-360-9d4a37e712bf.webp",
+    "caption": "Строгино 360 · архитектура и территория"
+  },
+  "michurinskiy-park": {
+    "src": "/images/projects/collected/michurinskiy-park-27df781cb746.webp",
+    "caption": "Мичуринский парк · архитектура и территория"
+  },
+  "kronshtadtskiy-9": {
+    "src": "/images/projects/collected/kronshtadtskiy-9-7bbd9496b1d8.webp",
+    "caption": "Кронштадтский 9 · архитектура и территория"
+  },
+  "2-irtyshskiy": {
+    "src": "/images/projects/collected/2-irtyshskiy-19b1722d2b75.webp",
+    "caption": "2-й Иртышский · архитектура и территория"
+  },
+  "moskvoreche": {
+    "src": "/images/projects/collected/moskvoreche-4a15aaf8baf2.webp",
+    "caption": "Москворечье · архитектура и территория"
+  },
+  "kvartal-domashniy": {
+    "src": "/images/projects/collected/kvartal-domashniy-4b914562df31.webp",
+    "caption": "Квартал Домашний · архитектура и территория"
+  },
+  "ultima-city": {
+    "src": "/images/projects/collected/ultima-city-a776d88e9a65.webp",
+    "caption": "УЛЬТИМА Сити / UltimaCity · архитектура и территория"
+  },
+  "evopark-izmaylovo": {
+    "src": "/images/projects/collected/evopark-izmaylovo-57c3180965b3.webp",
+    "caption": "Эвопарк Измайлово / EvoPark Измайлово · архитектура и территория"
+  },
+  "dom-dau": {
+    "src": "/images/projects/collected/dom-dau-28ac1ec80849.webp",
+    "caption": "Дом Дау · архитектура и территория"
+  },
+  "sobytie": {
+    "src": "/images/projects/collected/sobytie-b01ad023a5c4.webp",
+    "caption": "Событие · архитектура и территория"
+  },
+  "veer": {
+    "src": "/images/projects/collected/veer-fb21d7976795.webp",
+    "caption": "Веер / VEER · архитектура и территория"
+  },
+  "riversky": {
+    "src": "/images/projects/collected/riversky-9863b275abac.webp",
+    "caption": "RiverSky · архитектура и территория"
   }
 }

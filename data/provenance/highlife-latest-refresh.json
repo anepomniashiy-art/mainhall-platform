@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-05T07:17:45.945372+00:00",
+  "sourceUrl": "https://highlife.ru/ajax/?page=flats",
+  "rawJsonSha256": "014e53970526bbfed15afaf86be2188367340d74df914487e7af33fb1ff8be42",
+  "listedCount": 1511,
+  "activePricedCount": 1360,
+  "statuses": {
+    "Продажа": 1174,
+    "Свободно": 186,
+    "Уст.бронь": 10,
+    "Резерв": 141
+  },
+  "selection": "Include Продажа and Свободно only; exclude Резерв and Уст.бронь. Confirm availability before booking."
+}

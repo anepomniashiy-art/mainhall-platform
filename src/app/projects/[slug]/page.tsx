@@ -1,11 +1,12 @@
 import "@/app/project-experience.css";
 import {ResearchProjectAnalysis} from "@/components/ResearchProjectAnalysis";
 import {CommercialCatalogue} from "@/components/CommercialCatalogue";
-import {sminexFeed,catalogueCards} from "@/lib/sminex-catalogue";
+import {catalogueCards} from "@/lib/sminex-catalogue";
+import {residentialUnits} from "@/lib/residential-catalogue";
 import {InvestmentCase} from "@/components/InvestmentCase";
 import {getInvestmentProfile,hasInvestmentProfile} from "@/lib/investment-profiles";
 import {InvestmentArchive} from "@/components/InvestmentArchive";
-import {ProjectGallery,ProjectMarketUnits} from "@/components/ProjectMarket";
+import {ProjectGallery} from "@/components/ProjectMarket";
 import {developerSlug} from "@/lib/developers";
 import type {Metadata} from "next";
 import Link from "next/link";
@@ -28,7 +29,8 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 }
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params; const p=editorialProjects.find(x=>x.slug===slug);if(!p)notFound();
- const feedUnits=sminexFeed.units.filter(u=>u.projectSlug===slug&&u.propertyType==="residential");
+ const units=residentialUnits.filter(u=>u.projectSlug===slug);
+ const cards=catalogueCards(units).map((u,i)=>({...u,detailPath:units[i].detailPath,developer:units[i].developer,district:units[i].district,fetchedAt:units[i].fetchedAt}));
  const d=projectDossiers[slug];const photo=projectImages[slug];const district=districtForProject(slug);const related=editorialProjects.filter(x=>x.slug!==slug&&(x.developer===p.developer||x.area===p.area||x.className===p.className)).slice(0,3);
  return <article className="mh-project-detail mh-editorial-page mh-pad">
   <Breadcrumbs items={[{name:"Жилые комплексы",href:"/projects/"},{name:p.name,href:"/projects/"+slug+"/"}]}/>
@@ -40,7 +42,7 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
   <section id="product" className="mh-project-section"><p className="mh-eyebrow">ДОМ И СРЕДА</p><h2>{d?.format || "О проекте"}</h2>{d?.features?.length>0&&<div className="mh-project-feature-grid">{d.features.map(x=><div key={x}>{x}</div>)}</div>}</section>
   <section id="investment" className="mh-project-section"><p className="mh-eyebrow">ЭКСПЕРТНЫЙ ВЗГЛЯД</p><h2>Почему рассматриваем этот проект</h2><p>{p.thesis}</p><ResearchProjectAnalysis slug={slug}/>{hasInvestmentProfile(slug)&&<details><summary>Инвестиционный разбор и расчёт покупки</summary><InvestmentCase profile={getInvestmentProfile(slug)}/></details>}<details><summary>Подробные материалы исследования</summary><InvestmentArchive slug={slug}/></details></section>
   <section id="location" className="mh-project-section"><p className="mh-eyebrow">РАСПОЛОЖЕНИЕ</p><h2>{d?.address || p.area+", Москва"}</h2>{d?.location&&<p>{d.location}</p>}<iframe className="mh-location-map" title={"Карта локации: "+p.area} src={"https://maps.google.com/maps?q="+encodeURIComponent(d?.address || "Москва, "+p.area)+"&z=14&output=embed"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"/></section>
-  <section id="apartments" className="mh-project-section"><p className="mh-eyebrow">КВАРТИРЫ И ПЛАНИРОВКИ</p><h2>Выберите свою квартиру</h2><p>Подберём планировку, вид и этаж. Сравним полную стоимость и условия оплаты.</p><ProjectMarketUnits slug={slug} name={p.name}/>{feedUnits.length>0&&<CommercialCatalogue units={catalogueCards(feedUnits)} projects={{[slug]:{href:"/projects/"+slug+"/",cover:photo}}} residential groupByProject={false}/>}<ProjectEnquiry name={p.name}/><details><summary>Как проходит покупка с MAINHALL</summary><p>Согласуем задачи и бюджет, подготовим подборку квартир, организуем просмотр. Для выбранного варианта сопоставим полную оплату и рассрочку, проверим график платежей и условия договора.</p><Link href="/installments/" className="mh-text-link">Условия рассрочки ↗</Link></details></section>
+  <section id="apartments" className="mh-project-section"><p className="mh-eyebrow">ПРЕДЛОЖЕНИЯ И ПЛАНИРОВКИ</p><h2>Выберите подходящий вариант</h2><p>Подберём подходящий формат, планировку, вид и этаж. Сравним полную стоимость и условия оплаты.</p>{cards.length>0&&<CommercialCatalogue units={cards} projects={{[slug]:{href:"/projects/"+slug+"/",cover:photo}}} residential groupByProject={false}/>}<ProjectEnquiry name={p.name}/><details><summary>Как проходит покупка с MAINHALL</summary><p>Согласуем задачи и бюджет, подготовим подборку квартир, организуем просмотр. Для выбранного варианта сопоставим полную оплату и рассрочку, проверим график платежей и условия договора.</p><Link href="/installments/" className="mh-text-link">Условия рассрочки ↗</Link></details></section>
   <nav className="mh-inline-links" aria-label="Продолжить изучение">{district&&<Link href={"/districts/"+district.slug+"/"}>Обзор локации: {district.name} ↗</Link>}{collections.filter(c=>c.projects.includes(slug)).map(c=><Link key={c.slug} href={"/collections/"+c.slug+"/"}>{c.name} ↗</Link>)}<Link href="/analytics/kak-sravnit-novostroyki/">Как сравнить квартиры ↗</Link></nav>
   <Questions items={[{q:"Где находится "+p.name+"?",a:d.address+". Подробности окружения и карта приведены в разделе о расположении."},{q:"Как узнать цену и доступные квартиры в "+p.name+"?",a:"Укажите комнаты, бюджет и способ оплаты в форме подбора. Запросим наличие и условия на текущую дату, сравним планировки, виды и этажи."},{q:"Что проверить до покупки?",a:d.checks.join("; ")+"."}]}/>
   <section className="mh-related"><h2>Сравните с другими проектами</h2><ProjectGrid slugs={related.map(x=>x.slug)}/></section>
