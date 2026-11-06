@@ -2,17 +2,9 @@
   "checkedAt": "2026-11-06T13:40:00Z",
   "basis": "Current editorial catalogue registries and projectImages cover registry",
   "catalogueCount": 98,
-  "coverCount": 82,
-  "missingCoverCount": 16,
+  "coverCount": 87,
+  "missingCoverCount": 11,
   "projects": [
-    {
-      "slug": "2-irtyshskiy",
-      "name": "2-й Иртышский"
-    },
-    {
-      "slug": "amurskiy-park",
-      "name": "Амурский парк"
-    },
     {
       "slug": "kronshtadtskiy-9",
       "name": "Кронштадтский 9"
@@ -50,20 +42,8 @@
       "name": "Гранель Тринити"
     },
     {
-      "slug": "twelve",
-      "name": "Твелв / Twelve"
-    },
-    {
       "slug": "veer",
       "name": "Веер / VEER"
-    },
-    {
-      "slug": "vern",
-      "name": "ВЕРН"
-    },
-    {
-      "slug": "zelenyy-park",
-      "name": "Зеленый Парк"
     },
     {
       "slug": "zilart",

@@ -170,5 +170,25 @@
   "orient-express": {
     "src": "/images/projects/collected/orient-express-1-ad6cb4a3a81d.webp",
     "caption": "Ориент Экспресс · архитектура проекта · визуализация"
+  },
+  "2-irtyshskiy": {
+    "src": "/images/projects/collected/2-irtyshskiy-promo-2-8091087f2202.webp",
+    "caption": "2-й Иртышский · официальный материал ПИК"
+  },
+  "amurskiy-park": {
+    "src": "/images/projects/collected/amurskiy-park-promo-2-63f9eeb41372.webp",
+    "caption": "Амурский парк · официальный материал ПИК"
+  },
+  "zelenyy-park": {
+    "src": "/images/projects/collected/zelenyy-park-promo-2-18be9d223aa0.webp",
+    "caption": "Зелёный парк · официальный материал ПИК"
+  },
+  "twelve": {
+    "src": "/images/projects/collected/twelve-1-265b8f278c80.webp",
+    "caption": "Twelve · архитектура жилого комплекса · официальный материал проекта"
+  },
+  "vern": {
+    "src": "/images/projects/collected/vern-1-192e56842506.webp",
+    "caption": "ВЕРН · архитектурная панорама · официальный материал проекта"
   }
 }
