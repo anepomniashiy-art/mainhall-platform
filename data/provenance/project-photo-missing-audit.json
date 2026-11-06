@@ -2,44 +2,16 @@
   "checkedAt": "2026-11-06T13:40:00Z",
   "basis": "Current editorial catalogue registries and projectImages cover registry",
   "catalogueCount": 98,
-  "coverCount": 70,
-  "missingCoverCount": 28,
+  "coverCount": 82,
+  "missingCoverCount": 16,
   "projects": [
     {
       "slug": "2-irtyshskiy",
       "name": "2-й Иртышский"
     },
     {
-      "slug": "admiral",
-      "name": "Адмирал"
-    },
-    {
       "slug": "amurskiy-park",
       "name": "Амурский парк"
-    },
-    {
-      "slug": "aristarkhovskiy",
-      "name": "Аристарховский"
-    },
-    {
-      "slug": "belyy-grad",
-      "name": "Белый Град"
-    },
-    {
-      "slug": "beregovoy-2",
-      "name": "Береговой 2"
-    },
-    {
-      "slug": "c5",
-      "name": "С5"
-    },
-    {
-      "slug": "city-bay",
-      "name": "Сити Бэй / City Bay"
-    },
-    {
-      "slug": "evopark-izmaylovo",
-      "name": "Эвопарк Измайлово / EvoPark Измайлово"
     },
     {
       "slug": "kronshtadtskiy-9",
@@ -58,32 +30,12 @@
       "name": "Мичуринский парк"
     },
     {
-      "slug": "muza",
-      "name": "Муза"
-    },
-    {
-      "slug": "orient-express",
-      "name": "Ориент Экспресс"
-    },
-    {
       "slug": "pyatnitskoe-58",
       "name": "Пятницкое 58 / Перец"
     },
     {
       "slug": "riversky",
       "name": "RiverSky"
-    },
-    {
-      "slug": "sezar-city",
-      "name": "СЕЗАР СИТИ / SEZAR CITY"
-    },
-    {
-      "slug": "sobytie",
-      "name": "Событие"
-    },
-    {
-      "slug": "sreda-na-kutuzovskom",
-      "name": "Индиво / Среда на Кутузовском"
     },
     {
       "slug": "strogino-360",

@@ -2153,5 +2153,307 @@
       "width": 750,
       "height": 1125
     }
+  ],
+  "admiral": [
+    {
+      "src": "/images/projects/collected/admiral-1-fe3ec19922c8.webp",
+      "caption": "Адмирал · архитектура жилого квартала · официальный материал проекта",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/admiral-2-46d693cc466d.webp",
+      "caption": "Адмирал · архитектурная концепция · официальный материал проекта",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/admiral-3-ede41eb7d1a4.webp",
+      "caption": "Адмирал · лобби · официальный материал проекта",
+      "width": 1920,
+      "height": 1440
+    },
+    {
+      "src": "/images/projects/collected/admiral-4-73b229221c1a.webp",
+      "caption": "Адмирал · благоустройство двора · официальный материал проекта",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "aristarkhovskiy": [
+    {
+      "src": "/images/projects/collected/aristarkhovskiy-1-7f18611ade84.webp",
+      "caption": "Дом на Аристарховском · фасад и историческое окружение · официальный материал проекта",
+      "width": 960,
+      "height": 1161
+    },
+    {
+      "src": "/images/projects/collected/aristarkhovskiy-2-bb1bbd169e91.webp",
+      "caption": "Дом на Аристарховском · вариант отделки резиденции · официальный материал проекта",
+      "width": 960,
+      "height": 887
+    },
+    {
+      "src": "/images/projects/collected/aristarkhovskiy-3-14856cea39ba.webp",
+      "caption": "Дом на Аристарховском · архитектурная деталь · официальный материал проекта",
+      "width": 960,
+      "height": 1204
+    }
+  ],
+  "belyy-grad": [
+    {
+      "src": "/images/projects/collected/belyy-grad-1-284187ea78d4.webp",
+      "caption": "Белый Град · архитектура жилого квартала · официальный материал проекта",
+      "width": 1999,
+      "height": 1125
+    },
+    {
+      "src": "/images/projects/collected/belyy-grad-2-ce55906e044d.webp",
+      "caption": "Белый Град · панорама жилого квартала · официальный материал проекта",
+      "width": 2200,
+      "height": 1056
+    },
+    {
+      "src": "/images/projects/collected/belyy-grad-3-665367a67c7b.webp",
+      "caption": "Белый Град · благоустройство территории · официальный материал проекта",
+      "width": 2000,
+      "height": 1336
+    },
+    {
+      "src": "/images/projects/collected/belyy-grad-4-0eb2bf390b92.webp",
+      "caption": "Белый Град · парковый маршрут · официальный материал проекта",
+      "width": 2200,
+      "height": 1238
+    }
+  ],
+  "beregovoy-2": [
+    {
+      "src": "/images/projects/collected/beregovoy-2-1-4263f606cf81.webp",
+      "caption": "Береговой 2 · панорама квартала на набережной · официальный материал проекта",
+      "width": 1728,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/beregovoy-2-2-1313c93326f2.webp",
+      "caption": "Береговой 2 · ход строительства, вид на корпуса · официальный материал проекта",
+      "width": 1080,
+      "height": 810
+    },
+    {
+      "src": "/images/projects/collected/beregovoy-2-3-a53ed8c62902.webp",
+      "caption": "Береговой 2 · ход строительства, панорама · официальный материал проекта",
+      "width": 1080,
+      "height": 810
+    }
+  ],
+  "c5": [
+    {
+      "src": "/images/projects/collected/c5-1-c7b1894f51cb.webp",
+      "caption": "C5 · архитектура жилого комплекса · официальный материал проекта",
+      "width": 1164,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/collected/c5-2-cc21a9d23012.webp",
+      "caption": "C5 · архитектурная деталь · официальный материал проекта",
+      "width": 1422,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/collected/c5-3-da0b52cf6fef.webp",
+      "caption": "C5 · панорама проекта · официальный материал проекта",
+      "width": 792,
+      "height": 450
+    },
+    {
+      "src": "/images/projects/collected/c5-4-ac38c2c63819.webp",
+      "caption": "C5 · приватный двор-парк · официальный материал проекта",
+      "width": 1440,
+      "height": 906
+    }
+  ],
+  "city-bay": [
+    {
+      "src": "/images/projects/collected/city-bay-1-7c9eb2bcbc7d.webp",
+      "caption": "City Bay · архитектура жилого квартала · официальный материал проекта",
+      "width": 2048,
+      "height": 1153
+    },
+    {
+      "src": "/images/projects/collected/city-bay-2-2fab5f389bf3.webp",
+      "caption": "City Bay · архитектура на первой линии · официальный материал проекта",
+      "width": 1920,
+      "height": 1089
+    },
+    {
+      "src": "/images/projects/collected/city-bay-3-78496198d3da.webp",
+      "caption": "City Bay · лобби · официальный материал проекта",
+      "width": 1920,
+      "height": 1361
+    },
+    {
+      "src": "/images/projects/collected/city-bay-4-d67eeaf24714.webp",
+      "caption": "City Bay · благоустройство двора · официальный материал проекта",
+      "width": 1920,
+      "height": 1279
+    }
+  ],
+  "evopark-izmaylovo": [
+    {
+      "src": "/images/projects/collected/evopark-izmaylovo-1-ae2f154adf17.webp",
+      "caption": "EvoPark Измайлово · современная архитектура · официальный материал проекта",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/evopark-izmaylovo-2-b778850349d1.webp",
+      "caption": "EvoPark Измайлово · панорамное остекление · официальный материал проекта",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "src": "/images/projects/collected/evopark-izmaylovo-3-4cd36ec98e9f.webp",
+      "caption": "EvoPark Измайлово · дизайнерское лобби · официальный материал проекта",
+      "width": 970,
+      "height": 675
+    },
+    {
+      "src": "/images/projects/collected/evopark-izmaylovo-4-b748734d9f2d.webp",
+      "caption": "EvoPark Измайлово · благоустроенный двор · официальный материал проекта",
+      "width": 1200,
+      "height": 675
+    }
+  ],
+  "muza": [
+    {
+      "src": "/images/projects/collected/muza-1-5860af525281.webp",
+      "caption": "МУЗА · архитектура премиального проекта · официальный материал проекта",
+      "width": 1440,
+      "height": 687
+    },
+    {
+      "src": "/images/projects/collected/muza-2-bb57af8b40df.webp",
+      "caption": "МУЗА · авторская коллекция резиденций · официальный материал проекта",
+      "width": 2200,
+      "height": 688
+    },
+    {
+      "src": "/images/projects/collected/muza-3-f1d7abca999a.webp",
+      "caption": "МУЗА · архитектурная концепция · официальный материал проекта",
+      "width": 2200,
+      "height": 1036
+    },
+    {
+      "src": "/images/projects/collected/muza-4-208b8818304e.webp",
+      "caption": "МУЗА · гранд-лобби · официальный материал проекта",
+      "width": 2200,
+      "height": 1036
+    }
+  ],
+  "sobytie": [
+    {
+      "src": "/images/projects/collected/sobytie-1-131fcdbae5e8.webp",
+      "caption": "Событие · архитектура проекта · визуализация",
+      "width": 1920,
+      "height": 757,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/sobytie-2-fdfac457f775.webp",
+      "caption": "Событие · архитектура проекта · визуализация",
+      "width": 1920,
+      "height": 772,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/sobytie-3-0b99ee5b3d07.webp",
+      "caption": "Событие · архитектура проекта · визуализация",
+      "width": 2200,
+      "height": 997,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/sobytie-4-d7c3500b5307.webp",
+      "caption": "Событие · инфраструктура проекта · визуализация",
+      "width": 1400,
+      "height": 757,
+      "category": "infrastructure"
+    }
+  ],
+  "sezar-city": [
+    {
+      "src": "/images/projects/collected/sezar-city-1-b1df49ea532d.webp",
+      "caption": "СЕЗАР СИТИ · архитектура проекта · визуализация",
+      "width": 1920,
+      "height": 1080,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/sezar-city-2-b37fa3c071e4.webp",
+      "caption": "СЕЗАР СИТИ · общественные интерьеры · визуализация",
+      "width": 1920,
+      "height": 1441,
+      "category": "lobby"
+    }
+  ],
+  "sreda-na-kutuzovskom": [
+    {
+      "src": "/images/projects/collected/sreda-na-kutuzovskom-1-5ee1cd35899c.webp",
+      "caption": "Индиво · архитектура проекта · визуализация",
+      "width": 2200,
+      "height": 1236,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/sreda-na-kutuzovskom-2-00f23c1f1706.webp",
+      "caption": "Индиво · виды из проекта · визуализация",
+      "width": 1016,
+      "height": 1167,
+      "category": "views"
+    },
+    {
+      "src": "/images/projects/collected/sreda-na-kutuzovskom-3-eba004e2e5c9.webp",
+      "caption": "Индиво · архитектура проекта · визуализация",
+      "width": 1800,
+      "height": 1652,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/sreda-na-kutuzovskom-4-aa51dd62019a.webp",
+      "caption": "Индиво · благоустройство двора · визуализация",
+      "width": 2200,
+      "height": 1390,
+      "category": "courtyard"
+    },
+    {
+      "src": "/images/projects/collected/sreda-na-kutuzovskom-5-07314633cbf0.webp",
+      "caption": "Индиво · благоустройство двора · визуализация",
+      "width": 2200,
+      "height": 1390,
+      "category": "courtyard"
+    },
+    {
+      "src": "/images/projects/collected/sreda-na-kutuzovskom-6-0ab04373e923.webp",
+      "caption": "Индиво · благоустройство двора · визуализация",
+      "width": 2200,
+      "height": 1390,
+      "category": "courtyard"
+    }
+  ],
+  "orient-express": [
+    {
+      "src": "/images/projects/collected/orient-express-1-ad6cb4a3a81d.webp",
+      "caption": "Ориент Экспресс · архитектура проекта · визуализация",
+      "width": 600,
+      "height": 338,
+      "category": "exterior"
+    },
+    {
+      "src": "/images/projects/collected/orient-express-2-639f7dba981c.webp",
+      "caption": "Ориент Экспресс · архитектура проекта · визуализация",
+      "width": 1200,
+      "height": 675,
+      "category": "exterior"
+    }
   ]
 }

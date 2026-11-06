@@ -122,5 +122,53 @@
   "novoe-medvedkovo": {
     "src": "/images/projects/collected/novoe-medvedkovo-1-64a6647f5d30.jpg",
     "caption": "Новое Медведково · архитектура жилого квартала · визуализация"
+  },
+  "admiral": {
+    "src": "/images/projects/collected/admiral-1-fe3ec19922c8.webp",
+    "caption": "Адмирал · архитектура жилого квартала · официальный материал проекта"
+  },
+  "aristarkhovskiy": {
+    "src": "/images/projects/collected/aristarkhovskiy-1-7f18611ade84.webp",
+    "caption": "Дом на Аристарховском · фасад и историческое окружение · официальный материал проекта"
+  },
+  "belyy-grad": {
+    "src": "/images/projects/collected/belyy-grad-1-284187ea78d4.webp",
+    "caption": "Белый Град · архитектура жилого квартала · официальный материал проекта"
+  },
+  "beregovoy-2": {
+    "src": "/images/projects/collected/beregovoy-2-1-4263f606cf81.webp",
+    "caption": "Береговой 2 · панорама квартала на набережной · официальный материал проекта"
+  },
+  "c5": {
+    "src": "/images/projects/collected/c5-1-c7b1894f51cb.webp",
+    "caption": "C5 · архитектура жилого комплекса · официальный материал проекта"
+  },
+  "city-bay": {
+    "src": "/images/projects/collected/city-bay-1-7c9eb2bcbc7d.webp",
+    "caption": "City Bay · архитектура жилого квартала · официальный материал проекта"
+  },
+  "evopark-izmaylovo": {
+    "src": "/images/projects/collected/evopark-izmaylovo-1-ae2f154adf17.webp",
+    "caption": "EvoPark Измайлово · современная архитектура · официальный материал проекта"
+  },
+  "muza": {
+    "src": "/images/projects/collected/muza-1-5860af525281.webp",
+    "caption": "МУЗА · архитектура премиального проекта · официальный материал проекта"
+  },
+  "sobytie": {
+    "src": "/images/projects/collected/sobytie-1-131fcdbae5e8.webp",
+    "caption": "Событие · архитектура проекта · визуализация"
+  },
+  "sezar-city": {
+    "src": "/images/projects/collected/sezar-city-1-b1df49ea532d.webp",
+    "caption": "СЕЗАР СИТИ · архитектура проекта · визуализация"
+  },
+  "sreda-na-kutuzovskom": {
+    "src": "/images/projects/collected/sreda-na-kutuzovskom-1-5ee1cd35899c.webp",
+    "caption": "Индиво · архитектура проекта · визуализация"
+  },
+  "orient-express": {
+    "src": "/images/projects/collected/orient-express-1-ad6cb4a3a81d.webp",
+    "caption": "Ориент Экспресс · архитектура проекта · визуализация"
   }
 }
