@@ -1,0 +1,148 @@
+{
+  "score": 59,
+  "band": "рерайт",
+  "penalties": [
+    {
+      "reason": "хард-баны (фразы): 2",
+      "points": -24
+    },
+    {
+      "reason": "почерк модели: 1 оборот",
+      "points": -3
+    },
+    {
+      "reason": "рваная медитативность: 1 цепочка обрывков по 3+ подряд (самая длинная 3)",
+      "points": -8
+    },
+    {
+      "reason": "номинальность (сущ./глаг.=3.42, цель ≤2.5)",
+      "points": -6
+    }
+  ],
+  "notes": [],
+  "genre": "marketing",
+  "words": 19260,
+  "hard_bans": [
+    {
+      "category": "HARD BAN",
+      "name": "от X до Y (ложный диапазон)",
+      "count": 2,
+      "positions": [
+        48418,
+        55329
+      ]
+    }
+  ],
+  "hard_ban_count": 2,
+  "markers": [
+    {
+      "category": "Канцелярит",
+      "name": "реализаци",
+      "count": 6,
+      "positions": [
+        86345,
+        107338,
+        117409,
+        127316,
+        142856,
+        143204
+      ]
+    },
+    {
+      "category": "Кальки",
+      "name": "является",
+      "count": 1,
+      "positions": [
+        94
+      ]
+    },
+    {
+      "category": "Раздувание",
+      "name": "значительн",
+      "count": 1,
+      "positions": [
+        141409
+      ]
+    },
+    {
+      "category": "Контекстуализаторы",
+      "name": "с учётом",
+      "count": 11,
+      "positions": [
+        24061,
+        78234,
+        85580,
+        90574,
+        93697,
+        96697,
+        97709,
+        103762,
+        138056,
+        139098,
+        139376
+      ]
+    },
+    {
+      "category": "Неодушевлённый субъект",
+      "name": "предмет или абстракция подчёркивает/демонстрирует",
+      "count": 1,
+      "positions": [
+        53521
+      ]
+    },
+    {
+      "category": "Почерк модели",
+      "name": "может привести к",
+      "count": 1,
+      "positions": [
+        95932
+      ]
+    }
+  ],
+  "marker_count": 21,
+  "muted_by_genre": {
+    "hard_bans": 0,
+    "markers": 0
+  },
+  "rhythm": {
+    "sentences": 1450,
+    "words": 19260,
+    "mean_len": 13.3,
+    "stdev_len": 10.6,
+    "cv_len": 0.8,
+    "min_len": 1,
+    "max_len": 211,
+    "short_share": 0.017,
+    "long_share": 0.059,
+    "em_dash": 0,
+    "ellipsis": 0,
+    "parentheses": 0,
+    "questions": 19,
+    "staccato_runs": 1,
+    "staccato_max": 3
+  },
+  "morph": {
+    "nouns": 8486,
+    "verbs": 2483,
+    "noun_verb_ratio": 3.42,
+    "nominalizations": 1372,
+    "tokens": 18748
+  },
+  "structure": {
+    "paragraphs": 1,
+    "para_mean_sent": 1450,
+    "para_cv": 0.0,
+    "list_items": 0,
+    "listicle_share": 0.0,
+    "title_case_headings": 0,
+    "truncated_ending": true
+  },
+  "lexical": {
+    "tokens": 18748,
+    "mattr": 0.9417701863354038
+  },
+  "repeats": {
+    "tokens": 600,
+    "phrases": []
+  }
+}

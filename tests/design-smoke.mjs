@@ -59,6 +59,14 @@ try {
   await page.getByRole('heading',{level:1,name:'HIGH LIFE'}).waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:'design-proof/project-'+viewport.width+'.png',fullPage:true});
+  await page.goto('http://127.0.0.1:8091/units/',{waitUntil:'networkidle'});
+  assert.match(await page.getByRole('status').innerText(),new RegExp('ещё \\d+ ЖК доступны для подбора'));
+  assert.equal(await page.locator('.mh-project-result').count(),Math.min(expectedProjects,24));
+  await page.getByLabel('Жилой комплекс').selectOption('opus');
+  assert.equal(await page.locator('.mh-project-result').count(),1);
+  assert.match(await page.locator('.mh-project-result').innerText(),/Подбор по запросу/);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true,'units overflow '+viewport.width);
+  await page.screenshot({path:'design-proof/units-'+viewport.width+'.png',fullPage:true});
   for(const route of ['/districts/paveletskaya/','/analytics/rassrochka-ot-zastroishchika/','/collections/u-vody/','/about/','/installments/','/investments/','/projects/level-yuzhnoportovaya/','/projects/kvartal-serebryany-bor/']){
    await page.goto('http://127.0.0.1:8091'+route,{waitUntil:'networkidle'});
    assert.equal(await page.getByRole('heading',{level:1}).count(),1);

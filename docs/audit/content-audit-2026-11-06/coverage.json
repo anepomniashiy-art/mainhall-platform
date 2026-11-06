@@ -1,0 +1,424 @@
+{
+  "checkedAt": "2026-11-06T21:53:01.234067+00:00",
+  "commit": "6a98a0a47eaa85ea7ddb2b7a2f0f414ba787ced0",
+  "production": {
+    "sitemapUrls": 3081,
+    "htmlRead": 3081,
+    "missingHtml": [],
+    "pagesWithoutRussianText": [],
+    "visibleBlocks": 215381,
+    "uniqueVisibleBlocks": 9027,
+    "visibleWordsIncludingRepeatedLayout": 702409,
+    "uniqueVisibleWords": 71873
+  },
+  "source": {
+    "filesRead": 83,
+    "filesWithRussianStrings": 75,
+    "sourceBlocks": 2646,
+    "uniqueCandidateSourceBlocks": 2135,
+    "uniqueSourceBlocks": 1699,
+    "uniqueSourceWords": 19343,
+    "blocksByFile": {
+      "data/catalogue/investment-archive.json": 38,
+      "data/catalogue/research-additional-projects-2026-10-29.json": 63,
+      "data/catalogue/research-projects-2026-10-26.json": 163,
+      "data/catalogue/sminex-feed-project-editorial.json": 17,
+      "data/catalogue/sminex-portfolio.json": 368,
+      "data/editorial/articles/escrow-schet-pri-pokupke-novostroyki.json": 34,
+      "data/editorial/articles/gotovyy-dom-ili-stroyashchiysya.json": 31,
+      "data/editorial/articles/kak-chitat-proektnuyu-deklaraciyu.json": 26,
+      "data/editorial/articles/keller-pri-pokupke-kvartiry.json": 26,
+      "data/editorial/articles/klubnaya-infrastruktura-rashody-na-soderzhanie.json": 31,
+      "data/editorial/articles/klubnyy-dom-chto-proverit.json": 35,
+      "data/editorial/articles/kvartira-s-terrasoy-kak-otsenit-doplatu.json": 26,
+      "data/editorial/articles/mashinomesto-kvartira-polnaya-stoimost.json": 25,
+      "data/editorial/articles/nalog-na-imushchestvo-dorogoy-kvartiry.json": 37,
+      "data/editorial/articles/otdelka-ot-zastroyshchika-ili-bez.json": 26,
+      "data/editorial/articles/planirovka-premium-kvartiry.json": 34,
+      "data/editorial/articles/privatnost-kvartiry-kak-proverit-do-pokupki.json": 26,
+      "data/editorial/articles/rassrochka-ili-polnaya-oplata.json": 31,
+      "data/editorial/articles/vid-na-reku-proverka-pered-pokupkoy.json": 23,
+      "data/editorial/articles/vysokie-potolki-chto-ostanetsya-posle-remonta.json": 26,
+      "data/editorial/articles/vysotnyy-format-likvidnost.json": 46,
+      "src/app/(public)/developers/page.tsx": 6,
+      "src/app/(public)/units/[id]/page.tsx": 19,
+      "src/app/(public)/units/page.tsx": 6,
+      "src/app/about/page.tsx": 6,
+      "src/app/analytics/[slug]/page.tsx": 2,
+      "src/app/analytics/page.tsx": 6,
+      "src/app/collections/[slug]/page.tsx": 4,
+      "src/app/collections/page.tsx": 6,
+      "src/app/commercial/[id]/page.tsx": 13,
+      "src/app/commercial/page.tsx": 9,
+      "src/app/commercial/strategy/route.ts": 3,
+      "src/app/contacts/page.tsx": 6,
+      "src/app/developers/[slug]/page.tsx": 11,
+      "src/app/districts/[slug]/page.tsx": 4,
+      "src/app/districts/page.tsx": 7,
+      "src/app/installments/page.tsx": 13,
+      "src/app/investment-rating/page.tsx": 18,
+      "src/app/investments/page.tsx": 7,
+      "src/app/layout.tsx": 3,
+      "src/app/page.tsx": 2,
+      "src/app/projects/[slug]/page.tsx": 18,
+      "src/app/projects/page.tsx": 8,
+      "src/components/CommercialCatalogue.tsx": 14,
+      "src/components/Editorial.tsx": 5,
+      "src/components/InstallmentCalculator.tsx": 8,
+      "src/components/InvestmentArchive.tsx": 4,
+      "src/components/InvestmentCase.tsx": 18,
+      "src/components/InvestmentDesk.tsx": 53,
+      "src/components/MainhallExperience.tsx": 42,
+      "src/components/ProjectComparison.tsx": 20,
+      "src/components/ProjectEnquiry.tsx": 22,
+      "src/components/ProjectMarket.tsx": 14,
+      "src/components/ProjectPhotoGallery.tsx": 7,
+      "src/components/ProjectsCatalogue.tsx": 6,
+      "src/components/ResearchProjectAnalysis.tsx": 9,
+      "src/components/TeamSection.tsx": 13,
+      "src/components/UnitsCatalogue.tsx": 1,
+      "src/components/layout/Footer.tsx": 1,
+      "src/components/layout/Header.tsx": 13,
+      "src/lib/articles.ts": 1,
+      "src/lib/constants.ts": 1,
+      "src/lib/developers.ts": 18,
+      "src/lib/editorial-projects.ts": 153,
+      "src/lib/investment-profiles.ts": 368,
+      "src/lib/investment-selection.ts": 20,
+      "src/lib/project-comparison.ts": 17,
+      "src/lib/project-dossiers.ts": 205,
+      "src/lib/project-images.ts": 19,
+      "src/lib/research-projects.ts": 10,
+      "src/lib/residential-catalogue.ts": 4,
+      "src/lib/site-content.ts": 202,
+      "src/lib/sminex-catalogue-client.ts": 9,
+      "src/lib/sminex-catalogue.ts": 37,
+      "src/lib/sminex-projects.ts": 23
+    },
+    "scope": [
+      "src/**/*.{ts,tsx,json}",
+      "data/editorial/articles/*.json",
+      "selected catalogue editorial JSON"
+    ],
+    "excluded": [
+      "source packs and provenance",
+      "raw developer feeds",
+      "source strings absent from the sitemap export (comments, upstream metadata and dormant fallbacks)",
+      "generated HTML outside sitemap",
+      "third-party legacy assets"
+    ]
+  },
+  "humanizer": {
+    "versionCommit": "b6df5d9b87d47ca288cce3a02da007da33221626",
+    "productionReport": {
+      "score": 51,
+      "band": "рерайт",
+      "penalties": [
+        {
+          "reason": "хард-баны (фразы): 2",
+          "points": -24
+        },
+        {
+          "reason": "почерк модели: 1 оборот",
+          "points": -3
+        },
+        {
+          "reason": "рваная медитативность: 2 цепочки обрывков по 3+ подряд (самая длинная 3)",
+          "points": -14
+        },
+        {
+          "reason": "номинальность (сущ./глаг.=7.05, цель ≤2.5)",
+          "points": -8
+        }
+      ],
+      "notes": [],
+      "genre": "marketing",
+      "words": 65969,
+      "hard_bans": [
+        {
+          "category": "HARD BAN",
+          "name": "от X до Y (ложный диапазон)",
+          "count": 2,
+          "positions": [
+            411870,
+            413342
+          ]
+        }
+      ],
+      "hard_ban_count": 2,
+      "markers": [
+        {
+          "category": "Канцелярит",
+          "name": "реализаци",
+          "count": 5,
+          "positions": [
+            272740,
+            307532,
+            312898,
+            317825,
+            377274
+          ]
+        },
+        {
+          "category": "Кальки",
+          "name": "является",
+          "count": 6,
+          "positions": [
+            1645,
+            231246,
+            260048,
+            261430,
+            261736,
+            274718
+          ]
+        },
+        {
+          "category": "Раздувание",
+          "name": "значительн",
+          "count": 1,
+          "positions": [
+            452552
+          ]
+        },
+        {
+          "category": "Модальные хеджи",
+          "name": "может повлиять",
+          "count": 1,
+          "positions": [
+            258653
+          ]
+        },
+        {
+          "category": "Контекстуализаторы",
+          "name": "с учётом",
+          "count": 11,
+          "positions": [
+            216841,
+            229540,
+            237027,
+            267156,
+            278911,
+            285957,
+            288514,
+            304950,
+            395811,
+            450393,
+            450671
+          ]
+        },
+        {
+          "category": "Неодушевлённый субъект",
+          "name": "предмет или абстракция подчёркивает/демонстрирует",
+          "count": 1,
+          "positions": [
+            439415
+          ]
+        },
+        {
+          "category": "Почерк модели",
+          "name": "может привести к",
+          "count": 1,
+          "positions": [
+            283651
+          ]
+        }
+      ],
+      "marker_count": 26,
+      "muted_by_genre": {
+        "hard_bans": 0,
+        "markers": 0
+      },
+      "rhythm": {
+        "sentences": 2621,
+        "words": 65969,
+        "mean_len": 25.2,
+        "stdev_len": 603.8,
+        "cv_len": 23.989,
+        "min_len": 1,
+        "max_len": 30918,
+        "short_share": 0.071,
+        "long_share": 0.074,
+        "em_dash": 0,
+        "ellipsis": 0,
+        "parentheses": 5,
+        "questions": 223,
+        "staccato_runs": 2,
+        "staccato_max": 3
+      },
+      "morph": {
+        "nouns": 25426,
+        "verbs": 3604,
+        "noun_verb_ratio": 7.05,
+        "nominalizations": 2297,
+        "tokens": 48685
+      },
+      "structure": {
+        "paragraphs": 1,
+        "para_mean_sent": 2621,
+        "para_cv": 0.0,
+        "list_items": 1,
+        "listicle_share": 0.0,
+        "title_case_headings": 0,
+        "truncated_ending": false
+      },
+      "lexical": {
+        "tokens": 48685,
+        "mattr": 0.8968944099378882
+      },
+      "repeats": {
+        "tokens": 600,
+        "phrases": [
+          "сравним планировку полную стоимость покупки и бюджет подготовки помещения под вашу задачу"
+        ]
+      }
+    },
+    "sourceReport": {
+      "score": 59,
+      "band": "рерайт",
+      "penalties": [
+        {
+          "reason": "хард-баны (фразы): 2",
+          "points": -24
+        },
+        {
+          "reason": "почерк модели: 1 оборот",
+          "points": -3
+        },
+        {
+          "reason": "рваная медитативность: 1 цепочка обрывков по 3+ подряд (самая длинная 3)",
+          "points": -8
+        },
+        {
+          "reason": "номинальность (сущ./глаг.=3.42, цель ≤2.5)",
+          "points": -6
+        }
+      ],
+      "notes": [],
+      "genre": "marketing",
+      "words": 19260,
+      "hard_bans": [
+        {
+          "category": "HARD BAN",
+          "name": "от X до Y (ложный диапазон)",
+          "count": 2,
+          "positions": [
+            48418,
+            55329
+          ]
+        }
+      ],
+      "hard_ban_count": 2,
+      "markers": [
+        {
+          "category": "Канцелярит",
+          "name": "реализаци",
+          "count": 6,
+          "positions": [
+            86345,
+            107338,
+            117409,
+            127316,
+            142856,
+            143204
+          ]
+        },
+        {
+          "category": "Кальки",
+          "name": "является",
+          "count": 1,
+          "positions": [
+            94
+          ]
+        },
+        {
+          "category": "Раздувание",
+          "name": "значительн",
+          "count": 1,
+          "positions": [
+            141409
+          ]
+        },
+        {
+          "category": "Контекстуализаторы",
+          "name": "с учётом",
+          "count": 11,
+          "positions": [
+            24061,
+            78234,
+            85580,
+            90574,
+            93697,
+            96697,
+            97709,
+            103762,
+            138056,
+            139098,
+            139376
+          ]
+        },
+        {
+          "category": "Неодушевлённый субъект",
+          "name": "предмет или абстракция подчёркивает/демонстрирует",
+          "count": 1,
+          "positions": [
+            53521
+          ]
+        },
+        {
+          "category": "Почерк модели",
+          "name": "может привести к",
+          "count": 1,
+          "positions": [
+            95932
+          ]
+        }
+      ],
+      "marker_count": 21,
+      "muted_by_genre": {
+        "hard_bans": 0,
+        "markers": 0
+      },
+      "rhythm": {
+        "sentences": 1450,
+        "words": 19260,
+        "mean_len": 13.3,
+        "stdev_len": 10.6,
+        "cv_len": 0.8,
+        "min_len": 1,
+        "max_len": 211,
+        "short_share": 0.017,
+        "long_share": 0.059,
+        "em_dash": 0,
+        "ellipsis": 0,
+        "parentheses": 0,
+        "questions": 19,
+        "staccato_runs": 1,
+        "staccato_max": 3
+      },
+      "morph": {
+        "nouns": 8486,
+        "verbs": 2483,
+        "noun_verb_ratio": 3.42,
+        "nominalizations": 1372,
+        "tokens": 18748
+      },
+      "structure": {
+        "paragraphs": 1,
+        "para_mean_sent": 1450,
+        "para_cv": 0.0,
+        "list_items": 0,
+        "listicle_share": 0.0,
+        "title_case_headings": 0,
+        "truncated_ending": true
+      },
+      "lexical": {
+        "tokens": 18748,
+        "mattr": 0.9417701863354038
+      },
+      "repeats": {
+        "tokens": 600,
+        "phrases": []
+      }
+    }
+  }
+}

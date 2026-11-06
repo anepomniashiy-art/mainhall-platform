@@ -42,7 +42,9 @@ def safe_url(url, allowed_hosts):
         address = None
     if address and not address.is_global:
         raise ValueError("Private network address is not accepted")
-    return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, parsed.query, ""))
+    # Keep user-facing Unicode filenames but make the request URL RFC-safe.
+    path = urllib.parse.quote(urllib.parse.unquote(parsed.path), safe="/%:@!$&'()*+,;=-._~")
+    return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, path, parsed.query, ""))
 
 
 class RestrictedRedirect(urllib.request.HTTPRedirectHandler):
@@ -107,6 +109,152 @@ class PageHTML(HTMLParser):
             self.in_ld = False
         if tag == "title":
             self.in_title = False
+
+
+class LuminCardHTML(HTMLParser):
+    """Project-specific parser for the official Lumin apartment cards."""
+    VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.card, self.div_depth, self.stack, self.cards = None, 0, [], []
+
+    def handle_starttag(self, tag, attrs):
+        values = dict(attrs)
+        classes = set((values.get("class") or "").split())
+        if self.card is None and tag == "div" and "apartment-card" in classes:
+            self.card = {"text": [], "title": [], "kind": [], "price": [], "oldPrice": [], "images": [], "documents": []}
+            self.div_depth = 1
+        elif self.card is not None and tag == "div":
+            self.div_depth += 1
+        if self.card is None:
+            return
+        self.stack.append((tag, classes))
+        if tag == "img" and "apartment-card__slide-img" in classes and values.get("src"):
+            self.card["images"].append(values["src"])
+        if tag == "a" and "download-link" in classes and values.get("href"):
+            self.card["documents"].append(values["href"])
+        if tag in self.VOID_TAGS:
+            self.stack.pop()
+
+    def handle_data(self, data):
+        if self.card is None or not data.strip():
+            return
+        self.card["text"].append(data)
+        tag, classes = self.stack[-1] if self.stack else (None, set())
+        if "apartment-card__title" in classes:
+            self.card["title"].append(data)
+        if "apartment-card__type" in classes:
+            self.card["kind"].append(data)
+        if any("apartment-card__price" in classes for _, classes in self.stack):
+            if tag == "p":
+                self.card["price"].append(data)
+            elif tag == "strike":
+                self.card["oldPrice"].append(data)
+
+    def handle_endtag(self, tag):
+        if self.card is None:
+            return
+        if self.stack:
+            self.stack.pop()
+        if tag == "div":
+            self.div_depth -= 1
+            if self.div_depth == 0:
+                self.cards.append(self.card)
+                self.card = None
+
+
+def parse_lumin_cards(html, config, source):
+    """Return units only when one official card supplies id, area, floor and price."""
+    parser = LuminCardHTML()
+    parser.feed(html)
+    allowed = config.get("allowedMediaHosts") or config.get("allowedHosts")
+    units, seen = [], set()
+    for card in parser.cards:
+        title = " ".join(card["title"]).strip()
+        unit_match = re.fullmatch(r"(?:АПАРТАМЕНТ|ПЕНТХАУС)\s+([\d.]+)", title, re.I)
+        text = " ".join(" ".join(card["text"]).split())
+        area_match = re.search(r"Площадь:\s*([\d,.]+)\s*м", text, re.I)
+        floor_match = re.search(r"Этаж:\s*(\d+)", text, re.I)
+        price_text = re.sub(r"\D", "", " ".join(card["price"]))
+        if not unit_match or not area_match or not floor_match or not price_text:
+            continue
+        source_id = unit_match.group(1)
+        if source_id in seen:
+            continue
+        seen.add(source_id)
+        price, area = int(price_text), float(area_match.group(1).replace(",", "."))
+        if not (0 < price <= 10**13 and 1 <= area <= 10000):
+            continue
+        kind = " ".join(card["kind"]).strip()
+        bedrooms = re.search(r"(\d+)\s*спаль", kind, re.I)
+        finish = re.search(r"Отделка:\s*(.+?)\s+Стоимость лота", text, re.I)
+        old_price_text = re.sub(r"\D", "", " ".join(card["oldPrice"]))
+        images, documents = [], []
+        for raw, destination in [(raw, images) for raw in card["images"]] + [(raw, documents) for raw in card["documents"]]:
+            try:
+                destination.append(safe_url(urllib.parse.urljoin(source, raw), allowed))
+            except ValueError:
+                pass
+        units.append({
+            "sourceId": source_id, "unitNumber": source_id, "areaSqm": area,
+            "floor": int(floor_match.group(1)), "rooms": None,
+            "bedrooms": int(bedrooms.group(1)) if bedrooms else None,
+            "type": "Пентхаус" if title.upper().startswith("ПЕНТХАУС") else "Апартамент",
+            "finish": finish.group(1).strip() if finish else None,
+            "priceRub": price, "priceBeforeDiscountRub": int(old_price_text) if old_price_text else price,
+            "pricePerSqm": round(price / area), "salesStatus": "UNKNOWN",
+            "availabilityRaw": "Опубликовано в разделе апартаментов официального сайта",
+            "sourceUrl": source, "planImageUrl": images[0] if images else None,
+            "galleryImageUrls": images[1:], "documentUrl": documents[0] if documents else None,
+            "priceEvidence": "official Lumin apartment card: apartment-card__price",
+        })
+    return units
+
+
+def parse_level_nuxt_cards(html, config, source):
+    """Read the small server-rendered official Level project selection."""
+    match = re.search(r'<script[^>]+id=["\']__NUXT_DATA__["\'][^>]*>(.*?)</script>', html, re.I | re.S)
+    if not match:
+        return []
+    try:
+        state = json.loads(match.group(1))
+    except (json.JSONDecodeError, TypeError):
+        return []
+    if not isinstance(state, list):
+        return []
+    def scalar(value):
+        return state[value] if isinstance(value, int) and 0 <= value < len(state) else value
+    expected = config.get("projectName")
+    allowed = config.get("allowedMediaHosts") or config.get("allowedHosts")
+    units, seen = [], set()
+    for node in state:
+        if not isinstance(node, dict) or not {"price", "area", "number", "floor", "plan", "project"}.issubset(node):
+            continue
+        values = {key: scalar(node.get(key)) for key in ("price", "area", "number", "room", "floor", "plan", "status", "project")}
+        if expected and values["project"] != expected:
+            continue
+        try:
+            source_id, price, area = str(values["number"]).strip(), int(values["price"]), float(values["area"])
+            floor = int(values["floor"])
+        except (TypeError, ValueError):
+            continue
+        if not source_id or source_id in seen or not (0 < price <= 10**13 and 1 <= area <= 10000):
+            continue
+        try:
+            plan = safe_url(str(values["plan"]), allowed)
+        except ValueError:
+            plan = None
+        seen.add(source_id)
+        rooms = values.get("room") if isinstance(values.get("room"), int) else None
+        units.append({"sourceId": source_id, "unitNumber": source_id, "areaSqm": area,
+            "floor": floor, "rooms": rooms, "bedrooms": None,
+            "type": "Студия" if rooms == 0 else "Квартира", "finish": None,
+            "priceRub": price, "priceBeforeDiscountRub": price, "pricePerSqm": round(price / area),
+            "salesStatus": "UNKNOWN", "availabilityRaw": values.get("status"), "sourceUrl": source,
+            "planImageUrl": plan, "galleryImageUrls": [], "documentUrl": None,
+            "priceEvidence": "official Level Nuxt project selection: price"})
+    return units
 
 
 def types(node):
@@ -224,6 +372,10 @@ def parse_page(html, config, final_url=None, collected_at=None):
         units.append({"sourceId": unit_id, "areaSqm": area, "priceRub": price,
                       "availabilityRaw": offer.get("availability"), "salesStatus": "UNKNOWN",
                       "sourceUrl": source, "priceEvidence": "JSON-LD Apartment.offers.Offer.price"})
+    if config.get("adapter") == "lumin-apartment-cards":
+        units = parse_lumin_cards(html, config, source)
+    elif config.get("adapter") == "level-nuxt-project-selection":
+        units = parse_level_nuxt_cards(html, config, source)
     raw_images = list(config.get("mediaUrls", [])) + list(page.meta.get("og:image", []))
     for node in projects + [node for node in nodes if types(node) & UNIT_TYPES]:
         raw_images.extend(image_urls(node.get("image")))

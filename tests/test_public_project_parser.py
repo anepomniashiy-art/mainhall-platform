@@ -78,6 +78,46 @@ class PublicProjectParserTests(unittest.TestCase):
         self.assertTrue(result['warnings'])
         self.assertIsNone(result['projectPriceFromRub'])
 
+    def test_lumin_adapter_requires_one_complete_official_card(self):
+        config = dict(CONFIG, adapter='lumin-apartment-cards')
+        card = '''<div class="apartment-card">
+          <h3 class="apartment-card__title">АПАРТАМЕНТ 7.9</h3>
+          <p class="apartment-card__type">2 спальни</p>
+          <img class="apartment-card__slide-img" src="/plans/7.9.png">
+          <div class="apartment-card__text"><p>Этаж: 7</p><p>Площадь: 111,5 м²</p><p>Отделка: White box max</p></div>
+          <div class="apartment-card__price-wrap"><span>Стоимость лота, ₽:</span>
+            <div class="apartment-card__price"><p>126 552 500</p><strike>158 190 625</strike></div>
+          </div><a class="download-link" href="/docs/7.9.pdf">Скачать PDF</a>
+        </div>'''
+        unit = collector.parse_page(card, config)['units'][0]
+        self.assertEqual(unit['sourceId'], '7.9')
+        self.assertEqual(unit['priceRub'], 126552500)
+        self.assertEqual(unit['priceBeforeDiscountRub'], 158190625)
+        self.assertEqual(unit['areaSqm'], 111.5)
+        self.assertEqual(unit['bedrooms'], 2)
+        self.assertEqual(unit['floor'], 7)
+        self.assertEqual(unit['planImageUrl'], 'https://example.com/plans/7.9.png')
+        self.assertEqual(collector.parse_page(card.replace('126 552 500', ''), config)['units'], [])
+
+    def test_safe_url_encodes_official_unicode_media_path(self):
+        url = collector.safe_url('https://example.com/планы/вид 1.png', ['example.com'])
+        self.assertEqual(url, 'https://example.com/%D0%BF%D0%BB%D0%B0%D0%BD%D1%8B/%D0%B2%D0%B8%D0%B4%201.png')
+
+    def test_level_adapter_resolves_only_complete_matching_nuxt_units(self):
+        state = [None, {"price": 2, "area": 3, "number": 4, "room": 5, "floor": 6,
+                        "plan": 7, "status": 8, "project": 9},
+                 15672173, 28.7, "10-241", 0, 19, "https://cdn.example.com/plan.svg", 1, "Левел Южнопортовая"]
+        page = '<script type="application/json" id="__NUXT_DATA__">' + json.dumps(state, ensure_ascii=False) + '</script>'
+        config = dict(CONFIG, adapter='level-nuxt-project-selection', projectName='Левел Южнопортовая')
+        unit = collector.parse_page(page, config)['units'][0]
+        self.assertEqual(unit['sourceId'], '10-241')
+        self.assertEqual(unit['priceRub'], 15672173)
+        self.assertEqual(unit['rooms'], 0)
+        self.assertEqual(unit['type'], 'Студия')
+        self.assertEqual(unit['planImageUrl'], 'https://cdn.example.com/plan.svg')
+        config['projectName'] = 'Другой проект'
+        self.assertEqual(collector.parse_page(page, config)['units'], [])
+
 
 if __name__ == '__main__':
     unittest.main()

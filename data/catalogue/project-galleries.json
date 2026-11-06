@@ -1739,5 +1739,419 @@
       "width": 1600,
       "height": 900
     }
+  ],
+  "26-parkview": [
+    {
+      "src": "/images/projects/collected/26-parkview-1-4ea96bc369c2.webp",
+      "caption": "26 ПАРКВЬЮ · архитектура клубного дома · визуализация",
+      "width": 1018,
+      "height": 1272
+    },
+    {
+      "src": "/images/projects/collected/26-parkview-2-f4df8e7be019.webp",
+      "caption": "26 ПАРКВЬЮ · панорама проекта · визуализация",
+      "width": 1920,
+      "height": 1444
+    },
+    {
+      "src": "/images/projects/collected/26-parkview-3-c8241e1ea6e6.webp",
+      "caption": "26 ПАРКВЬЮ · благоустройство двора · визуализация",
+      "width": 2442,
+      "height": 1167
+    },
+    {
+      "src": "/images/projects/collected/26-parkview-4-7bb3e93ea87b.webp",
+      "caption": "26 ПАРКВЬЮ · лобби · визуализация",
+      "width": 1920,
+      "height": 1280
+    },
+    {
+      "src": "/images/projects/collected/26-parkview-5-7e8587bef734.jpg",
+      "caption": "26 ПАРКВЬЮ · детская комната · визуализация",
+      "width": 608,
+      "height": 784
+    }
+  ],
+  "set": [
+    {
+      "src": "/images/projects/collected/set-1-dd1b5697d18d.png",
+      "caption": "СЕТ · архитектура жилого квартала · визуализация",
+      "width": 1400,
+      "height": 915
+    },
+    {
+      "src": "/images/projects/collected/set-2-f471760db027.png",
+      "caption": "СЕТ · высотная башня квартала · визуализация",
+      "width": 2804,
+      "height": 1604
+    }
+  ],
+  "kazachiy": [
+    {
+      "src": "/images/projects/collected/kazachiy-1-42f908370d99.jpg",
+      "caption": "Казачий · архитектура клубного дома · визуализация",
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "src": "/images/projects/collected/kazachiy-2-ebf97cf93d73.jpg",
+      "caption": "Казачий · фасад и внутренний двор · визуализация",
+      "width": 2000,
+      "height": 2000
+    },
+    {
+      "src": "/images/projects/collected/kazachiy-3-e2af33acc4b1.jpg",
+      "caption": "Казачий · детали фасада · визуализация",
+      "width": 1600,
+      "height": 1874
+    },
+    {
+      "src": "/images/projects/collected/kazachiy-4-5a55d9604019.jpg",
+      "caption": "Казачий · библиотека с камином · визуализация",
+      "width": 1325,
+      "height": 1652
+    }
+  ],
+  "soul": [
+    {
+      "src": "/images/projects/collected/soul-1-cfabe65c2c58.jpg",
+      "caption": "SOUL · архитектура жилого квартала · визуализация",
+      "width": 2161,
+      "height": 2466
+    },
+    {
+      "src": "/images/projects/collected/soul-2-2499b2a171ab.webp",
+      "caption": "SOUL · архитектура квартала · визуализация",
+      "width": 3840,
+      "height": 3072
+    },
+    {
+      "src": "/images/projects/collected/soul-3-8b60e06e3390.jpg",
+      "caption": "SOUL · благоустройство двора · визуализация",
+      "width": 2316,
+      "height": 2945
+    },
+    {
+      "src": "/images/projects/collected/soul-4-d7639f38dc73.jpg",
+      "caption": "SOUL · детская инфраструктура · визуализация",
+      "width": 1114,
+      "height": 1421
+    },
+    {
+      "src": "/images/projects/collected/soul-5-b2aef9ec7934.jpg",
+      "caption": "SOUL · спортивная инфраструктура · визуализация",
+      "width": 1816,
+      "height": 1798
+    },
+    {
+      "src": "/images/projects/collected/soul-6-b26d5e51b8b4.jpg",
+      "caption": "SOUL · интерьер общественного пространства · визуализация",
+      "width": 2160,
+      "height": 1186
+    }
+  ],
+  "tatum": [
+    {
+      "src": "/images/projects/collected/tatum-1-3bdd53aa123a.webp",
+      "caption": "TATUM · архитектура жилого квартала · визуализация",
+      "width": 3000,
+      "height": 1800
+    },
+    {
+      "src": "/images/projects/collected/tatum-2-5d4e6aa697ef.webp",
+      "caption": "TATUM · благоустройство двора · визуализация",
+      "width": 2880,
+      "height": 1620
+    },
+    {
+      "src": "/images/projects/collected/tatum-3-86a3ee31b801.webp",
+      "caption": "TATUM · приватный двор · визуализация",
+      "width": 2880,
+      "height": 1620
+    },
+    {
+      "src": "/images/projects/collected/tatum-4-47e25766e2d4.webp",
+      "caption": "TATUM · общественное пространство · визуализация",
+      "width": 2880,
+      "height": 1620
+    },
+    {
+      "src": "/images/projects/collected/tatum-5-f82a08f58018.webp",
+      "caption": "TATUM · озеленение двора · визуализация",
+      "width": 2880,
+      "height": 1620
+    },
+    {
+      "src": "/images/projects/collected/tatum-6-81545893a138.webp",
+      "caption": "TATUM · архитектура и окружение · визуализация",
+      "width": 3000,
+      "height": 1800
+    }
+  ],
+  "one": [
+    {
+      "src": "/images/projects/collected/one-1-883f5e81dc1c.webp",
+      "caption": "ONE · архитектура небоскрёба · визуализация",
+      "width": 1650,
+      "height": 2383
+    },
+    {
+      "src": "/images/projects/collected/one-2-3758848b6945.jpg",
+      "caption": "ONE · панорама проекта · визуализация",
+      "width": 3840,
+      "height": 3954
+    },
+    {
+      "src": "/images/projects/collected/one-3-1998a4cef2c4.webp",
+      "caption": "ONE · общественное пространство · визуализация",
+      "width": 2880,
+      "height": 1620
+    },
+    {
+      "src": "/images/projects/collected/one-4-5c90857114f5.jpg",
+      "caption": "ONE · интерьер резиденции · визуализация",
+      "width": 3840,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/collected/one-5-0a47bb260cc7.jpg",
+      "caption": "ONE · интерьер резиденции · визуализация",
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "src": "/images/projects/collected/one-6-51af96ed855f.webp",
+      "caption": "ONE · виды из окон · визуализация",
+      "width": 2177,
+      "height": 1548
+    }
+  ],
+  "nachalo": [
+    {
+      "src": "/images/projects/collected/nachalo-1-8d3501882f96.jpg",
+      "caption": "НАЧАЛО · архитектура клубного дома · визуализация",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "src": "/images/projects/collected/nachalo-2-f7d9801a2b3e.jpg",
+      "caption": "НАЧАЛО · архитектура и окружение · визуализация",
+      "width": 4096,
+      "height": 2048
+    }
+  ],
+  "lyublinskiy-park": [
+    {
+      "src": "/images/projects/collected/lyublinskiy-park-1-caa1f66d7a32.jpg",
+      "caption": "Люблинский парк · архитектура жилого квартала · визуализация",
+      "width": 900,
+      "height": 600
+    }
+  ],
+  "moskvoreche": [
+    {
+      "src": "/images/projects/collected/moskvoreche-1-1e9185f2f0c2.jpg",
+      "caption": "Москворечье · архитектура жилого квартала · визуализация",
+      "width": 1920,
+      "height": 1286
+    }
+  ],
+  "kvartal-izdanie": [
+    {
+      "src": "/images/projects/collected/kvartal-izdanie-1-7fbb922bf572.jpg",
+      "caption": "Квартал Издание · архитектура проекта · визуализация",
+      "width": 1440,
+      "height": 604
+    }
+  ],
+  "kvartal-mons": [
+    {
+      "src": "/images/projects/collected/kvartal-mons-1-e584871134f2.jpg",
+      "caption": "Квартал МОНС · архитектура проекта · визуализация",
+      "width": 2880,
+      "height": 1208
+    }
+  ],
+  "mypriority-dubrovka": [
+    {
+      "src": "/images/projects/collected/mypriority-dubrovka-1-720d0ac6ee00.jpg",
+      "caption": "MYPRIORITY Дубровка · архитектура проекта · визуализация",
+      "width": 990,
+      "height": 663
+    },
+    {
+      "src": "/images/projects/collected/mypriority-dubrovka-2-a220a98690e0.png",
+      "caption": "MYPRIORITY Дубровка · благоустройство · визуализация",
+      "width": 2000,
+      "height": 2550
+    },
+    {
+      "src": "/images/projects/collected/mypriority-dubrovka-3-bcb4c54fd255.png",
+      "caption": "MYPRIORITY Дубровка · общественное пространство · визуализация",
+      "width": 2000,
+      "height": 2550
+    }
+  ],
+  "mypriority-mnevniki": [
+    {
+      "src": "/images/projects/collected/mypriority-mnevniki-1-50f200ca0d85.jpg",
+      "caption": "MYPRIORITY Мнёвники · архитектура проекта · визуализация",
+      "width": 990,
+      "height": 663
+    },
+    {
+      "src": "/images/projects/collected/mypriority-mnevniki-2-9d65506af555.png",
+      "caption": "MYPRIORITY Мнёвники · благоустройство · визуализация",
+      "width": 1024,
+      "height": 1209
+    },
+    {
+      "src": "/images/projects/collected/mypriority-mnevniki-3-cd1d7035a2ba.png",
+      "caption": "MYPRIORITY Мнёвники · общественное пространство · визуализация",
+      "width": 1024,
+      "height": 1209
+    }
+  ],
+  "dom-dau": [
+    {
+      "src": "/images/projects/collected/dom-dau-1-3a0bdb30adf1.jpg",
+      "caption": "DOM DAU · архитектура небоскрёба · визуализация",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "src": "/images/projects/collected/dom-dau-2-e5befa792d80.webp",
+      "caption": "DOM DAU · панорамные виды · визуализация",
+      "width": 360,
+      "height": 360
+    },
+    {
+      "src": "/images/projects/collected/dom-dau-3-812ce6f66285.webp",
+      "caption": "DOM DAU · детали архитектуры · визуализация",
+      "width": 1340,
+      "height": 2898
+    },
+    {
+      "src": "/images/projects/collected/dom-dau-4-ca941ae0a815.webp",
+      "caption": "DOM DAU · башня в городском контексте · визуализация",
+      "width": 1004,
+      "height": 999
+    }
+  ],
+  "emotion": [
+    {
+      "src": "/images/projects/collected/emotion-1-cca90eda9f36.jpg",
+      "caption": "Emotion · архитектура комплекса · визуализация",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "/images/projects/collected/emotion-2-d851f1ac8d2c.jpg",
+      "caption": "Emotion · интерьер и виды · визуализация",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "/images/projects/collected/emotion-3-070538bc7481.jpg",
+      "caption": "Emotion · дворовая инфраструктура · визуализация",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "/images/projects/collected/emotion-4-5d3cf26247d2.jpg",
+      "caption": "Emotion · благоустройство двора · визуализация",
+      "width": 1000,
+      "height": 1000
+    }
+  ],
+  "shift": [
+    {
+      "src": "/images/projects/collected/shift-1-40319ad22cbb.webp",
+      "caption": "SHIFT · архитектура жилого комплекса · визуализация",
+      "width": 3657,
+      "height": 2160
+    },
+    {
+      "src": "/images/projects/collected/shift-2-7ab9ea171035.webp",
+      "caption": "SHIFT · архитектура и окружение · визуализация",
+      "width": 1919,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/shift-3-1c7c463012c8.webp",
+      "caption": "SHIFT · общественные пространства · визуализация",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/shift-4-ddd6f7cefb4c.webp",
+      "caption": "SHIFT · интерьер проекта · визуализация",
+      "width": 730,
+      "height": 554
+    }
+  ],
+  "ultima-city": [
+    {
+      "src": "/images/projects/collected/ultima-city-1-7a55fe3c69a4.webp",
+      "caption": "ULTIMA CITY · архитектура жилого квартала · визуализация",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "/images/projects/collected/ultima-city-2-ff50ed673d8f.webp",
+      "caption": "ULTIMA CITY · благоустройство · визуализация",
+      "width": 1006,
+      "height": 1280
+    },
+    {
+      "src": "/images/projects/collected/ultima-city-3-894f4e1a0032.webp",
+      "caption": "ULTIMA CITY · общественное пространство · визуализация",
+      "width": 1280,
+      "height": 1170
+    },
+    {
+      "src": "/images/projects/collected/ultima-city-4-ac85cff0ec7a.webp",
+      "caption": "ULTIMA CITY · инфраструктура квартала · визуализация",
+      "width": 1280,
+      "height": 1170
+    },
+    {
+      "src": "/images/projects/collected/ultima-city-5-8b0aafb8da33.webp",
+      "caption": "ULTIMA CITY · интерьер общественной зоны · визуализация",
+      "width": 1274,
+      "height": 1280
+    },
+    {
+      "src": "/images/projects/collected/ultima-city-6-f6f2fb9e0830.jpg",
+      "caption": "ULTIMA CITY · расположение и окружение · визуализация",
+      "width": 1440,
+      "height": 454
+    }
+  ],
+  "novoe-medvedkovo": [
+    {
+      "src": "/images/projects/collected/novoe-medvedkovo-1-64a6647f5d30.jpg",
+      "caption": "Новое Медведково · архитектура жилого квартала · визуализация",
+      "width": 773,
+      "height": 1097
+    },
+    {
+      "src": "/images/projects/collected/novoe-medvedkovo-2-85296931b549.jpg",
+      "caption": "Новое Медведково · благоустройство · визуализация",
+      "width": 937,
+      "height": 1406
+    },
+    {
+      "src": "/images/projects/collected/novoe-medvedkovo-3-eef15f9d9782.jpg",
+      "caption": "Новое Медведково · двор и инфраструктура · визуализация",
+      "width": 769,
+      "height": 1010
+    },
+    {
+      "src": "/images/projects/collected/novoe-medvedkovo-4-d6bad4955817.jpg",
+      "caption": "Новое Медведково · архитектура и окружение · визуализация",
+      "width": 750,
+      "height": 1125
+    }
   ]
 }

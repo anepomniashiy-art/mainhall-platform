@@ -16,13 +16,14 @@ const official=sminexFeed.units.filter(u=>u.propertyType==='residential').map((u
 const publicUnits=publicData.units.map((u):ResidentialUnit=>{
  const p=project(u.projectSlug);const routeId='public-'+u.projectSlug+'-'+u.sourceId;
  const plan=u.planImageSrc||u.planImageUrl||null;
+ const gallery='galleryImageUrls' in u&&Array.isArray(u.galleryImageUrls)?u.galleryImageUrls:[];
  return {
   id:u.id,sourceId:u.sourceId,routeId,detailPath:'/units/'+routeId+'/',
   projectName:p?.name||u.projectSlug,projectSlug:u.projectSlug,developer:p?.developer||'',district:p?.area||'',
   category:'apartment',propertyType:'residential',areaSqm:u.areaSqm,priceRub:u.priceRub,
   priceBeforeDiscountRub:u.priceBeforeDiscountRub,pricePerSqm:u.pricePerSqm??null,
   floor:u.floor??null,floorsTotal:'floorsTotal' in u?u.floorsTotal:undefined,
-  unitNumber:u.unitNumber||null,description:'',images:plan?[{url:plan,tag:'plan'}]:[],
+  unitNumber:u.unitNumber||null,description:'',images:[...(plan?[{url:plan,tag:'plan'}]:[]),...gallery.map(url=>({url,tag:'interior'}))],
   planImageUrl:plan,sourcePlanImageUrl:u.planImageUrl||null,updatedAt:('sourceUpdatedAt' in u?u.sourceUpdatedAt:undefined)||u.fetchedAt,
   salesStatus:u.salesStatus,rooms:u.rooms,bedrooms:u.bedrooms,buildingName:u.buildingName,
   finishRaw:u.finish,ceilingHeight:'ceilingHeightM' in u?u.ceilingHeightM:undefined,

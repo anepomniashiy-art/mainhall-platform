@@ -70,13 +70,16 @@
   {
     "slug": "level-yuzhnoportovaya",
     "url": "https://level.ru/projects/southport/",
+    "adapter": "level-nuxt-project-selection",
+    "projectName": "Левел Южнопортовая",
     "allowedHosts": [
       "level.ru",
       "www.level.ru"
     ],
     "allowedMediaHosts": [
       "level.ru",
-      "www.level.ru"
+      "www.level.ru",
+      "cdn.level.ru"
     ],
     "mediaUrls": []
   },
@@ -109,6 +112,7 @@
   {
     "slug": "lumin",
     "url": "https://luminhouse.ru/",
+    "adapter": "lumin-apartment-cards",
     "allowedHosts": [
       "luminhouse.ru",
       "www.luminhouse.ru"

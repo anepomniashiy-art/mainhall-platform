@@ -1,0 +1,162 @@
+{
+  "score": 51,
+  "band": "рерайт",
+  "penalties": [
+    {
+      "reason": "хард-баны (фразы): 2",
+      "points": -24
+    },
+    {
+      "reason": "почерк модели: 1 оборот",
+      "points": -3
+    },
+    {
+      "reason": "рваная медитативность: 2 цепочки обрывков по 3+ подряд (самая длинная 3)",
+      "points": -14
+    },
+    {
+      "reason": "номинальность (сущ./глаг.=7.05, цель ≤2.5)",
+      "points": -8
+    }
+  ],
+  "notes": [],
+  "genre": "marketing",
+  "words": 65969,
+  "hard_bans": [
+    {
+      "category": "HARD BAN",
+      "name": "от X до Y (ложный диапазон)",
+      "count": 2,
+      "positions": [
+        411870,
+        413342
+      ]
+    }
+  ],
+  "hard_ban_count": 2,
+  "markers": [
+    {
+      "category": "Канцелярит",
+      "name": "реализаци",
+      "count": 5,
+      "positions": [
+        272740,
+        307532,
+        312898,
+        317825,
+        377274
+      ]
+    },
+    {
+      "category": "Кальки",
+      "name": "является",
+      "count": 6,
+      "positions": [
+        1645,
+        231246,
+        260048,
+        261430,
+        261736,
+        274718
+      ]
+    },
+    {
+      "category": "Раздувание",
+      "name": "значительн",
+      "count": 1,
+      "positions": [
+        452552
+      ]
+    },
+    {
+      "category": "Модальные хеджи",
+      "name": "может повлиять",
+      "count": 1,
+      "positions": [
+        258653
+      ]
+    },
+    {
+      "category": "Контекстуализаторы",
+      "name": "с учётом",
+      "count": 11,
+      "positions": [
+        216841,
+        229540,
+        237027,
+        267156,
+        278911,
+        285957,
+        288514,
+        304950,
+        395811,
+        450393,
+        450671
+      ]
+    },
+    {
+      "category": "Неодушевлённый субъект",
+      "name": "предмет или абстракция подчёркивает/демонстрирует",
+      "count": 1,
+      "positions": [
+        439415
+      ]
+    },
+    {
+      "category": "Почерк модели",
+      "name": "может привести к",
+      "count": 1,
+      "positions": [
+        283651
+      ]
+    }
+  ],
+  "marker_count": 26,
+  "muted_by_genre": {
+    "hard_bans": 0,
+    "markers": 0
+  },
+  "rhythm": {
+    "sentences": 2621,
+    "words": 65969,
+    "mean_len": 25.2,
+    "stdev_len": 603.8,
+    "cv_len": 23.989,
+    "min_len": 1,
+    "max_len": 30918,
+    "short_share": 0.071,
+    "long_share": 0.074,
+    "em_dash": 0,
+    "ellipsis": 0,
+    "parentheses": 5,
+    "questions": 223,
+    "staccato_runs": 2,
+    "staccato_max": 3
+  },
+  "morph": {
+    "nouns": 25426,
+    "verbs": 3604,
+    "noun_verb_ratio": 7.05,
+    "nominalizations": 2297,
+    "tokens": 48685
+  },
+  "structure": {
+    "paragraphs": 1,
+    "para_mean_sent": 2621,
+    "para_cv": 0.0,
+    "list_items": 1,
+    "listicle_share": 0.0,
+    "title_case_headings": 0,
+    "truncated_ending": false
+  },
+  "lexical": {
+    "tokens": 48685,
+    "mattr": 0.8968944099378882
+  },
+  "repeats": {
+    "tokens": 600,
+    "phrases": [
+      "сравним планировку полную стоимость покупки и бюджет подготовки помещения под вашу задачу"
+    ]
+  }
+}
