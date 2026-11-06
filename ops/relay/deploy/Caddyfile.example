@@ -1,0 +1,6 @@
+# Replace with an owner-controlled relay hostname. Do not replace existing sites.
+relay.example.invalid {
+    reverse_proxy 127.0.0.1:8881 {
+        flush_interval -1
+    }
+}
