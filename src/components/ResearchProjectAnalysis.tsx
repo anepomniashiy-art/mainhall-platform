@@ -24,12 +24,12 @@ export function ResearchProjectAnalysis({slug}:{slug:string}){
   <p>{conclusion}</p>
   <p className="mh-content-caption">Актуальные условия уточняем для выбранной квартиры.</p>
   <details style={{margin:"1.4rem 0",borderTop:"1px solid #d7ddd5",borderBottom:"1px solid #d7ddd5",padding:"1rem 0"}}>
-   <summary style={{cursor:"pointer",fontSize:".9rem"}}>Показатели оценки</summary>
+   <summary style={{cursor:"pointer",fontSize:".9rem"}}>Из чего складывается оценка</summary>
    <div style={{paddingTop:"1rem",fontSize:".9rem",lineHeight:1.65}}>
-    <p>Инвестиционный рейтинг показывает рыночную позицию проекта по шкале от 0 до 10.</p>
+    <p>Инвестиционный рейтинг MAINHALL показывает рыночную позицию проекта по шкале от 0 до 10. Мы учитываем цену метра относительно района, темп продаж, скидки, срок до ввода дома и динамику цены. <Link href="/investment-rating/" className="mh-text-link">Подробнее о методике ↗</Link></p>
     <dl style={{display:"grid",gridTemplateColumns:"minmax(0,1fr) minmax(0,1.3fr)",gap:".7rem 1rem"}}>
-     {p.listings!==null&&<><dt>Лотов в выборке</dt><dd style={{margin:0}}>{number(p.listings)}</dd></>}
-     {p.equityContractsSixMonths!==null&&<><dt>ДДУ за шесть месяцев</dt><dd style={{margin:0}}>{number(p.equityContractsSixMonths)}</dd></>}
+     {p.listings!==null&&<><dt>Квартир в продаже</dt><dd style={{margin:0}}>{number(p.listings)}</dd></>}
+     {p.equityContractsSixMonths!==null&&<><dt>Сделок за шесть месяцев</dt><dd style={{margin:0}}>{number(p.equityContractsSixMonths)}</dd></>}
      {p.olderThan180DaysPercent!==null&&<><dt>В продаже более 180 дней</dt><dd style={{margin:0}}>{number(p.olderThan180DaysPercent)}%</dd></>}
      {p.askingPriceChangeSinceListingPercent!==null&&<><dt>Изменение цены с начала продажи</dt><dd style={{margin:0}}>{signed(p.askingPriceChangeSinceListingPercent)}</dd></>}
     </dl>
