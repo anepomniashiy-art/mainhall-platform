@@ -1,0 +1,47 @@
+{
+  "packId": "2026-11-11-daylight",
+  "projects": [
+    {
+      "slug": "high-life",
+      "name": "HIGH LIFE"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "dnevnoj-svet-v-kvartire-okna-i-teni",
+      "title": "Дневной свет в квартире: как проверить окна и тени до покупки",
+      "category": "Гид покупателя",
+      "image": "high-life",
+      "related": [
+        "high-life"
+      ],
+      "kind": "evergreen",
+      "sources": [
+        {
+          "name": "PIONEER: карточка HIGH LIFE",
+          "url": "https://pioneer.ru/project/high-life",
+          "checkedAt": "2026-11-11T09:50:07+03:00",
+          "text": "Выдержка: «Первые жители оценили панорамные эркеры и продуманные планировки квартир». На странице PIONEER указано, что первая очередь сдана в 2025 году. Эркеры описаны как особенность проекта; карточка не показывает уровень освещённости выбранной комнаты."
+        },
+        {
+          "name": "PIONEER: остекление первой очереди HIGH LIFE",
+          "url": "https://pioneer.ru/news/v-pervoy-ocheredi-zhilogo-kvartala-high-life-sobstvenniki-poluchili-klyuchi-ot-kvartir",
+          "checkedAt": "2026-11-11T09:50:07+03:00",
+          "text": "Выдержка из официальной публикации PIONEER: «Витражное остекление со специальным покрытием обеспечивает высокий уровень солнцезащиты». Речь о первой очереди. Это описание решения девелопером, а не замер светопропускания или температуры в выбранной квартире."
+        },
+        {
+          "name": "Mos.ru: свод правил о естественном и искусственном освещении",
+          "url": "https://www.mos.ru/upload/documents/files/7178/SP52133302016EstestvennoeiiskysstvennoeosveshenieAktyalizirovannayaredakciyaSNiP23-05-95_Tekst.pdf",
+          "checkedAt": "2026-11-11T09:50:07+03:00",
+          "text": "Выдержка из раздела 5.9: «Расчет естественного освещения помещений проводится без учета мебели, оборудования, озеленения и других затеняющих предметов». В таблице 5.1 учитывается ориентация световых проёмов. Документ использован для разграничения проектного расчёта и бытового осмотра; нормативные пороги для конкретной квартиры не приводятся."
+        },
+        {
+          "name": "Pilkington: характеристики солнцезащитного стекла",
+          "url": "https://www.pilkington.com/en/gbl/architectural-and-technical-glass/product-categories/solar-control/solar-control-faqs",
+          "checkedAt": "2026-11-11T09:50:58+03:00",
+          "text": "Выдержка: «Different coatings on glass and degree of body tint changes the light transmission». Раздел о суммарном поступлении солнечного тепла учитывает прямую передачу и долю тепла, которую стекло отдаёт внутрь после поглощения. Это справка о показателях; она не относится к марке стеклопакетов в HIGH LIFE."
+        }
+      ]
+    }
+  ]
+}
