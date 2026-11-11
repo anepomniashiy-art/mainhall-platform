@@ -97,3 +97,9 @@ export function getInvestmentProfile(slug:string):InvestmentProfile {
 
 /** New research records are not promoted to a forecast until an individual model exists. */
 export const hasInvestmentProfile=(slug:string)=>Boolean(verifiedProfiles[slug]||theses[slug]);
+
+/** Strips internal provenance (source URLs) before the profile is serialised to the client component. */
+export const publicInvestmentProfile=(profile:InvestmentProfile):Omit<InvestmentProfile,"sources">=>{
+ const {sources:_sources,...rest}=profile;void _sources;
+ return {...rest,drivers:rest.drivers.map(({sourceUrl:_url,...driver})=>{void _url;return driver;})};
+};
