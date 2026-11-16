@@ -1,0 +1,43 @@
+name: Check Wellton domain in Beget
+on:
+  push:
+    branches: [diagnostics/beget-wellton-api]
+    paths: [.github/workflows/check-wellton-beget-api.yml]
+permissions: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Verify API authentication and domain
+        env:
+          BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
+        shell: python
+        run: |
+          import json
+          import os
+          import urllib.parse
+          import urllib.request
+
+          password = os.environ.get("BEGET_API_PASSWORD")
+          if not password:
+              raise SystemExit("BEGET_API_PASSWORD is unavailable to this job")
+          data = urllib.parse.urlencode({
+              "login": "wellton", "passwd": password, "output_format": "json"
+          }).encode()
+          request = urllib.request.Request("https://api.beget.com/api/domain/getList", data=data)
+          try:
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  payload = json.load(response)
+          except Exception as error:
+              raise SystemExit(f"Beget API request failed: {type(error).__name__}") from None
+          answer = payload.get("answer")
+          if payload.get("status") != "success" or not isinstance(answer, dict) or answer.get("status") != "success":
+              raise SystemExit("Beget API rejected the request")
+          domains = answer.get("result")
+          if not isinstance(domains, list):
+              raise SystemExit("Beget API returned an unexpected domain list")
+          print("Beget API authentication succeeded")
+          if not any(item.get("fqdn") == "welltonproperty.com" for item in domains if isinstance(item, dict)):
+              raise SystemExit("welltonproperty.com was absent from the Beget account")
+          print("welltonproperty.com is present in the Beget account")
