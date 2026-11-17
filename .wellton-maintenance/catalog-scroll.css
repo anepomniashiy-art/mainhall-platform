@@ -1,0 +1,12 @@
+/* Page links remain ordinary HTML until the catalogue enhancement is ready. */
+body.wl-v7 .wholewrap .wl-page-fallback{display:none!important}
+body.wl-v7 .wholewrap .wl-catalog-load{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px 24px;padding:30px 0;margin:0 0 24px;min-height:90px;box-sizing:border-box}
+body.wl-v7 .wholewrap .wl-catalog-load p{margin:0!important;font:400 13px/1.6 var(--wl-sans)!important;color:var(--wl-muted)!important}
+body.wl-v7 .wholewrap .wl-catalog-load-button{padding:12px 24px;min-height:44px;border:1px solid var(--wl-line);border-radius:4px;background:transparent;color:var(--wl-accent);font:600 13px/1.5 var(--wl-sans);cursor:pointer}
+body.wl-v7 .wholewrap .wl-catalog-load-button:hover{border-color:var(--wl-accent);background:var(--wl-soft)}
+body.wl-v7 .wholewrap .wl-catalog-load-button[hidden]{display:none!important}
+body.wl-v7 .wholewrap .wl-catalog-load-button:disabled{cursor:wait;opacity:.55}
+body.wl-v7 .wholewrap .wl-catalog-load.is-loading p:before{content:'';display:inline-block;width:12px;height:12px;margin-right:10px;border:1.5px solid var(--wl-line);border-top-color:var(--wl-accent);border-radius:50%;vertical-align:-2px;animation:wl-load-spin .8s linear infinite}
+@keyframes wl-load-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){body.wl-v7 .wholewrap .wl-catalog-load.is-loading p:before{animation:none}}
+@media(max-width:650px){body.wl-v7 .wholewrap .wl-catalog-load{flex-direction:column;padding:24px 0;gap:12px}}

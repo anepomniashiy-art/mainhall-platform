@@ -1,0 +1,30 @@
+/* WELLTON_REVIEWS_START — compact cards, full copy, indivisible five-star rating. */
+body.wl-v7 .wholewrap .wl-review-platforms{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:28px 0!important}
+body.wl-v7 .wholewrap .wl-review-platform{box-sizing:border-box;display:flex;align-items:center;justify-content:center;position:relative;min-width:0;min-height:82px;padding:20px 28px;border:1px solid var(--wl-line);border-radius:6px;background:#fff;text-decoration:none}
+body.wl-v7 .wholewrap .wl-review-platform img{display:block;width:auto!important;max-width:min(132px,100%)!important;height:auto!important;max-height:30px!important;object-fit:contain;filter:none!important;opacity:1!important}
+body.wl-v7 .wholewrap .wl-review-platform>span{position:absolute;right:14px;top:12px;color:var(--wl-accent);font:400 16px/1 var(--wl-sans)}
+body.wl-v7 .wholewrap a.wl-review-platform:hover{border-color:var(--wl-accent);background:var(--wl-soft)}
+body.wl-v7 .wholewrap .revgridtext .notSlider{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px!important;align-items:stretch}
+body.wl-v7 .wholewrap .revgridtext .revgridtext-item{box-sizing:border-box;display:flex!important;flex-direction:column;min-width:0;height:auto!important;padding:24px!important;background:#fff!important;border:1px solid var(--wl-line)!important;border-radius:6px!important}
+body.wl-v7 .wholewrap .revgridtext .notSlider .revgridtext-item{width:auto!important;margin:0!important}
+body.wl-v7 .wholewrap .revgridtext .itemheader{display:flex!important;flex-wrap:nowrap!important;align-items:flex-start!important;justify-content:space-between;gap:12px;margin:0 0 22px!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .itemheader .logo{flex:0 0 78px!important;width:78px!important;min-width:0;max-width:78px!important;margin:2px 0 0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .itemheader .logo img{display:block;width:78px!important;max-width:100%!important;height:28px!important;object-fit:contain;object-position:left center;filter:none!important}
+body.wl-v7 .wholewrap .revgridtext .itemheader .hdr{flex:0 0 auto!important;min-width:0!important;width:auto!important;margin:0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .notebar{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-start;gap:3px!important;width:max-content!important;white-space:nowrap!important;margin:0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .notebar .note{flex:0 0 auto;font:600 22px/1.2 var(--wl-sans)!important;color:var(--wl-ink)!important;margin:0 5px 0 0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .notebar .star{display:block!important;flex:0 0 16px!important;width:16px!important;height:16px!important;min-width:16px!important;margin:0!important;padding:0!important;filter:none!important;opacity:1!important;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23df7d28' d='m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01Z'/%3E%3C/svg%3E") center/contain no-repeat!important}
+body.wl-v7 .wholewrap .revgridtext .date{font:400 12px/1.5 var(--wl-sans)!important;color:var(--wl-muted)!important;margin:6px 0 0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .text,body.wl-v7 .wholewrap .revgridtext .text p{font:400 16px/1.65 var(--wl-sans)!important;color:var(--wl-ink)!important;letter-spacing:0!important;text-transform:none!important;overflow-wrap:break-word}
+body.wl-v7 .wholewrap .revgridtext .text{display:block!important;height:auto!important;max-height:none!important;overflow:visible!important;-webkit-line-clamp:unset!important;margin:0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .text p{margin:0 0 12px!important}
+body.wl-v7 .wholewrap .revgridtext .text p:last-child{margin-bottom:0!important}
+body.wl-v7 .wholewrap .revgridtext .readmore{display:inline-block;align-self:flex-start;font:600 13px/1.5 var(--wl-sans)!important;color:var(--wl-accent)!important;margin:16px 0 22px!important;padding:0!important;text-decoration:none}
+body.wl-v7 .wholewrap .revgridtext .readmore:hover{text-decoration:underline}
+body.wl-v7 .wholewrap .revgridtext .itemfooter{display:flex!important;flex-wrap:wrap!important;justify-content:space-between;gap:6px 14px;align-items:baseline;margin:auto 0 0!important;padding:18px 0 0!important;border-top:1px solid var(--wl-line)}
+body.wl-v7 .wholewrap .revgridtext .itemfooter,body.wl-v7 .wholewrap .revgridtext .itemfooter *{font:400 12px/1.5 var(--wl-sans)!important;color:var(--wl-muted)!important}
+body.wl-v7 .wholewrap .revgridtext .itemfooter>div{width:auto!important;margin:0!important;padding:0!important}
+body.wl-v7 .wholewrap .revgridtext .itemfooter a{color:var(--wl-accent)!important;text-underline-offset:3px;filter:none!important}
+@media(max-width:1100px){body.wl-v7 .wholewrap .revgridtext .notSlider{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){body.wl-v7 .wholewrap .wl-review-platforms{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0!important}body.wl-v7 .wholewrap .wl-review-platform{min-height:72px;padding:18px 24px}body.wl-v7 .wholewrap .revgridtext .notSlider{grid-template-columns:minmax(0,1fr);gap:16px!important}body.wl-v7 .wholewrap .revgridtext .revgridtext-item{padding:22px!important}body.wl-v7 .wholewrap .revgridtext .text,body.wl-v7 .wholewrap .revgridtext .text p{font-size:15px!important}}
+/* WELLTON_REVIEWS_END */

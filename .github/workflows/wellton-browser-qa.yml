@@ -1,0 +1,40 @@
+name: Wellton browser verification
+on:
+  push:
+    branches: [codex/wellton-access-20261117]
+    paths: [.wellton-maintenance/**, .github/workflows/wellton-browser-qa.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright && playwright install --with-deps chromium
+      - name: Inspect API redirect without forwarding credentials to another host
+        env:
+          BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,*args): return None
+          values=urllib.parse.urlencode({'login':'wellton','passwd':os.environ['BEGET_API_PASSWORD'],'output_format':'json'}).encode()
+          try:
+              response=urllib.request.build_opener(NoRedirect).open(urllib.request.Request('https://api.beget.com/api/site/getList',data=values),timeout=30)
+          except urllib.error.HTTPError as exc: response=exc
+          location=urllib.parse.urlsplit(response.headers.get('Location',''))
+          print('API_HTTP_STATUS',response.code,'REDIRECT',location.scheme,location.netloc,location.path)
+          PY
+      - name: Verify current public pages with prepared layout and loading fixes
+        run: python .wellton-maintenance/check.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wellton-browser-qa
+          path: /tmp/wellton-qa/
+          retention-days: 7
