@@ -1,4 +1,6 @@
 /* WELLTON_REVIEWS_START — compact cards, full copy, indivisible five-star rating. */
+body.wl-v7 .wholewrap .revgridtext .wl-direct-review-label{display:block;font:600 11px/1.4 var(--wl-sans)!important;color:var(--wl-accent);letter-spacing:.02em}
+body.wl-v7 .wholewrap .revgridtext .wl-direct-review .text{margin-bottom:24px!important}
 body.wl-v7 .wholewrap .wl-review-platforms{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:28px 0!important}
 body.wl-v7 .wholewrap .wl-review-platform{box-sizing:border-box;display:flex;align-items:center;justify-content:center;position:relative;min-width:0;min-height:82px;padding:20px 28px;border:1px solid var(--wl-line);border-radius:6px;background:#fff;text-decoration:none}
 body.wl-v7 .wholewrap .wl-review-platform img{display:block;width:auto!important;max-width:min(132px,100%)!important;height:auto!important;max-height:30px!important;object-fit:contain;filter:none!important;opacity:1!important}
