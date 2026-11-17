@@ -54,19 +54,64 @@ with sync_playwright() as p:
        })):[],
        delegates:typeof jQuery==='function'?Object.entries(jQuery._data(document,'events')||{}).map(([type,hs])=>({type,handlers:hs.filter(h=>h.selector).map(h=>({selector:h.selector,handler:String(h.handler).slice(0,1500)}))})):[]
     })""")
+    requests=[]
+    page.on('request',lambda req: requests.append(req.url) if req.resource_type=='fetch' and '/realty/' in req.url else None)
     page.add_style_tag(content=(root/'catalog-scroll.css').read_text())
     page.add_script_tag(content=(root/'catalog-scroll.js').read_text())
-    if page.locator('.wl-catalog-load').count():
-        before=page.locator('.re-item[data-card]').count()
+    assert page.locator('.wl-catalog-load').count()==1
+    before=page.locator('.re-item[data-card]').count()
+    # Simulate one transport failure. No contact forms are submitted.
+    blocked={'once':False}
+    def fail_once(route):
+        if not blocked['once'] and route.request.resource_type=='fetch' and 'plist=2' in route.request.url:
+            blocked['once']=True;route.abort()
+        else: route.continue_()
+    page.route('**/realty/**',fail_once)
+    page.locator('.wl-catalog-load').scroll_into_view_if_needed()
+    page.wait_for_function('()=>document.querySelector(".wl-catalog-load-button")?.textContent==="Повторить"',timeout=20000)
+    assert page.locator('.pagination').is_visible()
+    page.locator('.wl-catalog-load-button').click()
+    page.wait_for_function('(n)=>document.querySelectorAll(".re-item[data-card]").length>n',arg=before,timeout=30000)
+    page.unroute('**/realty/**',fail_once)
+    report['catalog-retry']={'ok':True,'before':before,'after':page.locator('.re-item[data-card]').count()}
+    card=page.locator('.re-item[data-card]').nth(before)
+    title=card.locator('h3').inner_text()
+    card.locator('button.req').click()
+    assert page.locator('.popup__wrap[data-modal="getPrice"].open').count()==1
+    assert page.locator('.popup__wrap[data-modal="getPrice"] input[name="thisRealty"]').input_value()==title
+    page.evaluate("()=>{document.querySelectorAll('.popup__wrap.open').forEach(x=>x.classList.remove('open'));document.querySelector('.page-overlay').classList.remove('active')}")
+    # Check the real delegated favourite handler without changing public ratings.
+    page.route('**/inc/setLike.php',lambda route:route.fulfill(status=200,body='1'))
+    heart=card.locator('.heart');heart.click();assert 'liked' in heart.get_attribute('class')
+    heart.click();assert 'liked' not in heart.get_attribute('class')
+    page.evaluate("()=>{navigator.clipboard.writeText=(text)=>{window.__qaShared=text;return Promise.resolve()}}")
+    share=card.locator('.share');share.click()
+    assert page.evaluate('window.__qaShared')==share.get_attribute('data-href')
+    report['new-card-actions']={'priceList':True,'project':title,'favouriteHandler':True,'shareHandler':True,'formSubmitted':False,'ratingRequestMocked':True}
+    history=[page.locator('.re-item[data-card]').count()]
+    for _ in range(8):
+        if page.locator('.wl-catalog-load-button').is_hidden():break
+        count=page.locator('.re-item[data-card]').count()
         page.locator('.wl-catalog-load').scroll_into_view_if_needed()
-        try:
-            page.wait_for_function('(n)=>document.querySelectorAll(".re-item[data-card]").length>n',arg=before,timeout=30000)
-            report['catalog-load']={'before':before,'after':page.locator('.re-item[data-card]').count(),'status':page.locator('.wl-catalog-load').inner_text()}
-        except Exception as exc:
-            report['catalog-load']={'before':before,'after':page.locator('.re-item[data-card]').count(),'error':type(exc).__name__,'status':page.locator('.wl-catalog-load').inner_text()}
-    else:
-        report['catalog-load']={'error':'Enhancement did not recognize catalogue or pagination'}
+        page.wait_for_function('(n)=>document.querySelectorAll(".re-item[data-card]").length>n||document.querySelector(".wl-catalog-load-button").hidden',arg=count,timeout=30000)
+        history.append(page.locator('.re-item[data-card]').count())
+    ids=page.locator('.re-item[data-card]').evaluate_all('(xs)=>xs.map(x=>x.dataset.card)')
+    assert len(ids)==len(set(ids))
+    assert page.locator('.wl-catalog-load-button').is_hidden()
+    from urllib.parse import urlsplit,parse_qs
+    assert all(parse_qs(urlsplit(u).query).get('sort')==['price-low'] and parse_qs(urlsplit(u).query).get('price')==['0-1200000'] for u in requests)
+    report['catalog-load']={'history':history,'count':len(ids),'unique':len(set(ids)),'requests':requests,'lastPageStopped':True,'status':page.locator('.wl-catalog-load').inner_text()}
     page.screenshot(path=str(out/'catalog.png'))
+    # Mobile automatic loading; no manual Show more click.
+    page.set_viewport_size({'width':390,'height':844})
+    page.goto('https://welltonproperty.com/ru/realty/?sort=price-low&price=0-1200000',wait_until='networkidle',timeout=60000)
+    page.add_style_tag(content=(root/'catalog-scroll.css').read_text())
+    page.add_script_tag(content=(root/'catalog-scroll.js').read_text())
+    before=page.locator('.re-item[data-card]').count()
+    page.locator('.wl-catalog-load').scroll_into_view_if_needed()
+    page.wait_for_function('(n)=>document.querySelectorAll(".re-item[data-card]").length>n',arg=before,timeout=30000)
+    report['catalog-mobile']={'before':before,'after':page.locator('.re-item[data-card]').count(),'overflow':page.evaluate('document.documentElement.scrollWidth>innerWidth')}
+    assert not report['catalog-mobile']['overflow']
     browser.close()
 (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print('WELLTON_QA_REPORT '+json.dumps(report,ensure_ascii=False))

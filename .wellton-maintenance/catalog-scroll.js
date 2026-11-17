@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   function pageNumber(url) {
-    return Math.max(1, Number(url.searchParams.get('pg') || url.searchParams.get('paged') || (url.pathname.match(/\/page\/(\d+)\/?$/) || [])[1] || 1));
+    return Math.max(1, Number(url.searchParams.get('plist') || url.searchParams.get('pg') || url.searchParams.get('paged') || (url.pathname.match(/\/page\/(\d+)\/?$/) || [])[1] || 1));
   }
   function catalogPath(url) { return url.pathname.replace(/\/page\/\d+\/?$/, '/').replace(/\/$/, ''); }
   function pageURL(href, base) {
@@ -13,7 +13,7 @@
     if (!Number.isSafeInteger(number) || number <= pageNumber(current)) return null;
     // Old pagination may omit the selected filters. Carry the exact current query.
     current.searchParams.forEach(function (value, key) {
-      if (!['pg', 'paged', 'page_id'].includes(key)) target.searchParams.set(key, value);
+      if (!['plist', 'pg', 'paged', 'page_id'].includes(key)) target.searchParams.set(key, value);
     });
     target.hash = '';
     return target;
