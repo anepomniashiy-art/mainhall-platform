@@ -20,7 +20,7 @@ jobs:
           BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
         run: |
           python3 - <<'PY'
-          import os,json,urllib.request,urllib.parse,urllib.error
+          import os,json,urllib.request,urllib.parse,urllib.error,re
           class NoRedirect(urllib.request.HTTPRedirectHandler):
               def redirect_request(self,*args): return None
           values=urllib.parse.urlencode({'login':'wellton','passwd':os.environ['BEGET_API_PASSWORD'],'output_format':'json'}).encode()
@@ -28,7 +28,8 @@ jobs:
               response=urllib.request.build_opener(NoRedirect).open(urllib.request.Request('https://api.beget.com/api/site/getList',data=values),timeout=30)
           except urllib.error.HTTPError as exc: response=exc
           location=urllib.parse.urlsplit(response.headers.get('Location',''))
-          print('API_HTTP_STATUS',response.code,'REDIRECT',location.scheme,location.netloc,location.path)
+          print('API_HTTP_STATUS',response.code,'REDIRECT',location.scheme,location.netloc,location.path,'QUERY_KEYS',list(urllib.parse.parse_qs(location.query)),'SERVER',response.headers.get('Server'))
+          print('REDIRECT_TITLE',re.findall(r'<title>(.*?)</title>',response.read().decode(errors='replace'))[:1])
           PY
       - name: Verify current public pages with prepared layout and loading fixes
         run: python .wellton-maintenance/check.py

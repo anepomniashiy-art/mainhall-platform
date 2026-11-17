@@ -39,12 +39,15 @@ with sync_playwright() as p:
         assert all(x['stars']==5 and x['oneRow'] and x['fits'] for x in values['cards']),values
         assert page.locator('.revgridtext-item .text').all_text_contents()==originals
         page.screenshot(path=str(out/('reviews-'+str(width)+'.png')))
+        if width in [1440,390]:
+            import base64
+            print('QA_IMAGE_'+str(width)+' '+base64.b64encode(page.screenshot(type='jpeg',quality=70)).decode())
     page.set_viewport_size({'width':1440,'height':1000})
     page.goto('https://welltonproperty.com/ru/realty/?sort=price-low&price=0-1200000',wait_until='networkidle',timeout=60000)
     report['catalog-before']=page.evaluate("""() => ({
        count:document.querySelectorAll('.re-item[data-card]').length,
        cards:Array.from(document.querySelectorAll('.re-item[data-card]')).map(n=>n.dataset.card),
-       pager:Array.from(document.querySelectorAll('a[href]')).filter(a=>/page\\/\\d|paged=|pg=/.test(a.href)).map(a=>({href:a.href,parent:a.parentElement.outerHTML.slice(0,2200)})),
+       pager:Array.from(document.querySelectorAll('a,button,span,li')).filter(a=>/^[1-9]$/.test(a.textContent.trim())).slice(-25).map(a=>({html:a.outerHTML,parent:a.parentElement.outerHTML.slice(0,4000)})),
        first:document.querySelector('.re-item')?.outerHTML.slice(0,6000),
        events:typeof jQuery==='function'?Array.from(document.querySelectorAll('.re-item:first-child .heart,.re-item:first-child .req,.re-item:first-child .share')).map(n=>({
          html:n.outerHTML,events:Object.entries(jQuery._data(n,'events')||{}).map(([type,hs])=>({type,handlers:hs.map(h=>String(h.handler).slice(0,1800))}))
