@@ -10,52 +10,51 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check existing Wellton account and public site
+      - name: Reconnect to existing Wellton API and FTPS
         env:
           BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
         run: |
           python3 - <<'PY'
-          import os,json,urllib.request,urllib.parse,urllib.error,socket,hashlib,re
-          from html.parser import HTMLParser
+          import os,json,urllib.request,urllib.parse,urllib.error,ftplib,ssl,io,hashlib
           password=os.environ.get('BEGET_API_PASSWORD','')
-          print('API_CREDENTIAL_CONFIGURED',bool(password),flush=True)
-          def api(method):
-              values={'login':'wellton','passwd':password,'input_format':'json','output_format':'json','input_data':'{}'}
-              request=urllib.request.Request('https://api.beget.com/api/'+method,data=urllib.parse.urlencode(values).encode())
-              with urllib.request.urlopen(request,timeout=20) as response:
-                  result=json.load(response)
-              answer=result.get('answer',{})
-              if result.get('status')!='success' or answer.get('status')!='success':
-                  print('API_RESULT',method,'rejected',flush=True)
-                  return None
-              return answer.get('result')
-          if password:
-              for method in ['site/getList','user/getAccountInfo','ftp/getList']:
-                  try:
-                      result=api(method)
-                      if method=='site/getList' and isinstance(result,list):
-                          print('WELLTON_SITES',json.dumps([{'path':x.get('path'),'id':x.get('id')} for x in result if 'welltonproperty.com' in x.get('path','')]),flush=True)
-                      elif method=='user/getAccountInfo' and isinstance(result,dict):
-                          print('SERVER',result.get('server_name'),flush=True)
-                      elif method=='ftp/getList' and isinstance(result,list):
-                          print('WELLTON_FTP',json.dumps([{'login':x.get('login'),'homedir':x.get('homedir')} for x in result if 'welltonproperty.com' in x.get('homedir','')]),flush=True)
-                  except Exception as exc:
-                      print('API_UNAVAILABLE',method,type(exc).__name__,getattr(exc,'code',None),flush=True)
-          for path in ['/ru/reviews/','/ru/realty/','/style-preview-taste/production.css']:
-              try:
-                  with urllib.request.urlopen('https://welltonproperty.com'+path,timeout=20) as response:
-                      body=response.read()
-                      print('PUBLIC',path,response.status,len(body),hashlib.sha256(body).hexdigest(),flush=True)
-              except Exception as exc:
-                  print('PUBLIC_UNAVAILABLE',path,type(exc).__name__,flush=True)
+          print('CREDENTIAL_CONFIGURED',bool(password),flush=True)
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+           def redirect_request(self,*args,**kwargs): return None
+          opener=urllib.request.build_opener(NoRedirect)
           try:
-              query=urllib.parse.urlencode({'login':'wellton','passwd':password,'output_format':'json'})
-              with urllib.request.urlopen('https://api.beget.com/api/site/getList?'+query,timeout=20) as response:
-                  result=json.load(response)
-              print('API_GET_STATUS',result.get('status'),result.get('answer',{}).get('status'),flush=True)
-              if result.get('status')=='success':
-                  print('GET_WELLTON_SITES',json.dumps([{'path':x.get('path'),'id':x.get('id')} for x in result.get('answer',{}).get('result',[]) if isinstance(x,dict) and 'welltonproperty.com' in x.get('path','')]),flush=True)
-          except Exception as exc:
-              print('API_GET_UNAVAILABLE',type(exc).__name__,getattr(exc,'code',None),flush=True)
-          
+           data=urllib.parse.urlencode({'login':'wellton','passwd':password,'input_format':'json','output_format':'json','input_data':'{}'}).encode()
+           r=opener.open(urllib.request.Request('https://api.beget.com/api/site/getList',data=data),timeout=20)
+           j=json.load(r)
+           print('API_STATUS',j.get('status'),j.get('answer',{}).get('status'),flush=True)
+           if isinstance(j.get('answer',{}).get('result'),list):
+            print('TARGET_SITES',[x.get('path') for x in j['answer']['result'] if 'welltonproperty.com' in x.get('path','')],flush=True)
+          except Exception as e: print('API_UNAVAILABLE',type(e).__name__,getattr(e,'code',None),flush=True)
+          class TLS(ftplib.FTP_TLS):
+           def ntransfercmd(self,cmd,rest=None):
+            c,s=ftplib.FTP.ntransfercmd(self,cmd,rest)
+            if self._prot_p:c=self.context.wrap_socket(c,server_hostname=self.host,session=self.sock.session)
+            return c,s
+          context=ssl.create_default_context()
+          context.maximum_version=ssl.TLSVersion.TLSv1_2
+          for host in ['wellton.beget.tech','urdak.beget.com']:
+           f=TLS(context=context,timeout=20)
+           try:
+            f.connect(host,21); f.host='wellton.beget.tech'
+            f.login('wellton',password);f.prot_p()
+            print('FTPS_AUTHENTICATED',host,flush=True)
+            f.cwd('/welltonproperty.com/public_html')
+            print('TARGET_ROOT_CONFIRMED',f.pwd(),flush=True)
+            for name in ['index.php','style-preview-taste/production.php','style-preview-taste/production.css']:
+             b=io.BytesIO();f.retrbinary('RETR '+name,b.write)
+             print('REMOTE_FILE',name,len(b.getvalue()),hashlib.sha256(b.getvalue()).hexdigest(),flush=True)
+            f.quit();break
+           except ftplib.error_perm as e:
+            print('FTPS_REJECTED',host,str(e)[:3],flush=True);f.close();break
+           except Exception as e:
+            print('FTPS_UNAVAILABLE',host,type(e).__name__,flush=True);f.close()
+          for path in ['/ru/reviews/','/style-preview-taste/production.css']:
+           try:
+            r=urllib.request.urlopen('https://welltonproperty.com'+path,timeout=20);b=r.read()
+            print('PUBLIC',path,r.status,len(b),hashlib.sha256(b).hexdigest(),flush=True)
+           except Exception as e:print('PUBLIC_UNAVAILABLE',path,type(e).__name__,flush=True)
           PY
