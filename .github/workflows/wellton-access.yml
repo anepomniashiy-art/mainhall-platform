@@ -15,7 +15,8 @@ jobs:
           BEGET_API_PASSWORD: ${{ secrets.BEGET_API_PASSWORD }}
         run: |
           python3 - <<'PY'
-          import os,json,urllib.request,urllib.parse,socket,hashlib
+          import os,json,urllib.request,urllib.parse,urllib.error,socket,hashlib,re
+          from html.parser import HTMLParser
           password=os.environ.get('BEGET_API_PASSWORD','')
           print('API_CREDENTIAL_CONFIGURED',bool(password),flush=True)
           def api(method):
@@ -39,7 +40,7 @@ jobs:
                       elif method=='ftp/getList' and isinstance(result,list):
                           print('WELLTON_FTP',json.dumps([{'login':x.get('login'),'homedir':x.get('homedir')} for x in result if 'welltonproperty.com' in x.get('homedir','')]),flush=True)
                   except Exception as exc:
-                      print('API_UNAVAILABLE',method,type(exc).__name__,flush=True)
+                      print('API_UNAVAILABLE',method,type(exc).__name__,getattr(exc,'code',None),flush=True)
           for path in ['/ru/reviews/','/ru/realty/','/style-preview-taste/production.css']:
               try:
                   with urllib.request.urlopen('https://welltonproperty.com'+path,timeout=20) as response:
@@ -47,4 +48,14 @@ jobs:
                       print('PUBLIC',path,response.status,len(body),hashlib.sha256(body).hexdigest(),flush=True)
               except Exception as exc:
                   print('PUBLIC_UNAVAILABLE',path,type(exc).__name__,flush=True)
+          try:
+              query=urllib.parse.urlencode({'login':'wellton','passwd':password,'output_format':'json'})
+              with urllib.request.urlopen('https://api.beget.com/api/site/getList?'+query,timeout=20) as response:
+                  result=json.load(response)
+              print('API_GET_STATUS',result.get('status'),result.get('answer',{}).get('status'),flush=True)
+              if result.get('status')=='success':
+                  print('GET_WELLTON_SITES',json.dumps([{'path':x.get('path'),'id':x.get('id')} for x in result.get('answer',{}).get('result',[]) if isinstance(x,dict) and 'welltonproperty.com' in x.get('path','')]),flush=True)
+          except Exception as exc:
+              print('API_GET_UNAVAILABLE',type(exc).__name__,getattr(exc,'code',None),flush=True)
+          
           PY
