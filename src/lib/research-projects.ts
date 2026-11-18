@@ -1,7 +1,7 @@
 import archive from "../../data/catalogue/research-projects-2026-10-26.json";
 import type {ProjectEntry} from "./editorial-projects";
 import additional from "../../data/catalogue/research-additional-projects-2026-10-29.json";
-export const researchProjects=[...archive.projects.map(p=>({...p,priceReference:"Прайс-листы на 26.10.2026",source:archive.source})),...additional];
+export const researchProjects=[...archive.projects.map(p=>({...p,priceReference:"Цены на 26.10.2026",source:archive.source})),...additional];
 export const researchSource=archive.source;
 export const researchMethodology=archive.methodology;
 export const researchBySlug=(slug:string)=>researchProjects.find(p=>p.slug===slug);

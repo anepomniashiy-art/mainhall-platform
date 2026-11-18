@@ -1,4 +1,5 @@
 import { MainhallExperience } from "@/components/MainhallExperience";
 import {pageMetadata} from "@/lib/seo";
+import {publicProjectCards} from "@/lib/public-projects";
 export const metadata=pageMetadata("MAINHALL: недвижимость Москвы с инвестиционной логикой","Жилые комплексы Москвы, обзоры районов и рассрочек. Подбор квартиры для жизни, аренды и инвестиций с командой MAINHALL.","/");
-export default function HomePage(){return <MainhallExperience/>;}
+export default function HomePage(){return <MainhallExperience projects={publicProjectCards()}/>;}

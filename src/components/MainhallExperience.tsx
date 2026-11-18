@@ -9,10 +9,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { COMPANY } from "@/lib/constants";
-import { editorialProjects } from "@/lib/editorial-projects";
+import type { PublicProjectCard } from "@/lib/public-projects";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-export function MainhallExperience() {
+export function MainhallExperience({ projects }: { projects: PublicProjectCard[] }) {
  const root = useRef<HTMLDivElement>(null);
  const [hero, setHero] = useState(0);
  const heroProjects = [
@@ -57,10 +57,10 @@ export function MainhallExperience() {
    <div className="hero-gallery-nav"><span>Сравниваем цену, спрос и риски.</span><div role="group" aria-label="Проекты на первом экране">{heroProjects.map((p,i)=><button type="button" key={p.slug} aria-pressed={hero===i} onClick={()=>setHero(i)}><span>{String(i+1).padStart(2,"0")}</span> {p.name}</button>)}</div><a href="#selection" className="hero-scroll" aria-label="Проекты в фокусе">Выбор MAINHALL ↓</a></div>
   </section>
   <section id="selection" className="mh-selection mh-pad">
-   <div className="mh-section-head" data-reveal><p className="mh-eyebrow">01 / ПРОЕКТЫ В ФОКУСЕ</p><span>Москва · {editorialProjects.length} проектов в обзоре</span></div>
+   <div className="mh-section-head" data-reveal><p className="mh-eyebrow">01 / ПРОЕКТЫ В ФОКУСЕ</p><span>Москва · {projects.length} проектов в обзоре</span></div>
    <div className="mh-editorial-head" data-reveal><h2>Разные адреса.<br/><span>Разная логика покупки.</span></h2><p>Выбираем не название на фасаде. Разбираемся, почему именно здесь, почему сейчас и для какой задачи.</p></div>
-   <div className="mh-featured-projects">{featuredSlugs.map((slug,i)=>{const p=editorialProjects.find(p=>p.slug===slug)!;return <Link data-reveal href={"/projects/"+p.slug+"/"} key={p.slug} className="mh-featured-project"><div className="mh-photo-frame"><img className="mh-featured-photo" src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": "+p.developer} width="1200" height="900" loading="lazy"/><span className="mh-photo-explore" aria-hidden="true">Смотреть проект ↗</span></div><div className="mh-featured-copy"><div className="mh-project-meta"><span>{String(i+1).padStart(2,"0")} / {p.developer}</span><span>{p.className}</span></div><h3>{p.name}</h3><p className="mh-project-location">{p.area}, Москва</p><p className="mh-project-thesis">{p.thesis}</p><span className="mh-text-link">Расположение, продукт, инвестиционная логика ↗</span></div></Link>})}</div>
-   <div className="mh-list-bottom"><span>Шесть разных сценариев покупки. В полном каталоге: {editorialProjects.length} проектов Москвы.</span><Link href="/projects/" className="mh-text-link">Смотреть все {editorialProjects.length} проектов ↗</Link></div>
+   <div className="mh-featured-projects">{featuredSlugs.map((slug,i)=>{const p=projects.find(p=>p.slug===slug)!;return <Link data-reveal href={"/projects/"+p.slug+"/"} key={p.slug} className="mh-featured-project"><div className="mh-photo-frame"><img className="mh-featured-photo" src={"/images/projects/"+p.slug+".jpg"} alt={p.name+": "+p.developer} width="1200" height="900" loading="lazy"/><span className="mh-photo-explore" aria-hidden="true">Смотреть проект ↗</span></div><div className="mh-featured-copy"><div className="mh-project-meta"><span>{String(i+1).padStart(2,"0")} / {p.developer}</span><span>{p.className}</span></div><h3>{p.name}</h3><p className="mh-project-location">{p.area}, Москва</p><p className="mh-project-thesis">{p.thesis}</p><span className="mh-text-link">Расположение, продукт, инвестиционная логика ↗</span></div></Link>})}</div>
+   <div className="mh-list-bottom"><span>Шесть разных сценариев покупки. В полном каталоге: {projects.length} проектов Москвы.</span><Link href="/projects/" className="mh-text-link">Смотреть все {projects.length} проектов ↗</Link></div>
   </section>
   <section className="mh-intro mh-pad" id="approach">
    <div className="mh-section-head" data-reveal><p className="mh-eyebrow">02 / СМОТРИМ ГЛУБЖЕ</p><span>Бизнес+ · Премиум · Элитная недвижимость</span></div>

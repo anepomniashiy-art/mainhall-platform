@@ -12,7 +12,8 @@
     "db:migrate": "prisma migrate dev",
     "build:static": "node scripts/clean-static-export.mjs && GITHUB_PAGES=true next build && node scripts/finalize-static-export.mjs",
     "build:host": "node scripts/clean-static-export.mjs && MAINHALL_STATIC_EXPORT=true next build && node scripts/finalize-static-export.mjs",
-    "audit:copy": "python3 scripts/audit-public-copy.py --check"
+    "audit:copy": "python3 scripts/audit-public-copy.py --check",
+    "test:public-copy": "python3 tests/public-copy-regression.py out"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
