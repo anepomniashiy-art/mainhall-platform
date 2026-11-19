@@ -5,7 +5,7 @@ import {residentialUnits,residentialProjectCount} from '@/lib/residential-catalo
 import {editorialProjects} from '@/lib/editorial-projects';
 import {projectImages} from '@/lib/project-images';
 import {pageMetadata} from '@/lib/seo';
-export const metadata=pageMetadata('Квартиры в новостройках Москвы: цены и планировки','Каталог квартир MAINHALL: фильтры по жилому комплексу, цене и площади, планировки и характеристики выбранного лота.','/units/');
+export const metadata=pageMetadata('Квартиры в новостройках Москвы и области: цены и планировки','Каталог квартир MAINHALL: фильтры по жилому комплексу, цене и площади, планировки и характеристики выбранного лота.','/units/');
 export default function UnitsPage(){
  const projects=Object.fromEntries(editorialProjects.map(p=>[p.slug,{name:p.name,developer:p.developer,district:p.area,href:'/projects/'+p.slug+'/',cover:projectImages[p.slug]}]));
  const cards=catalogueCards(residentialUnits).map((u,i)=>({...u,detailPath:residentialUnits[i].detailPath,developer:residentialUnits[i].developer,district:residentialUnits[i].district,fetchedAt:residentialUnits[i].fetchedAt}));return <EditorialShell>

@@ -78,3 +78,6 @@ for (const [slug, entry] of Object.entries(sminexProjectImages)) {
 projectImages["kvartal-serebryany-bor"]={src:"/images/projects/kvartal-serebryany-bor.jpg",caption:"Квартал Серебряный бор · ST MICHAEL · визуализация проекта"};
 
 for(const [slug,photo] of Object.entries(collectedImages)){if(!projectImages[slug])projectImages[slug]=photo;}
+
+import nmarketCovers from "../../data/catalogue/nmarket-covers.json";
+for(const [slug,photo] of Object.entries(nmarketCovers)){if(!projectImages[slug])projectImages[slug]=photo;}

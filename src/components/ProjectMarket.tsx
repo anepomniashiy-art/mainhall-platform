@@ -1,3 +1,4 @@
+import nmarketGalleryData from "../../data/catalogue/nmarket-galleries.json";
 import {ProjectPhotoGallery} from "./ProjectPhotoGallery";
 import unitsData from "../../data/catalogue/public-units.json";
 import galleries from "../../data/catalogue/project-galleries.json";
@@ -7,9 +8,9 @@ type Unit = {id:string;projectSlug:string;unitNumber:string;buildingName:string;
 type Photo = {src:string;caption:string;width:number;height:number;category?:string};
 const number=(value:number)=>new Intl.NumberFormat("ru-RU",{maximumFractionDigits:2}).format(value);
 export function ProjectGallery({slug,name}:{slug:string;name:string}){
- const photos=(galleries as Record<string,Photo[]>)[slug]||[];
- if(!photos.length)return null;
- return <ProjectPhotoGallery photos={photos} name={name} slug={slug}/>;
+ const existing=galleries[slug as keyof typeof galleries]||[];
+ const photos=[...existing,...(nmarketGalleryData[slug as keyof typeof nmarketGalleryData]||[])].filter((p,i,all)=>all.findIndex(x=>x.src===p.src)===i);
+ return <ProjectPhotoGallery slug={slug} name={name} photos={photos}/>;
 }
 export function ProjectMarketUnits({slug,name,unitIds}:{slug:string;name:string;unitIds?:string[]}){
  const units=(unitsData.units as Unit[]).filter(unit=>unit.projectSlug===slug&&(!unitIds||unitIds.includes(unit.id)));

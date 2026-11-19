@@ -1,13 +1,14 @@
+import {nmarketImageCaption} from '@/lib/nmarket-catalogue';
 import {projectImages} from '@/lib/project-images';
 import {editorialProjects} from '@/lib/editorial-projects';
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
 import {EditorialShell,EditorialHeader,Breadcrumbs,SelectionContact,JsonLd} from '@/components/Editorial';
 import {feedDate,unitFeatures,rub,categoryNames} from '@/lib/sminex-catalogue';
-import {residentialUnits,residentialUnitByRouteId} from '@/lib/residential-catalogue';
+import {residentialRouteIds,residentialUnitByRouteId} from '@/lib/residential-catalogue';
 import {pageMetadata,SITE_URL} from '@/lib/seo';
 import '../../../commercial/commercial.css';
-export function generateStaticParams(){return residentialUnits.map(u=>({id:u.routeId}));}
+export function generateStaticParams(){return residentialRouteIds.map(id=>({id}));}
 export async function generateMetadata({params}:{params:Promise<{id:string}>}){
  const {id}=await params;const u=residentialUnitByRouteId(id);
  return u?pageMetadata(`${u.projectName}: квартира ${u.unitNumber||u.sourceId}, ${u.areaSqm} м² · лот ${u.sourceId}`,`${u.projectName}: ${u.areaSqm} м², ${rub(u.priceRub)}. Лот ${u.sourceId}. Планировка, характеристики квартиры и подбор MAINHALL.`,u.detailPath):{robots:{index:false}};
@@ -29,8 +30,9 @@ export default async function ResidentialUnitPage({params}:{params:Promise<{id:s
    {u.features?.length?<ul>{u.features.map(f=><li key={f}>{f}</li>)}</ul>:null}
    {projectHref&&<Link className="mh-text-link" href={projectHref}>Подробнее о проекте {u.projectName} ↗</Link>}
   </section>
+  {u.description&&<section className="mh-longread"><h2>Описание квартиры и дома</h2>{u.description.split('\n').map((text,i)=><p key={i}>{text}</p>)}</section>}
   <section className="mh-longread"><h2>Условия покупки</h2><p>Сравним полную оплату и рассрочку, уточним состав отделки, срок передачи и дополнительные расходы. Для инвестиционной покупки подготовим расчёт по этой квартире.</p></section>
-  <div className="mh-commercial-gallery">{u.images.filter(i=>i.url!==u.planImageUrl).map((i,n)=><img key={i.url} src={i.url} alt={u.projectName+' · изображение квартиры '+(n+1)} width="1000" height="700" loading="lazy"/>)}</div>
+  <div className="mh-commercial-gallery">{u.images.filter(i=>i.url!==u.planImageUrl).map((i,n)=><img key={i.url} src={i.url} alt={u.projectName+' · '+nmarketImageCaption(i.tag)+' '+(n+1)} width="1000" height="700" loading="lazy"/>)}</div>
   <SelectionContact text="Обсудим эту квартиру" context={'квартиру '+(u.unitNumber||u.sourceId)+' в проекте '+u.projectName}/>
   <Link href="/units/" className="mh-text-link">Все квартиры ↗</Link>
   <JsonLd data={{'@type':'RealEstateListing',name:u.projectName+' · '+label+' '+u.areaSqm+' м²',url:SITE_URL+u.detailPath}}/>

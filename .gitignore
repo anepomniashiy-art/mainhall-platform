@@ -43,3 +43,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private raw feeds and importer bytecode
+/data/private/
+__pycache__/
+*.pyc
+
+/public/images/nmarket/*.partial
+
+# Original media is hydrated from the verified manifest before deployment
+/public/images/nmarket/

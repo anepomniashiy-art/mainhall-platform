@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-11-06T13:40:00Z",
+  "checkedAt": "2026-11-19T08:51:28Z",
   "basis": "Current editorial catalogue registries and projectImages cover registry",
-  "catalogueCount": 98,
-  "coverCount": 87,
-  "missingCoverCount": 11,
+  "catalogueCount": 225,
+  "coverCount": 215,
+  "missingCoverCount": 10,
   "projects": [
     {
       "slug": "kronshtadtskiy-9",
@@ -44,10 +44,6 @@
     {
       "slug": "veer",
       "name": "Веер / VEER"
-    },
-    {
-      "slug": "zilart",
-      "name": "ЗИЛАРТ"
     }
   ]
 }

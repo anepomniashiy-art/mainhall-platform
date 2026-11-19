@@ -302,3 +302,6 @@ for(const p of researchProjects) if(!projectDossiers[p.slug]) projectDossiers[p.
  thesis:"Сравниваем стоимость квартиры с предложениями соседних проектов и переуступками. Считаем полную сумму покупки с учётом отделки, платежей и расходов на продажу.",
  checks:["Проверить цену и наличие на дату подбора","Сверить адрес и корпус с документами","Сравнить цену с предложениями по переуступке","Рассчитать расходы и срок выхода"],source:p.source,checkedAt:p.slug==="vern"?"24.10.2026":p.priceReference.includes("26.10")?"26.10.2026":"30.09.2026"
 };
+
+import nmarketDossiers from "../../data/catalogue/nmarket-dossiers.json";
+for(const [slug,dossier] of Object.entries(nmarketDossiers)){if(!projectDossiers[slug])projectDossiers[slug]=dossier;}

@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://img.nmarket.pro/photo/pid/C301B0D8-95B3-4FBC-9FCF-0F6B55F6D0E3/?v=2&cid=&pid=C301B0D8-95B3-4FBC-9FCF-0F6B55F6D0E3&wpsid=51&hash=97a92d2dceb55b0e552f24c045fc3955",
+    "httpStatus": 404,
+    "checkedAt": "2026-11-19",
+    "tag": "floorplan",
+    "projectId": "86998",
+    "projectName": "Деснаречье",
+    "offerIds": [
+      "8412813",
+      "8412814",
+      "8412818",
+      "8412821"
+    ],
+    "verification": "Repeated HTTPS and original HTTP responses, plus canonical asset path, return HTTP 404. No replacement image used."
+  }
+]

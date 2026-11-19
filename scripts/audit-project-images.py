@@ -21,6 +21,8 @@ def catalogue_projects() -> dict[str, str]:
             projects.setdefault(p['slug'],(p.get('editorial') or {}).get('name') or p['name'])
     for p in load('data/catalogue/sminex-feed-project-editorial.json')['projects']:
         projects.setdefault(p['slug'],p['name'])
+    for p in load('data/catalogue/nmarket-editorial.json'):
+        projects.setdefault(p['slug'],p['name'])
     return projects
 
 def covered_slugs() -> set[str]:
@@ -31,12 +33,13 @@ def covered_slugs() -> set[str]:
     covered.update(re.findall(r'projectImages\["([a-z0-9-]+)"\]',text))
     covered.update(load('data/catalogue/collected-project-images.json'))
     covered.update(p['slug'] for p in load('data/catalogue/sminex-portfolio.json')['projects'])
+    covered.update(load('data/catalogue/nmarket-covers.json'))
     return covered
 
 def build_audit() -> dict:
     projects=catalogue_projects(); covered=covered_slugs(); missing=sorted(set(projects)-covered)
     return {
-      'checkedAt':'2026-11-06T13:40:00Z',
+      'checkedAt':'2026-11-19T08:51:28Z',
       'basis':'Current editorial catalogue registries and projectImages cover registry',
       'catalogueCount':len(projects),
       'coverCount':len(set(projects)&covered),

@@ -69,3 +69,7 @@ for (const entry of sminexEditorialProjects) {
 
 import {researchEditorialProjects} from "./research-projects";
 for(const p of researchEditorialProjects) if(!editorialProjects.some(x=>x.slug===p.slug)) editorialProjects.push(p);
+
+import nmarketEditorialData from "../../data/catalogue/nmarket-editorial.json";
+const nmarketEditorialProjects=nmarketEditorialData as ProjectEntry[];
+for(const p of nmarketEditorialProjects)if(!editorialProjects.some(x=>x.slug===p.slug))editorialProjects.push(p);
