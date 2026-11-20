@@ -7,7 +7,6 @@ export function ResearchProjectAnalysis({slug}:{slug:string}){
  const metrics=[
   ["Ценовой ориентир",`${number(p.priceThousandPerSqm)} тыс. ₽/м²`],
   ["К цене района",signed(p.districtPriceDifferencePercent)],
-  ...(p.score===null?[]:[["Инвестрейтинг MAINHALL",`${number(p.score/10)} / 10`]]),
   ...(p.maximumAdvertisedDiscountPercent===null?[]:[["Размер скидки",`до ${number(p.maximumAdvertisedDiscountPercent)}%`]]),
  ];
  const conclusion=p.districtPriceDifferencePercent<0
@@ -17,16 +16,15 @@ export function ResearchProjectAnalysis({slug}:{slug:string}){
    : `Ценовой ориентир ${p.name} выше районного на ${number(p.districtPriceDifferencePercent)}%. Проверяем, оправдывают ли доплату расположение квартиры, её характеристики и условия покупки.`;
  return <section className="mh-dossier-section" aria-labelledby="research-analysis-title">
   <p className="mh-eyebrow">MAINHALL / ЦЕНА И ОТБОР</p>
-  <h2 id="research-analysis-title">Позиция проекта на рынке</h2><Link href="/investment-rating/" className="mh-text-link">Как устроен инвестиционный рейтинг ↗</Link>
+  <h2 id="research-analysis-title">Ценовые ориентиры из архивной выборки</h2><Link href="/investment-rating/" className="mh-text-link">Критерии проверки ЖК ↗</Link>
   <dl style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:1,background:"#d7ddd5",border:"1px solid #d7ddd5",margin:"1.5rem 0"}}>
    {metrics.map(([label,value])=><div key={label} style={{background:"#f1f2ec",padding:"1.2rem"}}><dt style={{fontSize:".8rem",color:"#606b61"}}>{label}</dt><dd style={{fontSize:"clamp(1.4rem,2.2vw,2rem)",lineHeight:1.25,margin:".6rem 0 0"}}>{value}</dd></div>)}
   </dl>
   <p>{conclusion}</p>
-  <p className="mh-content-caption">Актуальные условия уточняем для выбранной квартиры.</p>
+  <p className="mh-content-caption">Архивные ориентиры по предложениям. Текущую цену и условия уточняем для выбранной квартиры.</p>
   <details style={{margin:"1.4rem 0",borderTop:"1px solid #d7ddd5",borderBottom:"1px solid #d7ddd5",padding:"1rem 0"}}>
-   <summary style={{cursor:"pointer",fontSize:".9rem"}}>Показатели оценки</summary>
+   <summary style={{cursor:"pointer",fontSize:".9rem"}}>Данные из архивной выборки</summary>
    <div style={{paddingTop:"1rem",fontSize:".9rem",lineHeight:1.65}}>
-    <p>Инвестиционный рейтинг показывает рыночную позицию проекта по шкале от 0 до 10.</p>
     <dl style={{display:"grid",gridTemplateColumns:"minmax(0,1fr) minmax(0,1.3fr)",gap:".7rem 1rem"}}>
      {p.listings!==null&&<><dt>Лотов в выборке</dt><dd style={{margin:0}}>{number(p.listings)}</dd></>}
      {p.equityContractsSixMonths!==null&&<><dt>ДДУ за шесть месяцев</dt><dd style={{margin:0}}>{number(p.equityContractsSixMonths)}</dd></>}
@@ -39,3 +37,4 @@ export function ResearchProjectAnalysis({slug}:{slug:string}){
   <Link className="mh-text-link" href="/contacts/">Обсудить покупку с MAINHALL ↗</Link>
  </section>;
 }
+

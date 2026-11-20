@@ -18,18 +18,21 @@ try {
   await page.getByRole('heading',{level:1}).waitFor({state:'visible'});
   await page.locator('#cinema-hero .cinema-image').evaluate(image => image.decode());
   await page.locator('#project-results [data-project-card]').first().waitFor();
-  assert.ok(await page.locator('#investment-overview-list a[href^="#project/"]').count() > 0);
+  assert.equal(await page.locator("#investment-overview-list, [data-quick=ratedOnly]").count(), 0);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path:'design-proof/top-'+viewport.width+'.png'});
   await page.screenshot({path:'design-proof/layout-'+viewport.width+'.png',fullPage:true});
   if (viewport.width < 768) {
     const menu = page.locator('.mobile-navigation');
     await menu.locator('summary').click();
-    await menu.getByRole('link', {name:'Инвестиционный рейтинг'}).click();
+    await menu.getByRole('link', {name:'Квартиры'}).click();
     assert.equal(await menu.getAttribute('open'), null);
   }
-  await page.locator('#investment-overview-list a[href^="#project/"]').first().click();
+  const project = await page.locator('#project-results [data-project-card]').first().getAttribute('data-project-card');
+  assert.ok(project);
+  await page.evaluate(slug => { location.hash = 'project/' + encodeURIComponent(slug); }, project);
   await page.locator('#project-investment').waitFor({state:'visible'});
+  assert.equal(await page.locator('.factor-card, .decision-score').count(), 0);
   await page.locator('.header [data-action="home"]').click();
   await page.locator('#cinema-hero').waitFor({state:'visible'});
   assert.equal(await page.locator('footer').getByRole('link',{name:'О Mainhall',exact:true}).count(),1);
