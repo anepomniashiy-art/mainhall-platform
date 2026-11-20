@@ -16,40 +16,24 @@ try {
   page.on('pageerror', e => errors.push(e.message));
   await page.goto('http://127.0.0.1:8091/',{waitUntil:'networkidle'});
   await page.getByRole('heading',{level:1}).waitFor({state:'visible'});
-  await page.waitForTimeout(1800);
-  assert.equal(await page.locator('.hero-image.is-active').evaluate(el=>el.complete && el.naturalWidth>0),true);
+  await page.locator('#cinema-hero .cinema-image').evaluate(image => image.decode());
+  await page.locator('#project-results [data-project-card]').first().waitFor();
+  assert.ok(await page.locator('#investment-overview-list a[href^="#project/"]').count() > 0);
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path:'design-proof/top-'+viewport.width+'.png'});
   await page.screenshot({path:'design-proof/layout-'+viewport.width+'.png',fullPage:true});
-  const overflow = await page.evaluate(()=>Array.from(document.querySelectorAll('body *')).filter(el=>el.getBoundingClientRect().right>innerWidth+1 && getComputedStyle(el).position!=='absolute').slice(0,10).map(el=>({tag:el.tagName,cls:el.className,right:el.getBoundingClientRect().right})));
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true,JSON.stringify(overflow));
-  await page.getByRole('button',{name:'02 OPUS',exact:true}).click();
-  assert.equal(await page.locator('.hero-image.is-active').getAttribute('src'),'/images/projects/opus.jpg');
-  await page.getByRole('button',{name:'01 Николь',exact:true}).click();
-  await page.locator('.mh-approach-signature').scrollIntoViewIfNeeded();
-  await page.locator('.mh-motion-player svg').waitFor({state:'visible'});
-  await page.getByRole('tab',{name:'Павелецкая',exact:true}).click();
-  assert.match(await page.locator('.mh-district-visual img').getAttribute('src'),/opus/);
-  await page.getByRole('tab',{name:'Китай-город',exact:true}).click();
-  assert.match(await page.locator('.mh-district-visual img').getAttribute('src'),/lumin/);
-  for(const person of ['pavel','evgeny']){
-   const frame=page.locator('.mh-team-portrait-'+person);
-   await frame.scrollIntoViewIfNeeded();
-   await frame.locator('img').evaluate(async img=>{await img.decode();});
-   const geometry=await frame.evaluate(el=>{
-    const img=el.querySelector('img'),a=el.getBoundingClientRect(),b=img.getBoundingClientRect();
-    return {loaded:img.complete&&img.naturalWidth>0,ratio:b.width/b.height,natural:img.naturalWidth/img.naturalHeight,covers:b.left<=a.left+1&&b.top<=a.top+1&&b.right>=a.right-1&&b.bottom>=a.bottom-1};
-   });
-   assert.equal(geometry.loaded,true,person+' loaded');
-   assert.equal(geometry.covers,true,person+' fills portrait frame '+JSON.stringify(geometry));
-   assert.ok(Math.abs(geometry.ratio-geometry.natural)<.005,person+' preserves source proportions');
+  if (viewport.width < 768) {
+    const menu = page.locator('.mobile-navigation');
+    await menu.locator('summary').click();
+    await menu.getByRole('link', {name:'Инвестиционный рейтинг'}).click();
+    assert.equal(await menu.getAttribute('open'), null);
   }
-  await page.locator('.mh-team-grid').screenshot({path:'design-proof/team-'+viewport.width+'.png'});
-  await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));
-  if(viewport.width<768){
-   await page.getByRole('button',{name:'Открыть меню'}).click();
-   assert.equal(await page.getByRole('navigation',{name:'Мобильная навигация'}).isVisible(),true);
-   await page.getByRole('button',{name:'Закрыть меню'}).click();
-  }
+  await page.locator('#investment-overview-list a[href^="#project/"]').first().click();
+  await page.locator('#project-investment').waitFor({state:'visible'});
+  await page.locator('.header [data-action="home"]').click();
+  await page.locator('#cinema-hero').waitFor({state:'visible'});
+  assert.equal(await page.locator('footer').getByRole('link',{name:'О Mainhall',exact:true}).count(),1);
+  await page.evaluate(() => scrollTo({top:0,behavior:'instant'}));
   await page.screenshot({path:'design-proof/home-'+viewport.width+'.png',fullPage:true});
   await page.goto('http://127.0.0.1:8091/projects/',{waitUntil:'networkidle'});
   assert.equal(await page.locator('.mh-project-row').count(),expectedProjects);
@@ -88,8 +72,8 @@ try {
  const page=await browser.newPage({reducedMotion:'reduce',viewport:{width:390,height:844}});
  await page.goto('http://127.0.0.1:8091/',{waitUntil:'networkidle'});
  assert.equal(await page.getByRole('heading',{level:1}).isVisible(),true);
- assert.equal(await page.locator('.hero-line span').first().evaluate(el=>getComputedStyle(el).transform),'none');
- assert.equal(await page.locator('.mh-motion-player svg').count(),0);
+ assert.equal(await page.locator('body').evaluate(el => el.classList.contains('cinema-reveal-ready')),false);
+ assert.equal(await page.locator('#cinema-hero').evaluate(el => el.style.getPropertyValue('--hero-image-y')), '0px');
  console.log('PASS reduced motion');
  if(process.env.LOTTIE_STUDIO_URL){
   const studio=await browser.newPage({viewport:{width:1200,height:900}});
