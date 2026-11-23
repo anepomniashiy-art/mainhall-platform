@@ -7,7 +7,15 @@ These city photographs establish the Moscow setting. They do not depict any of t
 
 Both source pages identify free use under the Unsplash License, verified 2026-10-19. License: https://unsplash.com/license . Files are served locally.
 
-## Active homepage imagery — Capital Group
+## Homepage city photography
+
+Responsive WebP crops are served from `/atelier/assets/hero/`.
+
+- `city-river-*` — Julia Kova, [Moscow at golden hour](https://www.pexels.com/photo/a-view-of-a-city-during-the-golden-hour-10433453/). [Pexels License](https://www.pexels.com/license/)
+- `city-streets-*` — Murat Ts., [Old Arbat](https://unsplash.com/photos/people-walking-on-a-bustling-pedestrian-street-with-historic-buildings-cvPf6KmH8WU). [Unsplash License](https://unsplash.com/license)
+- `city-skyline-*` — Platon Matakaev, [Moscow skyline](https://unsplash.com/photos/a-view-of-a-city-with-tall-buildings-hXuwAvZUfpU). [Unsplash License](https://unsplash.com/license)
+
+## Earlier homepage imagery — Capital Group
 
 - badaevsky-day-02.jpg (hero): https://www.capitalgroup.ru/uploads/002_27fff8eb06.jpg
 - badaevsky-day-01.jpg (approach): https://www.capitalgroup.ru/uploads/001_31e1170043.jpg

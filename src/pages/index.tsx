@@ -4,8 +4,11 @@ import path from "node:path";
 
 const base = "/atelier";
 const title = "Mainhall — новостройки Москвы";
-const description = "Выберите квартиру в новостройке Москвы и области. Сравните жилые комплексы, планировки и цены квартир.";
-const heroImage = base + "/assets/hero/high-life-1200.webp";
+const description = "Подберите квартиру в новостройке Москвы. Сравните похожие предложения по цене, планировке и сроку сдачи.";
+const heroDirectory = base + "/assets/hero";
+const heroImage = heroDirectory + "/city-river-1920.webp";
+const heroSrcSet = heroDirectory + "/city-river-960.webp 960w, " + heroImage + " 1920w";
+const portraitQuery = "(max-width: 760px) and (orientation: portrait)";
 const styles = [
   "style", "investment", "expertise", "cinematic", "company", "recommendation",
   "assets/leaflet", "assets/markercluster",
@@ -27,7 +30,7 @@ export default function Home({ markup }: { markup: string }) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="theme-color" content="#faf9f6" />
+        <meta name="theme-color" content="#19232e" />
         <link rel="canonical" href="https://main-hall.ru/" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:type" content="website" />
@@ -36,10 +39,10 @@ export default function Home({ markup }: { markup: string }) {
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://main-hall.ru/" />
         <meta property="og:image" content={"https://main-hall.ru" + heroImage} />
-        <link rel="preload" href={heroImage} as="image" />
-        <link rel="preload" href={base + "/assets/hero/mainhall-editorial.woff"} as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href={heroDirectory + "/city-river-portrait.webp"} media={portraitQuery} />
+        <link rel="preload" as="image" imageSrcSet={heroSrcSet} imageSizes="100vw" media={"not all and " + portraitQuery} />
         <link rel="preload" href={base + "/assets/onest.ttf"} as="font" type="font/ttf" crossOrigin="anonymous" />
-        {styles.map(name => <link key={name} rel="stylesheet" href={base + "/" + name + ".css" + (name === "cinematic" ? "?v=20261120-high-life" : "")} />)}
+        {styles.map(name => <link key={name} rel="stylesheet" href={base + "/" + name + ".css" + (["cinematic", "company"].includes(name) ? "?v=20261123-city" : "")} />)}
       </Head>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
       <div dangerouslySetInnerHTML={{ __html: markup }} />

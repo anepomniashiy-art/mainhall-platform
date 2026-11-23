@@ -13,7 +13,7 @@ export default class MainhallDocument extends Document {
             <script defer src="/atelier/assets/leaflet.js" />
             <script defer src="/atelier/assets/markercluster.js" />
             <script type="module" src="/atelier/app.mjs?v=20261120-review-hold" />
-            <script type="module" src="/atelier/cinematic-motion.mjs" />
+            <script type="module" src="/atelier/cinematic-motion.mjs?v=20261123-city" />
           </>}
         </body>
       </Html>

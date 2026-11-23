@@ -15,8 +15,21 @@ try {
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
   await page.goto('http://127.0.0.1:8091/',{waitUntil:'networkidle'});
-  await page.getByRole('heading',{level:1}).waitFor({state:'visible'});
-  await page.locator('#cinema-hero .cinema-image').evaluate(image => image.decode());
+  await page.getByRole('heading',{level:1,name:'Новостройки Москвы.'}).waitFor({state:'visible'});
+  const hero = page.locator('#cinema-hero');
+  const heroImage = hero.locator('.cinema-frame.is-active img');
+  await heroImage.evaluate(image => image.decode());
+  assert.ok((await hero.boundingBox()).height >= viewport.height, 'home hero fills the viewport');
+  assert.match(await heroImage.evaluate(image => image.currentSrc), viewport.width < 761 ? /-portrait\.webp$/ : /-1920\.webp$/);
+  if (viewport.width === 1440) {
+   await hero.getByRole('button', {name:'Приостановить смену кадров'}).click();
+   await hero.getByRole('button', {name:/Кадр 2 из 3/}).click();
+   await hero.locator('[data-scene="streets"].is-active').waitFor();
+   assert.equal(await hero.getByRole('button', {name:/Кадр 2 из 3/}).getAttribute('aria-pressed'), 'true');
+   assert.equal(await hero.getByRole('button', {name:'Продолжить смену кадров'}).isVisible(), true);
+   await hero.getByRole('button', {name:/Кадр 1 из 3/}).click();
+   await hero.locator('[data-scene="river"].is-active').waitFor();
+  }
   await page.locator('#project-results [data-project-card]').first().waitFor();
   assert.equal(await page.locator("#investment-overview-list, [data-quick=ratedOnly]").count(), 0);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
@@ -77,6 +90,10 @@ try {
  assert.equal(await page.getByRole('heading',{level:1}).isVisible(),true);
  assert.equal(await page.locator('body').evaluate(el => el.classList.contains('cinema-reveal-ready')),false);
  assert.equal(await page.locator('#cinema-hero').evaluate(el => el.style.getPropertyValue('--hero-image-y')), '0px');
+ assert.equal(await page.locator('[data-cinema-pause]').isVisible(), false);
+ await page.getByRole('button', {name:/Кадр 3 из 3/}).click();
+ await page.locator('[data-scene="skyline"].is-active').waitFor();
+ assert.equal(await page.locator('.cinema-frame.is-outgoing').count(), 0);
  console.log('PASS reduced motion');
  if(process.env.LOTTIE_STUDIO_URL){
   const studio=await browser.newPage({viewport:{width:1200,height:900}});
