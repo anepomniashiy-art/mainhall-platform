@@ -1,0 +1,180 @@
+@font-face {
+  font-family: Onest;
+  src: url('/fonts/onest-variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+html[lang="ru"] {
+  --bg: #faf9f6;
+  --bg-2: #f0eae0;
+  --dark: #19232e;
+  --dark-2: #1e2a37;
+  --dark-3: #263542;
+  --cream: #fff5e3;
+  --cream-2: #ddd8d0;
+  --gold: #c69a68;
+  --gold-dark: #805a38;
+  --gray: #53606a;
+  --gray-light: #cbd1d7;
+  --text: #19232e;
+  --text-2: #39454f;
+  --strategy-gutter: clamp(20px, 6vw, 112px);
+  scroll-padding-top: 82px;
+}
+
+.t-body :is(.hero, .about, .how, .tenants, .portfolio, .terms, .team, .cta, nav, footer) {
+  font-family: Onest, Arial, sans-serif;
+  font-weight: 400;
+}
+.t-body :is(h1, h2, h3, h4, .hero-metric .num, .stat-card .num, .step-num, .metric .val, .ps-num, .terms-highlight .big-num, .btn, .nav-logo, .footer-logo) {
+  font-family: Onest, Arial, sans-serif;
+}
+.t-body :is(h1, h2, h3, h4) { font-weight: 530; letter-spacing: -.047em; }
+.t-body :is(.hero, .about, .how, .tenants, .portfolio, .terms, .team, .cta, nav, footer) .container {
+  max-width: 1680px;
+  padding-inline: var(--strategy-gutter);
+}
+.t-body :is(.label, .btn) { letter-spacing: .065em; }
+.t-body a:focus-visible,
+.t-body button:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+
+.t-body #nav { padding-block: 15px; border-bottom: 1px solid #ffffff30; }
+.t-body #nav.scrolled { padding-block: 13px; background: #faf9f6f5; box-shadow: none; border-color: #ddd8d0; }
+.t-body #nav .container { gap: 20px; }
+.t-body #nav .nav-logo {
+  min-height: 44px;
+  color: #fffaf1;
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -.075em;
+}
+.t-body #nav.scrolled .nav-logo { color: var(--dark); }
+.t-body #nav .nav-links { gap: clamp(12px, 2vw, 30px); }
+.t-body #nav .nav-links a { color: #fffaf1; white-space: nowrap; }
+.t-body #nav.scrolled .nav-links a { color: var(--dark); }
+.t-body #nav .nav-links a:hover { color: var(--cream); text-decoration: underline; text-underline-offset: .22em; }
+.t-body #nav.scrolled .nav-links a:hover { color: var(--gold-dark); }
+.t-body #nav .nav-cta { color: #fffaf1 !important; border-color: #ffffff70 !important; }
+.t-body #nav.scrolled .nav-cta { color: var(--dark) !important; border-color: #c9b9a7 !important; }
+.t-body #nav .nav-cta:hover { background: var(--cream) !important; color: var(--dark) !important; }
+.t-body #nav .menu-toggle span { background: #fffaf1; }
+.t-body #nav.scrolled .menu-toggle span { background: var(--dark); }
+
+.t-body .hero {
+  min-height: max(680px, 100svh);
+  align-items: end;
+  justify-content: stretch;
+  text-align: left;
+  background: #19232e;
+  color: #fffaf1;
+}
+.t-body .hero::before {
+  background:
+    linear-gradient(90deg, #19232e 0%, #19232ef2 34%, #19232e49 83%),
+    linear-gradient(180deg, #161d2a99, transparent 34%, #19232ee8 98%),
+    url('/legacy-mainhall/assets/2be4bc4f600d8a58-04_kazakova_loft1.jpg') right 48% / auto 125% no-repeat;
+}
+.t-body .hero .container { width: 100%; padding-block: 115px clamp(43px, 8vh, 90px); }
+.t-body .hero .hero-logo { display: none; }
+.t-body .hero h1 {
+  position: relative;
+  max-width: 16ch;
+  color: #fffaf1;
+  font-size: clamp(37px, 7.1vw, 113px);
+  font-weight: 540;
+  line-height: .98;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+.t-body .hero h1 em { color: inherit; font-style: normal; }
+.t-body .hero .hero-sub {
+  max-width: 47ch;
+  margin: 0 0 clamp(23px, 5vh, 50px);
+  color: #e5e6e8;
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: 1.55;
+}
+.t-body .hero .hero-metrics {
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 16px clamp(23px, 5vw, 68px);
+  padding-top: 16px;
+  border-top: 1px solid #ffffff45;
+}
+.t-body .hero .hero-metric .num {
+  color: #fff5e3;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 550;
+  letter-spacing: -.04em;
+}
+.t-body .hero .hero-metric .txt { color: #e5e6e8; line-height: 1.4; }
+.t-body .hero-scroll { display: none; }
+.t-body .gold-strip { height: 1px; background: #ddd8d0; }
+
+.t-body :is(.about, .how, .tenants, .portfolio, .terms, .team, .cta) { padding-block: clamp(52px, 8vw, 116px); }
+.t-body :is(.how-header, .tenants-header, .portfolio-header, .terms-header, .team-header) { margin-bottom: clamp(30px, 5vw, 70px); text-align: left; }
+.t-body :is(.about, .how, .tenants, .portfolio, .terms, .team, .cta) h2 { font-size: clamp(34px, 5vw, 73px); line-height: 1.01; }
+.t-body :is(.how-header, .tenants-header, .portfolio-header, .terms-header, .team-header) :is(.subtitle, p) { margin-inline: 0; }
+.t-body .gold-line { margin-inline: 0; width: 38px; height: 1px; }
+.t-body :is(.stat-card, .step, .portfolio-card) { border: 1px solid #ddd8d0; }
+.t-body .step-num { position: static; display: block; margin-bottom: 18px; color: #805a38; font-size: 27px; }
+.t-body .card-top { flex-wrap: wrap; gap: 8px; }
+.t-body .card-top .badge { margin-left: 0; }
+.t-body .card-photos img { filter: none; }
+.t-body .terms :is(.label, h2 em) { color: #ffe1b6; font-style: normal; }
+.t-body .terms :is(.term-item p, .terms-highlight .detail, .terms-header p) { color: #d7dce0; }
+.t-body .terms-highlight .big-num { color: #ffe1b6; letter-spacing: -.045em; }
+.t-body .cta { background: #f0eae0; }
+.t-body .cta .gold-line { margin-inline: auto; }
+.t-body .btn { justify-content: center; letter-spacing: 0; min-height: 48px; }
+.t-body .btn-gold { background: #19232e; color: #fff5e3; }
+.t-body .btn-gold:hover { background: #263542; box-shadow: none; }
+.t-body .msg-btn { color: #805a38; }
+.t-body .footer-logo { font-size: 26px; letter-spacing: -.075em; }
+
+@media (max-width: 1080px) {
+  .t-body #nav .nav-links { display: none; }
+  .t-body #nav .menu-toggle { display: block; }
+  .t-body #nav .nav-links.open {
+    position: absolute;
+    inset: 100% 0 auto;
+    display: grid;
+    gap: 0;
+    max-height: 73svh;
+    overflow: auto;
+    padding: 10px var(--strategy-gutter) 18px;
+    background: var(--bg);
+    border-bottom: 1px solid #ddd8d0;
+  }
+  .t-body #nav .nav-links.open a {
+    padding: 11px 0;
+    color: var(--dark) !important;
+    border-bottom: 1px solid #ddd8d0;
+  }
+  .t-body #nav .nav-links.open .nav-cta { border: 0 !important; padding: 11px 0 !important; }
+}
+
+@media (max-width: 600px) {
+  .t-body .hero {
+    min-height: 100svh;
+  }
+  .t-body .hero::before {
+    background:
+      linear-gradient(180deg, #19232e50 0%, #19232e82 38%, #19232ef5 82%),
+      url('/legacy-mainhall/assets/2be4bc4f600d8a58-04_kazakova_loft1.jpg') center 46% / cover no-repeat;
+  }
+  .t-body .hero .container { padding-bottom: 32px; }
+  .t-body .hero h1 { white-space: normal; overflow-wrap: break-word; }
+  .t-body .hero h1 br { display: none; }
+  .t-body .hero h1 em { display: block; }
+  .t-body .hero .hero-metric .txt { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[lang="ru"] { scroll-behavior: auto; }
+  .t-body .hero :is(h1, .hero-sub, .hero-metrics), .t-body .reveal { animation: none; opacity: 1; transform: none; }
+  .t-body :is(.reveal, .btn, .portfolio-card, .card-photos img) { transition: none; }
+}

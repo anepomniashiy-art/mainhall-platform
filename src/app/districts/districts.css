@@ -1,0 +1,424 @@
+.district-page {
+  --district-ink: #19232e;
+  --district-muted: #555f68;
+  --district-rule: #dddad1;
+  --district-highlight: #fff3de;
+  --district-gutter: clamp(22px, 6vw, 118px);
+  background: var(--paper, #faf9f6);
+  color: var(--district-ink);
+  font-family: Onest, Arial, sans-serif;
+}
+
+.district-width {
+  width: min(100%, 1760px);
+  margin-inline: auto;
+  padding-inline: var(--district-gutter);
+}
+
+.district-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  background: var(--district-ink);
+  color: #fffdf8;
+}
+
+.district-hero-media,
+.district-hero-media img,
+.district-hero-media::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.district-hero-media {
+  z-index: -1;
+  margin: 0;
+}
+
+.district-hero-media img {
+  display: block;
+  object-fit: cover;
+  object-position: var(--district-image-position, center);
+}
+
+.district-hero-media::after {
+  content: "";
+  background: linear-gradient(180deg, #11192298 0%, #11192206 29%, #11192237 45%, #111922d9 100%),
+    linear-gradient(90deg, #1119227d, #1119221a 80%);
+}
+
+.district-hero-media figcaption {
+  position: absolute;
+  z-index: 1;
+  right: var(--district-gutter);
+  bottom: 19px;
+  max-width: 64%;
+  color: #fffbf1;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.district-hero-inner {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  min-height: clamp(540px, 72svh, 840px);
+  padding-block: clamp(21px, 3vw, 42px) clamp(56px, 7.5vw, 115px);
+}
+
+.district-hero .mh-breadcrumbs {
+  color: #fffdf8;
+  margin: 0;
+}
+
+.district-hero .mh-breadcrumbs li + li::before {
+  color: #fffdf8ba;
+}
+
+.district-hero-copy {
+  align-self: end;
+  max-width: 1050px;
+  padding-top: clamp(52px, 10vh, 108px);
+}
+
+.district-hero h1 {
+  max-width: 16ch;
+  margin: 0;
+  font: 540 clamp(36px, 6.15vw, 107px)/.96 Onest, Arial, sans-serif;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+
+.district-index .district-hero h1 {
+  font-size: clamp(53px, 9.1vw, 151px);
+}
+
+.district-hero-copy > p {
+  max-width: 51ch;
+  margin: 25px 0 0;
+  font-size: clamp(16px, 1.65vw, 23px);
+  line-height: 1.53;
+}
+
+.district-hero-link {
+  display: inline-flex;
+  min-height: 51px;
+  align-items: center;
+  margin-top: 26px;
+  padding: 12px 20px;
+  background: var(--district-highlight);
+  color: var(--district-ink);
+  font-weight: 600;
+  transition: background .2s ease;
+}
+
+.district-hero-link:hover {
+  background: #ead0a8;
+}
+
+.district-hero a:focus-visible {
+  outline: 2px solid var(--district-highlight);
+  outline-offset: 4px;
+}
+
+.district-detail--historic-center {
+  --district-image-position: 57% 50%;
+}
+
+.district-body {
+  padding-block: clamp(42px, 7vw, 110px);
+}
+
+.district-directory,
+.district-projects,
+.district-questions,
+.district-reading .mh-longread section {
+  scroll-margin-top: 95px;
+}
+
+.district-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(36px, 6vw, 90px) clamp(22px, 3.8vw, 56px);
+}
+
+.district-card {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  color: inherit;
+}
+
+.district-card:first-child {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  align-items: stretch;
+  background: #19232e;
+  color: #fffdf8;
+}
+
+.district-card-media {
+  overflow: clip;
+  aspect-ratio: 1.62;
+  background: #d8dce0;
+}
+
+.district-card:first-child .district-card-media {
+  aspect-ratio: 1.55;
+}
+
+.district-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.22, .61, .36, 1);
+}
+
+.district-card:hover img,
+.district-card:focus-visible img {
+  transform: scale(1.045);
+}
+
+.district-card-copy {
+  position: relative;
+  padding: 21px 46px 0 0;
+}
+
+.district-card:first-child .district-card-copy {
+  align-self: end;
+  padding: clamp(27px, 3.8vw, 62px);
+}
+
+.district-card-count {
+  margin: 0;
+  color: var(--district-muted);
+  font-size: 13px;
+}
+
+.district-card:first-child .district-card-count {
+  color: #d8dde3;
+}
+
+.district-card h2,
+.district-section-head h2,
+.district-page .mh-page-faq h2,
+.district-page .mh-selection-contact h2 {
+  margin: 8px 0 11px;
+  font: 550 clamp(28px, 3.75vw, 64px)/1.02 Onest, Arial, sans-serif;
+  letter-spacing: -.055em;
+}
+
+.district-card-copy > p:last-of-type {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--district-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.district-card:first-child .district-card-copy > p:last-of-type {
+  color: #e4e9ed;
+}
+
+.district-card-arrow {
+  position: absolute;
+  top: 22px;
+  right: 1px;
+  color: inherit;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.district-card:first-child .district-card-arrow {
+  right: clamp(20px, 2.2vw, 35px);
+}
+
+.district-reading {
+  display: grid;
+  grid-template-columns: minmax(190px, .85fr) minmax(0, 2.6fr);
+  gap: clamp(30px, 8vw, 125px);
+  align-items: start;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.district-reading-aside {
+  position: sticky;
+  top: 112px;
+  border-top: 1px solid var(--district-rule);
+  padding-top: 20px;
+}
+
+.district-label {
+  margin-bottom: 13px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.district-reading-aside a {
+  display: block;
+  padding: 9px 0;
+  color: var(--district-muted);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.district-reading-aside a:hover,
+.district-addresses a:hover,
+.district-section-head a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--district-ink);
+}
+
+.district-reading .mh-longread section {
+  margin: 0 0 clamp(30px, 4vw, 62px);
+  padding-bottom: clamp(30px, 4vw, 55px);
+  border-bottom: 1px solid var(--district-rule);
+}
+
+.district-reading .mh-longread h2 {
+  margin: 0 0 20px;
+  font-size: clamp(27px, 3.5vw, 52px);
+  font-weight: 540;
+  line-height: 1.07;
+  letter-spacing: -.055em;
+}
+
+.district-page .mh-longread p,
+.district-page .mh-longread li,
+.district-page .mh-page-faq details p {
+  color: var(--district-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.district-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.district-section-head a,
+.district-back-link {
+  font-size: 15px;
+  font-weight: 550;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.district-page .mh-editorial-projects {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  max-width: 100%;
+  gap: 35px;
+}
+
+.district-page .mh-editorial-projects .mh-photo-frame {
+  height: auto;
+  aspect-ratio: 1.62;
+}
+
+.district-page .mh-editorial-projects .mh-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.district-addresses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr));
+  gap: 18px 30px;
+  list-style: none;
+  border-top: 1px solid var(--district-rule);
+  padding: 20px 0 0;
+  margin: 0;
+}
+
+.district-addresses a {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.district-addresses span,
+.district-note {
+  display: block;
+  color: var(--district-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.district-note {
+  margin-top: 20px;
+}
+
+.district-page .mh-page-faq {
+  margin-block: clamp(48px, 8vw, 100px);
+}
+
+.district-page .mh-page-faq h2 {
+  margin-bottom: 24px;
+}
+
+.district-page .mh-page-faq summary {
+  font-size: clamp(17px, 1.7vw, 22px);
+}
+
+.district-page .mh-selection-contact {
+  background: #19232e;
+  color: #fffdf8;
+}
+
+.district-page .mh-selection-contact :is(p, .mh-eyebrow) {
+  color: #e2e6e9;
+}
+
+.district-page .mh-selection-contact .mh-pill {
+  border: 0;
+  background: var(--district-highlight);
+  color: var(--district-ink);
+}
+
+.district-page .mh-selection-contact .mh-pill:hover {
+  background: #ead0a8;
+}
+
+@media (max-width: 760px) {
+  .district-hero-inner {
+    min-height: clamp(470px, 76svh, 660px);
+  }
+
+  .district-hero-copy > p {
+    margin-top: 18px;
+  }
+
+  .district-hero-link {
+    margin-top: 19px;
+  }
+
+  .district-directory,
+  .district-card:first-child,
+  .district-reading {
+    grid-template-columns: 1fr;
+  }
+
+  .district-card:first-child .district-card-copy {
+    padding: 22px 44px 26px 20px;
+  }
+
+  .district-reading-aside {
+    position: static;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .district-card-media img,
+  .district-hero-link {
+    transition: none;
+  }
+}

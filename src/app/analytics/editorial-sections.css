@@ -1,0 +1,312 @@
+/* Architecture leads the editorial pages. The same palette also frames text-led routes. */
+.mh-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(34px, 5vw, 76px) clamp(22px, 3.5vw, 56px);
+  margin-block: clamp(28px, 5vw, 68px);
+}
+
+.mh-story-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-width: 0;
+  color: inherit;
+}
+
+.mh-story-card-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #e8e3da;
+}
+
+.mh-story-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.25, .65, .3, 1);
+}
+
+.mh-story-card:is(:hover, :focus-visible) img {
+  transform: scale(1.045);
+}
+
+.mh-story-card-copy {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  width: 100%;
+  min-width: 0;
+  gap: 13px;
+  padding-block: clamp(17px, 2vw, 27px) 24px;
+  border-bottom: 1px solid var(--rule, #d9d5ce);
+}
+
+.mh-story-category,
+.mh-story-credit {
+  margin: 0;
+  color: var(--muted, #595c61);
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.mh-editorial-page .mh-story-card h2 {
+  max-width: 28ch;
+  margin: 0;
+  color: inherit;
+  font-size: clamp(1.5rem, 3vw, 2.875rem);
+  font-weight: 520;
+  letter-spacing: -.048em;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.mh-story-card-summary {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--muted, #595c61);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.mh-story-card .mh-text-link {
+  margin-top: 3px;
+}
+
+.mh-story-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.38fr) minmax(0, 1fr);
+  align-items: stretch;
+  grid-column: 1 / -1;
+  background: #19232e;
+  color: #fbf7ef;
+}
+
+.mh-story-feature .mh-story-card-media {
+  height: 100%;
+  min-height: 360px;
+  aspect-ratio: auto;
+  background: #283444;
+}
+
+.mh-story-feature .mh-story-card-copy {
+  align-content: end;
+  padding: clamp(26px, 5vw, 75px);
+  border-bottom: 0;
+}
+
+.mh-story-feature :is(.mh-story-card-summary, .mh-story-category, .mh-story-credit) {
+  color: #dedbd4;
+}
+
+.mh-story-feature .mh-text-link {
+  color: #fbe2bc;
+  border-color: currentColor;
+}
+
+.mh-story-feature:focus-visible {
+  outline-offset: 5px;
+}
+
+.mh-collection-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mh-collection-grid .mh-story-card-media {
+  aspect-ratio: 4 / 4.5;
+}
+
+.mh-editorial-reading,
+.mh-editorial-directory,
+.mh-editorial-method {
+  margin-block: clamp(30px, 6vw, 82px);
+}
+
+.mh-editorial-reading .mh-reading-aside {
+  gap: 13px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 0;
+  background: #ece7df;
+}
+
+.mh-editorial-reading .mh-reading-aside .mh-eyebrow {
+  margin: 0 0 3px;
+  color: #695b48;
+}
+
+.mh-editorial-reading .mh-reading-aside a {
+  padding-block: 7px;
+  border-bottom: 1px solid #d4cec2;
+}
+
+.mh-editorial-reading .mh-reading-aside a:last-child {
+  border-bottom: 0;
+}
+
+.mh-story-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0 0 clamp(22px, 3vw, 44px);
+  padding: 16px 0;
+  border-block: 1px solid var(--rule, #d9d5ce);
+  color: var(--muted, #595c61);
+  font-size: .875rem;
+  line-height: 1.55;
+}
+
+.mh-editorial-directory {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 29px);
+  align-items: start;
+}
+
+.mh-editorial-directory-group {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 37px);
+  background: #ede8e0;
+  border-top: 2px solid #a28a6a;
+}
+
+.mh-editorial-page .mh-editorial-directory-group h2 {
+  margin: 0 0 15px;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  letter-spacing: -.038em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.mh-editorial-directory-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mh-editorial-directory-group li {
+  border-top: 1px solid #d9d3c9;
+}
+
+.mh-editorial-directory-group li a {
+  display: grid;
+  gap: 4px;
+  padding: 12px 0;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.mh-editorial-directory-group a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.mh-editorial-directory-group li span {
+  color: #575a5e;
+  font-size: .875rem;
+}
+
+.mh-editorial-method {
+  padding: clamp(24px, 5vw, 70px);
+  color: #fbf7ef;
+  background: #19232e;
+}
+
+.mh-editorial-page .mh-editorial-method h2 {
+  max-width: 24ch;
+  margin: 0 0 clamp(23px, 4vw, 48px);
+  color: inherit;
+  font-size: clamp(1.875rem, 4vw, 3.75rem);
+  letter-spacing: -.05em;
+  line-height: 1.08;
+}
+
+.mh-editorial-method dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 55px) clamp(18px, 3.5vw, 43px);
+  margin: 0;
+}
+
+.mh-editorial-method dl > div {
+  padding-top: 20px;
+  border-top: 1px solid #ffffff48;
+}
+
+.mh-editorial-method dt {
+  font-size: clamp(1.125rem, 1.8vw, 1.6rem);
+  font-weight: 550;
+  letter-spacing: -.025em;
+  line-height: 1.22;
+}
+
+.mh-editorial-method dd {
+  margin: 12px 0 0;
+  color: #dfddd6;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.mh-portfolio-summary {
+  max-width: 49rem;
+  margin: 0 0 26px;
+  color: var(--muted, #595c61);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 920px) {
+  .mh-editorial-directory,
+  .mh-editorial-method dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .mh-story-grid,
+  .mh-story-feature,
+  .mh-editorial-directory,
+  .mh-editorial-method dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mh-story-feature .mh-story-card-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .mh-collection-grid .mh-story-card-media {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mh-story-card img {
+    transition: none;
+  }
+
+  .mh-story-card:is(:hover, :focus-visible) img {
+    transform: none;
+  }
+}
+
+.mh-portfolio-list {
+  align-items: stretch;
+  padding: 0;
+  list-style: none;
+}
+
+.mh-portfolio-list h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 550;
+  line-height: 1.25;
+}
+
+.mh-portfolio-list p {
+  margin: 0;
+  color: #575a5e;
+  font-size: .9375rem;
+}

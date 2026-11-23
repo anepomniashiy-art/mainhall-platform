@@ -1,8 +1,50 @@
 import Link from 'next/link';
-import {EditorialShell,EditorialHeader,Breadcrumbs,SelectionContact,JsonLd} from '@/components/Editorial';
-import {CommercialCatalogue} from '@/components/CommercialCatalogue';
-import {commercialUnits,catalogueCards,sminexFeed,feedDate} from '@/lib/sminex-catalogue';
-import {pageMetadata,SITE_URL} from '@/lib/seo';
+import { Breadcrumbs, EditorialHeader, EditorialShell, JsonLd, SelectionContact } from '@/components/Editorial';
+import { CommercialCatalogue } from '@/components/CommercialCatalogue';
+import { commercialUnits, catalogueCards, sminexFeed, feedDate } from '@/lib/sminex-catalogue';
+import { pageMetadata, SITE_URL } from '@/lib/seo';
 import './commercial.css';
-export const metadata=pageMetadata('Коммерческая недвижимость Sminex в Москве: цены и планировки','Офисы, торговые помещения и другие объекты Sminex: площадь, цена, планировки и подбор MAINHALL. Машино-места и кладовые выделены отдельными типами.','/commercial/');
-export default function CommercialPage(){return <EditorialShell><Breadcrumbs items={[{name:'Коммерческая недвижимость',href:'/commercial/'}]}/><EditorialHeader eyebrow="КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ / SMINEX" title="Помещение под вашу задачу." description="Сравните офисы, торговые помещения и другие предложения Sminex по проекту, площади и бюджету. Машино-места и кладовые доступны отдельными типами в фильтре."/><p>Условия проверены {feedDate(sminexFeed.fetchedAt)}. Перед бронированием уточняем цену и наличие выбранного помещения.</p><CommercialCatalogue units={catalogueCards(commercialUnits)}/><section className="mh-longread"><h2>Как выбрать коммерческое помещение</h2><p>Для офиса сравниваем планировку, высоту потолков, доступ и инженерные системы. Для торговли проверяем вход, видимость с улицы, соседние помещения и маршрут покупателей. Эти характеристики уточняем по документам конкретного лота.</p><h3>Сначала полная сумма вложений</h3><p>К цене помещения добавляем бюджет ремонта, оборудование и содержание. Арендный доход рассчитываем после изучения сопоставимых предложений и расходов.</p><Link className="mh-text-link" href="/commercial/strategy/">Подход MAINHALL к коммерческой недвижимости ↗</Link></section><SelectionContact text="Подберём коммерческое помещение" context="покупку коммерческой недвижимости Sminex"/><JsonLd data={{'@type':'CollectionPage',name:'Коммерческая недвижимость Sminex',url:SITE_URL+'/commercial/'}}/></EditorialShell>}
+
+export const metadata = pageMetadata(
+  'Коммерческая недвижимость Sminex в Москве: цены и планировки',
+  'Офисы, торговые помещения и другие объекты Sminex: площадь, цена, планировки и подбор MAINHALL. Машино-места и кладовые выделены отдельными типами.',
+  '/commercial/',
+);
+
+export default function CommercialPage() {
+  return (
+    <EditorialShell>
+      <Breadcrumbs items={[{ name: 'Коммерческая недвижимость', href: '/commercial/' }]} />
+      <section className="mh-commercial-hero">
+        <EditorialHeader
+          eyebrow="Коммерческая недвижимость"
+          title="Помещение под вашу задачу."
+          description="Сравните офисы, торговые помещения и другие предложения Sminex по проекту, площади и бюджету. Машино-места и кладовые доступны отдельными типами в фильтре."
+        />
+        <figure>
+          <img
+            src="/images/projects/sminex/manufaktura-xix.webp"
+            alt="Кирпичный фасад здания «Мануфактура XIX» в Москве"
+            width="792"
+            height="540"
+            fetchPriority="high"
+          />
+          <figcaption>Мануфактура XIX</figcaption>
+        </figure>
+      </section>
+      <section className="mh-commercial-listing" aria-label="Предложения коммерческой недвижимости">
+        <p className="mh-commercial-date">Условия проверены {feedDate(sminexFeed.fetchedAt)} Перед бронированием уточняем цену и наличие выбранного помещения.</p>
+        <CommercialCatalogue units={catalogueCards(commercialUnits)} />
+      </section>
+      <section className="mh-longread">
+        <h2>Как выбрать коммерческое помещение</h2>
+        <p>Для офиса сравниваем планировку, высоту потолков, доступ и инженерные системы. Для торговли проверяем вход, видимость с улицы, соседние помещения и маршрут покупателей. Эти характеристики уточняем по документам конкретного лота.</p>
+        <h3>Сначала полная сумма вложений</h3>
+        <p>К цене помещения добавляем бюджет ремонта, оборудование и содержание. Арендный доход рассчитываем после изучения сопоставимых предложений и расходов.</p>
+        <Link className="mh-text-link" href="/commercial/strategy/">Подход Mainhall к коммерческой недвижимости ↗</Link>
+      </section>
+      <SelectionContact text="Подберём коммерческое помещение" context="покупку коммерческой недвижимости Sminex" />
+      <JsonLd data={{ '@type': 'CollectionPage', name: 'Коммерческая недвижимость Sminex', url: SITE_URL + '/commercial/' }} />
+    </EditorialShell>
+  );
+}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs, EditorialShell, EditorialHeader, JsonLd } from "@/components/Editorial";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
+import "../analytics/editorial-sections.css";
 
 export const metadata = pageMetadata(
   "Как Mainhall изучает жилые комплексы",
@@ -25,11 +26,16 @@ export default function RatingPage() {
         title="Как мы изучаем жилые комплексы"
         description="Инвестиционный рейтинг готовится. Оценку и рекомендацию опубликуем после проверки всех критериев по конкретному жилому комплексу."
       />
-      <section className="mh-dossier-section">
-        <h2>Пять критериев проверки</h2>
-        <div className="mh-dossier-columns">
-          {factors.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
-        </div>
+      <section className="mh-editorial-method" aria-labelledby="rating-criteria">
+        <h2 id="rating-criteria">Пять критериев проверки</h2>
+        <dl>
+          {factors.map(([title, text]) => (
+            <div key={title}>
+              <dt>{title}</dt>
+              <dd>{text}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
       <section className="mh-dossier-section">
         <h2>Выбор квартиры</h2>
