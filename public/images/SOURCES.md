@@ -7,7 +7,20 @@ These city photographs establish the Moscow setting. They do not depict any of t
 
 Both source pages identify free use under the Unsplash License, verified 2026-10-19. License: https://unsplash.com/license . Files are served locally.
 
-## Homepage city photography
+## Homepage architecture gallery
+
+Responsive WebP crops in `/atelier/assets/hero/` are made from existing official project imagery. The frame controls carry the project, image type and credit.
+
+| Hero files | Project and credit | Type | Official page |
+| --- | --- | --- | --- |
+| `city-level-*` | Level Южнопортовая · Level Group | Architectural visualization | https://level.ru/projects/southport/ |
+| `city-lavrushinsky-*` | Лаврушинский · Sminex | Photograph of the completed façade | https://www.sminex.com/lavrushinskiy |
+| `city-opus-*` | OPUS · PIONEER | Architectural visualization | https://pioneer.ru/project/opus |
+| `city-badaevsky-*` | Бадаевский · Capital Group | Architectural visualization | https://www.capitalgroup.ru/ru/objects/136 |
+
+Exact originals are listed in [project visual sources](projects/SOURCES.md), [additional project sources](projects/SOURCES-ADDITIONAL.md), [Лаврушинский sources](projects/SOURCES-LAVRUSHINSKY.md) and the earlier Badaevsky entry below.
+
+## Earlier homepage city photography
 
 Responsive WebP crops are served from `/atelier/assets/hero/`.
 

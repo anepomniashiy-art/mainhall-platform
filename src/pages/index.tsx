@@ -6,8 +6,8 @@ const base = "/atelier";
 const title = "Mainhall — новостройки Москвы";
 const description = "Подберите квартиру в новостройке Москвы. Сравните похожие предложения по цене, планировке и сроку сдачи.";
 const heroDirectory = base + "/assets/hero";
-const heroImage = heroDirectory + "/city-river-1920.webp";
-const heroSrcSet = heroDirectory + "/city-river-960.webp 960w, " + heroImage + " 1920w";
+const heroImage = heroDirectory + "/city-level-1920.webp";
+const heroSrcSet = heroDirectory + "/city-level-960.webp 960w, " + heroImage + " 1920w";
 const portraitQuery = "(max-width: 760px) and (orientation: portrait)";
 const styles = [
   "style", "investment", "expertise", "cinematic", "company", "recommendation",
@@ -39,7 +39,7 @@ export default function Home({ markup }: { markup: string }) {
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://main-hall.ru/" />
         <meta property="og:image" content={"https://main-hall.ru" + heroImage} />
-        <link rel="preload" as="image" href={heroDirectory + "/city-river-portrait.webp"} media={portraitQuery} />
+        <link rel="preload" as="image" href={heroDirectory + "/city-level-portrait.webp"} media={portraitQuery} />
         <link rel="preload" as="image" imageSrcSet={heroSrcSet} imageSizes="100vw" media={"not all and " + portraitQuery} />
         <link rel="preload" href={base + "/assets/onest.ttf"} as="font" type="font/ttf" crossOrigin="anonymous" />
         {styles.map(name => <link key={name} rel="stylesheet" href={base + "/" + name + ".css" + (["cinematic", "company"].includes(name) ? "?v=20261123-city" : "")} />)}

@@ -2,23 +2,35 @@
 <header class="header"><a class="wordmark" href="#" data-action="home" aria-label="Mainhall — главная">Mainhall</a><nav class="nav" aria-label="Основная навигация"><a href="#catalogue-search" data-anchor="catalogue-search">Квартиры</a><a href="/districts/">Районы</a><a href="/analytics/">Аналитика</a><a href="#contact-mainhall" data-anchor="contact-mainhall">Контакты</a></nav><details class="mobile-navigation"><summary>Меню</summary><nav class="mobile-navigation-links" aria-label="Мобильная навигация"><a href="#catalogue-search" data-anchor="catalogue-search">Квартиры</a><a href="/districts/">Районы</a><a href="/analytics/">Аналитика</a><a href="#contact-mainhall" data-anchor="contact-mainhall">Контакты</a></nav></details><div class="header-actions"><button class="icon-button" data-action="saved-searches" aria-label="Сохранённые поиски" title="Сохранённые поиски" data-icon="bookmark"></button><button class="header-favorite" data-action="favorites" aria-label="Открыть избранное"><span data-icon="heart"></span><span class="favorite-label">Избранное</span><span id="favorite-count">0</span></button></div></header>
 <main id="main" tabindex="-1"><section id="catalogue-view"><section id="cinema-hero" class="cinema-hero" aria-labelledby="home-title">
   <div class="cinema-shot" aria-hidden="true">
-    <div class="cinema-frame is-active" data-scene="river">
+    <div class="cinema-frame is-active" data-scene="level">
       <picture class="cinema-media">
-        <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-river-portrait.webp">
-        <img class="cinema-image" src="/atelier/assets/hero/city-river-1920.webp" srcset="/atelier/assets/hero/city-river-960.webp 960w, /atelier/assets/hero/city-river-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high" decoding="async">
+        <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-level-portrait.webp">
+        <img class="cinema-image" src="/atelier/assets/hero/city-level-1920.webp" srcset="/atelier/assets/hero/city-level-960.webp 960w, /atelier/assets/hero/city-level-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high" decoding="async">
       </picture>
     </div>
-    <div class="cinema-frame" data-scene="streets">
-      <template><picture class="cinema-media">
-        <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-streets-portrait.webp">
-        <img class="cinema-image" src="/atelier/assets/hero/city-streets-1920.webp" srcset="/atelier/assets/hero/city-streets-960.webp 960w, /atelier/assets/hero/city-streets-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async">
-      </picture></template>
+    <div class="cinema-frame" data-scene="lavrushinsky">
+      <template>
+        <picture class="cinema-media">
+          <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-lavrushinsky-portrait.webp">
+          <img class="cinema-image" src="/atelier/assets/hero/city-lavrushinsky-1920.webp" srcset="/atelier/assets/hero/city-lavrushinsky-960.webp 960w, /atelier/assets/hero/city-lavrushinsky-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async">
+        </picture>
+      </template>
     </div>
-    <div class="cinema-frame" data-scene="skyline">
-      <template><picture class="cinema-media">
-        <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-skyline-portrait.webp">
-        <img class="cinema-image" src="/atelier/assets/hero/city-skyline-1920.webp" srcset="/atelier/assets/hero/city-skyline-960.webp 960w, /atelier/assets/hero/city-skyline-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async">
-      </picture></template>
+    <div class="cinema-frame" data-scene="opus">
+      <template>
+        <picture class="cinema-media">
+          <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-opus-portrait.webp">
+          <img class="cinema-image" src="/atelier/assets/hero/city-opus-1920.webp" srcset="/atelier/assets/hero/city-opus-960.webp 960w, /atelier/assets/hero/city-opus-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async">
+        </picture>
+      </template>
+    </div>
+    <div class="cinema-frame" data-scene="badaevsky">
+      <template>
+        <picture class="cinema-media">
+          <source media="(max-width: 760px) and (orientation: portrait)" srcset="/atelier/assets/hero/city-badaevsky-portrait.webp">
+          <img class="cinema-image" src="/atelier/assets/hero/city-badaevsky-1920.webp" srcset="/atelier/assets/hero/city-badaevsky-960.webp 960w, /atelier/assets/hero/city-badaevsky-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async">
+        </picture>
+      </template>
     </div>
   </div>
   <div class="cinema-shade" aria-hidden="true"></div>
@@ -34,10 +46,11 @@
     </div>
     <div class="cinema-footer">
       <a class="cinema-scroll" href="#how-we-choose" data-anchor="how-we-choose" aria-label="Перейти к критериям оценки"><span aria-hidden="true">↓</span></a>
-      <div class="cinema-controls" role="group" aria-label="Панорамы Москвы" hidden>
-        <button class="cinema-step" type="button" data-cinema-step="0" aria-label="Кадр 1 из 3: Москва-река" aria-pressed="true"></button>
-        <button class="cinema-step" type="button" data-cinema-step="1" aria-label="Кадр 2 из 3: исторический центр" aria-pressed="false"></button>
-        <button class="cinema-step" type="button" data-cinema-step="2" aria-label="Кадр 3 из 3: современная Москва" aria-pressed="false"></button>
+      <div class="cinema-controls" role="group" aria-label="Архитектура московских новостроек" hidden>
+        <button class="cinema-step" type="button" data-cinema-step="0" title="Level Южнопортовая · архитектурная визуализация Level Group" aria-label="Кадр 1 из 4: Level Южнопортовая · архитектурная визуализация Level Group" aria-pressed="true"></button>
+        <button class="cinema-step" type="button" data-cinema-step="1" title="Лаврушинский · фотография фасада Sminex" aria-label="Кадр 2 из 4: Лаврушинский · фотография фасада Sminex" aria-pressed="false"></button>
+        <button class="cinema-step" type="button" data-cinema-step="2" title="OPUS · архитектурная визуализация PIONEER" aria-label="Кадр 3 из 4: OPUS · архитектурная визуализация PIONEER" aria-pressed="false"></button>
+        <button class="cinema-step" type="button" data-cinema-step="3" title="Бадаевский · архитектурная визуализация Capital Group" aria-label="Кадр 4 из 4: Бадаевский · архитектурная визуализация Capital Group" aria-pressed="false"></button>
         <button class="cinema-pause" type="button" data-cinema-pause aria-label="Приостановить смену кадров"><span aria-hidden="true"></span></button>
       </div>
     </div>

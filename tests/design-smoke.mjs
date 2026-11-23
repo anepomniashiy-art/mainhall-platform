@@ -23,12 +23,12 @@ try {
   assert.match(await heroImage.evaluate(image => image.currentSrc), viewport.width < 761 ? /-portrait\.webp$/ : /-1920\.webp$/);
   if (viewport.width === 1440) {
    await hero.getByRole('button', {name:'Приостановить смену кадров'}).click();
-   await hero.getByRole('button', {name:/Кадр 2 из 3/}).click();
-   await hero.locator('[data-scene="streets"].is-active').waitFor();
-   assert.equal(await hero.getByRole('button', {name:/Кадр 2 из 3/}).getAttribute('aria-pressed'), 'true');
+   await hero.getByRole('button', {name:/Кадр 2 из 4/}).click();
+   await hero.locator('[data-scene="lavrushinsky"].is-active').waitFor();
+   assert.equal(await hero.getByRole('button', {name:/Кадр 2 из 4/}).getAttribute('aria-pressed'), 'true');
    assert.equal(await hero.getByRole('button', {name:'Продолжить смену кадров'}).isVisible(), true);
-   await hero.getByRole('button', {name:/Кадр 1 из 3/}).click();
-   await hero.locator('[data-scene="river"].is-active').waitFor();
+   await hero.getByRole('button', {name:/Кадр 1 из 4/}).click();
+   await hero.locator('[data-scene="level"].is-active').waitFor();
   }
   await page.locator('#project-results [data-project-card]').first().waitFor();
   assert.equal(await page.locator("#investment-overview-list, [data-quick=ratedOnly]").count(), 0);
@@ -91,8 +91,8 @@ try {
  assert.equal(await page.locator('body').evaluate(el => el.classList.contains('cinema-reveal-ready')),false);
  assert.equal(await page.locator('#cinema-hero').evaluate(el => el.style.getPropertyValue('--hero-image-y')), '0px');
  assert.equal(await page.locator('[data-cinema-pause]').isVisible(), false);
- await page.getByRole('button', {name:/Кадр 3 из 3/}).click();
- await page.locator('[data-scene="skyline"].is-active').waitFor();
+ await page.getByRole('button', {name:/Кадр 4 из 4/}).click();
+ await page.locator('[data-scene="badaevsky"].is-active').waitFor();
  assert.equal(await page.locator('.cinema-frame.is-outgoing').count(), 0);
  console.log('PASS reduced motion');
  if(process.env.LOTTIE_STUDIO_URL){
