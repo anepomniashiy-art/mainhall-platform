@@ -296,11 +296,11 @@ projectDossiers["level-yuzhnoportovaya"].checkedAt="24.10.2026";
 
 import {researchProjects} from "./research-projects";
 for(const p of researchProjects) if(!projectDossiers[p.slug]) projectDossiers[p.slug]={
- address:`Москва, район ${p.district}`,format:`${p.name}: расположение и условия покупки`,
+ address:"address" in p&&p.address?`Москва, ${String(p.address).replace(/^г\.?\s*Москва,?\s*/i,"")}`:`Москва, район ${p.district}`,format:`${p.name}: расположение и условия покупки`,
  features:[`Девелопер: ${p.developer}`,`Район: ${p.district}`,`Класс: ${p.className}`],
  location:`${p.name} расположен в районе ${p.district}. При выборе квартиры сравниваем корпуса, окружение окон и маршрут до нужного транспорта.`,
  thesis:"Сравниваем стоимость квартиры с предложениями соседних проектов и переуступками. Считаем полную сумму покупки с учётом отделки, платежей и расходов на продажу.",
- checks:["Проверить цену и наличие на дату подбора","Сверить адрес и корпус с документами","Сравнить цену с предложениями по переуступке","Рассчитать расходы и срок выхода"],source:p.source,checkedAt:p.slug==="vern"?"24.10.2026":p.priceReference.includes("26.10")?"26.10.2026":"30.09.2026"
+ checks:["Проверить цену и наличие на дату подбора","Сверить адрес и корпус с документами","Сравнить цену с предложениями по переуступке","Рассчитать расходы и срок выхода"],source:p.source,checkedAt:p.slug==="vern"?"24.10.2026":p.priceReference.includes("26.10")?"26.10.2026":p.priceReference.includes("2026")&&p.slug.startsWith("bn-")?"05.11.2026":"30.09.2026"
 };
 
 import nmarketDossiers from "../../data/catalogue/nmarket-dossiers.json";
