@@ -10,3 +10,10 @@ test('archive date and price meaning remain explicit and do not become forward r
  assert.equal(data.priceDate,'2026-10-26');assert.ok(data.methodology.includes('Прайс не равен цене сделки'));assert.ok(data.methodology.includes('не является процентом роста'));
  for(const p of data.projects){assert.ok(p.score>=0&&p.score<=100);assert.ok(p.priceThousandPerSqm>0);assert.ok(!('forecastPercent' in p));}
 });
+test('deal-market additions are Moscow business+ projects with unique slugs absent from earlier archives',()=>{
+ const add=JSON.parse(fs.readFileSync('data/catalogue/research-bnmap-projects-2026-11-24.json','utf8'));
+ const prior=[...data.projects,...JSON.parse(fs.readFileSync('data/catalogue/research-additional-projects-2026-10-29.json','utf8'))].map(x=>x.slug);
+ assert.ok(add.length>=30);assert.equal(new Set(add.map(x=>x.slug)).size,add.length);
+ for(const p of add){assert.ok(p.slug.startsWith('bn-'));assert.ok(!prior.includes(p.slug));assert.ok(['Бизнес','Бизнес+','Премиум','Элитная'].includes(p.className));
+  assert.ok(p.priceThousandPerSqm>=600||p.className!=='Бизнес'||p.districtPriceDifferencePercent>=20);assert.ok(p.equityContractsSixMonths>0);assert.ok(!/bnmap|выгрузк/i.test(p.source));}
+});
