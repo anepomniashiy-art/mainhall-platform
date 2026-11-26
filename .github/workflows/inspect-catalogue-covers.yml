@@ -1,0 +1,84 @@
+name: Prepare approved developer covers and visual review
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/inspect-catalogue-covers.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          pattern: remaining-photos-*
+          run-id: 45825695934
+          path: /tmp/picks
+          merge-multiple: true
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          name: catalogue-photo-review
+          run-id: 45821106467
+          path: /tmp/mainhall-audit
+      - run: pip install --quiet pillow
+      - name: Verify cover sources and group original review sheets
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageDraw
+          from pathlib import Path
+          from hashlib import sha256
+          import shutil, json, gzip
+          dest=Path('reports/photo-review-20261126/cover-choices')
+          dest.mkdir(parents=True,exist_ok=True)
+          picks={'insider':(0,'e331498add4b88427e2b37a939d666db56ffcf6998ebdcb0b9bc8058bc6d68b7'),'zilart':(34,'b643a693de507b9407957407bbb9a85ef2cd62944b685da878aeb92b8ff4b86c')}
+          covers=[]
+          for slug,(ident,want) in picks.items():
+              p=next(Path('/tmp/picks').rglob('covers/'+slug+'/%03d.jpg'%ident))
+              img=p.read_bytes()
+              assert sha256(img).hexdigest()==want
+              source=next(i for i in json.loads((p.parent/'index.json').read_text()) if i['id']==ident)
+              shutil.copyfile(p,dest/(slug+'.jpg'))
+              webp=dest/(slug+'.webp')
+              im=Image.open(p)
+              im.thumbnail((1920,1440))
+              im.save(webp,quality=88,method=6)
+              covers.append(dict(source,project=slug,webpSha256=sha256(webp.read_bytes()).hexdigest()))
+          (dest/'choices.json').write_text(json.dumps(covers,ensure_ascii=False,indent=2))
+          j=next(Path('/tmp/mainhall-audit').rglob('index.json'))
+          allpaths=json.loads(j.read_text())
+          gallery=json.loads(Path('data/catalogue/nmarket-galleries.json').read_text())
+          extra=[s for s in allpaths if s.startswith('/') and not s.startswith('/images/nmarket/')]
+          for label,paths in [('others',extra)]+[(s,[i['src'] for i in gallery[s]]) for s in picks]:
+              (dest/(label+'-paths.json')).write_text(json.dumps(paths,ensure_ascii=False))
+              for start in range(0,len(paths),35):
+                  chunk=paths[start:start+35]; im=Image.new('RGB',(900,((len(chunk)+4)//5)*134),'#151515'); pen=ImageDraw.Draw(im)
+                  for n,path in enumerate(chunk):
+                      idx=allpaths.index(path); key=idx%40
+                      with Image.open(j.parent/('sheet-%04d.jpg'%(idx//40*40))) as sheet:
+                          sx,sy=key%5*212,key//5*153
+                          cell=sheet.crop((sx,sy,sx+212,sy+135)); cell.thumbnail((179,111))
+                          x,y=n%5*180,n//5*134; im.paste(cell,(x,y)); pen.text((x+2,y+113),str(start+n),fill='white')
+                  im.save(dest/('%s-%03d.jpg'%(label,start)),quality=86)
+          raw=json.loads(gzip.decompress(Path('data/catalogue/nmarket-media.json.gz').read_bytes()))
+          records=raw['images'] if isinstance(raw,dict) else raw
+          print('media fields',list(records[0]))
+          from collections import defaultdict
+          aliases=defaultdict(list)
+          for record in records:
+              aliases[record['sha256']].append(record['src'])
+          setgallery={i['src'] for g in gallery.values() for i in g}
+          (dest/'aliases.json').write_text(json.dumps({k:v for k,v in aliases.items() if len(v)>1 and any(x in setgallery for x in v)}))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/cover-choices/
+          git commit -m "Record verified official covers, image aliases and gallery contact sheets"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
