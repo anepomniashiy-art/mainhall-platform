@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "shagal",
+    "target": "/images/nmarket/6e8bc44c56fd24a71393711b.jpg",
+    "source": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf#image-374",
+    "page": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf",
+    "inliers": 293,
+    "oldSha256": "f3a4157599f8231da1156e48e894bdf44feb8c21af7be2b6b30f6c6ceec1dc3a",
+    "sha256": "7cc45ce74c013ee70056bbad183bf5c8f68be277665abc28bd668d23115d0d13"
+  },
+  {
+    "slug": "shagal",
+    "target": "/images/nmarket/93672c18981e4d43fb1f9daa.jpg",
+    "source": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf#image-359",
+    "page": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf",
+    "inliers": 301,
+    "oldSha256": "b20c08d9252e420c89a83727fd1e19244c0380e313e9549595d20c94beb2dad7",
+    "sha256": "46e1ec55820582d5c7a0588cdd46385f85d767048a3a8bfa2ee04c75e3e2a20f"
+  },
+  {
+    "slug": "shagal",
+    "target": "/images/nmarket/0b88cd0396291f01142403bc.jpg",
+    "source": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf#image-374",
+    "page": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf",
+    "inliers": 286,
+    "oldSha256": "30e261cf1fbd9a8ac341f21d9bf8d355aa4e2bbc15622d2f22caf2372023f34c",
+    "sha256": "7cc45ce74c013ee70056bbad183bf5c8f68be277665abc28bd668d23115d0d13"
+  }
+]
