@@ -1,0 +1,67 @@
+name: Import verified A101 drawings
+on:
+  push:
+    branches: [developer-plans-a101-20261126]
+    paths: [.github/workflows/mainhall-import-a101.yml, data/plan-import/a101-matches.json.gz]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  originals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: developer-plans-a101-20261126
+          sparse-checkout: |
+            data/plan-import
+      - name: Prepare publication
+        run: |
+          cp data/plan-import/a101-matches.json.gz /tmp/matches.gz
+          git fetch origin main:refs/remotes/origin/main
+          git sparse-checkout set data/photo-replacements
+          git checkout --detach origin/main
+          pip -q install pillow
+      - name: Verify and convert original developer drawings
+        run: |
+          python - <<'PY'
+          import concurrent.futures, gzip, hashlib, io, json, pathlib, re, time, urllib.request
+          from PIL import Image
+          rows=json.loads(gzip.decompress(pathlib.Path('/tmp/matches.gz').read_bytes()))
+          folder=pathlib.Path('data/photo-replacements');mf=folder/'manifest.json';manifest=json.loads(mf.read_text())
+          used={p for r in manifest for p in [r['path'],*r.get('aliases',[])]}
+          groups={}
+          for r in rows:
+              assert re.fullmatch('/images/nmarket/[0-9a-f]{24}.jpg',r['path'])
+              assert re.fullmatch(r'https://cdn\.a101\.ru/mmedia/p/p/blp/[a-zA-Z0-9_./-]+\.png',r['url'])
+              if r['path'] not in used:groups.setdefault(r['url'],[]).append(r)
+          def download(pair):
+              url,records=pair
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'Mainhall developer media import'})
+                      with urllib.request.urlopen(req,timeout=16) as response:data=response.read(12_000_001)
+                      assert len(data)<=12_000_000
+                      pic=Image.open(io.BytesIO(data));assert pic.format=='PNG' and min(pic.size)>100 and max(pic.size)<12000
+                      pic=pic.convert('RGBA');canvas=Image.new('RGB',pic.size,'white');canvas.paste(pic,mask=pic.getchannel('A'))
+                      output=io.BytesIO();canvas.save(output,'JPEG',quality=96,subsampling=0,optimize=True);jpeg=output.getvalue()
+                      r=records[0];(folder/pathlib.Path(r['path']).name).write_bytes(jpeg)
+                      return {'path':r['path'],'project':r['project'],'source':'https://a101.ru/feeds/agensy/','original':url,'sha256':hashlib.sha256(jpeg).hexdigest(),'aliases':[v['path'] for v in records[1:]]}
+                  except Exception as e:
+                      last=e;time.sleep(attempt+1)
+              print('Unavailable',url,type(last).__name__,flush=True);return None
+          with concurrent.futures.ThreadPoolExecutor(14) as pool:
+              added=[v for v in pool.map(download,sorted(groups.items())) if v]
+          manifest.extend(added)
+          print('Verified source images',len(added),'published paths',sum(1+len(v['aliases']) for v in added))
+          if not added and groups:raise RuntimeError('Could not retrieve original images')
+          mf.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+          PY
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add data/photo-replacements
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish verified A101 apartment drawings across eight residential projects'
+            git push origin HEAD:main
+          fi
