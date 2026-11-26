@@ -1,0 +1,98 @@
+name: Check repeated watermarks in the gallery inventory
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/check-gallery-badges.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          name: catalogue-photo-review
+          run-id: 45821106467
+          github-token: ${{ github.token }}
+          path: /tmp/full-review
+      - run: python -m pip install --quiet pillow opencv-python-headless numpy
+      - name: Check the central badge against known marked and original frames
+        run: |
+          python - <<'PY'
+          """Count the repeated Nmarket badge in the photographed site inventory."""
+          import json
+          from collections import Counter
+          from functools import lru_cache
+          from pathlib import Path
+          import cv2
+          import numpy as np
+          from PIL import Image, ImageDraw
+          review=Path('/tmp/full-review')
+          index=json.loads((review/'index.json').read_text())
+          gal=json.loads(Path('data/catalogue/nmarket-galleries.json').read_text())
+          known=json.loads(Path('reports/photo-review-20261126/matches.json').read_text())
+          lookup={r['src']:{**r,'slug':slug} for slug,rows in gal.items() for r in rows}
+          @lru_cache(maxsize=3)
+          def sheet(number):
+              return Image.open(review/('sheet-%04d.jpg'%(number//40*40))).convert('RGB')
+          def thumb(i):
+              n=i%40;x=n%5*212;y=n//5*153
+              return sheet(i//40*40).crop((x,y,x+212,y+135))
+          def frame(i,path):
+              t=thumb(i)
+              if path in lookup:
+                  w,h=lookup[path]['width'],lookup[path]['height']
+                  scale=min(208/w,135/h,1)
+                  w,h=round(w*scale),round(h*scale)
+                  x=(212-w)//2
+                  return t.crop((x,0,x+w,h))
+              # Contact sheets were generated on an RGB(21,21,21) background.
+              raw=np.asarray(t)
+              mask=(np.abs(raw.astype(np.int16)-21).max(axis=2)>12)
+              yy,xx=np.nonzero(mask)
+              if len(xx)<50:
+                  return t
+              return t.crop((int(xx.min()),int(yy.min()),int(xx.max()+1),int(yy.max()+1)))
+          def fingerprint(photo):
+              a=np.float32(photo);h,w=a.shape[:2];sz=min(w,h);cx=w//2;cy=h//2
+              cut=a[cy-sz//2:cy+(sz+1)//2,cx-sz//2:cx+(sz+1)//2]
+              im=cv2.resize(cut,(100,100),interpolation=cv2.INTER_LINEAR)
+              r,g,b=cv2.split(im)
+              yellow=(r+g)/2-b
+              gray=(r*.3+g*.59+b*.11)
+              return np.stack([v-cv2.GaussianBlur(v,(0,0),2.6) for v in (yellow,gray)])
+          records={}
+          for i,path in enumerate(index):
+              records[path]=fingerprint(frame(i,path))
+          paths=[s for s in lookup if s in records]
+          training=np.array([records[s] for s in paths if lookup[s]['category']=='Проект'])
+          model=np.median(training,axis=0)
+          # Strong edges in both the round yellow badge and the H mark, within the known central overlay.
+          mask=np.zeros_like(model,dtype=bool)
+          mask[:,19:77,20:83]=True
+          mask &= abs(model)>np.quantile(abs(model[:,19:77,20:83]),.87)
+          def score(fp):
+              vals=fp[mask]; ref=model[mask]
+              return float(np.dot(ref,vals)/(np.linalg.norm(ref)*np.linalg.norm(vals)+1e-6))
+          scores={s:score(records[s]) for s in index}
+          pos=[scores[r['target']] for r in known if r['target'] in scores]
+          neg=[scores[r['source']] for r in known if r['source'] in scores]
+          limit=max(.145,max(neg,default=0)+.055)
+          classes={s:('matched' if n>=limit else 'review') for s,n in scores.items()}
+          stats=Counter(classes[s] for s in paths)
+          print('Calibrated positives',sorted(round(v,3) for v in pos),'clean references',sorted(round(v,3) for v in neg),flush=True)
+          print('Threshold',round(limit,3),'catalogue',stats,'projects with positive detections',len({lookup[s]['slug'] for s in paths if classes[s]=='matched'}),flush=True)
+          print('Other positive paths',[(s,round(scores[s],2)) for s in index if s not in lookup and classes[s]=='matched'][:70],flush=True)
+          report={'threshold':limit,'positiveControls':pos,'cleanControls':neg,'images':[{'path':s,'project':lookup.get(s,{}).get('slug'),'category':lookup.get(s,{}).get('category'),'score':round(scores[s],4),'status':classes[s]} for s in index]}
+          d=Path('reports/photo-review-20261126');(d/'badge-audit.json').write_text(json.dumps(report,ensure_ascii=False,separators=(',',':')))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/badge-audit.json
+          git commit -m "Record repeated overlay detections against known reference pairs"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
