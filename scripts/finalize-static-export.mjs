@@ -1,4 +1,4 @@
-import {readFileSync, statSync, rmSync, mkdirSync, writeFileSync, existsSync} from 'node:fs';
+import {copyFileSync, readFileSync, statSync, rmSync, mkdirSync, writeFileSync, existsSync} from 'node:fs';
 
 // Next exports GET route handlers as extensionless files, even with trailingSlash.
 // Directory indexes are required for GitHub Pages to serve HTML at /commercial/.
@@ -30,3 +30,13 @@ for (const [, path] of paths) {
   if (!existsSync('out' + path.replace('/mainhall-platform', ''))) throw Error(`Missing exported asset: ${path}`);
 }
 console.log(`Commercial export ready: ${paths.length} local asset references verified`);
+
+const photoReplacements = JSON.parse(readFileSync('data/photo-replacements/manifest.json', 'utf8'));
+mkdirSync('out/images/nmarket', { recursive: true });
+for (const photo of photoReplacements) {
+  if (!/^\/images\/nmarket\/[a-f0-9]{24}\.jpg$/.test(photo.path)) {
+    throw Error('Invalid catalogue photograph path: ' + photo.path);
+  }
+  const file = photo.path.split('/').pop();
+  copyFileSync('data/photo-replacements/' + file, 'out' + photo.path);
+}
