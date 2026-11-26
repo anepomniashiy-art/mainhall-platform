@@ -1,0 +1,73 @@
+name: Review original scenes for the developer media kits
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/group-kit-targets.yml]
+permissions:
+  actions: read
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          name: catalogue-photo-review
+          run-id: 45821106467
+          path: /tmp/mainhall-scenes
+      - run: pip install --quiet pillow
+      - run: |
+          python - <<'PY'
+          from PIL import Image,ImageDraw
+          from pathlib import Path
+          from functools import lru_cache
+          import json
+          root=Path('reports/photo-review-20261126')
+          dest=root/'kit-scenes'
+          dest.mkdir(exist_ok=True,parents=True)
+          read=lambda f: json.loads(f.read_text())
+          approved=set(read(root/'published-photo-paths.json'))
+          projects=read(root/'project-media-kits.json')
+          gallery=read(Path('data/catalogue/nmarket-galleries.json'))
+          ident=next(Path('/tmp/mainhall-scenes').rglob('index.json'))
+          indices={p:i for i,p in enumerate(read(ident))}
+          pairs=read(root/'duplicate-frames.json')
+          al=read(root/'cover-choices/aliases.json')
+          @lru_cache(maxsize=35)
+          def sheet(i): return Image.open(ident.parent/('sheet-%04d.jpg'%i)).convert('RGB')
+          out={}
+          for slug in projects:
+              paths=[r['src'] for r in gallery[slug] if r['category']=='Проект' and r['src'] not in approved]
+              roots={p:p for p in paths}
+              def lookup(k):
+                  while roots[k]!=k: k=roots[k]
+                  return k
+              def link(k,v):
+                  if k in roots and v in roots: roots[lookup(k)]=lookup(v)
+              for k,vs in pairs.get(slug,{}).items():
+                  for v in vs: link(k,v)
+              for vs in al.values():
+                  for v in vs[1:]: link(vs[0],v)
+              gr={}
+              for path in paths: gr.setdefault(lookup(path),[]).append(path)
+              groups=list(gr.values()); out[slug]=groups
+              for start in range(0,len(groups),35):
+                  group=groups[start:start+35]; result=Image.new('RGB',(900,((len(group)+4)//5)*130),'#151515'); d=ImageDraw.Draw(result)
+                  for n,g in enumerate(group):
+                      i=indices[g[0]]; x=(i%5)*212;y=(i%40//5)*153
+                      im=sheet(i//40*40).crop((x,y,x+212,y+135));im.thumbnail((177,107))
+                      x=n%5*180;y=n//5*130;result.paste(im,(x,y));d.text((x+2,y+109),str(start+n)+' x'+str(len(g)),fill='white')
+                  result.save(dest/(slug+'-%03d.jpg'%start),quality=86)
+          (dest/'groups.json').write_text(json.dumps(out))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/kit-scenes/
+          git commit -m "Group unmatched photographs by scene for visual review"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
