@@ -1,0 +1,54 @@
+name: Stage reviewed project photographs
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/stage-reviewed-subjects.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          pattern: project-editions-*
+          run-id: 45828464824
+          path: /tmp/mainhall-editions
+          merge-multiple: true
+      - run: pip install --quiet pillow
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageOps
+          import json, shutil, hashlib
+          dest=Path('reports/photo-review-20261126/reviewed-photographs')
+          dest.mkdir(parents=True,exist_ok=True)
+          choices=json.loads(Path('reports/photo-review-20261126/reviewed-subjects.json').read_text())
+          result=[]
+          for kind,rows in choices.items():
+              for row in rows:
+                  out=dest/Path(row['target']).name
+                  if kind=='ed':
+                      p=next(Path('/tmp/mainhall-editions').rglob('covers/'+row['slug']+'/%03d.jpg'%row['id']))
+                      assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+                      shutil.copyfile(p,out)
+                  else:
+                      with Image.open('public'+row['source']) as im:
+                          im=ImageOps.exif_transpose(im).convert('RGB')
+                          im.thumbnail((2000,2000))
+                          im.save(out,'JPEG',quality=91,optimize=True)
+                  result.append(dict(row,sha256=hashlib.sha256(out.read_bytes()).hexdigest()))
+          (dest/'selected.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/reviewed-photographs/
+          git commit -m "Stage clean confirmed photographs for the applicable projects"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
