@@ -1,0 +1,66 @@
+name: Verify the final developer source material
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/final-media-sources.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          pattern: developer-feed-set-*
+          run-id: 45832156606
+          path: /tmp/mainhall-editions
+          merge-multiple: true
+      - run: pip install --quiet pillow
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageOps
+          import json, shutil, hashlib
+          dest=Path('reports/photo-review-20261126/final-kit-choices')
+          dest.mkdir(parents=True,exist_ok=True)
+          choices=json.loads(Path('reports/photo-review-20261126/dune-choices.json').read_text())
+          result=[]
+          for kind,rows in choices.items():
+              for row in rows:
+                  out=dest/Path(row['target']).name
+                  if kind=='ed':
+                      p=next(Path('/tmp/mainhall-editions').rglob('covers/'+row['slug']+'/%03d.jpg'%row['id']))
+                      assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+                      shutil.copyfile(p,out)
+                  else:
+                      with Image.open('public'+row['source']) as im:
+                          im=ImageOps.exif_transpose(im).convert('RGB')
+                          im.thumbnail((2000,2000))
+                          im.save(out,'JPEG',quality=91,optimize=True)
+                  result.append(dict(row,sha256=hashlib.sha256(out.read_bytes()).hexdigest()))
+          (dest/'selected.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+          PY
+      - name: Compare original LSR architecture material
+        env:
+          PAGES: luchi-edition.json
+          GROUPS_COUNT: "1"
+          SHARD: "0"
+        run: |
+          pip install --quiet numpy opencv-python-headless pymupdf requests beautifulsoup4
+          python scripts/compare-project-media-kits.py
+          cp -r results/0/candidates reports/photo-review-20261126/final-kit-choices/luchi-images
+          cp results/0/matches.json reports/photo-review-20261126/final-kit-choices/luchi.json
+          for file in results/0/proof-*.jpg; do if test -f "$file"; then cp "$file" reports/photo-review-20261126/final-kit-choices/; fi; done
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/final-kit-choices/
+          git commit -m "Stage clean confirmed photographs for the applicable projects"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
