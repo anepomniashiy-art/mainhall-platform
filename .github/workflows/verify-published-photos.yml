@@ -8,11 +8,11 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 38
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: 9501fde5d626c921112c6de57ba0f13a0b6e03ab
+          ref: 2bf25e122275ada7d6396055985eba33602e4ccd
           persist-credentials: false
       - name: Compare the public image bytes with the approved release
         run: |
@@ -25,18 +25,18 @@ jobs:
               for path in r.get('aliases',[]): checks[path]=r['sha256']
               if r.get('coverPath'):
                   checks[r['coverPath']]=hashlib.sha256(Path('public'+r['coverPath']).read_bytes()).hexdigest()
-          def verify(pair):
+          def verify(pair,refresh=False):
               path,want=pair
               try:
-                  req=urllib.request.Request('https://main-hall.ru'+path+'?mainhall_photo_verify='+want[:12],headers={'User-Agent':'Mainhall release verification','Accept-Encoding':'identity'})
+                  req=urllib.request.Request('https://main-hall.ru'+path+('?mainhall_photo_verify='+want[:12] if refresh else ''),headers={'User-Agent':'Mainhall release verification','Accept-Encoding':'identity'})
                   with urllib.request.urlopen(req,timeout=15) as r:
                       return path, r.status==200 and r.headers['Content-Type'].startswith('image/') and hashlib.sha256(r.read()).hexdigest()==want
               except OSError: return path,False
           static=json.loads(Path('data/photo-replacements/static.json').read_text())
           for row in static: checks[row['path']]=row['sha256']
-          sentinel=(static[-1]['path'],static[-1]['sha256'])
-          for n in range(36):
-              if verify(sentinel)[1]: break
+          sentinel=(manifest[-1]['path'],manifest[-1]['sha256'])
+          for n in range(54):
+              if verify(sentinel,True)[1]: break
               time.sleep(45)
           pending=checks.copy()
           for attempt in range(9):
