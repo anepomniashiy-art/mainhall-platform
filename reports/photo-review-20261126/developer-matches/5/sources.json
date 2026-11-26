@@ -1,0 +1,149 @@
+[
+  {
+    "project": "bazaeva-11",
+    "sourcePages": [
+      "https://sadovoe-kolco.ru/news/gk-sadovoe-koltso-nachala-vozvedenie-pervogo-etazha-zhk-bazaeva-11-v-podmoskovnoy-shakhovskoy"
+    ],
+    "candidates": 13,
+    "decoded": 13,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "dom-na-dzhalilya",
+    "sourcePages": [
+      "https://a101.ru/news/start-prodazh-novogo-proekta-biznes-klassa-dom-na-dzhalilya-v-bolshoj-moskve/",
+      "https://a101.ru/projects/dom-na-dzhalilya/"
+    ],
+    "candidates": 196,
+    "decoded": 83,
+    "publishedPhotos": 1
+  },
+  {
+    "project": "emotion",
+    "sourcePages": [
+      "https://gk-osnova.ru/emotion",
+      "https://emotionmsk.ru/"
+    ],
+    "candidates": 209,
+    "decoded": 92,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "gardarika-klab",
+    "sourcePages": [
+      "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/"
+    ],
+    "candidates": 12,
+    "decoded": 11,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "kinokvartal",
+    "sourcePages": [
+      "https://kino-kvartal.ru/gk-monolit"
+    ],
+    "candidates": 57,
+    "decoded": 26,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "kvartal-gertsena",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/gertzena/"
+    ],
+    "candidates": 2,
+    "decoded": 1,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "luchi-2",
+    "sourcePages": [
+      "https://cdn.static.lsr.ru/upload/kelnik.estate/e6f/qgjndzkm6zxmahavloj5smle5vt2f20i/A4_Luchi_putevoditel_imig-book_apr-26_p1.pdf"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 46
+  },
+  {
+    "project": "mirapolis",
+    "sourcePages": [
+      "https://gk-osnova.ru/mirapolis"
+    ],
+    "candidates": 130,
+    "decoded": 55,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "novye-ostrovtsy",
+    "sourcePages": [
+      "https://novie-ostrovtzi.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 41,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "pervyy-kvartal",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/perviy/"
+    ],
+    "candidates": 3,
+    "decoded": 2,
+    "publishedPhotos": 36
+  },
+  {
+    "project": "renessans",
+    "sourcePages": [
+      "https://www.494unr.ru/"
+    ],
+    "candidates": 8,
+    "decoded": 1,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "rodnye-kvartaly",
+    "sourcePages": [
+      "https://a101.ru/projects/rodniye-kvartaly"
+    ],
+    "candidates": 130,
+    "decoded": 90,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "shagal",
+    "sourcePages": [
+      "https://etalongroup.ru/msk/news/gruppa-etalon-poluchila-razreshenie-na-vvod-v-ekspluatatsiyu-pervogo-etapa-tretey-ocheredi-zhilogo-k/",
+      "https://etalongroup.ru/tmn/news/mosgosstroynadzor-vydal-razreshenie-gruppe-etalon-na-vvod-v-ekspluatatsiyu-novogo-zdaniya/"
+    ],
+    "candidates": 42,
+    "decoded": 18,
+    "publishedPhotos": 131
+  },
+  {
+    "project": "stoun-greyn",
+    "sourcePages": [
+      "https://stone.ru/residential/grain"
+    ],
+    "candidates": 130,
+    "decoded": 68,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "very-na-miklukho-maklaya",
+    "sourcePages": [
+      "https://gk-osnova.ru/mikluho-maklaya/novosti/gk-osnova-poluchila-razreshenie-na-vvod-v-ekspluatatsiyu-zhilogo-kompleksa-very-na-miklukho-maklaya-na-yugo-zapade-moskvi"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "zilart",
+    "sourcePages": [
+      "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/a1f/9h744nzpnpym84tz623ez1gggpuv8ayb/%D0%904_zilart_img-book_apr-26_p3.pdf"
+    ],
+    "candidates": 60,
+    "decoded": 60,
+    "publishedPhotos": 16
+  }
+]

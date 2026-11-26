@@ -1,0 +1,497 @@
+[
+  {
+    "slug": "bazaeva-11",
+    "target": "/images/nmarket/88962d26f20a0e26583d91b8.jpg",
+    "source": "https://sadovoe-kolco.ru/upload/iblock/ecc/39g74kx1fhyvpjexhbe1fnv7oba04ef7/1920х758.jpg",
+    "page": "https://sadovoe-kolco.ru/news/gk-sadovoe-koltso-nachala-vozvedenie-pervogo-etazha-zhk-bazaeva-11-v-podmoskovnoy-shakhovskoy",
+    "inliers": 377,
+    "oldSha256": "a3e21408f37dc39841d9fb4958695117736e0269bef91bcb15fd83e4a784574f",
+    "sha256": "3230db2ba44dcaa674ff03ecfe6f02f8ca9dabec616ada7d9bf2085218a4e51c"
+  },
+  {
+    "slug": "dom-na-dzhalilya",
+    "target": "/images/nmarket/d93e9c29876bdaac70409883.jpg",
+    "source": "https://cdn.a101.ru/mmedia/cb/s/badf573470.jpg",
+    "page": "https://a101.ru/news/start-prodazh-novogo-proekta-biznes-klassa-dom-na-dzhalilya-v-bolshoj-moskve/",
+    "inliers": 362,
+    "oldSha256": "199368f779a13076643b6206222232c88ea7f571dd909215edc3825e3a136bda",
+    "sha256": "f4d2d3ad3cb55e24a66f0881cc14265c264bbaff0ceaebe2e343b6283f873d71"
+  },
+  {
+    "slug": "emotion",
+    "target": "/images/nmarket/8043825798555aaca39e931b.jpg",
+    "source": "https://emotionmsk.ru/wp-content/uploads/2026/07/lobby-768x432.jpg",
+    "page": "https://emotionmsk.ru/",
+    "inliers": 273,
+    "oldSha256": "49600d7900a8556c93448649bf11ae562504fa649a1fbad4a372bba9dbd54bba",
+    "sha256": "94b7a4813801a463a5d328c1a425116a1f77e2569fba5622ed754b317009403c"
+  },
+  {
+    "slug": "emotion",
+    "target": "/images/nmarket/73c66e2f2e9b659144005f52.jpg",
+    "source": "https://emotionmsk.ru/wp-content/uploads/2026/07/office.jpg",
+    "page": "https://emotionmsk.ru/",
+    "inliers": 477,
+    "oldSha256": "39d35e6880b3a9f68f0a52769682230791465a4bc2a97b4fcfcf088d511514b7",
+    "sha256": "56ddede7f11ef4789c31cfdc74ab99e07ac0a7b7a55d345d7014d92a3024dfce"
+  },
+  {
+    "slug": "emotion",
+    "target": "/images/nmarket/2d0a6606d738ee01c5ebecd7.jpg",
+    "source": "https://emotionmsk.ru/wp-content/uploads/2026/07/flats-2048x1152.webp",
+    "page": "https://emotionmsk.ru/",
+    "inliers": 519,
+    "oldSha256": "21420020b32c371a5ca01991dc4f0e5b5f7d9ec8b53be6c6f5bc26bb6a96a7bd",
+    "sha256": "e747d2351c475e06d947e219e6ff726dc27e8ef8ca1eb38367cf3507d703985c"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/01f0bc63eee25ce1ddcb46ca.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/bc5/1320_600_2/ptklrrmdh3wmr27l5xh5ms4hg0a3xcum.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 224,
+    "oldSha256": "33d8cb35fa9653b0403c63c1248ee38c7d1b003cd078f3b61094f425b1fe0d93",
+    "sha256": "6f0d96b69c47a1c9d0b34e50dbc8cf229d0716552f68259a6bc4ea4fb6dffcc5"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/b4eea36584cf41aa5788cbaf.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/6b8/1320_600_2/4la69kd23mmfubgju093mxw7393ag1ma.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 442,
+    "oldSha256": "9fd8f04287a1643b4826624b5c735b25e2083f5bab9d37a4e28efc052872a287",
+    "sha256": "9f642f8c7f70f21ca8984751f4414c390fc0e7b87310320410be490ba4684966"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/8c886972b512e6fbfa63151c.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/eb6/1320_600_2/81k2khtdj38spxpw1c9v1p26sh8zjvkf.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 439,
+    "oldSha256": "71ead7b9adb17aced76f4a3bf7d7468eafb4d854ee4530061b17feb071962449",
+    "sha256": "dd2886a03888d0a9abedd93d0ae5c1c379dc429acd20121d8c25046ba571b410"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/2ed5e769500a1e19966b59fa.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/21f/1320_600_2/83g0zk52psblftfktb7ad1v2gqiux8ae.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 382,
+    "oldSha256": "6065cbec5d3ec1f4aa6fda08c2f3e272e0a8762323b3dd9660e314d0f90e5402",
+    "sha256": "9d7646ddb72540045df40dfd634bb7497057712785c0aba92b7b0d68b8ef1059"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/61e40c34c2e70e5703c244ad.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/bc5/1320_600_2/ptklrrmdh3wmr27l5xh5ms4hg0a3xcum.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 361,
+    "oldSha256": "478573c0b0c010457aa455c652573906227b031bbdb5409bacc4302557c6b7c9",
+    "sha256": "6f0d96b69c47a1c9d0b34e50dbc8cf229d0716552f68259a6bc4ea4fb6dffcc5"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/b3c2121a93508ce3a68ff79d.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/d4e/1320_600_2/q91h6paaosco70641g6wjuo2wod3yx2h.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 404,
+    "oldSha256": "180709089bad931096b11c488e8bf20efe949782e540cebb2db7cc5aa4b2e509",
+    "sha256": "9e4420b598d7219ca8bd99b03a46e9ebf88aef3ad1435a3dd5ca92f4b03056b2"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/86ee0918e78f7c7c63dd5e90.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/6b8/1320_600_2/4la69kd23mmfubgju093mxw7393ag1ma.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 442,
+    "oldSha256": "9fd8f04287a1643b4826624b5c735b25e2083f5bab9d37a4e28efc052872a287",
+    "sha256": "9f642f8c7f70f21ca8984751f4414c390fc0e7b87310320410be490ba4684966"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/1769938d81fd46cf30bf71ae.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/eb6/1320_600_2/81k2khtdj38spxpw1c9v1p26sh8zjvkf.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 439,
+    "oldSha256": "71ead7b9adb17aced76f4a3bf7d7468eafb4d854ee4530061b17feb071962449",
+    "sha256": "dd2886a03888d0a9abedd93d0ae5c1c379dc429acd20121d8c25046ba571b410"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/3267d46a082595b8a167a191.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/21f/1320_600_2/83g0zk52psblftfktb7ad1v2gqiux8ae.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 382,
+    "oldSha256": "6065cbec5d3ec1f4aa6fda08c2f3e272e0a8762323b3dd9660e314d0f90e5402",
+    "sha256": "9d7646ddb72540045df40dfd634bb7497057712785c0aba92b7b0d68b8ef1059"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/2a02bf0840157c85f2f07837.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/bc5/1320_600_2/ptklrrmdh3wmr27l5xh5ms4hg0a3xcum.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 361,
+    "oldSha256": "478573c0b0c010457aa455c652573906227b031bbdb5409bacc4302557c6b7c9",
+    "sha256": "6f0d96b69c47a1c9d0b34e50dbc8cf229d0716552f68259a6bc4ea4fb6dffcc5"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/35de74f1837fe892ff18cd97.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/6b8/1320_600_2/4la69kd23mmfubgju093mxw7393ag1ma.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 442,
+    "oldSha256": "9fd8f04287a1643b4826624b5c735b25e2083f5bab9d37a4e28efc052872a287",
+    "sha256": "9f642f8c7f70f21ca8984751f4414c390fc0e7b87310320410be490ba4684966"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/dd57ce66adc52d5236e753c2.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/eb6/1320_600_2/81k2khtdj38spxpw1c9v1p26sh8zjvkf.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 439,
+    "oldSha256": "71ead7b9adb17aced76f4a3bf7d7468eafb4d854ee4530061b17feb071962449",
+    "sha256": "dd2886a03888d0a9abedd93d0ae5c1c379dc429acd20121d8c25046ba571b410"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/22cb1fbec13283f5e2c6c48f.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/21f/1320_600_2/83g0zk52psblftfktb7ad1v2gqiux8ae.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 382,
+    "oldSha256": "6065cbec5d3ec1f4aa6fda08c2f3e272e0a8762323b3dd9660e314d0f90e5402",
+    "sha256": "9d7646ddb72540045df40dfd634bb7497057712785c0aba92b7b0d68b8ef1059"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/aed3b4da1286d8991c113720.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/bc5/1320_600_2/ptklrrmdh3wmr27l5xh5ms4hg0a3xcum.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 361,
+    "oldSha256": "478573c0b0c010457aa455c652573906227b031bbdb5409bacc4302557c6b7c9",
+    "sha256": "6f0d96b69c47a1c9d0b34e50dbc8cf229d0716552f68259a6bc4ea4fb6dffcc5"
+  },
+  {
+    "slug": "gardarika-klab",
+    "target": "/images/nmarket/104f6cd1c12b567b399982f6.jpg",
+    "source": "https://rzv.ru/upload/resize_cache/iblock/d4e/1320_600_2/q91h6paaosco70641g6wjuo2wod3yx2h.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/gardarika-klab/description/",
+    "inliers": 404,
+    "oldSha256": "180709089bad931096b11c488e8bf20efe949782e540cebb2db7cc5aa4b2e509",
+    "sha256": "9e4420b598d7219ca8bd99b03a46e9ebf88aef3ad1435a3dd5ca92f4b03056b2"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/34f494ae68bb5d896027b5ef.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/bhJxjqLWpOK4TSyOTSQWl5FTNI0Rw49fbC1B3XLp.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 74,
+    "oldSha256": "61ed8d37df5a55fb5f38cd15d9b4198973e072823b1f142eb5409e0ba0e398b1",
+    "sha256": "4107f27ce58587f0cbe71282f0ed13a4da15bef28517fd9f8d06622a302a3f26"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/537b93a5ddecaf572c07ec2a.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/11/5mJ5UfPbdNls4hN5P7BlCZIxdx1MdJDRXrLLtFh7.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 313,
+    "oldSha256": "dfc70a3f6eae5cbc9ca3b342b15a0614ce690e938a09873d4abddc03e38b2406",
+    "sha256": "aed1fb954dab851f74639eb1b7dcae7406baca1114802e0c006ac2a25dbfb9b1"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/bf89df64bb3354ec3397ea9e.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/TA6T9H4QdxpbtAlJZBuMS1EvOIkZPwtrgPOeTcMy.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 134,
+    "oldSha256": "de5abf097fedcb8f85046802ea6f4ce145680fa93f085b9e5247ff579633ec74",
+    "sha256": "32d34a6fd2dcf4d79fbcf828aa5ba64d35c4d7ea96b60789e997b195b6f04606"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/bf8403f036fa9b49c5434dcc.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/cQ3h0W174llrpRdELmA3wecGMtW6spn4V0i5Q3mt.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 118,
+    "oldSha256": "3ab895c488f59f6693e690f87269f25b8ee636c32fc9a93226a283f7a14b7c72",
+    "sha256": "9b673508ec2f1a8ad22b8de4e601d8e304a5bf1ac01fc70f7c5b316f8f8631d1"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/ce3e9b81206dfae280ec7cb1.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/12/9xXRB54hUHngtMz6He1me14GMo13vo55PBEYNabR.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 107,
+    "oldSha256": "4438e9ee1f954aa70bcd96e5514b7cd0849a77dc505fb48a8ee8e6cf3195c18f",
+    "sha256": "b68d4a4f82d4f9dc5ed1ea748b5f75270373fea78194dc2f99eafc95087992a2"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/c5e19ca467c1f6cd58f1816d.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/ZmsTpwffUGr2TSDK2QPocfMPx40E53AaT8mCMF5r.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 238,
+    "oldSha256": "a36315ddd875d54f2d857a081086a8b36acdbd7d90403053c0b96fa20ed8837c",
+    "sha256": "9cdd6c33d5e5f5e53a7e4cec46384e7cbbcce4ce39fbe4a92f8af1d0bba2ee38"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/83604d08a364c66f9ec0b11e.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/ZmsTpwffUGr2TSDK2QPocfMPx40E53AaT8mCMF5r.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 240,
+    "oldSha256": "7c783e3f2a4e13ea6c3d25279c2b2aa157ada460fceb4dac90f19ca659c44070",
+    "sha256": "9cdd6c33d5e5f5e53a7e4cec46384e7cbbcce4ce39fbe4a92f8af1d0bba2ee38"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/26ea171a3ccd36dc96d739f8.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/TA6T9H4QdxpbtAlJZBuMS1EvOIkZPwtrgPOeTcMy.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 134,
+    "oldSha256": "94267577f1fdcaa8bd5f2bfe9e61d9efe207cd1d5c7720498382bce888589e09",
+    "sha256": "32d34a6fd2dcf4d79fbcf828aa5ba64d35c4d7ea96b60789e997b195b6f04606"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/7aa1797a95144bbb869ba8d4.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/cQ3h0W174llrpRdELmA3wecGMtW6spn4V0i5Q3mt.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 115,
+    "oldSha256": "95439f5f93512a279ed02ef7c976afc06e77f6a676634c604ee1957569ba83d8",
+    "sha256": "9b673508ec2f1a8ad22b8de4e601d8e304a5bf1ac01fc70f7c5b316f8f8631d1"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/c044e4a9069c159e4d7afb17.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/12/9xXRB54hUHngtMz6He1me14GMo13vo55PBEYNabR.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 113,
+    "oldSha256": "9a699f61cb6b46417adda26429e6b0a9bc698e683b1631abd3cf04567fbacb22",
+    "sha256": "b68d4a4f82d4f9dc5ed1ea748b5f75270373fea78194dc2f99eafc95087992a2"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/eaa855e570d049290c7d9217.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/SvAklXkzkkfWxRI4fYsy3Ww8MjPn7oazn4guz3Ct.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 71,
+    "oldSha256": "a10e8d20bfe5f2fcb24d7af9994219b46e8ac0cb3b50b8d4c99c19bf77688799",
+    "sha256": "12705a1b8d8de54005dc0ca48c4286ac7ff97c429b7c48a0bea717c69027803b"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/8233609b294baee7ae90b2b7.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/11/5mJ5UfPbdNls4hN5P7BlCZIxdx1MdJDRXrLLtFh7.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 313,
+    "oldSha256": "dfc70a3f6eae5cbc9ca3b342b15a0614ce690e938a09873d4abddc03e38b2406",
+    "sha256": "aed1fb954dab851f74639eb1b7dcae7406baca1114802e0c006ac2a25dbfb9b1"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/b8d5e0d4e604ad51b68a03c1.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/TA6T9H4QdxpbtAlJZBuMS1EvOIkZPwtrgPOeTcMy.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 134,
+    "oldSha256": "de5abf097fedcb8f85046802ea6f4ce145680fa93f085b9e5247ff579633ec74",
+    "sha256": "32d34a6fd2dcf4d79fbcf828aa5ba64d35c4d7ea96b60789e997b195b6f04606"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/3029cc045b8bf9c9bf153a09.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/cQ3h0W174llrpRdELmA3wecGMtW6spn4V0i5Q3mt.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 118,
+    "oldSha256": "3ab895c488f59f6693e690f87269f25b8ee636c32fc9a93226a283f7a14b7c72",
+    "sha256": "9b673508ec2f1a8ad22b8de4e601d8e304a5bf1ac01fc70f7c5b316f8f8631d1"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/e6c0e114e6162b182ba2a9f1.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/ZszyjEiaBomheJ87cAE0bKRvsdWY0qNFvmcD5v1n.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 208,
+    "oldSha256": "56cdc3d3dd20354e99601a0ccd6ecb5a8a8e3bdc09c71bcb6cf9fe0efba2d79e",
+    "sha256": "788e0ca00c1ed7b6920fe03bab0f80aa148021c1fb9eb9d208eceb1c10c35b3c"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/f39371a07e18387412df2bad.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2024/9/SvAklXkzkkfWxRI4fYsy3Ww8MjPn7oazn4guz3Ct.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 72,
+    "oldSha256": "4d633b1b2c0eff39b958e55e14ecfb655d75d73a60d2325ef5a2322357c256a8",
+    "sha256": "12705a1b8d8de54005dc0ca48c4286ac7ff97c429b7c48a0bea717c69027803b"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/4eee11d57e5a1c8f391d65ea.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/12/ccrlQtZOWrmJOTaXuzjynDjQNRkWB7ML7C9PdrUZ.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 309,
+    "oldSha256": "137ce78b86adf4cf92a0d1315787ace5c01d901c6769dd61a79dd1e791f94d4d",
+    "sha256": "6d909ef36e8417138c8026d54cde61d6a872e687e6d590a39f1e03f8df253301"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/034e5a7398d4dab266b1d8cd.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/12/9xXRB54hUHngtMz6He1me14GMo13vo55PBEYNabR.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 111,
+    "oldSha256": "ec44748ca55b0241316f49359051c084fd8281d38beb993bf1166e085a61e91b",
+    "sha256": "b68d4a4f82d4f9dc5ed1ea748b5f75270373fea78194dc2f99eafc95087992a2"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/4a2757f82a7bc5aa3650837c.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/11/jj8aYr4dGgqmH4ykXSg55fSSTfeTsGxf1DMRZ6W1.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 322,
+    "oldSha256": "d0608652a5775a8e25217328c62c68bcf0b839590c79d55b47bf81a4204fcd96",
+    "sha256": "9e1155955cf180b71cfe807606abb39dcd13d9882c788be3a3fefb73cf78d056"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/8a18f2c62cfcbae119389008.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2022/11/r7hsdBVzIol8bbhGNDJPGJDfTrwbhFAnBNyfTp9f.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 314,
+    "oldSha256": "d2759e1594d02eb72ea1cc266b4292b7d64b1ad6037367200d6b093c9204a1ac",
+    "sha256": "c220b8f52cb753cec3a067b0df18ed0062b017adc1092f8e0394e20e45ca4dbd"
+  },
+  {
+    "slug": "mirapolis",
+    "target": "/images/nmarket/b4c91d77897cccde29a6ea9c.jpg",
+    "source": "https://gk-osnova.ru/_ipx/w_1060&f_jpeg/https://api.gkosnova.tech/public/storage/media/2024/8/srPITPOuyH3hu0zHltpFkA2CyF3QXAyiSLcqxiyU.jpg",
+    "page": "https://gk-osnova.ru/mirapolis",
+    "inliers": 238,
+    "oldSha256": "488b5d2497ebbc60e6bb8c38f78b2b35bba0c923e9d3455a84ba38c888d8e1c5",
+    "sha256": "8ae825b64d2858d2a89452e8ab8dee5484ea16646cfc7f3d71474d1f41e01aca"
+  },
+  {
+    "slug": "novye-ostrovtsy",
+    "target": "/images/nmarket/18a2998ee896aff15dced9ca.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:0:600/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/a2a4fd3d-040a-42b7-931f-c22f9a140507/sites/blocks/6f4b3efa5b0d481b89472bbca2ffb7ca.jpeg",
+    "page": "https://novie-ostrovtzi.ru/",
+    "inliers": 499,
+    "oldSha256": "bc3f6bcec85e7d75817e2185f1e5c5901136b1dc1f053b3d5c7f68bd7f45fa64",
+    "sha256": "66b717b097d28205b14b5803b2053afe1f7024b81be7b64acc5f47960245b055"
+  },
+  {
+    "slug": "novye-ostrovtsy",
+    "target": "/images/nmarket/9d034f84cc394e5ecba29ce7.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:1180:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/3dfe4bea-b0d2-4759-8404-c12bb26d2213/c9abb7f2b9d9467d9d24bf6eaffb5c9a.jpeg",
+    "page": "https://novie-ostrovtzi.ru/",
+    "inliers": 508,
+    "oldSha256": "c45a7fbeeb1efabb0ee164781b973fcebf53f9937952041c3f7cfb2a692667bd",
+    "sha256": "479b2cfbc982f441a52d79218d22ceb161e705d5653cb7478497fd5f09c9981c"
+  },
+  {
+    "slug": "novye-ostrovtsy",
+    "target": "/images/nmarket/10712c83ab893b98d3399912.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:1180:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/3dfe4bea-b0d2-4759-8404-c12bb26d2213/fe7a9c8b09cb4a81875ea400857536e7.jpeg",
+    "page": "https://novie-ostrovtzi.ru/",
+    "inliers": 523,
+    "oldSha256": "df292c291ecdd9e482467a932ab2e26b89cf68c023cf1070dd04e3bcbd786772",
+    "sha256": "25e87ce3a1a3a4fe7b456bb072e98e96274324c1cd7d2983548544cdbd0fb759"
+  },
+  {
+    "slug": "novye-ostrovtsy",
+    "target": "/images/nmarket/ae31322b534a71d22e0b469b.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:1320:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/3dfe4bea-b0d2-4759-8404-c12bb26d2213/87665398922845b2b87676c72f7279ff.jpeg",
+    "page": "https://novie-ostrovtzi.ru/",
+    "inliers": 521,
+    "oldSha256": "3b7669b75e7080c676c6c9c56d1ec50f7557068b3727bc884843b29a867a2d17",
+    "sha256": "ca492e2a8cd6515883bbdd1660035295148ea8b66982499a4ff3000977b08302"
+  },
+  {
+    "slug": "novye-ostrovtsy",
+    "target": "/images/nmarket/2b0043b4724f9f9a99268388.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:1180:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/3dfe4bea-b0d2-4759-8404-c12bb26d2213/6a9152ed17c04834ad0a1d0287e5f65f.jpeg",
+    "page": "https://novie-ostrovtzi.ru/",
+    "inliers": 437,
+    "oldSha256": "69e8bfdf9791e3d558d00b981c8dd37de8c5fe51b87194814558810168e2ee90",
+    "sha256": "777dd6f9946c04ad0659b1408a65cbaa2786202a98edc61e3c306efff7ab1857"
+  },
+  {
+    "slug": "rodnye-kvartaly",
+    "target": "/images/nmarket/66b6bca61bc1efbc9b84af7d.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/218d9b4b42.jpg",
+    "page": "https://a101.ru/projects/rodniye-kvartaly",
+    "inliers": 388,
+    "oldSha256": "d521078b63d8eff60bc4ca47c298a948eebf275097511de59415c5c9f90ee2bb",
+    "sha256": "76f3bf408e548e783fb114bab2a936e09322bb8d3216ba476bb8b03bad66dc19"
+  },
+  {
+    "slug": "rodnye-kvartaly",
+    "target": "/images/nmarket/c245587cbf4c8d86df111256.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1600/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/f334bfe745.jpg",
+    "page": "https://a101.ru/projects/rodniye-kvartaly",
+    "inliers": 418,
+    "oldSha256": "8d6a8d3178e0dedb4d55d20f148f9cf5f3440063a8f8afb4c000b48cfb1ae46c",
+    "sha256": "8717501f1ae6c224ec4b4f4339d510ecd2e986662e88e2687c4decbf5ee1a0f6"
+  },
+  {
+    "slug": "rodnye-kvartaly",
+    "target": "/images/nmarket/44780823d1b5945e10272383.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/46a5d06db2.jpg",
+    "page": "https://a101.ru/projects/rodniye-kvartaly",
+    "inliers": 503,
+    "oldSha256": "af7f33db6776b7ec95819e175fd70fb373dc3f1f81f774ec2fc1de170a39f8bc",
+    "sha256": "2ce21293e31ec356765b7ed1613606479b35459b024f70ee3be1605ac4b623ab"
+  },
+  {
+    "slug": "rodnye-kvartaly",
+    "target": "/images/nmarket/3c32fdb3b71d9b6ff37b9f4a.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/fc5bb6b138.jpg",
+    "page": "https://a101.ru/projects/rodniye-kvartaly",
+    "inliers": 491,
+    "oldSha256": "ba34dc6a69dc5fd0602b84cc7eac1571a22e8e35ea3952cd108c8f96dd21a1bb",
+    "sha256": "bc4c05b1934b378925e849e74a406f2c34f95a9689f2008305846ec15ce548fa"
+  },
+  {
+    "slug": "stoun-greyn",
+    "target": "/images/nmarket/219bc371d9f552191e92f05a.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/result_75529ac5_abb5_4261_a114_067a341a1330_cc58ab2a12_edabe74e67_9111031fbf_b42e7655f1_bfcd58b7ab_bde7314966_b44d070b82_344dfc3564_2c185c1fc0.jpg",
+    "page": "https://stone.ru/residential/grain",
+    "inliers": 342,
+    "oldSha256": "e7fc551e49159fb52b09adc71a542c2334427db81a090dbb31ddb7cfa63433c3",
+    "sha256": "622d8e45d4b3e144e8172a32a85e8c91e4e22e366b7df60144604c607172424b"
+  },
+  {
+    "slug": "stoun-greyn",
+    "target": "/images/nmarket/1dff522a866cb91af067dc22.jpg",
+    "source": "https://stone.ru/uploads/S_Toun_grejn_terrasa_78c298bccb_4981512bb6.webp",
+    "page": "https://stone.ru/residential/grain",
+    "inliers": 517,
+    "oldSha256": "d098ad69ef5a2243bf591d3425c76299956e507cc73774cf6bade4ffbe701cdc",
+    "sha256": "5f301ae4423c65f182cddfaaaf8cc87943afa774e53ca03727e33e22ee22a759"
+  },
+  {
+    "slug": "stoun-greyn",
+    "target": "/images/nmarket/d0c4515c5b7be7768fe54fbd.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Full_size_Grejn_Arhitektura2x_591443b69c_4cf5924720.webp",
+    "page": "https://stone.ru/residential/grain",
+    "inliers": 418,
+    "oldSha256": "2ff521fb9c634e28afce73f524a7f8828b29da9614e2db33e1d92d2a7d3c20e1",
+    "sha256": "17934d4b1386ea76fb4dbad265886dda66400903bc6f560f502a5fc7cf7f1927"
+  },
+  {
+    "slug": "stoun-greyn",
+    "target": "/images/nmarket/9ab713f563dda3a5ec6e063d.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Full_size_Grain_Ritejl1_5x_04df419f69.webp",
+    "page": "https://stone.ru/residential/grain",
+    "inliers": 426,
+    "oldSha256": "c583cb60452c5ce350c34f4f43836d5c72ae2860bff4040f32fe8a4c9d5ca707",
+    "sha256": "f0ebb1ab43ce2c733c982009ac50d4e73d059f53099c084d98d3a4ab8adc9bf8"
+  },
+  {
+    "slug": "stoun-greyn",
+    "target": "/images/nmarket/1c6ba5dde5e696487fb46b8c.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Infra_a1_1_5_0814b30bed_85519774fc.webp",
+    "page": "https://stone.ru/residential/grain",
+    "inliers": 216,
+    "oldSha256": "98d16c5f77ee79185bc2843572e43a09270240dc5360d1b8c4df2dec94eaffca",
+    "sha256": "3744399f8e29a6582843a1f7aa7faa5238e287b66833245cd953aa91808352c1"
+  }
+]

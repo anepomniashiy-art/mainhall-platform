@@ -1,0 +1,146 @@
+[
+  {
+    "project": "admiral",
+    "sourcePages": [
+      "https://admiral-moscow.com/"
+    ],
+    "candidates": 16,
+    "decoded": 16,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "desnareche",
+    "sourcePages": [
+      "https://a101.ru/projects/desnarechie"
+    ],
+    "candidates": 130,
+    "decoded": 92,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "dom-soyuzov",
+    "sourcePages": [
+      "https://dom-unions.rzv.ru/"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "evopark-sokolniki",
+    "sourcePages": [
+      "https://gk-osnova.ru/novosti/gk-osnova-postroit-novii-proekt-u-parka-sokolniki"
+    ],
+    "candidates": 130,
+    "decoded": 58,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "grand-fili",
+    "sourcePages": [
+      "https://grandfili.ru/gallery"
+    ],
+    "candidates": 4,
+    "decoded": 4,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "kollektsiya-luzhniki",
+    "sourcePages": [
+      "https://luzhniki-collection.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 102,
+    "publishedPhotos": 56
+  },
+  {
+    "project": "kvartal-svetlyy",
+    "sourcePages": [
+      "https://xn----7sbagds2abmd3cpjg0l.xn--p1ai/about/"
+    ],
+    "candidates": 118,
+    "decoded": 50,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "mariin-park",
+    "sourcePages": [
+      "https://etalon-project.ru/projects/mariinn-park/"
+    ],
+    "candidates": 11,
+    "decoded": 11,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "nikolskiy-kvartal-otrada",
+    "sourcePages": [
+      "https://otrada-kvartal.ru/news/nikolskiy_june26"
+    ],
+    "candidates": 1,
+    "decoded": 1,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "odinburg",
+    "sourcePages": [
+      "https://afi-development.com/project/odinburg"
+    ],
+    "candidates": 50,
+    "decoded": 23,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "prime-park",
+    "sourcePages": [
+      "https://primepark.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 125,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "rezidentsiya-omega",
+    "sourcePages": [
+      "https://aurix-development.ru/projects/omega-residence"
+    ],
+    "candidates": 130,
+    "decoded": 25,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "russian-design-district",
+    "sourcePages": [
+      "https://rodinagroup.com/projects/russian-design-district?ysclid=mgaqh4fzh5427289264"
+    ],
+    "candidates": 1,
+    "decoded": 1,
+    "publishedPhotos": 7
+  },
+  {
+    "project": "skandinaviya",
+    "sourcePages": [
+      "https://a101.ru/projects/skandinaviya"
+    ],
+    "candidates": 130,
+    "decoded": 89,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "u2-yutu",
+    "sourcePages": [
+      "https://u2.moscow/"
+    ],
+    "candidates": 130,
+    "decoded": 123,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "vostok-2",
+    "sourcePages": [
+      "https://www.gkvostok2.ru/"
+    ],
+    "candidates": 15,
+    "decoded": 13,
+    "publishedPhotos": 11
+  }
+]

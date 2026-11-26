@@ -1,0 +1,146 @@
+[
+  {
+    "project": "afi-tower",
+    "sourcePages": [
+      "https://afi-development.com/project/afi-tower"
+    ],
+    "candidates": 80,
+    "decoded": 35,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "detali",
+    "sourcePages": [
+      "https://plus.dev/complexes/detali"
+    ],
+    "candidates": 130,
+    "decoded": 99,
+    "publishedPhotos": 9
+  },
+  {
+    "project": "domodedovo-park",
+    "sourcePages": [
+      "https://www.domodedovograd.ru/about"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "fiztekhsiti",
+    "sourcePages": [
+      "https://gk-osnova.ru/fizteh"
+    ],
+    "candidates": 130,
+    "decoded": 25,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "insider",
+    "sourcePages": [
+      "https://www.rks-dev.ru/press-center/rks-development-i-c-u-podpisali-dogovor-o-sotrudnichestve/"
+    ],
+    "candidates": 1,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "kosmo-4-22",
+    "sourcePages": [
+      "https://hals-development.ru/presscenter/news/1368452"
+    ],
+    "candidates": 130,
+    "decoded": 3,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "lastochkino",
+    "sourcePages": [
+      "https://gk-lastochkino.ru/"
+    ],
+    "candidates": 34,
+    "decoded": 20,
+    "publishedPhotos": 18
+  },
+  {
+    "project": "marshal",
+    "sourcePages": [
+      "https://494unr.ru/ru/projects.html"
+    ],
+    "candidates": 11,
+    "decoded": 1,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "novaya-ivanteevka",
+    "sourcePages": [
+      "https://xn----dtbjjb4adhjrlq.xn--p1ai/objects/novaya-ivanteevka"
+    ],
+    "candidates": 130,
+    "decoded": 41,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "onegin",
+    "sourcePages": [
+      "https://rzv.ru/objects/v-realizatsii/onegin/"
+    ],
+    "candidates": 130,
+    "decoded": 74,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "prokshino",
+    "sourcePages": [
+      "https://a101.ru/projects/prokshino/"
+    ],
+    "candidates": 130,
+    "decoded": 92,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "riga-khills",
+    "sourcePages": [
+      "https://rigahills.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 68,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "secret-garden",
+    "sourcePages": [
+      "https://kortros.ru/projects/secretgarden"
+    ],
+    "candidates": 47,
+    "decoded": 38,
+    "publishedPhotos": 9
+  },
+  {
+    "project": "skolkovo-one",
+    "sourcePages": [
+      "https://skolkovoone.ru/about/"
+    ],
+    "candidates": 19,
+    "decoded": 16,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "ultima-city",
+    "sourcePages": [
+      "https://kortros.ru/projects/ultima"
+    ],
+    "candidates": 8,
+    "decoded": 7,
+    "publishedPhotos": 10
+  },
+  {
+    "project": "voys",
+    "sourcePages": [
+      "https://3s.group/projects/voice"
+    ],
+    "candidates": 130,
+    "decoded": 69,
+    "publishedPhotos": 4
+  }
+]

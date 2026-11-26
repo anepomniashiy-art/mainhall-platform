@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "desnareche",
+    "target": "/images/nmarket/1b5ad49d2903a711af9ca7d3.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/69f382f165.jpg",
+    "page": "https://a101.ru/projects/desnarechie",
+    "inliers": 507,
+    "oldSha256": "494f9411d54c32dc8c09867e843d26e3e06554933e33285f060a00033b8d34a7",
+    "sha256": "fa6b9027f456644598f755c12bc4b6197318a1068ef40c89b9f767b495bb5fa0"
+  },
+  {
+    "slug": "desnareche",
+    "target": "/images/nmarket/eb209dfc0ca311f51c0328bc.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/69f382f165.jpg",
+    "page": "https://a101.ru/projects/desnarechie",
+    "inliers": 507,
+    "oldSha256": "494f9411d54c32dc8c09867e843d26e3e06554933e33285f060a00033b8d34a7",
+    "sha256": "fa6b9027f456644598f755c12bc4b6197318a1068ef40c89b9f767b495bb5fa0"
+  },
+  {
+    "slug": "evopark-sokolniki",
+    "target": "/images/nmarket/a06990a22b005b14ff362f41.jpg",
+    "source": "https://gk-osnova.ru/_ipx/f_webp&s_2560x1602/https://api.gkosnova.tech/public/storage/media/2024/3/pTlxFr3b5oSHqk3OtNCeCLA7JyENq4ILoDd1cseS.png",
+    "page": "https://gk-osnova.ru/novosti/gk-osnova-postroit-novii-proekt-u-parka-sokolniki",
+    "inliers": 352,
+    "oldSha256": "e63133bd7822fe9760327e19a462a28bbf4cf3d97e52bd93b0276d736a60f5c6",
+    "sha256": "49ab27258439da5a2f0ed079fb71d316b272b219917b1e3a1e92968e363bbc40"
+  },
+  {
+    "slug": "mariin-park",
+    "target": "/images/nmarket/e0306e60dc53e21e59567e53.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/768/tb5s66atjwlcnni9rxndsbjg8iqe5w46.jpg",
+    "page": "https://etalon-project.ru/projects/mariinn-park/",
+    "inliers": 179,
+    "oldSha256": "75a84a21fd8acd570c9441215f566e74e333296035ebca7895b1870ea8f604c6",
+    "sha256": "02742b694ada373d78f8c9a647b462c545302f362351975b0ea6317cc460d6e3"
+  },
+  {
+    "slug": "mariin-park",
+    "target": "/images/nmarket/b82b06c6a693937c4f48914d.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/c02/oqvyfm893i96bh7p3hiajoeuujwej9n8.jpg",
+    "page": "https://etalon-project.ru/projects/mariinn-park/",
+    "inliers": 324,
+    "oldSha256": "9d48ea21af8f6b4eadca3f9f1c34431a6d7f1cc22a7682a882923a97f2b0c790",
+    "sha256": "d1c739cf9837b73b44cc617252c92142b7f0c90b5f2d1e23172c49a503340126"
+  },
+  {
+    "slug": "mariin-park",
+    "target": "/images/nmarket/fa869325cf8dad9ef988ea66.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/19f/hw74kbmls61av420n4gy3mit1tcf31pf.jpg",
+    "page": "https://etalon-project.ru/projects/mariinn-park/",
+    "inliers": 272,
+    "oldSha256": "53bc4826879ec08b5d701984ceaa20047963084464b33e252f7915ecd78679cc",
+    "sha256": "4ddfeaaa8370291a8b50ffadc2d499987f6c511c6bf68e4183c51601de0d91b3"
+  },
+  {
+    "slug": "mariin-park",
+    "target": "/images/nmarket/4a4fc2502bf86d32d739534f.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/584/lhdj9u2mr9q1pcpsoj0gi4isfiwfnfx4.jpg",
+    "page": "https://etalon-project.ru/projects/mariinn-park/",
+    "inliers": 133,
+    "oldSha256": "90cc3a7ce6a2d4280d5ecef8796197151582541798cd4a282be6de7a0b7c6343",
+    "sha256": "2043b36cc4a52c2e4982552b07513963ea912f191376d6c405ce872f96dca4c0"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/aeeffae582a8e8c06d7896b8.jpg",
+    "source": "https://primepark.ru/local/templates/lp_promo/images/gallery/01-gall.jpg",
+    "page": "https://primepark.ru/",
+    "inliers": 449,
+    "oldSha256": "62531c9b2bdfc3d0265a1aa9841ceb57ee304a0826c6ac0d0a23dfc76ebcec1c",
+    "sha256": "c23d9c37a10311432923845be07e2d5b2f14a0ad1fca726cd61d34a6eb79b8f9"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/bdcb53d57868a0968fdee6de.jpg",
+    "source": "https://primepark.ru/local/templates/lp_promo/images/start/start.jpg",
+    "page": "https://primepark.ru/",
+    "inliers": 391,
+    "oldSha256": "5c51d866d0d9a9c890649d7691070a5e03ecad77b1a47d5d7f935ee4db563609",
+    "sha256": "7845ef414167ecc7d97d13a88d891206d92f8cfa509786594f7c5efbcce4f35a"
+  },
+  {
+    "slug": "rezidentsiya-omega",
+    "target": "/images/nmarket/42bf30f12d3ae35f25e55cdf.jpg",
+    "source": "https://api.aurix-development.ru/upload/iblock/992/7bmdnx175j6vwocqle4sohqjotmjdany/11.jpg",
+    "page": "https://aurix-development.ru/projects/omega-residence",
+    "inliers": 526,
+    "oldSha256": "c2a163c5c8a1871dc009156eae0920f9c293000dc793356aaa4bd1009691b1e1",
+    "sha256": "f6c7b305928f02e5e99df0fad16871160155aa0336b51b0100ab77e97b28cd26"
+  },
+  {
+    "slug": "rezidentsiya-omega",
+    "target": "/images/nmarket/0a62e2587d65eed0098f3aaa.jpg",
+    "source": "https://api.aurix-development.ru/upload/iblock/71a/t5c1sg0f9lvpz8wrz9ndatkngkhqgc5r/1.jpg",
+    "page": "https://aurix-development.ru/projects/omega-residence",
+    "inliers": 430,
+    "oldSha256": "8ad448a8d8d61eb4ccdcaa9bad477a9737699e3f27241bec990ea516c4d8cd72",
+    "sha256": "41757927330b1c7bfb6d94bd72ca6138cb571806f50293949bdd95a9c78f7433"
+  },
+  {
+    "slug": "rezidentsiya-omega",
+    "target": "/images/nmarket/46a42dea8e635e173c4f4b71.jpg",
+    "source": "https://api.aurix-development.ru/upload/iblock/5c0/hd39hpg3wwm88djlz6uba2usncic3ve6/10.jpg",
+    "page": "https://aurix-development.ru/projects/omega-residence",
+    "inliers": 554,
+    "oldSha256": "702e64181dfb4c8a4a611f2658ddfcd48a1176a557692257780b64c43edf2fea",
+    "sha256": "2450b6d329d2623e36cfa49b1d91ee41f7fc14498dc5c9c341c6a7ee65dcddf1"
+  }
+]

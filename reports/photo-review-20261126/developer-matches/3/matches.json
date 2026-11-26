@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "alia",
+    "target": "/images/nmarket/3aadeedbdc7d5e1cf4e8082f.jpg",
+    "source": "https://alia.moscow/m/c/p/company/media/8168d3ba7ef95031031460886ddd54a74062fbb9/d8e1c337b868c22872079f25b4c91cc2.jpg",
+    "page": "https://alia.moscow/about/",
+    "inliers": 223,
+    "oldSha256": "c1e4b9977c7c95604e47ff77dfa63adb9e94693b1a3faff1be5016e876776499",
+    "sha256": "0ca3cca3555fe9f3c065af5cfd5306cd4ca273fc38e22bdc12f2b3e21aca87c5"
+  },
+  {
+    "slug": "alia",
+    "target": "/images/nmarket/218b6c404be125d1e0aafbf8.jpg",
+    "source": "https://alia.moscow/m/c/p/company/media/8168d3ba7ef95031031460886ddd54a74062fbb9/d8e1c337b868c22872079f25b4c91cc2.jpg",
+    "page": "https://alia.moscow/about/",
+    "inliers": 224,
+    "oldSha256": "0d3836a8b316fefb372f5ddf96b67387c11ab2d87a6371c1a6dbc9748cbd8b60",
+    "sha256": "0ca3cca3555fe9f3c065af5cfd5306cd4ca273fc38e22bdc12f2b3e21aca87c5"
+  },
+  {
+    "slug": "alia",
+    "target": "/images/nmarket/07654d8088be08311de4be71.jpg",
+    "source": "https://alia.moscow/m/c/p/company/media/8168d3ba7ef95031031460886ddd54a74062fbb9/d8e1c337b868c22872079f25b4c91cc2.jpg",
+    "page": "https://alia.moscow/about/",
+    "inliers": 224,
+    "oldSha256": "0d3836a8b316fefb372f5ddf96b67387c11ab2d87a6371c1a6dbc9748cbd8b60",
+    "sha256": "0ca3cca3555fe9f3c065af5cfd5306cd4ca273fc38e22bdc12f2b3e21aca87c5"
+  },
+  {
+    "slug": "dom-a",
+    "target": "/images/nmarket/3f79d2912bad3d9b77899ebc.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/blocks/weather_block/n_BPcWIbv.jpg",
+    "page": "https://moskva.brusnika.ru/projects/dom-a/",
+    "inliers": 86,
+    "oldSha256": "2f97bfe4969c43a1147fcda9a4582d6a3322933ab2079f1068d58141fc4367e6",
+    "sha256": "69611c98feb28158288398b5826e0884d88d8e5702881b28be6ad7fa81bc1548"
+  },
+  {
+    "slug": "dom-a",
+    "target": "/images/nmarket/b9e4db983ccd0f37501ef759.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/blocks/gallery_block_slide/0093_Brusnika_Dom_A_0027_Close-Up.jpg",
+    "page": "https://moskva.brusnika.ru/projects/dom-a/",
+    "inliers": 477,
+    "oldSha256": "8c1cb9519e84229084ec45caa7a2ef4a676a9f179c2d9f1dceb0a32c4183699f",
+    "sha256": "eee3442efc6a83de24d3002f3535d39ded2f3a59e5b7f3edeafa9dee3f289cb7"
+  },
+  {
+    "slug": "dom-a",
+    "target": "/images/nmarket/6d99cc65b8c34fcdf0ce8618.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/blocks/gallery_block_slide/0093_Brusnika_Dom_A_0062_%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%BA%D0%B0%D1%84%D0%B5.jpg",
+    "page": "https://moskva.brusnika.ru/projects/dom-a/",
+    "inliers": 416,
+    "oldSha256": "8eb7532d5f8933a066270731850ed2f039b29bed783e48e0885b45d0204ae104",
+    "sha256": "f88267851f89b1547e48df3c7fbd99fee5b7b8bc5e2176081dfd789481e1b6c9"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/394c7e19606c94f8a7297c9b.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/b3ae409b35.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 472,
+    "oldSha256": "ca9b387ef1e4ca08ac583aeb5b999b8e4b1f951cab25e7983c93073644b4db2a",
+    "sha256": "8cc3a458705f5126fea55b67400f190491d67a33c78d675913a64039faeefc08"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/0d4ec646cf8474f339c8379a.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1024/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/584a3cf6d9.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 471,
+    "oldSha256": "2ea1dbe61d64046f58b889c18ebf8c3b8f05edb0b88b82bee30e7dbdba9eacbd",
+    "sha256": "5d21708d646544da139785796750e42997740e430b2d18f415be5325dd1e6523"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/20e217294b159d7a1fc0f8e4.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/0be0eed987.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 496,
+    "oldSha256": "62e649ea2114efb85673bff0a9d45d0caaddf630d7cf949e699801c33bb35a3d",
+    "sha256": "13a2f633e4bd59d0c1b5f3a77e50b72690a4a136edd63c0e1f0f9e69cd0b7e55"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/db6b9089caff85d4784024ec.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/b3ae409b35.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 472,
+    "oldSha256": "ca9b387ef1e4ca08ac583aeb5b999b8e4b1f951cab25e7983c93073644b4db2a",
+    "sha256": "8cc3a458705f5126fea55b67400f190491d67a33c78d675913a64039faeefc08"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/3274efcdc61dcb48b17c6fb6.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1024/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/584a3cf6d9.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 471,
+    "oldSha256": "2ea1dbe61d64046f58b889c18ebf8c3b8f05edb0b88b82bee30e7dbdba9eacbd",
+    "sha256": "5d21708d646544da139785796750e42997740e430b2d18f415be5325dd1e6523"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/ef8dc60175f57c1694a3767c.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/0be0eed987.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 496,
+    "oldSha256": "62e649ea2114efb85673bff0a9d45d0caaddf630d7cf949e699801c33bb35a3d",
+    "sha256": "13a2f633e4bd59d0c1b5f3a77e50b72690a4a136edd63c0e1f0f9e69cd0b7e55"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/a649f812a6d7889861b69c33.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1024/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/65bf3eafdf.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 477,
+    "oldSha256": "a9ccfd2e74a21d491e7fd04534b71a846859d6d6d2a998883619859ba44d048e",
+    "sha256": "1bad9ba9ae84a2ac6c84bbd3d88da9079d4e0c439757ae0683df927651f7e0dd"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/c861793b66bbf14117ae59c7.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1024/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/65bf3eafdf.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 477,
+    "oldSha256": "a9ccfd2e74a21d491e7fd04534b71a846859d6d6d2a998883619859ba44d048e",
+    "sha256": "1bad9ba9ae84a2ac6c84bbd3d88da9079d4e0c439757ae0683df927651f7e0dd"
+  },
+  {
+    "slug": "dzen-kvartaly",
+    "target": "/images/nmarket/b46e5fbf3e9fb73ed3f392b9.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1024/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/65bf3eafdf.jpg",
+    "page": "https://a101.ru/projects/dzen-kvartaly/",
+    "inliers": 477,
+    "oldSha256": "a9ccfd2e74a21d491e7fd04534b71a846859d6d6d2a998883619859ba44d048e",
+    "sha256": "1bad9ba9ae84a2ac6c84bbd3d88da9079d4e0c439757ae0683df927651f7e0dd"
+  },
+  {
+    "slug": "forst-hoomie",
+    "target": "/images/nmarket/57a1e733c202ce20177851a2.jpg",
+    "source": "https://forst.forma.ru/upload/iblock/1d2/nfrz606csyqn2trl1ox9vs5vmwzc5cpv/location_page.jpg",
+    "page": "https://forst.forma.ru/",
+    "inliers": 274,
+    "oldSha256": "ae46b05d113d20511340d6513f86449296f1a478674843b3f14f96e2849b1795",
+    "sha256": "b8cd778fcd8a88e535df947a723ac513b1f37087cd7e7ed490d1f22e9bad2544"
+  },
+  {
+    "slug": "rodina-park",
+    "target": "/images/nmarket/d0c1f274b8c0d711a86afeff.jpg",
+    "source": "https://rodinapark.ru/upload/resize_cache/iblock/885/3840_3840_1/czuma45oanlwcyr8plmtedqe3fsiad85.webp",
+    "page": "https://rodinapark.ru/",
+    "inliers": 359,
+    "oldSha256": "b521b64ddd541fa1c2098ac656f24a91994a854a5ea15b839db16627d184f33a",
+    "sha256": "2560dcdc7f9e1b3dc7adc0db597f8f4c1fadd5328141974dc4565177bcfb952e"
+  },
+  {
+    "slug": "rodina-park",
+    "target": "/images/nmarket/5567f9cfd9363c86473599fa.jpg",
+    "source": "https://rodinapark.ru/upload/iblock/aaf/wyiw2zzidxcbxgbfv4el9q6sr7lza111.webp",
+    "page": "https://rodinapark.ru/",
+    "inliers": 181,
+    "oldSha256": "d59ff28fb58954f7c8ef4c3554b0a948fd6608959c32dc4e79bb86303e200ae0",
+    "sha256": "e3d4edc05dba00d4fcc1de8a2146a2efa19b666e5f5ddd57cd224a27b4869673"
+  },
+  {
+    "slug": "stone-blik",
+    "target": "/images/nmarket/99bc68e9754aec61707da383.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Frame_sssssss_f7efa1c5d4_ab4b4af1dc.webp",
+    "page": "https://stone.ru/residential/blik",
+    "inliers": 437,
+    "oldSha256": "8aee076fbe2396d5c668d20af509e0e8d8326136ecdce87951e3370761d0c9a6",
+    "sha256": "b5c487bb54b448e278040c7e71c947e44a9cb1aa2b481279b0209a8be2b2f120"
+  },
+  {
+    "slug": "uno-sokolinaya-gora",
+    "target": "/images/nmarket/ea98161d00f83f26dd583b88.jpg",
+    "source": "https://api.gkosnova.tech/public/storage/media/2026/11/u8sKgXjVXBiZoQgMYyVFPj4Xkpu1iGON7Kx1g3yv.jpg",
+    "page": "https://gk-osnova.ru/sokolinaya-gora",
+    "inliers": 155,
+    "oldSha256": "999d8f3238fa66edcc675d8146918c52db12dac7e5b4ebceba7e9c910e64234c",
+    "sha256": "e63e1ddb623d3b27954a886ec2cdc324cc4f9c008009924fe278c2498b0c62e2"
+  },
+  {
+    "slug": "uno-sokolinaya-gora",
+    "target": "/images/nmarket/72f1131c72dde574e1a733cc.jpg",
+    "source": "https://gk-osnova.ru/_ipx/w_1060&f_webp/https://api.gkosnova.tech/public/storage/media/2026/4/EfQPRZNziZHirVrUidw9cXD4l9SaYZltX9UBKu0K.jpg",
+    "page": "https://gk-osnova.ru/sokolinaya-gora",
+    "inliers": 291,
+    "oldSha256": "57894362494a3b7bda1ce4b71fdae34f612b79d497cf87f253f6d5c9d42fe3da",
+    "sha256": "a3799b00886a3a09806f34b987963e0b7dab2ac4e318932d9d36526f9d902296"
+  }
+]

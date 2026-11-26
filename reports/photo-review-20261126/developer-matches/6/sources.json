@@ -1,0 +1,137 @@
+[
+  {
+    "project": "belyy-gorod",
+    "sourcePages": [
+      "https://sp.koshelev-proekt.ru/map/"
+    ],
+    "candidates": 92,
+    "decoded": 81,
+    "publishedPhotos": 41
+  },
+  {
+    "project": "dom-na-zorge",
+    "sourcePages": [
+      "https://a101.ru/projects/dom-na-zorge"
+    ],
+    "candidates": 130,
+    "decoded": 92,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "esterra-vnukovo-kantri-klab",
+    "sourcePages": [
+      "https://vnukovocountry.club/mainb"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 41
+  },
+  {
+    "project": "gorki-marusino",
+    "sourcePages": [
+      "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/"
+    ],
+    "candidates": 19,
+    "decoded": 3,
+    "publishedPhotos": 51
+  },
+  {
+    "project": "kod-sokolniki",
+    "sourcePages": [
+      "https://n-era.com/media/28"
+    ],
+    "candidates": 30,
+    "decoded": 22,
+    "publishedPhotos": 1
+  },
+  {
+    "project": "kvartal-izdanie",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/izdanie/"
+    ],
+    "candidates": 2,
+    "decoded": 1,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "malakhovskiy",
+    "sourcePages": [
+      "https://malahovskii.rzv.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 89,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "monblan",
+    "sourcePages": [
+      "https://hals-development.ru/realty/object/monblan"
+    ],
+    "candidates": 130,
+    "decoded": 13,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "novyy-zelenograd",
+    "sourcePages": [
+      "https://newzelenograd.ru/"
+    ],
+    "candidates": 63,
+    "decoded": 49,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "pirogovskaya-rivera",
+    "sourcePages": [
+      "https://pirogovo-riviera.ru/about-project/"
+    ],
+    "candidates": 130,
+    "decoded": 125,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "rezidentsii-arkhitektorov",
+    "sourcePages": [
+      "https://afi-development.com/project/rezidentsii-arkhitektorov"
+    ],
+    "candidates": 77,
+    "decoded": 34,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "rublevskie-dvory",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/rublevskie-dvory/"
+    ],
+    "candidates": 63,
+    "decoded": 55,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "sirenevyy-park",
+    "sourcePages": [
+      "https://afi-development.com/project/sirenevyy-park"
+    ],
+    "candidates": 89,
+    "decoded": 38,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "stoun-rayz",
+    "sourcePages": [
+      "https://stone.ru/residential/rise"
+    ],
+    "candidates": 130,
+    "decoded": 65,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "veyv",
+    "sourcePages": [
+      "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf"
+    ],
+    "candidates": 56,
+    "decoded": 56,
+    "publishedPhotos": 56
+  }
+]

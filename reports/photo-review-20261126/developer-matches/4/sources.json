@@ -1,0 +1,146 @@
+[
+  {
+    "project": "ays-tauers",
+    "sourcePages": [
+      "https://ice-towers.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 83,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "dom-chkalov",
+    "sourcePages": [
+      "https://ikon-pm.ru/news/dom-chkalov-poluchil-zos/"
+    ],
+    "candidates": 3,
+    "decoded": 3,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "eko-usadba-troitskoe",
+    "sourcePages": [
+      "https://gk-osnova.ru/novosti/gk-osnova-vivodit-na-rinok-pervii-zagorodnii-proekt-eko-usadbu-troitskoe-u-klyazminskogo-vodokhranilishcha"
+    ],
+    "candidates": 130,
+    "decoded": 23,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "friday-villas",
+    "sourcePages": [
+      "https://hitdev.ru/friday"
+    ],
+    "candidates": 27,
+    "decoded": 19,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "kholm",
+    "sourcePages": [
+      "https://a101.ru/projects/holm/"
+    ],
+    "candidates": 130,
+    "decoded": 74,
+    "publishedPhotos": 36
+  },
+  {
+    "project": "kvartal-belata",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/belata/"
+    ],
+    "candidates": 2,
+    "decoded": 2,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "lesnaya-otrada",
+    "sourcePages": [
+      "https://myotrada.ru/projects/lesnaya-otrada-1-2"
+    ],
+    "candidates": 16,
+    "decoded": 16,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "mfk-kinetik-rezidentsii-na-dmitrovskom",
+    "sourcePages": [
+      "https://moscow.uds-developer.ru/projects/kinetikresidence"
+    ],
+    "candidates": 3,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "novye-kotelniki",
+    "sourcePages": [
+      "https://rusich.group/kotelniki/"
+    ],
+    "candidates": 130,
+    "decoded": 119,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "parksayd",
+    "sourcePages": [
+      "https://cdn.static.lsr.ru/upload/kelnik.estate/ab2/6baw53n3mjocv2qvilmyru7dph1urq1v/Parkside_A4_img-book_apr-25_p3.pdf"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "red7",
+    "sourcePages": [
+      "https://red-seven.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 125,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "rodina-peredelkino",
+    "sourcePages": [
+      "https://rodinagroup.com/projects/rodina-peredelkino"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "sezar-city",
+    "sourcePages": [
+      "https://sezar-group.ru/projects/sezarcity"
+    ],
+    "candidates": 130,
+    "decoded": 117,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "stone-sokolniki",
+    "sourcePages": [
+      "https://stone.ru/residential/sokolniki"
+    ],
+    "candidates": 130,
+    "decoded": 70,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "very-botanicheskaya",
+    "sourcePages": [
+      "https://gk-osnova.ru/very-botsad"
+    ],
+    "candidates": 130,
+    "decoded": 30,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "zapadnaya-ivanteevka",
+    "sourcePages": [
+      "https://xn----dtbjjb4adhjrlq.xn--p1ai/objects/zapadnaya-ivanteevka"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 6
+  }
+]

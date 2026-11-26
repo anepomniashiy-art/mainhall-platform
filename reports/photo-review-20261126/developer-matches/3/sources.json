@@ -1,0 +1,148 @@
+[
+  {
+    "project": "alia",
+    "sourcePages": [
+      "https://alia.moscow/about/"
+    ],
+    "candidates": 67,
+    "decoded": 35,
+    "publishedPhotos": 45
+  },
+  {
+    "project": "dom-a",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/dom-a/"
+    ],
+    "candidates": 91,
+    "decoded": 68,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "dzen-kvartaly",
+    "sourcePages": [
+      "https://a101.ru/projects/dzen-kvartaly/"
+    ],
+    "candidates": 130,
+    "decoded": 92,
+    "publishedPhotos": 36
+  },
+  {
+    "project": "forst-hoomie",
+    "sourcePages": [
+      "https://forst.forma.ru/"
+    ],
+    "candidates": 84,
+    "decoded": 63,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "khimki-taym",
+    "sourcePages": [
+      "https://himkitime.ru/"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "kutuzov-siti",
+    "sourcePages": [
+      "https://kutuzov-city.ru/gallery"
+    ],
+    "candidates": 3,
+    "decoded": 2,
+    "publishedPhotos": 16
+  },
+  {
+    "project": "lesnaya-kollektsiya",
+    "sourcePages": [
+      "https://grad.ru/press/novosti-stroitelstva-zhk-lesnaja-kollektsija345"
+    ],
+    "candidates": 20,
+    "decoded": 6,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "metronom",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/metronom/"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "novo-molokovo",
+    "sourcePages": [
+      "https://novo-molokovo.ru/company/"
+    ],
+    "candidates": 10,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "pakhra-siti",
+    "sourcePages": [
+      "https://rzv.ru/objects/v-realizatsii/pakhra-siti/progress/"
+    ],
+    "candidates": 64,
+    "decoded": 54,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "ravnovesie",
+    "sourcePages": [
+      "https://kortros.ru/projects/ravnovesie2"
+    ],
+    "candidates": 130,
+    "decoded": 68,
+    "publishedPhotos": 46
+  },
+  {
+    "project": "rodina-park",
+    "sourcePages": [
+      "https://rodinapark.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 128,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "sezar-budushchee",
+    "sourcePages": [
+      "https://sezar-group.ru/projects/sezar-budushee"
+    ],
+    "candidates": 130,
+    "decoded": 116,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "stone-blik",
+    "sourcePages": [
+      "https://stone.ru/residential/blik"
+    ],
+    "candidates": 130,
+    "decoded": 75,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "uno-sokolinaya-gora",
+    "sourcePages": [
+      "https://gk-osnova.ru/sokolinaya-gora"
+    ],
+    "candidates": 130,
+    "decoded": 24,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "yuzhnye-sady",
+    "sourcePages": [
+      "https://cdn.a101.ru/projects/yujnie-sadi/",
+      "https://a101.ru/projects/",
+      "https://a101.ru/projects/yujnie-sadi/"
+    ],
+    "candidates": 258,
+    "decoded": 188,
+    "publishedPhotos": 11
+  }
+]

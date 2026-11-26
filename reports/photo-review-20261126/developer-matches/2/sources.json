@@ -1,0 +1,147 @@
+[
+  {
+    "project": "aktsenty",
+    "sourcePages": [
+      "https://accenty.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 93,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "dom-56",
+    "sourcePages": [
+      "https://dom56.com/"
+    ],
+    "candidates": 17,
+    "decoded": 17,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "dyuna",
+    "sourcePages": [
+      "https://www.trend-gr.ru/"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "forevil",
+    "sourcePages": [
+      "https://3s.group/projects/foreville"
+    ],
+    "candidates": 130,
+    "decoded": 58,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "kantemirovskiy",
+    "sourcePages": [
+      "https://rusich.group/kantemirovsky/construction_progress/"
+    ],
+    "candidates": 130,
+    "decoded": 107,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "kottedzhnyy-poselok-rezidentsii-istra",
+    "sourcePages": [
+      "https://residences-istra.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 129,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "laym",
+    "sourcePages": [
+      "https://lime-dom.ru/gallery/",
+      "https://lime-dom.ru/"
+    ],
+    "candidates": 39,
+    "decoded": 37,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "mechta",
+    "sourcePages": [
+      "https://mechta.su/kontakty/"
+    ],
+    "candidates": 46,
+    "decoded": 29,
+    "publishedPhotos": 51
+  },
+  {
+    "project": "novaya-shcherbinka",
+    "sourcePages": [
+      "https://newscherbinka.ru/"
+    ],
+    "candidates": 65,
+    "decoded": 62,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "otrada",
+    "sourcePages": [
+      "https://myotrada.ru/"
+    ],
+    "candidates": 9,
+    "decoded": 9,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "pushkino-grad",
+    "sourcePages": [
+      "https://pushkino-grad.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 57,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "river-park-towers-kutuzovskiy",
+    "sourcePages": [
+      "https://aeonestate.ru/zhk/river-park-towers/"
+    ],
+    "candidates": 32,
+    "decoded": 17,
+    "publishedPhotos": 26
+  },
+  {
+    "project": "severnyy-kvartal",
+    "sourcePages": [
+      "https://sever-kvartal.ru/"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "soyuz",
+    "sourcePages": [
+      "https://xn--g1ani7c.xn--80adxhks/process"
+    ],
+    "candidates": 130,
+    "decoded": 130,
+    "publishedPhotos": 31
+  },
+  {
+    "project": "uno-gorbunova",
+    "sourcePages": [
+      "https://gk-osnova.ru/gorbunova"
+    ],
+    "candidates": 130,
+    "decoded": 29,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "yuzhnaya-dolina",
+    "sourcePages": [
+      "https://rdiprigorod.ru/"
+    ],
+    "candidates": 130,
+    "decoded": 58,
+    "publishedPhotos": 55
+  }
+]

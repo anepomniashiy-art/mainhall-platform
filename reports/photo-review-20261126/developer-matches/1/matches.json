@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "afi-tower",
+    "target": "/images/nmarket/8c1019de3eacace13dd06033.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/3a7/ppmopvpn2smwh31u7hcfzq4d50y3ns67.jpg",
+    "page": "https://afi-development.com/project/afi-tower",
+    "inliers": 143,
+    "oldSha256": "be9a1417553e8ae1bd54f4582072935608813a0057ddc90130e96e27c7e5e30a",
+    "sha256": "8cbbc22224a1dd313f0dec164fa8d95214c679fe76cdd5731ce8a6670596d7f2"
+  },
+  {
+    "slug": "lastochkino",
+    "target": "/images/nmarket/6cd20fecf6d94041361b82c7.jpg",
+    "source": "https://gk-lastochkino.ru/_ipx/f_webp&q_85/pics/gallery/exterior.jpg",
+    "page": "https://gk-lastochkino.ru/",
+    "inliers": 451,
+    "oldSha256": "86ae77168b63a44d2c214751e70825b1562e732ce5d2de67db20e8b42d46f317",
+    "sha256": "ae7787740edb7b157824299ba989a9517c72ef77f3efa688b55b69a13db0f17f"
+  },
+  {
+    "slug": "lastochkino",
+    "target": "/images/nmarket/3c9e3effa734994e72eb8ec3.jpg",
+    "source": "https://gk-lastochkino.ru/_ipx/f_webp&q_85/pics/gallery/exterior.jpg",
+    "page": "https://gk-lastochkino.ru/",
+    "inliers": 451,
+    "oldSha256": "86ae77168b63a44d2c214751e70825b1562e732ce5d2de67db20e8b42d46f317",
+    "sha256": "ae7787740edb7b157824299ba989a9517c72ef77f3efa688b55b69a13db0f17f"
+  },
+  {
+    "slug": "onegin",
+    "target": "/images/nmarket/0845634cf7fc8da298a35506.jpg",
+    "source": "https://rzv.ru/upload/uf/319/zbpialld1j1ig5rn85ht8gmwocnywmla/9-kopiya-_1_.jpg",
+    "page": "https://rzv.ru/objects/v-realizatsii/onegin/",
+    "inliers": 426,
+    "oldSha256": "602aee2a19d69ad66a0894c878e3bf6d0b3db0bdde64754002d19c8ec88c8be3",
+    "sha256": "5a4f92fa1fefcf7529b2994e79efa21e9fe017d086d09268604b9e36b06d4947"
+  },
+  {
+    "slug": "prokshino",
+    "target": "/images/nmarket/0a2ecc934f5f5ff2868c03ee.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1536/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/3d6f8f1613.jpg",
+    "page": "https://a101.ru/projects/prokshino/",
+    "inliers": 535,
+    "oldSha256": "635bb1ebd7832ed8e55433a832afb8dc3391934ffbb8ca2a7b72b6f97f324dc3",
+    "sha256": "3c1014e9ec431313d458efb75b1fad0a1703ea8088d03de167ef77738b7fa4f1"
+  },
+  {
+    "slug": "prokshino",
+    "target": "/images/nmarket/f26aec0d8bede62fce073ec4.jpg",
+    "source": "https://cdn.a101.ru/proxy/insecure/w:1024/q:80/plain/https://cdn.a101.ru/mmedia/p/pag/i/5597621af6.jpg",
+    "page": "https://a101.ru/projects/prokshino/",
+    "inliers": 522,
+    "oldSha256": "e1b3ebfefb923454b14c97735f66a096cdbedfcda7ba06659e7c9904db0ad69a",
+    "sha256": "4f17e36d66610b6910b2b8aee9547e5ae03b5c0e2d104f9af67e737c0ce00b6a"
+  },
+  {
+    "slug": "riga-khills",
+    "target": "/images/nmarket/0e54df4c200863f516c6379e.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fill:1040:768/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/3933e790-9a3e-47a7-8d25-2f0c1eb6440b/sites/blocks/45af07769c404b52975846374c4a00f6.jpg",
+    "page": "https://rigahills.ru/",
+    "inliers": 225,
+    "oldSha256": "41ae685c4371ff2541c0982b5777a891afb6740d056a55ddb8df294232222ebd",
+    "sha256": "374c889b96ea6ceb4b9a20ac6f7ced61d9bcace2c31ab9274edea89656378c0c"
+  }
+]

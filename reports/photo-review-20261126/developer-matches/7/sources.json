@@ -1,0 +1,138 @@
+[
+  {
+    "project": "buninskie-kvartaly",
+    "sourcePages": [
+      "https://a101.ru/projects/buninskiye-kvartaly/"
+    ],
+    "candidates": 130,
+    "decoded": 100,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "dom-soboleva",
+    "sourcePages": [
+      "https://domsoboleva.ru/"
+    ],
+    "candidates": 5,
+    "decoded": 3,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "evopark-izmaylovo",
+    "sourcePages": [
+      "https://gk-osnova.ru/evoizmaylovo",
+      "https://gk-osnova.ru/novosti/evopark-izmailovo-novii-proekt-gk-osnova-u-izmailovskogo-parka"
+    ],
+    "candidates": 260,
+    "decoded": 90,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "gorodskoy-bor",
+    "sourcePages": [
+      "https://avadom.ru/serpukhov/objects/gorodskoy-bor/"
+    ],
+    "candidates": 6,
+    "decoded": 5,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "kollektsiya",
+    "sourcePages": [
+      "https://www.rks-dev.ru/press-center/khod-stroitelstva-zhk-kollektsiya-oktyabr-2026/"
+    ],
+    "candidates": 6,
+    "decoded": 5,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "kvartal-mons",
+    "sourcePages": [
+      "https://moskva.brusnika.ru/projects/mons/"
+    ],
+    "candidates": 2,
+    "decoded": 2,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "malinovo",
+    "sourcePages": [
+      "https://gk-osnova.ru/malinovo"
+    ],
+    "candidates": 130,
+    "decoded": 35,
+    "publishedPhotos": 5
+  },
+  {
+    "project": "nametkin-tower",
+    "sourcePages": [
+      "https://gk-osnova.ru/nametkin-tower"
+    ],
+    "candidates": 130,
+    "decoded": 42,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "obrucheva-30",
+    "sourcePages": [
+      "https://cdn.static.lsr.ru/upload/kelnik.estate/1ce/6zdll228b5n97znnmvbi51lko4tec68v/A4_Obrucheva-30_imig-book_apr-25_web.pdf"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "praym-kvartal-otrada-na-reke",
+    "sourcePages": [
+      "https://otrada-river.ru/khod-stroitelstva"
+    ],
+    "candidates": 130,
+    "decoded": 130,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "rezidentsii-vorontsova",
+    "sourcePages": [
+      "https://rzv.ru/objects/v-realizatsii/rezidentsii-vorontsova/description/"
+    ],
+    "candidates": 31,
+    "decoded": 30,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "rusich-kotelniki-park",
+    "sourcePages": [
+      "https://kvartalkotelniki.ru/"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "siti-kvartal-otrada",
+    "sourcePages": [
+      "https://myotrada.ru/projects/city"
+    ],
+    "candidates": 6,
+    "decoded": 6,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "tate",
+    "sourcePages": [
+      "https://kortros.ru/projects/tate"
+    ],
+    "candidates": 4,
+    "decoded": 3,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "vokskholl",
+    "sourcePages": [
+      "https://etalongroup.ru/msk/news/etalon-zavershil-stroitelstvo-proekta-vokskholl/"
+    ],
+    "candidates": 27,
+    "decoded": 10,
+    "publishedPhotos": 21
+  }
+]

@@ -1,0 +1,884 @@
+[
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/77fa358674d35ae0dfcb4d24.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p8.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 521,
+    "oldSha256": "d435863ec0b5df62f93d46dc252fdb24bc27f1d5c4fba3e913ee36832d1761e8",
+    "sha256": "c54c69372b04ae2d51130263c9c5405e44721390ca03c37eca66b7d7112518cd"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/7b61c25062ff69c568ccfb11.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/4e9a9d79772724c29e464037.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/26480a78967f7c991418fdf2.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/8a91a750d06e36309e07395e.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/82fd5f8e690ac8816db0acc0.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/88646f14b6a14bad9d1effaa.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/2dc6334300d398324347ff1c.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/58c958dbd1aea00cbcc98ecd.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/a5c84582b42880a75843c71d.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/a80b432a4f9d404e8f043e57.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/c337e6d90a16d0a49e751568.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/da92e15d58504f2ca86a725d.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/0b03504cc7ca8fc5e8cfeb57.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/ef3349df44bcc17bcf5bce24.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/5d09a69f25c5a7c50b62b053.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/d75b99ea239ac31524bd7bc4.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/642000a1304a62368f42e06a.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/d41d071977220c315a79b353.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/bc2f2bcd0ca85ec4703623a7.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/482b4b89bfd31d09793927fb.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/8580801c18818708f132bfb2.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/5d65afaba0fe46c66b2d8c4a.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/ff0b1886107d884cfc3d58a3.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/2a3db9f8b09794a35efff645.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/8e2f0822fafb3fff2fef5120.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/fe1f643c6ff20b2db203476c.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/e273ce4a0a6b34b793ebcdd8.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/ca81123df22cc7514daf24c1.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/21fb292a417d150e9c2b8275.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/2a3d0196cfb824212831ef5e.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/39b9c4b8fe661150ba865bc2.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/0f5ec9eebe2c189dee7874f0.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/319f2ce8668a296cf3df7bb8.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/f2c08c94d8216323e2af03fc.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/b612649c02a3389f0f2cd603.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/41f4f89cd14b33e1f1d32069.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p1.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 441,
+    "oldSha256": "dd1f984edae9879edc4bf0e3f91c45e2f92ba9970ea608a42fc26c8e0e54b687",
+    "sha256": "68beeef367f5c49ca81a6094430789ecea592b8d58b96e358fa1648c71f1f6d2"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/70787267745b0776aa3a6448.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p2.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 559,
+    "oldSha256": "7f6f26b9ce3c92dedef1be75a266ced27ef18e76391f04f2d69c6d641eb718c1",
+    "sha256": "eb45a6e09b0bf2cb62ba7da30302a197ba519e5adc96eaca20a71d170563117b"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/abe983a6716ec05c7f555da0.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p3.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 554,
+    "oldSha256": "05f8f2c91b36a72c091acbbbd9a894d826770c66a3e631f3758063ac516a27b3",
+    "sha256": "860d1133a7ae7a145fd2b7d760b0c0276ed27153f79251f4d5228effecb06aa8"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/05e02d76e10a222401c8dead.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p4.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 490,
+    "oldSha256": "8c108b558a14f1ef16c969461f38b2630f54b37063a5b88a8e04ac52d87ba28a",
+    "sha256": "1642531d32fd0657e3d226456e0464c3d28d0919e636b707a9147b57e97cdf2c"
+  },
+  {
+    "slug": "belyy-gorod",
+    "target": "/images/nmarket/846dd30600cf754769c1d48e.jpg",
+    "source": "https://sp.koshelev-proekt.ru/uploads/gallery-arh-p5.jpg",
+    "page": "https://sp.koshelev-proekt.ru/map/",
+    "inliers": 542,
+    "oldSha256": "33e823c0a05529416cf66058dd503444b155c788dfdcb997da32961388a36e85",
+    "sha256": "1ce501afaab5ac009d5c658e7dfd4fefa05385f80282be73225c9fc5708f6b17"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/c1d000cb4efa330bda75d2b7.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/gorki-inn.webp",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 332,
+    "oldSha256": "2af154eb0ad220cfc1ba9e40f3fdebaa4005c7e8bcfb675db81c06ff1f69fcfe",
+    "sha256": "7d952dcad6b2d5c9e5f0fb629d3ff33aab3e90f2791b6c859594d9a1c4a461ca"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/98f61c0764466bd591ac27cd.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/064a3c76814e68cc7ef141e1.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/3793ec226234d76cc4d8cdb8.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/199c25f28567d64068a94a10.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/6a9627e166d6672eb17758a2.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/71b4c51345c6bd55b768b77f.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/7f4af666d05b2aa6ae14517f.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/7140ac04c4871e281bc24c77.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/4bacf4925fef84acf0374450.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "gorki-marusino",
+    "target": "/images/nmarket/462ba51b88b623294e818bfb.jpg",
+    "source": "https://xn----8sbefgb8dfke.xn--p1ai/images/projects/marusino/marusino-desc.jpg",
+    "page": "https://xn----8sbefgb8dfke.xn--p1ai/proekty/gorki-marusino/",
+    "inliers": 386,
+    "oldSha256": "13f5bf7b25c3e7a187b5eb24bd35ebe914662119d6159187a544e0f4de9d27e8",
+    "sha256": "933f26e757004de1f38c8ec4d6bb12a3d83921360585b1f7d73d266d189f8b9e"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/6e027ae5b8b8269c463e662b.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/img/sections-bg.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 79,
+    "oldSha256": "a5b4eafd464694e0af6f0100b69f40608dbd26f8709e7b3261c06f5f802c9c0d",
+    "sha256": "18245c0e58f33318fd1e6912d1ff3d6623efb515a0245bd559cd4e57d8144c70"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/db78a9366a4ee20c6292b03f.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/50e/mys0eo2vm7lo3svvt78epxb48ijcooaw.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 477,
+    "oldSha256": "d08d93ed0e4144d5eff506cc1b79729bbac97571081c29705d84a432f2e1414a",
+    "sha256": "022ccd358ce3af2ff4ee5b93aea9a4fe3f86a35be82f5f6f339610f2e2f60c4d"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/bfaafa70d36136fe5a040e58.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/a8b/iree1rtopzepidxigsxsvj7bf93096ax.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 489,
+    "oldSha256": "c36635936df901e0d766b8e47d9ad6312bb4b3ec70530524e54bec70b2f91dae",
+    "sha256": "833d8e565aa051eee8d2431e4123bd5c4837a52bf227fda3a21a7958d8b0f4d9"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/724b4cf92009aa474a6f6673.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/889/cca0v5ypb5shlwnca0dcjxbd0y76x1ao.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 430,
+    "oldSha256": "2aef3ab18768c96cb9cdea3f44b3fc7f4c3d6ee141a8358772f84cd5271b12f6",
+    "sha256": "6c2333eb69ccb4d67d846bfd9b79b4e2ace0e8f4e3b82549f0db804c58c85bf4"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/7591f71bfdc669e1015460d0.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/resize_cache/iblock/b89/1920_1080_2/ufm2yqgt0ccw965a84hg7cpfli1001sj.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 402,
+    "oldSha256": "b5c0e38b6126d9f111b42d7779c6bf0566e2b149f48654e3e858602e1152eb76",
+    "sha256": "b88ee29cdb34a94cd8cf0f982190a5227dba84e43d9dc6a17842eed0ad57c2c7"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/23b6631950da43d466d7c546.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/087/16sbxugl797ej0h9u6jltc9bsmz3sw34.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 392,
+    "oldSha256": "85ea7b7327c54d84dea0272e0e1b718cc727b2492ec86283774ff512f4078bcd",
+    "sha256": "4e5ddbc325c5a75ff5ec708415cd396741aa5799b2ca83435d0d63c753623d87"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/ba3edf8714ce0e313caecf29.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/50e/mys0eo2vm7lo3svvt78epxb48ijcooaw.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 477,
+    "oldSha256": "d08d93ed0e4144d5eff506cc1b79729bbac97571081c29705d84a432f2e1414a",
+    "sha256": "022ccd358ce3af2ff4ee5b93aea9a4fe3f86a35be82f5f6f339610f2e2f60c4d"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/e1bba292604d8189df624f15.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/a8b/iree1rtopzepidxigsxsvj7bf93096ax.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 489,
+    "oldSha256": "c36635936df901e0d766b8e47d9ad6312bb4b3ec70530524e54bec70b2f91dae",
+    "sha256": "833d8e565aa051eee8d2431e4123bd5c4837a52bf227fda3a21a7958d8b0f4d9"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/7e9034328b20b9b05cdddd84.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/889/cca0v5ypb5shlwnca0dcjxbd0y76x1ao.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 430,
+    "oldSha256": "2aef3ab18768c96cb9cdea3f44b3fc7f4c3d6ee141a8358772f84cd5271b12f6",
+    "sha256": "6c2333eb69ccb4d67d846bfd9b79b4e2ace0e8f4e3b82549f0db804c58c85bf4"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/659c271a69134091ace3d68d.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/resize_cache/iblock/b89/1920_1080_2/ufm2yqgt0ccw965a84hg7cpfli1001sj.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 402,
+    "oldSha256": "b5c0e38b6126d9f111b42d7779c6bf0566e2b149f48654e3e858602e1152eb76",
+    "sha256": "b88ee29cdb34a94cd8cf0f982190a5227dba84e43d9dc6a17842eed0ad57c2c7"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/8002960e3fefcc46586c06cd.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/087/16sbxugl797ej0h9u6jltc9bsmz3sw34.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 392,
+    "oldSha256": "85ea7b7327c54d84dea0272e0e1b718cc727b2492ec86283774ff512f4078bcd",
+    "sha256": "4e5ddbc325c5a75ff5ec708415cd396741aa5799b2ca83435d0d63c753623d87"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/03fd2c4036fbcd649c69b5c3.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/50e/mys0eo2vm7lo3svvt78epxb48ijcooaw.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 477,
+    "oldSha256": "d08d93ed0e4144d5eff506cc1b79729bbac97571081c29705d84a432f2e1414a",
+    "sha256": "022ccd358ce3af2ff4ee5b93aea9a4fe3f86a35be82f5f6f339610f2e2f60c4d"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/bf79a2413630ffe174be5f0b.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/a8b/iree1rtopzepidxigsxsvj7bf93096ax.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 489,
+    "oldSha256": "c36635936df901e0d766b8e47d9ad6312bb4b3ec70530524e54bec70b2f91dae",
+    "sha256": "833d8e565aa051eee8d2431e4123bd5c4837a52bf227fda3a21a7958d8b0f4d9"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/de514c348ff6522177e1a825.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/889/cca0v5ypb5shlwnca0dcjxbd0y76x1ao.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 430,
+    "oldSha256": "2aef3ab18768c96cb9cdea3f44b3fc7f4c3d6ee141a8358772f84cd5271b12f6",
+    "sha256": "6c2333eb69ccb4d67d846bfd9b79b4e2ace0e8f4e3b82549f0db804c58c85bf4"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/be5a9643a04f9f356d22e45d.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/resize_cache/iblock/b89/1920_1080_2/ufm2yqgt0ccw965a84hg7cpfli1001sj.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 402,
+    "oldSha256": "b5c0e38b6126d9f111b42d7779c6bf0566e2b149f48654e3e858602e1152eb76",
+    "sha256": "b88ee29cdb34a94cd8cf0f982190a5227dba84e43d9dc6a17842eed0ad57c2c7"
+  },
+  {
+    "slug": "malakhovskiy",
+    "target": "/images/nmarket/6c97a3552932759266d2f8fd.jpg",
+    "source": "https://malahovskii.rzv.ru/upload/iblock/087/16sbxugl797ej0h9u6jltc9bsmz3sw34.webp",
+    "page": "https://malahovskii.rzv.ru/",
+    "inliers": 392,
+    "oldSha256": "85ea7b7327c54d84dea0272e0e1b718cc727b2492ec86283774ff512f4078bcd",
+    "sha256": "4e5ddbc325c5a75ff5ec708415cd396741aa5799b2ca83435d0d63c753623d87"
+  },
+  {
+    "slug": "novyy-zelenograd",
+    "target": "/images/nmarket/af462980ad3fe398f4f0620b.jpg",
+    "source": "https://newzelenograd.ru/upload/weimg_cache/e4a/e4aab43c1793362d04bcd635a832b3a5/P7220004-HDR.jpg",
+    "page": "https://newzelenograd.ru/",
+    "inliers": 179,
+    "oldSha256": "0d42b42b2a2bf241316f17b35ec4788d71b5979ff05227615d160f8fb74d7198",
+    "sha256": "a30d02415b820d6ad7601b2f9500e838ae053c199c8a4c2b3775052eb5789cc6"
+  },
+  {
+    "slug": "novyy-zelenograd",
+    "target": "/images/nmarket/4ef3796675ce32b101c6c5af.jpg",
+    "source": "https://newzelenograd.ru/upload/weimg_cache/9f5/9f5dfc9cb2b88a2e35e3dc616bd75213/P7220022-HDR.jpg",
+    "page": "https://newzelenograd.ru/",
+    "inliers": 357,
+    "oldSha256": "974129e3382b41d8dca8666ed0869130f631831519e07f93e6664fd24341d376",
+    "sha256": "61b87d643ebc2cff080942cb8718d2a54200504d864997b1baefaebde707425c"
+  },
+  {
+    "slug": "novyy-zelenograd",
+    "target": "/images/nmarket/73696e6b703344cf9f23e0f8.jpg",
+    "source": "https://newzelenograd.ru/upload/weimg_cache/e4a/e4aab43c1793362d04bcd635a832b3a5/P7220004-HDR.jpg",
+    "page": "https://newzelenograd.ru/",
+    "inliers": 173,
+    "oldSha256": "e4cc65ae23252b2fcfc93f83fec863cca282d2d632c3b3fadbbe57229547c451",
+    "sha256": "a30d02415b820d6ad7601b2f9500e838ae053c199c8a4c2b3775052eb5789cc6"
+  },
+  {
+    "slug": "novyy-zelenograd",
+    "target": "/images/nmarket/fbaebb2ecf7eb55365e6575e.jpg",
+    "source": "https://newzelenograd.ru/upload/weimg_cache/9f5/9f5dfc9cb2b88a2e35e3dc616bd75213/P7220022-HDR.jpg",
+    "page": "https://newzelenograd.ru/",
+    "inliers": 352,
+    "oldSha256": "d9a3a44013256301d39ab6ecd3603c1078408f47810497afac71fe3fa5aa8a0c",
+    "sha256": "61b87d643ebc2cff080942cb8718d2a54200504d864997b1baefaebde707425c"
+  },
+  {
+    "slug": "rezidentsii-arkhitektorov",
+    "target": "/images/nmarket/b6fc7c05458ee06ecb07fff9.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/afe/xq61mgshy2lxylkdp6dqhx68jyi0lb60.jpg",
+    "page": "https://afi-development.com/project/rezidentsii-arkhitektorov",
+    "inliers": 452,
+    "oldSha256": "8df2b755533238c7195fad83084d538c33d3b281c850ab934c12e0f201944bd2",
+    "sha256": "2fd0d6c51902fdb219c693a8633041ea1ad0a8c07264cceb6008c58ef0aa05e3"
+  },
+  {
+    "slug": "rezidentsii-arkhitektorov",
+    "target": "/images/nmarket/9460fc1642480e9ca8edd39e.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/afe/xq61mgshy2lxylkdp6dqhx68jyi0lb60.jpg",
+    "page": "https://afi-development.com/project/rezidentsii-arkhitektorov",
+    "inliers": 452,
+    "oldSha256": "8df2b755533238c7195fad83084d538c33d3b281c850ab934c12e0f201944bd2",
+    "sha256": "2fd0d6c51902fdb219c693a8633041ea1ad0a8c07264cceb6008c58ef0aa05e3"
+  },
+  {
+    "slug": "rublevskie-dvory",
+    "target": "/images/nmarket/3c617793705a21245dfeb7eb.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/blocks/advantages_block_slide/%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82.jpg",
+    "page": "https://moskva.brusnika.ru/projects/rublevskie-dvory/",
+    "inliers": 168,
+    "oldSha256": "b2648957eefc6c78a024260bab822fd18eef37b5232492c87892aaa20f6edf94",
+    "sha256": "4f09585f9553c74a7159a4c98cb0c718cb3b185a865461aaa1588bf5b25a5a2e"
+  },
+  {
+    "slug": "rublevskie-dvory",
+    "target": "/images/nmarket/6c2e50a128ef6381cf14901e.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/custom_complex_page/image/%D0%9A%D0%BB%D0%BE%D1%83%D0%B7%D0%B0%D0%BF-1.jpg",
+    "page": "https://moskva.brusnika.ru/projects/rublevskie-dvory/",
+    "inliers": 323,
+    "oldSha256": "b556bc02c6cac7cd4635fd8c9d630742ee38535ab585c8cc0bfac67c4374624f",
+    "sha256": "cd0ff82ce31c7a0d705356f97a15cec306cf215417680e3680fc36439e281f51"
+  },
+  {
+    "slug": "rublevskie-dvory",
+    "target": "/images/nmarket/4697b413b4b30452f388023e.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/blocks/advantages_block_slide/%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%B2%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82.jpg",
+    "page": "https://moskva.brusnika.ru/projects/rublevskie-dvory/",
+    "inliers": 168,
+    "oldSha256": "b2648957eefc6c78a024260bab822fd18eef37b5232492c87892aaa20f6edf94",
+    "sha256": "4f09585f9553c74a7159a4c98cb0c718cb3b185a865461aaa1588bf5b25a5a2e"
+  },
+  {
+    "slug": "rublevskie-dvory",
+    "target": "/images/nmarket/06ea492512162c01a687af69.jpg",
+    "source": "https://cdn.brusnika.ru/proxy/insecure/plain/https://cdn.brusnika.ru/media/custom_complex_page/image/%D0%9A%D0%BB%D0%BE%D1%83%D0%B7%D0%B0%D0%BF-1.jpg",
+    "page": "https://moskva.brusnika.ru/projects/rublevskie-dvory/",
+    "inliers": 323,
+    "oldSha256": "b556bc02c6cac7cd4635fd8c9d630742ee38535ab585c8cc0bfac67c4374624f",
+    "sha256": "cd0ff82ce31c7a0d705356f97a15cec306cf215417680e3680fc36439e281f51"
+  },
+  {
+    "slug": "sirenevyy-park",
+    "target": "/images/nmarket/d2bd68d24b4d83ff02261b23.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/8c1/g8ygo6gxg7bb9pd0x7k0opqdstpq8t2h.jpeg",
+    "page": "https://afi-development.com/project/sirenevyy-park",
+    "inliers": 259,
+    "oldSha256": "2e7c3b985c468e52fcb6338da89d40c10d6afc3d950a64c4299b73cbfe6213ea",
+    "sha256": "0438f7fc5a95acd26b4dafe6d4c421021f121d25f4663453e71e81c9f371d5b4"
+  },
+  {
+    "slug": "sirenevyy-park",
+    "target": "/images/nmarket/cbb7b326b02bb929c738c966.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/8c1/g8ygo6gxg7bb9pd0x7k0opqdstpq8t2h.jpeg",
+    "page": "https://afi-development.com/project/sirenevyy-park",
+    "inliers": 259,
+    "oldSha256": "2e7c3b985c468e52fcb6338da89d40c10d6afc3d950a64c4299b73cbfe6213ea",
+    "sha256": "0438f7fc5a95acd26b4dafe6d4c421021f121d25f4663453e71e81c9f371d5b4"
+  },
+  {
+    "slug": "sirenevyy-park",
+    "target": "/images/nmarket/c7c6c7c934f70c02bd0c1269.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/8c1/g8ygo6gxg7bb9pd0x7k0opqdstpq8t2h.jpeg",
+    "page": "https://afi-development.com/project/sirenevyy-park",
+    "inliers": 259,
+    "oldSha256": "2e7c3b985c468e52fcb6338da89d40c10d6afc3d950a64c4299b73cbfe6213ea",
+    "sha256": "0438f7fc5a95acd26b4dafe6d4c421021f121d25f4663453e71e81c9f371d5b4"
+  },
+  {
+    "slug": "sirenevyy-park",
+    "target": "/images/nmarket/6a2e4cdbed540e6139a8bd1b.jpg",
+    "source": "https://afi-development.com/api/proxy-image/f_avif/upload/iblock/8c1/g8ygo6gxg7bb9pd0x7k0opqdstpq8t2h.jpeg",
+    "page": "https://afi-development.com/project/sirenevyy-park",
+    "inliers": 259,
+    "oldSha256": "2e7c3b985c468e52fcb6338da89d40c10d6afc3d950a64c4299b73cbfe6213ea",
+    "sha256": "0438f7fc5a95acd26b4dafe6d4c421021f121d25f4663453e71e81c9f371d5b4"
+  },
+  {
+    "slug": "stoun-rayz",
+    "target": "/images/nmarket/0e77704a894dcbf54b3202f0.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Full_size_Raiz_Arhitektura2x_f9f9ebc86a_a7b14227cf.webp",
+    "page": "https://stone.ru/residential/rise",
+    "inliers": 409,
+    "oldSha256": "0a0885d6edf1e85733470879ee329a7cd31c1b7a2128a3ed31a819a099653b1f",
+    "sha256": "b60293d7f20941f3294d68dee6354c6a9be4defe93ad0544d7a0e80e9211d85b"
+  },
+  {
+    "slug": "stoun-rayz",
+    "target": "/images/nmarket/2995f2ddda36da1427d0686f.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Sokolniki_kartochka_1_0ed8c0489c_3b84ab4a19_b99398003e_dc3dfdb4b9_d7821bbf57_c4cfc184e3.jpg",
+    "page": "https://stone.ru/residential/rise",
+    "inliers": 226,
+    "oldSha256": "3e47550dc9dd1172c47a475a73d2bc35968c79885105464236f9a10aa76a2172",
+    "sha256": "e2159fc43446fd04f9f91e3adf3d9192a3e6555d22db969de5fa22f0c6cd267e"
+  },
+  {
+    "slug": "stoun-rayz",
+    "target": "/images/nmarket/1c42d617167028d4add2d3d2.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/10_b05310e568_ebbc7aeb9e_bbbd479f77_2e059c0f53.webp",
+    "page": "https://stone.ru/residential/rise",
+    "inliers": 302,
+    "oldSha256": "a64dd17a7bda053be276128d7c56d483df3d3166cec5f5e4b2cfe3e0ee69e54b",
+    "sha256": "ec0cbfc732f6d3f5c154573987e7df6a22178aef2c1bd014a4f81ead64cb2163"
+  },
+  {
+    "slug": "stoun-rayz",
+    "target": "/images/nmarket/536b39da60fd50f36e839c04.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/10_b05310e568_ebbc7aeb9e_bbbd479f77_2e059c0f53.webp",
+    "page": "https://stone.ru/residential/rise",
+    "inliers": 302,
+    "oldSha256": "a64dd17a7bda053be276128d7c56d483df3d3166cec5f5e4b2cfe3e0ee69e54b",
+    "sha256": "ec0cbfc732f6d3f5c154573987e7df6a22178aef2c1bd014a4f81ead64cb2163"
+  },
+  {
+    "slug": "stoun-rayz",
+    "target": "/images/nmarket/c713faddb418f8d2f7894bc7.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/8_d528e1a0a8_6b9cada3db_568c8eef9b_b42714a0da.webp",
+    "page": "https://stone.ru/residential/rise",
+    "inliers": 280,
+    "oldSha256": "53ffb89ca25727888ddb12e3997b2680ecb03c1b040c2814df4dfb2810322935",
+    "sha256": "ef051025bd5389761631d893e1cb275c1fc00798106d69dae93dd380e18dd84d"
+  },
+  {
+    "slug": "stoun-rayz",
+    "target": "/images/nmarket/38a5d83166086d8ea70f697e.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/1172x560_grand_lobbi_cba9f9609f_2005d260fb.webp",
+    "page": "https://stone.ru/residential/rise",
+    "inliers": 244,
+    "oldSha256": "ad436ada38b0b6ae37016b21b26130d70aa9a0cbf7c24802052f2cc190300d88",
+    "sha256": "e3900aabb8baf3261f87745d317519752c68b3445a8cf0eb6a288a9adeb89fad"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/09ce3bee6a4ea8bd5a21cfe1.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1521",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 140,
+    "oldSha256": "5c2010a1249ca62b0c05b3dcebf21214b58cb419cc12ec86ddcea8e856ac8f68",
+    "sha256": "7869076e4a650314d66e6eee23f40b47d5cadef17b8ad08a25cf7e9febe71cd1"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/8853ded85895f4fb9d8e4933.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1523",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 168,
+    "oldSha256": "44f5629d180e1ca0c552a66b2841d0fef2e930b1f7148fd8a4da4e66be27fb1f",
+    "sha256": "d7010d594b9abc6c64ff3c0aa80bdd959a6ac4fb16b754676d14d2b6944b9658"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/3ac6809246feef9e7a047eb1.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 191,
+    "oldSha256": "d9a1e0058c012d83537e8e84964808f95bc8949a6bbf2390b113a3930b40e511",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/d06843f24835f34a53db542e.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 191,
+    "oldSha256": "d9a1e0058c012d83537e8e84964808f95bc8949a6bbf2390b113a3930b40e511",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/d1bd1e954adcea3b79273551.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 191,
+    "oldSha256": "d9a1e0058c012d83537e8e84964808f95bc8949a6bbf2390b113a3930b40e511",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/1b85dbd58c9f8532c94a6e09.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 191,
+    "oldSha256": "d9a1e0058c012d83537e8e84964808f95bc8949a6bbf2390b113a3930b40e511",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/c9f66c4e599c69eb32a5963e.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 197,
+    "oldSha256": "a80d280bb4964cd24ac12ddc503512567365d05aca2ddbd08eb4540c719150a1",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/e377fbe5f97f6f09dc4f029d.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1450",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 275,
+    "oldSha256": "404348b135efa9fd0af72416171f5966e64dc6fbd478192d9f6a5f871352f5ea",
+    "sha256": "2183f226b0e0c7e30df771519c0f43bec9d75cba239ff645be28a5d2c79ffa5e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/cf33a1d5fd04490faa3dd466.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 191,
+    "oldSha256": "d9a1e0058c012d83537e8e84964808f95bc8949a6bbf2390b113a3930b40e511",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  },
+  {
+    "slug": "veyv",
+    "target": "/images/nmarket/2f02be56a38926961f0e695b.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf#image-1530",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.lsrdocuments/1d9/6lspaueb52m3j7fi1ixdsn5kt77tw24h/A4_Wave_putevoditel_apr-26_p1.pdf",
+    "inliers": 191,
+    "oldSha256": "d9a1e0058c012d83537e8e84964808f95bc8949a6bbf2390b113a3930b40e511",
+    "sha256": "1dbd82da010bf8680ed6f40b5f5ba04a0f30b74ac753b2ef6672fd5d03f4fa3e"
+  }
+]
