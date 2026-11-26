@@ -1,0 +1,29 @@
+name: Inspect published catalogue photography
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths:
+      - scripts/audit-catalogue-media.py
+      - .github/workflows/catalogue-photo-review.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --quiet pillow numpy opencv-python-headless
+      - run: python scripts/audit-catalogue-media.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalogue-photo-review
+          path: photo-review/
+          retention-days: 7
