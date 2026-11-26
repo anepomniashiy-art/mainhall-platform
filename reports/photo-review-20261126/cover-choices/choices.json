@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "source": "https://insiderhome.ru/files/eaa9fff0-faa3-4969-9b71-a12789789436.webp?key=welcome-block",
+    "page": "https://insiderhome.ru/",
+    "sha256": "e331498add4b88427e2b37a939d666db56ffcf6998ebdcb0b9bc8058bc6d68b7",
+    "project": "insider",
+    "webpSha256": "86f6000786f995622e42f6c0f9c8468b380cbd8e0f7fbb69d7c8ab34408ff78c"
+  },
+  {
+    "id": 34,
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3200",
+    "page": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sha256": "b643a693de507b9407957407bbb9a85ef2cd62944b685da878aeb92b8ff4b86c",
+    "project": "zilart",
+    "webpSha256": "b67efcf684bc09243dfb53ea268582147b932818c4d152287ae08088aa4415c3"
+  }
+]
