@@ -1,0 +1,65 @@
+name: Group visually identical catalogue frames
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/compare-gallery-duplicates.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          name: catalogue-photo-review
+          run-id: 45821106467
+          path: /tmp/gallery-proofs
+      - run: pip install -q numpy pillow
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import numpy as np, json
+          from functools import lru_cache
+          root=Path('reports/photo-review-20261126')
+          idx=next(Path('/tmp/gallery-proofs').rglob('index.json'))
+          indices={p:i for i,p in enumerate(json.loads(idx.read_text()))}
+          galleries=json.loads(Path('data/catalogue/nmarket-galleries.json').read_text())
+          @lru_cache(maxsize=64)
+          def sheet(n):
+              return Image.open(idx.parent/('sheet-%04d.jpg'%n)).convert('RGB')
+          def pixels(r):
+              i=indices[r['src']]; x=(i%5)*212; y=(i%40//5)*153
+              w,h=r['width'],r['height']; k=min(1,208/w,135/h)
+              w,h=round(w*k),round(h*k); x+=(212-w)//2
+              cell=sheet(i//40*40).crop((x,y,x+w,y+h)).resize((64,48),Image.Resampling.BILINEAR)
+              return np.asarray(cell).astype('float32')
+          outputs={}
+          for slug,gallery in galleries.items():
+              rows=[r for r in gallery if r['category']=='Проект' and r['src'] in indices]
+              values=[pixels(r) for r in rows]
+              matches={}
+              for ai,a in enumerate(values):
+                  for bi in range(ai+1,len(rows)):
+                      b=values[bi]
+                      diff=np.abs(a-b)
+                      if diff.mean()>3.2: continue
+                      blocks=[diff[y:y+24,x:x+32].mean() for y in (0,24) for x in (0,32)]
+                      if max(blocks)<6 and np.corrcoef(a.ravel(),b.ravel())[0,1]>.994:
+                          matches.setdefault(rows[ai]['src'],[]).append(rows[bi]['src'])
+              if matches: outputs[slug]=matches
+          (root/'duplicate-frames.json').write_text(json.dumps(outputs))
+          print('Visually identical pairs',sum(len(v) for m in outputs.values() for v in m.values()))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/duplicate-frames.json
+          git commit -m "Record duplicate catalogue frames across encodings"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
