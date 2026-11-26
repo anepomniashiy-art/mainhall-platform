@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "luchi-2",
+    "target": "/images/nmarket/16e3fe4a1105ba618d2b27c1.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "page": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf",
+    "inliers": 272,
+    "oldSha256": "2cf0add2fab826857a62306c803b9740238325535943959f2cabb7ac88305ac4",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6"
+  },
+  {
+    "slug": "luchi-2",
+    "target": "/images/nmarket/861e7bc3749a7c802303a301.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "page": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf",
+    "inliers": 287,
+    "oldSha256": "6f48add74db7c5be04cdc9336254564f452b2145447dcabdc90940559ddeab18",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6"
+  },
+  {
+    "slug": "luchi-2",
+    "target": "/images/nmarket/3509e0110720b85a5d09bb6c.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "page": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf",
+    "inliers": 287,
+    "oldSha256": "5c93aad81abf27e6037a26720bb89ddefdcae1406e72b79ebf36243d98694fd7",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6"
+  },
+  {
+    "slug": "luchi-2",
+    "target": "/images/nmarket/84a1daaefcd66d8e0d67c10e.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "page": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf",
+    "inliers": 288,
+    "oldSha256": "ba554c25cbb5d9c9584accefaa0a753768190442749db4e179b26dd582f1f685",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6"
+  },
+  {
+    "slug": "luchi-2",
+    "target": "/images/nmarket/d26a41116b383c0af4ca5d57.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "page": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf",
+    "inliers": 288,
+    "oldSha256": "ba554c25cbb5d9c9584accefaa0a753768190442749db4e179b26dd582f1f685",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6"
+  },
+  {
+    "slug": "luchi-2",
+    "target": "/images/nmarket/bca6bdae7777e4217882155b.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "page": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf",
+    "inliers": 287,
+    "oldSha256": "5c93aad81abf27e6037a26720bb89ddefdcae1406e72b79ebf36243d98694fd7",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6"
+  }
+]
