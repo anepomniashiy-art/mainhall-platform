@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "dyuna",
+    "target": "/images/nmarket/b683db3580ca1f6fcd9e88f3.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950124/_6lm8CoN0HGy7HwxNzMwOTgxNTIzfDE5MWZi/kamera_17.jpg",
+    "page": "https://www.trend-gr.ru/agent",
+    "inliers": 325,
+    "oldSha256": "c689f310b06c6c4fb1d3ecee1a4f44ab9e18fb981e4c3847f12b669419c3410d",
+    "sha256": "59b9092e31f60472d3c0832b89072a6fe58c0e6c79a4d099858836193108d4e4"
+  },
+  {
+    "slug": "dyuna",
+    "target": "/images/nmarket/1f5947b9442a1d604e8f7473.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950134/_6lm8CoN0HCy7HwxNzMwOTgxNTIzfDUxNWFm/kamera_18.jpg",
+    "page": "https://www.trend-gr.ru/agent",
+    "inliers": 409,
+    "oldSha256": "ccf25ee26e208fd8ea49f07383519a7f3b685a6020dfab04d49006b8083dc9cb",
+    "sha256": "d59e2b51ae165d350c36023e348f4a3b40ca9dc64d42e9bfa4febbf02ab3b399"
+  },
+  {
+    "slug": "dyuna",
+    "target": "/images/nmarket/08f230b64b059b68a5c8d0f6.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/7246140/4208155/XHW9JoCv5Ly_U3wxNzc3ODczODI4fDdiOTMz/vstroika_3.jpg",
+    "page": "https://www.trend-gr.ru/agent",
+    "inliers": 136,
+    "oldSha256": "cbbb1fcc615804d94e23b26dc9eaa8e27870f27fe95057998ba236fb2bca066c",
+    "sha256": "7ed556d46cfad559ca8a8d1593230e811500a86140c45e196f3a131b218f2e30"
+  }
+]
