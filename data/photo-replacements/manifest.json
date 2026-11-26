@@ -88,5 +88,259 @@
     "path": "/images/nmarket/992f4f1dc94b39bb64266243.jpg",
     "source": "https://cms.stonehedgecompany.com/uploads/Frame_1948756188_9699fa8ab4_ac27539c6e.webp",
     "sha256": "121d7b2237e685ae234c473cf979de01ae61d341371fcb7bc84f1a68bd6789d1"
+  },
+  {
+    "project": "odingrad-kvartal-semeynyy",
+    "path": "/images/nmarket/a56cec19e77051b972cd0e5c.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:1200:1200/plain/s3://idalite-media/media/images/f3857db3bfbf453ba15681703508ebd9.jpg",
+    "sha256": "3ef2e485f35f3bac834b4f28fbfcdc331a40453185766099cbc5f60767e3fd1f",
+    "sourcePage": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad"
+  },
+  {
+    "project": "odingrad-kvartal-semeynyy",
+    "path": "/images/nmarket/0a9a0ced08e9eebf8a2b8c2c.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fit:0:1200/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/4dcca1d199314743bf190e402dbd9cac.jpg",
+    "sha256": "eec520b39fc43ddda83cf6fd70ffbe1edfa50c25163e229f6435a9401edb84ef",
+    "sourcePage": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad"
+  },
+  {
+    "project": "odingrad-kvartal-semeynyy",
+    "path": "/images/nmarket/d7ba73a10eebd73511e8e184.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fit:0:1200/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/4dcca1d199314743bf190e402dbd9cac.jpg",
+    "sha256": "eec520b39fc43ddda83cf6fd70ffbe1edfa50c25163e229f6435a9401edb84ef",
+    "sourcePage": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad"
+  },
+  {
+    "project": "odingrad-kvartal-semeynyy",
+    "path": "/images/nmarket/daa951399431d5dccb0541e5.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fit:0:1200/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/4dcca1d199314743bf190e402dbd9cac.jpg",
+    "sha256": "eec520b39fc43ddda83cf6fd70ffbe1edfa50c25163e229f6435a9401edb84ef",
+    "sourcePage": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad"
+  },
+  {
+    "project": "odingrad-kvartal-semeynyy",
+    "path": "/images/nmarket/ca544a506e01fdfb327c5229.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:95/rs:fit:1280:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/8a9953b1-9358-4fda-a4e6-ddbfd9d1bb49/7ccd1bac588940c496307b53a8879fc5.jpg",
+    "sha256": "6304a34fb88ce495079c1751d12998b02c42cca163f4a93a0ba395b1769d9815",
+    "sourcePage": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad"
+  },
+  {
+    "project": "insider",
+    "path": "/images/nmarket/b82877d74aea835995ddf694.jpg",
+    "source": "https://respect.house/assets/projects/official-20261018/insider-04.webp",
+    "sha256": "253e98a95bacae4365b4db3a7110a9395734b3ff2f58d29bab0c74259348fdf3",
+    "sourcePage": "https://respect.house/projects/insider/"
+  },
+  {
+    "project": "odintsovskie-kvartaly",
+    "path": "/images/nmarket/eba5415d04fdfe40cf592166.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fill:1063:624/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/98c532cb6f48433594d426a5634c916e.jpg",
+    "sha256": "0c164c21eea8bbc39fd4f7bf3bde1ac7ff04831edd404664cffc5609e7db7579",
+    "sourcePage": "https://xn--b1agpqkk.xn--p1ai/"
+  },
+  {
+    "project": "sokolin-park",
+    "path": "/images/nmarket/bdbf4e99c03076cc99c5324a.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/e33/cbz2yvug5b5luywve3zpmdabroxfdqkd.jpg",
+    "sha256": "41cee3a226b7b9550b4f2bf28cd7e6a7c41690e717443505cbe297b92eae752d",
+    "sourcePage": "https://etalon-project.ru/projects/sokoliinn-park/"
+  },
+  {
+    "project": "sokolin-park",
+    "path": "/images/nmarket/e1bebda70886da163b3bc18c.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/73e/35h7rts6jxo22zwuw3cjgqubhoxflzez.jpg",
+    "sha256": "f6d892574a3e725053374a63e0a008575842dd63156d551c795f748bdb918e34",
+    "sourcePage": "https://etalon-project.ru/projects/sokoliinn-park/"
+  },
+  {
+    "project": "sokolin-park",
+    "path": "/images/nmarket/82fa1c156fae460fe9601852.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/0c0/9pphv9dbdnis897qwnipox64b3yig9cw.jpg",
+    "sha256": "dede023560b5c0cb786ddc4b6228e81570b5299bc0f4a284fe4278b5e4e9e7c9",
+    "sourcePage": "https://etalon-project.ru/projects/sokoliinn-park/"
+  },
+  {
+    "project": "sokolin-park",
+    "path": "/images/nmarket/7a3473fb0e9d3a7d1e98e00b.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/2f1/mlesqn2eaee8p4sc1myyq4qsc8hptfx5.jpg",
+    "sha256": "0e29a9e6a20b5da43c887b4f2b86a0ec9df8093fd82a6907533760c8ecb35445",
+    "sourcePage": "https://etalon-project.ru/projects/sokoliinn-park/"
+  },
+  {
+    "project": "sokolin-park",
+    "path": "/images/nmarket/5910cc74939b3651d3f18ce0.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/8ec/scw12iwot3d1yhufcxtybl07wt2ty07x.jpg",
+    "sha256": "a327c8a1bafaf496850a125ecb39a629025c3f39112dd07c4a1382dc0361239e",
+    "sourcePage": "https://etalon-project.ru/projects/sokoliinn-park/"
+  },
+  {
+    "project": "insider",
+    "path": "/images/nmarket/1147b5208c2d786ac8a9872d.jpg",
+    "source": "https://insiderhome.ru/files/bba345a4-f780-44ff-8ba5-a20fdb99bd07.webp?key=welcome-block",
+    "sha256": "415d61f79df05d6639755075e4ed7165cacb0f15ed3e44aaa15d6ce57e948f21",
+    "sourcePage": "https://insiderhome.ru/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "insider",
+    "path": "/images/nmarket/a1f912a04d4669b701a2d366.jpg",
+    "source": "https://insiderhome.ru/files/905ada1a-85b3-4d94-b36d-e218cb16f107.webp?key=size-800x300",
+    "sha256": "a0dabc166d5ef114ac4b215126f2f93f66de69610671a18083f2413940b95bd9",
+    "sourcePage": "https://insiderhome.ru/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "insider",
+    "path": "/images/nmarket/d5810e810eacb4f35d33a9b9.jpg",
+    "source": "https://respect.house/assets/projects/official-20261018/insider-03.webp",
+    "sha256": "ff129a8d9189282b8aa207a458510b164f75b298339b3d02146644e9d37ae0a4",
+    "sourcePage": "https://respect.house/projects/insider/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "insider",
+    "path": "/images/nmarket/321a857c1e03d7bc0876adfc.jpg",
+    "source": "https://www.rks-dev.ru/upload/resize_cache/iblock/9d6/1500_826_1619711fa078991f0a23d032687646b21/8yplm7ll8vnjjui5ic87ln73mcefi3xo.jpg",
+    "sha256": "f46537e38032c50a527753ac2fc91668aa042d1cf863d6363ea102008b249399",
+    "sourcePage": "https://www.rks-dev.ru/press-center/dvor-gornaya-reka-poyavitsya-v-komplekse-apartamentov-insider-v-moskve/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/5973ce1be976f55b8dd7e815.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-715",
+    "sha256": "860f66b56a2658cff77feb3a8dedcf185046fd263e4e82ec8abb41559e0f9748",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/8c01b29bafb4ce8f31b4bd3d.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-755",
+    "sha256": "fd287be48e8bbac1cce9e207ae3bc888c7e3e466ab866802d27d994abb279218",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/9affbfa91c3be9c5d3c1e904.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3257",
+    "sha256": "018cda557f6761dbdf832e1ee1847d1fef6823779c937f438a480510cc8eeeb5",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/ac38db614de14c7ded554946.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3259",
+    "sha256": "b336cb2d40f4b88f68a23364155f503bfbac6d7807b21ef1be686b0c6ac6b88c",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/7a128bb0a4856b4b5da2fb41.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3270",
+    "sha256": "8a4911f60cc63e91100654ba9adc74f8934adf94b34cd29f5cbfc6ba5706e503",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/91af9014243517ef7b2273e6.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3026",
+    "sha256": "ffb26e52abcdf67c04010f20259c2c375033d6dd319ea0270b2bacb559308f7c",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/95e5e570555d7f9ed500f164.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3294",
+    "sha256": "45404f8160bc2d369fd71e422e2fe0aaa5517d28cbf8dddbf60d8b37522cd9bb",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/48a4063eac616805240eed78.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-359",
+    "sha256": "93ad9a3a1131a8be924c2c42bc24efb51616235919646cad8bc9ec1adf131700",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/132b0061ce9264e03fe292b3.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3283",
+    "sha256": "91061bd00d9874c65160effc86e5a40b7e6824be1ff7790b21ccc44d7b14ab07",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/f8e22054de06e202f223245f.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3371",
+    "sha256": "42e85fa1384eb86c1163efaad1d99f4e22f911cc9b336bb9c985a4e8b8f730d0",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/97be5c0e83d0d3ea2ef2a9bf.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3255",
+    "sha256": "9e1a526388ebe833cd00826f5a4b93396e9a7d5e9e12a2a4dd4dc0a3708cd0b9",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/c24bba3fe14d37d055d68890.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3349",
+    "sha256": "bef3258869e28d1c21f714d676ee100ae4a64292a12c506f339de4a6b7e1e405",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/6949b93ae0b664d40676859a.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3244",
+    "sha256": "581bf260940cd6367209e3fb0805fc420eadaf5507a1da8d67e93bcc802a1adb",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/c31be7089dca43f0720e587b.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3296",
+    "sha256": "a3bc771ba1d8b58a37a69a800a7898c0fb48bb71698dfff259858c9d0a17a650",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/dc48b3c8327d69d0db5e46ad.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3272",
+    "sha256": "2ede82c572c6323433ca5ff6a3cd8211f082208a1aebf9199e0089da6930feba",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "insider",
+    "path": "/images/nmarket/bfacebf8ab1fc89c4b80c91a.jpg",
+    "source": "https://insiderhome.ru/files/eaa9fff0-faa3-4969-9b71-a12789789436.webp?key=welcome-block",
+    "sha256": "e331498add4b88427e2b37a939d666db56ffcf6998ebdcb0b9bc8058bc6d68b7",
+    "sourcePage": "https://insiderhome.ru/",
+    "sameProjectAlternative": true,
+    "coverPath": "/atelier/assets/covers/insider.webp"
+  },
+  {
+    "project": "zilart",
+    "path": "/images/nmarket/7f0d55f3ea562d58c3a3f018.jpg",
+    "source": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf#image-3200",
+    "sha256": "b643a693de507b9407957407bbb9a85ef2cd62944b685da878aeb92b8ff4b86c",
+    "sourcePage": "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+    "sameProjectAlternative": true,
+    "coverPath": "/atelier/assets/covers/zilart.webp"
   }
 ]

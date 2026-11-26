@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import {copyFileSync, readFileSync, statSync, rmSync, mkdirSync, writeFileSync, existsSync} from 'node:fs';
 
 // Next exports GET route handlers as extensionless files, even with trailingSlash.
@@ -34,9 +35,13 @@ console.log(`Commercial export ready: ${paths.length} local asset references ver
 const photoReplacements = JSON.parse(readFileSync('data/photo-replacements/manifest.json', 'utf8'));
 mkdirSync('out/images/nmarket', { recursive: true });
 for (const photo of photoReplacements) {
-  if (!/^\/images\/nmarket\/[a-f0-9]{24}\.jpg$/.test(photo.path)) {
-    throw Error('Invalid catalogue photograph path: ' + photo.path);
-  }
   const file = photo.path.split('/').pop();
-  copyFileSync('data/photo-replacements/' + file, 'out' + photo.path);
+  if (!/^[a-f0-9]{24}\.jpg$/.test(file)) throw Error('Invalid photograph filename: ' + file);
+  const original = 'data/photo-replacements/' + file;
+  const digest = createHash('sha256').update(readFileSync(original)).digest('hex');
+  if (digest !== photo.sha256) throw Error('Unexpected developer photograph: ' + original);
+  for (const path of [photo.path, ...(photo.aliases ?? [])]) {
+    if (!/^\/images\/nmarket\/[a-f0-9]{24}\.jpg$/.test(path)) throw Error('Invalid photograph path: ' + path);
+    copyFileSync(original, 'out' + path);
+  }
 }
