@@ -1,0 +1,74 @@
+name: Compare existing developer gallery subjects
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/catalogue-source-pairs.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: project-editions-*
+          github-token: ${{ github.token }}
+          run-id: 45828464824
+          path: /tmp/project-editions
+          merge-multiple: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: catalogue-photo-review
+          github-token: ${{ github.token }}
+          run-id: 45821106467
+          path: /tmp/mainhall-audit
+      - run: pip install --quiet pillow
+      - run: |
+          python - <<'PY'
+          from PIL import Image, ImageDraw
+          from pathlib import Path
+          from hashlib import sha256
+          import json,shutil
+          dest=Path('reports/photo-review-20261126/catalogue-subjects')
+          dest.mkdir(exist_ok=True,parents=True)
+          picks=json.loads(Path('reports/photo-review-20261126/donstroy-picks.json').read_text())
+          for row in picks:
+              src=next(Path('/tmp/project-editions').rglob('covers/'+row['project']+'/%03d.jpg'%row['id']))
+              assert sha256(src.read_bytes()).hexdigest()==row['sha256']
+              shutil.copyfile(src,dest/Path(row['path']).name)
+          j=next(Path('/tmp/mainhall-audit').rglob('index.json'))
+          allpaths=json.loads(j.read_text())
+          gallery=json.loads(Path('data/catalogue/nmarket-galleries.json').read_text())
+          extra=[s for s in allpaths if s.startswith('/') and not s.startswith('/images/nmarket/')]
+          aliases=json.loads(Path('reports/photo-review-20261126/cover-choices/aliases.json').read_text())
+          reverse={v:k for k,paths in aliases.items() for v in paths}
+          for label in ["prime-park","very-botanicheskaya","emotion","kvartal-mons","stone-sokolniki","evopark-izmaylovo","kvartal-izdanie","yuzhnye-sady","sezar-city","ultima-city","monblan","admiral","secret-garden","stone-blik","dom-na-dzhalilya"]:
+              groups={}
+              for row in gallery[label]:
+                  p=row['src']
+                  if row['category']=='Проект': groups.setdefault(reverse.get(p,p),[]).append(p)
+              group_list=list(groups.values())
+              (dest/(label+'-groups.json')).write_text(json.dumps(group_list))
+              paths=[g[0] for g in group_list]
+              (dest/(label+'-paths.json')).write_text(json.dumps(paths,ensure_ascii=False))
+              for start in range(0,len(paths),35):
+                  chunk=paths[start:start+35]; im=Image.new('RGB',(900,((len(chunk)+4)//5)*134),'#151515'); pen=ImageDraw.Draw(im)
+                  for n,path in enumerate(chunk):
+                      idx=allpaths.index(path); key=idx%40
+                      with Image.open(j.parent/('sheet-%04d.jpg'%(idx//40*40))) as sheet:
+                          sx,sy=key%5*212,key//5*153
+                          cell=sheet.crop((sx,sy,sx+212,sy+135)); cell.thumbnail((179,111))
+                          x,y=n%5*180,n//5*134; im.paste(cell,(x,y)); pen.text((x+2,y+113),str(start+n),fill='white')
+                  im.save(dest/('%s-%03d.jpg'%(label,start)),quality=86)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/catalogue-subjects/
+          git commit -m "Prepare reviewed Donstroy photography and compare remaining project subjects"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
