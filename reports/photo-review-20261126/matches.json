@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "laym",
+    "target": "/images/nmarket/f0027b53d5f7d711e19d400a.jpg",
+    "source": "https://lime-dom.ru/upload/iblock/f75/atozkez6rbq5wpczpry4048ebtyvbijw/DJI_0606.jpg",
+    "inliers": 550,
+    "candidate": "reports/photo-review-20261126/candidates/f0027b53d5f7d711e19d400a.jpg",
+    "sha256": "95f33a724e8bdf115a226994243c61c8a919153940a6d95d00ae2cf7afb9924f"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/35e603744380467f22db9a85.jpg",
+    "source": "/images/projects/gallery/prime-park-park.webp",
+    "inliers": 635,
+    "candidate": "reports/photo-review-20261126/candidates/35e603744380467f22db9a85.jpg",
+    "sha256": "5c05e4a0cad8bd3a17c7a6c2b20fb9de35c863f7eb9ea13bd361d31e7175bb96"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/10c96e703116b9945b116310.jpg",
+    "source": "/images/projects/gallery/prime-park-architecture.webp",
+    "inliers": 625,
+    "candidate": "reports/photo-review-20261126/candidates/10c96e703116b9945b116310.jpg",
+    "sha256": "7581574d5e50d7c38bc0fdace1b6d0587197f4a4c8c03832d3740ea9ba5eb378"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/6c7a76fd880b8f28e60e2db3.jpg",
+    "source": "/images/projects/gallery/prime-park-park.webp",
+    "inliers": 638,
+    "candidate": "reports/photo-review-20261126/candidates/6c7a76fd880b8f28e60e2db3.jpg",
+    "sha256": "5c05e4a0cad8bd3a17c7a6c2b20fb9de35c863f7eb9ea13bd361d31e7175bb96"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/1ebafa87bf7f92ad491949a3.jpg",
+    "source": "/images/projects/gallery/prime-park-park.webp",
+    "inliers": 638,
+    "candidate": "reports/photo-review-20261126/candidates/1ebafa87bf7f92ad491949a3.jpg",
+    "sha256": "5c05e4a0cad8bd3a17c7a6c2b20fb9de35c863f7eb9ea13bd361d31e7175bb96"
+  },
+  {
+    "slug": "prime-park",
+    "target": "/images/nmarket/b20fdcf5e4d59745fef32b63.jpg",
+    "source": "/images/projects/gallery/prime-park-park.webp",
+    "inliers": 638,
+    "candidate": "reports/photo-review-20261126/candidates/b20fdcf5e4d59745fef32b63.jpg",
+    "sha256": "5c05e4a0cad8bd3a17c7a6c2b20fb9de35c863f7eb9ea13bd361d31e7175bb96"
+  },
+  {
+    "slug": "evopark-izmaylovo",
+    "target": "/images/nmarket/235c1fcba52ac3e40e36e09b.jpg",
+    "source": "/images/projects/collected/evopark-izmaylovo-3-4cd36ec98e9f.webp",
+    "inliers": 369,
+    "candidate": "reports/photo-review-20261126/candidates/235c1fcba52ac3e40e36e09b.jpg",
+    "sha256": "425d9f310cafa80a7a9abd916b24c2e128bc747a02ad2bb3124fc40df0623ee1"
+  },
+  {
+    "slug": "ultima-city",
+    "target": "/images/nmarket/91fbbfbab8aa31b551a74b0a.jpg",
+    "source": "/images/projects/collected/ultima-city-3-894f4e1a0032.webp",
+    "inliers": 108,
+    "candidate": "reports/photo-review-20261126/candidates/91fbbfbab8aa31b551a74b0a.jpg",
+    "sha256": "6980f3bbb0b28f4ad8541e268b3108db63ed31866119929100200c2b85c75c2b"
+  },
+  {
+    "slug": "monblan",
+    "target": "/images/nmarket/e55b523c7f6d9059d51be0a3.jpg",
+    "source": "/images/projects/collected/monblan-487a88b4e9be.webp",
+    "inliers": 493,
+    "candidate": "reports/photo-review-20261126/candidates/e55b523c7f6d9059d51be0a3.jpg",
+    "sha256": "dcf71fef3a208774095875c7070faf84c86832ae1386b3b6afc72abf131e0877"
+  },
+  {
+    "slug": "dom-na-dzhalilya",
+    "target": "/images/nmarket/3f05b33fe8c6fe14d0788c41.jpg",
+    "source": "/images/projects/collected/dom-na-dzhalilya-84c01f431a5a.webp",
+    "inliers": 524,
+    "candidate": "reports/photo-review-20261126/candidates/3f05b33fe8c6fe14d0788c41.jpg",
+    "sha256": "b2161eeef798c6e9fc77e607c915bf926b28c7e7e3afc4dcbfbe7972ad12c707"
+  },
+  {
+    "slug": "dom-na-dzhalilya",
+    "target": "/images/nmarket/203299fca9a8ad23b393b0b0.jpg",
+    "source": "/images/projects/collected/dom-na-dzhalilya-4e55f3c33a00.webp",
+    "inliers": 714,
+    "candidate": "reports/photo-review-20261126/candidates/203299fca9a8ad23b393b0b0.jpg",
+    "sha256": "68bc3ac3ed3bce2349a9832ea81b291fa76f3373d1c8472005431c7096199728"
+  },
+  {
+    "slug": "dom-na-dzhalilya",
+    "target": "/images/nmarket/792d50a883dfff290a018e10.jpg",
+    "source": "/images/projects/collected/dom-na-dzhalilya-423b05b9f7ca.webp",
+    "inliers": 717,
+    "candidate": "reports/photo-review-20261126/candidates/792d50a883dfff290a018e10.jpg",
+    "sha256": "560bc999b687bee09e4d6584d2fe4363b5998565cf12f610fb92a63e1763ee7d"
+  },
+  {
+    "slug": "secret-garden",
+    "target": "/images/nmarket/4385ac3f0ddef0086d63cb2f.jpg",
+    "source": "/images/projects/collected/secret-garden-9d538402862b.webp",
+    "inliers": 316,
+    "candidate": "reports/photo-review-20261126/candidates/4385ac3f0ddef0086d63cb2f.jpg",
+    "sha256": "8aba201e49eebd4436e260afd657ae18688e70b4645f408c59a31b903f7aa0f2"
+  },
+  {
+    "slug": "secret-garden",
+    "target": "/images/nmarket/404c40676e65a0186d23fbaf.jpg",
+    "source": "/images/projects/collected/secret-garden-9d538402862b.webp",
+    "inliers": 316,
+    "candidate": "reports/photo-review-20261126/candidates/404c40676e65a0186d23fbaf.jpg",
+    "sha256": "8aba201e49eebd4436e260afd657ae18688e70b4645f408c59a31b903f7aa0f2"
+  },
+  {
+    "slug": "stone-blik",
+    "target": "/images/nmarket/992f4f1dc94b39bb64266243.jpg",
+    "source": "https://cms.stonehedgecompany.com/uploads/Frame_1948756188_9699fa8ab4_ac27539c6e.webp",
+    "inliers": 765,
+    "candidate": "reports/photo-review-20261126/candidates/992f4f1dc94b39bb64266243.jpg",
+    "sha256": "121d7b2237e685ae234c473cf979de01ae61d341371fcb7bc84f1a68bd6789d1"
+  }
+]
