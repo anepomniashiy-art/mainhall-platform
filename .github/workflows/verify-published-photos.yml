@@ -1,0 +1,44 @@
+name: Verify published catalogue photography
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/verify-published-photos.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Compare the public image bytes with the approved release
+        run: |
+          python - <<'PY'
+          import hashlib, json, time, urllib.request, concurrent.futures
+          from pathlib import Path
+          manifest=json.loads(Path('data/photo-replacements/manifest.json').read_text())
+          checks={r['path']:r['sha256'] for r in manifest}
+          for r in manifest:
+              for path in r.get('aliases',[]): checks[path]=r['sha256']
+              if r.get('coverPath'):
+                  checks[r['coverPath']]=hashlib.sha256(Path('public'+r['coverPath']).read_bytes()).hexdigest()
+          def verify(pair):
+              path,want=pair
+              try:
+                  req=urllib.request.Request('https://main-hall.ru'+path+'?mainhall_photo_verify='+want[:12],headers={'User-Agent':'Mainhall release verification','Accept-Encoding':'identity'})
+                  with urllib.request.urlopen(req,timeout=15) as r:
+                      return path, r.status==200 and r.headers['Content-Type'].startswith('image/') and hashlib.sha256(r.read()).hexdigest()==want
+              except OSError: return path,False
+          pending=checks.copy()
+          for attempt in range(9):
+              with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+                  for path,ok in pool.map(verify,list(pending.items())):
+                      if ok: del pending[path]
+              print('Public image hashes verified',len(checks)-len(pending),'of',len(checks),flush=True)
+              if not pending: break
+              if attempt<8: time.sleep(45)
+          if pending: raise SystemExit('Pending published paths: '+', '.join(pending))
+          PY
