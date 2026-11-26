@@ -1,0 +1,42 @@
+name: Prepare official gallery alternatives
+on:
+  push:
+    branches: [photo-review-20261126]
+    paths: [.github/workflows/approved-gallery-alternatives.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: photo-review-20261126
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          pattern: remaining-photos-*
+          run-id: 45825695934
+          path: /tmp/mainhall-gallery
+          merge-multiple: true
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          from hashlib import sha256
+          import json,shutil
+          dest=Path('reports/photo-review-20261126/approved-alternatives')
+          dest.mkdir(exist_ok=True,parents=True)
+          rows=json.loads(Path('reports/photo-review-20261126/gallery-choices.json').read_text())
+          for row in rows:
+              p=next(Path('/tmp/mainhall-gallery').rglob('covers/'+row['slug']+'/%03d.jpg'%row['id']))
+              assert sha256(p.read_bytes()).hexdigest()==row['sha256']
+              shutil.copyfile(p,dest/Path(row['target']).name)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/photo-review-20261126/approved-alternatives/
+          git commit -m "Stage verified project-specific gallery originals"
+          git pull --rebase origin photo-review-20261126
+          git push origin HEAD:photo-review-20261126
