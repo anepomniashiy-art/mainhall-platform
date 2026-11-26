@@ -3051,5 +3051,728 @@
     "sha256": "33e1983e8d3daf632d4a2933e07ec10ec2bccf121e4d9a05710ea051138bc7ff",
     "sourcePage": "https://myshagal.ru/sites/default/files/%D0%94%D0%B5%D0%BD%D1%8C%20%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D0%B0%20Shagal.pdf",
     "sameProjectAlternative": true
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/650927f02b805642f17cb3cd.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2024/12/m-4-prestizh-min-1-1536x864.jpg",
+    "sha256": "7f6cba7a1580f040513581cc3739f4f2057c2d2c98557ebbdfe072765fe63fcb",
+    "sourcePage": "https://mechta.su/"
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/85474656a3a4a003674e9c0b.jpg",
+    "source": "https://wowfest.ru/upload/iblock/578/3ei7x8z69d5ixlixwo80y2o07p4b2sq4/kelnik_kortros_zhk_ravnovesie_prezentatsiya_sayta_dlya_wow_awards_2023_300_dpi_compressed_2023_06_08.pdf#image-558",
+    "sha256": "5c8e642d3312ceea2b1713b5bad34f8c7c417a1d56074124b16032dd1a1ad68b",
+    "sourcePage": "https://wowfest.ru/upload/iblock/578/3ei7x8z69d5ixlixwo80y2o07p4b2sq4/kelnik_kortros_zhk_ravnovesie_prezentatsiya_sayta_dlya_wow_awards_2023_300_dpi_compressed_2023_06_08.pdf"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/683ed0f667d10e64783ecb0b.jpg",
+    "source": "https://static.tildacdn.com/tild3063-3639-4733-a338-653534333065/IMG_1201.png",
+    "sha256": "74210f9396a4ebc73259d8814fa681e76787a4969526accc825da9e992374cfb",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/47f9cf5201719e8a0977cf10.jpg",
+    "source": "https://static.tildacdn.com/tild6162-3438-4766-b231-373561396161/6tOwVn2cfv2I__h822iB.jpg",
+    "sha256": "03beb5b39eddd992a20ce65be8a280365aa091837f489992602e4ccd671c906a",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/deb4df2d4b061445e3c96a67.jpg",
+    "source": "https://static.tildacdn.com/tila3933-3331-4965-b038-663664306163/____-2.jpg",
+    "sha256": "3aa9bb81ec83fc31c901cad59c120749260f5f904d31675a4a5146de59027bac",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/d20d785621de201bfa64bfee.jpg",
+    "source": "https://static.tildacdn.com/tild3639-3765-4337-a533-666661353034/IMG_1879.jpeg",
+    "sha256": "b54a7d1f0d446ac451d82237c79e4bb13f86250ecf467e0becc5b83124867af7",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/001df05975f66f2bae997212.jpg",
+    "source": "https://static.tildacdn.com/tild3063-3639-4733-a338-653534333065/IMG_1201.png",
+    "sha256": "74210f9396a4ebc73259d8814fa681e76787a4969526accc825da9e992374cfb",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/35ea2c7025bb6a462a4c0d2f.jpg",
+    "source": "https://static.tildacdn.com/tild6162-3438-4766-b231-373561396161/6tOwVn2cfv2I__h822iB.jpg",
+    "sha256": "03beb5b39eddd992a20ce65be8a280365aa091837f489992602e4ccd671c906a",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/36931cab8ca031695b088cc5.jpg",
+    "source": "https://static.tildacdn.com/tila3933-3331-4965-b038-663664306163/____-2.jpg",
+    "sha256": "3aa9bb81ec83fc31c901cad59c120749260f5f904d31675a4a5146de59027bac",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/997f60f96262a3c07338161c.jpg",
+    "source": "https://static.tildacdn.com/tild3639-3765-4337-a533-666661353034/IMG_1879.jpeg",
+    "sha256": "b54a7d1f0d446ac451d82237c79e4bb13f86250ecf467e0becc5b83124867af7",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/c4facf72575342d9e16cee66.jpg",
+    "source": "https://static.tildacdn.com/tild3063-3639-4733-a338-653534333065/IMG_1201.png",
+    "sha256": "74210f9396a4ebc73259d8814fa681e76787a4969526accc825da9e992374cfb",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/ff16e5b803a10d73a5490cd5.jpg",
+    "source": "https://static.tildacdn.com/tild6162-3438-4766-b231-373561396161/6tOwVn2cfv2I__h822iB.jpg",
+    "sha256": "03beb5b39eddd992a20ce65be8a280365aa091837f489992602e4ccd671c906a",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/1195f801b59292b5b54eecd5.jpg",
+    "source": "https://static.tildacdn.com/tila3933-3331-4965-b038-663664306163/____-2.jpg",
+    "sha256": "3aa9bb81ec83fc31c901cad59c120749260f5f904d31675a4a5146de59027bac",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/0c51aa42f99892497f26e11e.jpg",
+    "source": "https://static.tildacdn.com/tild3639-3765-4337-a533-666661353034/IMG_1879.jpeg",
+    "sha256": "b54a7d1f0d446ac451d82237c79e4bb13f86250ecf467e0becc5b83124867af7",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/56493fdc4b46dcfcaf6d1c72.jpg",
+    "source": "https://static.tildacdn.com/tild3063-3639-4733-a338-653534333065/IMG_1201.png",
+    "sha256": "74210f9396a4ebc73259d8814fa681e76787a4969526accc825da9e992374cfb",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/920abc1b65129b4b4f5f3c48.jpg",
+    "source": "https://static.tildacdn.com/tild6162-3438-4766-b231-373561396161/6tOwVn2cfv2I__h822iB.jpg",
+    "sha256": "03beb5b39eddd992a20ce65be8a280365aa091837f489992602e4ccd671c906a",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/e1798b1bc844d14bf70fc229.jpg",
+    "source": "https://static.tildacdn.com/tila3933-3331-4965-b038-663664306163/____-2.jpg",
+    "sha256": "3aa9bb81ec83fc31c901cad59c120749260f5f904d31675a4a5146de59027bac",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/9cb47de7f80da80accbd7366.jpg",
+    "source": "https://static.tildacdn.com/tild3639-3765-4337-a533-666661353034/IMG_1879.jpeg",
+    "sha256": "b54a7d1f0d446ac451d82237c79e4bb13f86250ecf467e0becc5b83124867af7",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/2a692b9a37aad268c18a49f7.jpg",
+    "source": "https://static.tildacdn.com/tild3063-3639-4733-a338-653534333065/IMG_1201.png",
+    "sha256": "74210f9396a4ebc73259d8814fa681e76787a4969526accc825da9e992374cfb",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/dd51fa0f03df8609bc21d273.jpg",
+    "source": "https://static.tildacdn.com/tild6162-3438-4766-b231-373561396161/6tOwVn2cfv2I__h822iB.jpg",
+    "sha256": "03beb5b39eddd992a20ce65be8a280365aa091837f489992602e4ccd671c906a",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/61654d810997c3e999336bad.jpg",
+    "source": "https://static.tildacdn.com/tila3933-3331-4965-b038-663664306163/____-2.jpg",
+    "sha256": "3aa9bb81ec83fc31c901cad59c120749260f5f904d31675a4a5146de59027bac",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/274baeb1ad946c556c27cd66.jpg",
+    "source": "https://static.tildacdn.com/tild3639-3765-4337-a533-666661353034/IMG_1879.jpeg",
+    "sha256": "b54a7d1f0d446ac451d82237c79e4bb13f86250ecf467e0becc5b83124867af7",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/9c24dcc4f0291b651a448e62.jpg",
+    "source": "https://static.tildacdn.com/tild3063-3639-4733-a338-653534333065/IMG_1201.png",
+    "sha256": "74210f9396a4ebc73259d8814fa681e76787a4969526accc825da9e992374cfb",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/f921c17431642d359f6ef748.jpg",
+    "source": "https://static.tildacdn.com/tild6162-3438-4766-b231-373561396161/6tOwVn2cfv2I__h822iB.jpg",
+    "sha256": "03beb5b39eddd992a20ce65be8a280365aa091837f489992602e4ccd671c906a",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/8d216d5c02ea697a7289676e.jpg",
+    "source": "https://static.tildacdn.com/tila3933-3331-4965-b038-663664306163/____-2.jpg",
+    "sha256": "3aa9bb81ec83fc31c901cad59c120749260f5f904d31675a4a5146de59027bac",
+    "sourcePage": "https://jk-troitskiy.ru/"
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/f6a7bebff51298252ea96d53.jpg",
+    "source": "https://static.tildacdn.com/tild3639-3765-4337-a533-666661353034/IMG_1879.jpeg",
+    "sha256": "b54a7d1f0d446ac451d82237c79e4bb13f86250ecf467e0becc5b83124867af7",
+    "sourcePage": "https://jktroitskiy.ru/"
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/b683db3580ca1f6fcd9e88f3.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950124/_6lm8CoN0HGy7HwxNzMwOTgxNTIzfDE5MWZi/kamera_17.jpg",
+    "sha256": "59b9092e31f60472d3c0832b89072a6fe58c0e6c79a4d099858836193108d4e4",
+    "sourcePage": "https://www.trend-gr.ru/agent"
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/1f5947b9442a1d604e8f7473.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950134/_6lm8CoN0HCy7HwxNzMwOTgxNTIzfDUxNWFm/kamera_18.jpg",
+    "sha256": "d59e2b51ae165d350c36023e348f4a3b40ca9dc64d42e9bfa4febbf02ab3b399",
+    "sourcePage": "https://www.trend-gr.ru/agent"
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/08f230b64b059b68a5c8d0f6.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/7246140/4208155/XHW9JoCv5Ly_U3wxNzc3ODczODI4fDdiOTMz/vstroika_3.jpg",
+    "sha256": "7ed556d46cfad559ca8a8d1593230e811500a86140c45e196f3a131b218f2e30",
+    "sourcePage": "https://www.trend-gr.ru/agent"
+  },
+  {
+    "project": "luchi-2",
+    "path": "/images/nmarket/16e3fe4a1105ba618d2b27c1.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6",
+    "sourcePage": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf"
+  },
+  {
+    "project": "luchi-2",
+    "path": "/images/nmarket/861e7bc3749a7c802303a301.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6",
+    "sourcePage": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf"
+  },
+  {
+    "project": "luchi-2",
+    "path": "/images/nmarket/3509e0110720b85a5d09bb6c.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6",
+    "sourcePage": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf"
+  },
+  {
+    "project": "luchi-2",
+    "path": "/images/nmarket/84a1daaefcd66d8e0d67c10e.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6",
+    "sourcePage": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf"
+  },
+  {
+    "project": "luchi-2",
+    "path": "/images/nmarket/d26a41116b383c0af4ca5d57.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6",
+    "sourcePage": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf"
+  },
+  {
+    "project": "luchi-2",
+    "path": "/images/nmarket/bca6bdae7777e4217882155b.jpg",
+    "source": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf#image-9",
+    "sha256": "274e878af30ae603c40cfff5d74fdcaa5ad6b8f4150805b8442baa355a90c2c6",
+    "sourcePage": "https://wowfest.ru/upload/iblock/e08/luchi_3.pdf"
+  },
+  {
+    "project": "kollektsiya-luzhniki",
+    "path": "/images/nmarket/fb1903d90bac8ec0b75ef808.jpg",
+    "source": "https://luzhniki-collection.ru/assets/Luzhniki-og.jpeg",
+    "sha256": "ad76cf7592050222d74fd8cac697ef8eb3cfe7f0137ac65a420d22b15bf1118e",
+    "sourcePage": "https://luzhniki-collection.ru/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "kollektsiya-luzhniki",
+    "path": "/images/nmarket/3c55075f57b512b89283ea10.jpg",
+    "source": "https://luzhniki-collection.ru/proxy/insecure/w:767/q:80/plain/https://cdn.luzhniki-collection.ru/media/CACHE/images/mp/mps/im/3_YtmFKzM/b95df55cd76b25ffb3f9b643218105fc.jpg",
+    "sha256": "490b4b067b79c22bb3ba6e39e87f547bf39b6ae13d90221dda63a7d4f02e7f9d",
+    "sourcePage": "https://luzhniki-collection.ru/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/07d62a2beaa19ad5361da6e9.jpg"
+    ]
+  },
+  {
+    "project": "kollektsiya-luzhniki",
+    "path": "/images/nmarket/23e44e568e2ea0ced66de017.jpg",
+    "source": "https://luzhniki-collection.ru/proxy/insecure/w:767/q:80/plain/https://cdn.luzhniki-collection.ru/media/CACHE/images/mp/mps/im/4/e8642775473e4aac29964885080c0199.jpg",
+    "sha256": "a34d3282274335c7ce67edce2a350db8d3d316056465d19307ba61f8788a9c70",
+    "sourcePage": "https://luzhniki-collection.ru/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/1c208da6311eda056a109f2f.jpg"
+    ]
+  },
+  {
+    "project": "kollektsiya-luzhniki",
+    "path": "/images/nmarket/233c16058db1c9d59b54ff2a.jpg",
+    "source": "https://luzhniki-collection.ru/proxy/insecure/w:767/q:80/plain/https://cdn.luzhniki-collection.ru/media/CACHE/images/mp/mps/im/3/06d2064acdf11da52092b290bcf5463b.jpg",
+    "sha256": "f871d6be55d1b7be000b6f154cf6364f39424997589310769e961d43e370d9dd",
+    "sourcePage": "https://luzhniki-collection.ru/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/22423310be93430352a36a8b.jpg"
+    ]
+  },
+  {
+    "project": "kollektsiya-luzhniki",
+    "path": "/images/nmarket/12452a4bfd08eb96a62334f3.jpg",
+    "source": "https://luzhniki-collection.ru/proxy/insecure/w:767/q:80/plain/https://cdn.luzhniki-collection.ru/media/CACHE/images/mp/mps/im/5_SJjzATY/f51314260d45e0972f5eed619928092d.jpg",
+    "sha256": "ec12772328e51494a1f6431d610ecee6a4f3b94c08509dea228ef93ef85d0c10",
+    "sourcePage": "https://luzhniki-collection.ru/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/acc09f82b8d856a9ec391280.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/5a6704fc8b0a459910f41892.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2024/12/m4-komfort_2-min-2.jpg",
+    "sha256": "ffae081048465b07417201fa100466b810904d2c7271a986438785a52141b7e4",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/1e6cc3e5433a456b013894cd.jpg",
+    "source": "https://love.mechta.su/wp-content/uploads/2026/02/image-29_result.webp",
+    "sha256": "4b13eea6ab6d336e5cd9ee01f7787f41759728ebc207c72a5152c73a9629e33a",
+    "sourcePage": "https://love.mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/4ebd5fe7d9e488830f2c138c.jpg",
+      "/images/nmarket/18de04d69a307f6c2429af31.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/7a48d8f41e6a55c2cfa5113d.jpg",
+    "source": "https://love.mechta.su/wp-content/uploads/2026/02/image-31_result.webp",
+    "sha256": "91c46519082e6daf6f8cba14aba97129cc3b1088d824350ea8cc36d677f9f6f6",
+    "sourcePage": "https://love.mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/2260cddf8c35532ce8678b57.jpg",
+      "/images/nmarket/7145332bf31574b4506bd61b.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/e883a7422918d2d9377caf9a.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2026/07/love-fasady-4.webp",
+    "sha256": "e50589fb2291736f9a956b462447dc3cff1b54648dd32e7ce3aa608255ccfc33",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/529c9e847c6fd3494fd2cfc9.jpg",
+      "/images/nmarket/c7cec0be3ec35c10df5eb160.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/48b05166cdb904fc70e3bdf4.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2026/07/druzhba-fasady-5.webp",
+    "sha256": "e38af1e61d9bb3ef733a5e1744f309a30b20c2f7bffa436020e6e7eb3910abc8",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/641db9ca2a1573f38ad7ff21.jpg",
+      "/images/nmarket/1db2011c7c35753ae08aabdd.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/52bcf3f01db54b0f97bbb36a.jpg",
+    "source": "https://love.mechta.su/wp-content/uploads/2026/02/image-30_result.webp",
+    "sha256": "47e5ddb2b5da772aec51e7e5150306ade89ac894db02c80fe32d697c9267c644",
+    "sourcePage": "https://love.mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/4c03f95587622d23f1af78a8.jpg",
+      "/images/nmarket/9dd0639c8c97efce504cf69d.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/930af7069929395f1ddfc71e.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2026/09/zemlyanichnaya-polyana-12-1.webp",
+    "sha256": "14edb505dfaadee558f7f9212e1308a5e48802050987949fae55da72a043c626",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/c75ae6786911d31111ef82fe.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/fa2da039c5ea87a015d2b976.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2024/11/zemlyanichnaya-polyana-ochered1.webp",
+    "sha256": "8313f497cfe251d5d3b0461ac9982332ef4c2be9164a7e4c343eb0c3b507962c",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/00913b1053760de9626711dd.jpg",
+      "/images/nmarket/c264904390088ca71ee252bf.jpg",
+      "/images/nmarket/a4bf211cfedd3916842fdb2d.jpg",
+      "/images/nmarket/b7cfc712d9b5c8ea9e4a8533.jpg",
+      "/images/nmarket/ce4f2333d9f7aee9dd8f796a.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/8e8098def4de151c40b9e17c.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2026/09/main-mechta.webp",
+    "sha256": "16b3b970f430e18b21109b0fe04c39d699ece9e426f3533e461266b703a04cea",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/74c8d2f3fd9971af3e06794a.jpg",
+      "/images/nmarket/18cf8e7762ff63cccc46abb1.jpg",
+      "/images/nmarket/f5297d58fb75daadf83f874d.jpg",
+      "/images/nmarket/cc87fcf8c1744e7ad7c306cd.jpg",
+      "/images/nmarket/766c50aac0220a94c0f438e6.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/da70ea8b130b529d6f92fb43.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2026/09/mechta-rassrochka.webp",
+    "sha256": "0002d963951e2754147cd9c97bbf4b4a435112e9e448f420646c844249db2320",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/8859ee4944e0a264e9d93318.jpg",
+      "/images/nmarket/efd40240631e996b7111396c.jpg",
+      "/images/nmarket/f8083b06e6db3beb15ef76ce.jpg",
+      "/images/nmarket/2092d73dcf9a838ca7a8efa4.jpg",
+      "/images/nmarket/0cf62aa5d3f81566031a0eeb.jpg"
+    ]
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/bf8a48c825c5f03de52762d2.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2024/11/kvartal-tylpanov-ochered1.webp",
+    "sha256": "545cf085d43c219979fe8a8facd3e1f0cb14752aac4bffae4a1b28869b0e2d18",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "mechta",
+    "path": "/images/nmarket/8923861fe6d3b91b2674b8f3.jpg",
+    "source": "https://mechta.su/wp-content/uploads/2024/10/kvartal-drujba.jpg",
+    "sha256": "e2181fa322f672093a025cf1d885f69e17db10e31bd839b9311d1543f775b7fb",
+    "sourcePage": "https://mechta.su/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "nikolskiy-kvartal-otrada",
+    "path": "/images/nmarket/637f32e01e3e1c52723206e9.jpg",
+    "source": "https://myotrada.ru/uploads/main/02x/985601164f4493171758db2008530970d82a379c371efff86163af2fda35707c/siti-mob-2.jpg",
+    "sha256": "1e4891846a71fd5010a9ac16496a86844679b5f1d60ea3833cf883d6fdfa7b93",
+    "sourcePage": "https://myotrada.ru/projects/nk",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "nikolskiy-kvartal-otrada",
+    "path": "/images/nmarket/2c5d53a9582597136b09d7f6.jpg",
+    "source": "https://myotrada.ru/uploads/main/02y/52d5fae828e0e8dec1f4b46968638b7723541108e8f83484f9b9e7d5e3ba3846/frame-2136140311-_2_-_1_.jpg",
+    "sha256": "b24203e765c567dbb7db5dbe36f4eb705e44c3cc728e55be63bceff5f4bad4e6",
+    "sourcePage": "https://myotrada.ru/projects/nk",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/11ed4e3290e45639df20407d.jpg",
+      "/images/nmarket/4bef07f956047e09221238f6.jpg",
+      "/images/nmarket/155f6c145748a2008f99bce7.jpg"
+    ]
+  },
+  {
+    "project": "nikolskiy-kvartal-otrada",
+    "path": "/images/nmarket/3f341ff34b04cd33d575e319.jpg",
+    "source": "https://myotrada.ru/uploads/main/02x/aaf4dc5e5f72862fa637441497dc50c4afb35f1e5eba30aa78e54421fb5b1664/siti-mob-1.jpg",
+    "sha256": "2b2bc0636d3eac45bf24fda5645053f922c363676df4a296bb6eb86871d7730a",
+    "sourcePage": "https://myotrada.ru/projects/nk",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/85d2290e9c4ed458854c83e5.jpg"
+    ]
+  },
+  {
+    "project": "nikolskiy-kvartal-otrada",
+    "path": "/images/nmarket/4704055f6e1a73a997adbd24.jpg",
+    "source": "https://myotrada.ru/uploads/main/02x/4475d74fa32a51e3d32c51d3b44ba75545ba7d618cec68074f01f8025c23903a/siti-mob-3.jpg",
+    "sha256": "2f849896aca8ab84edaf98c0953b866bc2d0d78058d48bba801a158071ebecfa",
+    "sourcePage": "https://myotrada.ru/projects/nk",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "nikolskiy-kvartal-otrada",
+    "path": "/images/nmarket/e39125d1fe7aa808f732421f.jpg",
+    "source": "https://myotrada.ru/uploads/main/02t/0e24c3c5e97ba01a559075235e541730b3db5a62e70a290c6a7ad3523c1d6938/img_0473-3.png",
+    "sha256": "721e8948d104401edd85cad6ebcca68bc81e368288858cd3d49e06319da97222",
+    "sourcePage": "https://myotrada.ru/projects/nk",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "pervyy-kvartal",
+    "path": "/images/nmarket/5fa46eb43e69facd03b5d8aa.jpg",
+    "source": "https://cdn.brusnika.ru/media/complex/header_video_placeholder/%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D0%BA%D0%B0_%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_1440-604.jpg",
+    "sha256": "233ab01b036b008fa91c4364d35bdee1c261fcdcb4d1d712a0eaefb955f8f0c1",
+    "sourcePage": "https://moskva.brusnika.ru/projects/perviy/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/6f8f8a91dea4155179e9908d.jpg",
+    "source": "https://wowfest.ru/upload/iblock/578/3ei7x8z69d5ixlixwo80y2o07p4b2sq4/kelnik_kortros_zhk_ravnovesie_prezentatsiya_sayta_dlya_wow_awards_2023_300_dpi_compressed_2023_06_08.pdf#image-165",
+    "sha256": "f8566c93a676083f9c0c1fc57b7cfaada787dfff43192b65265d9dbbcb292881",
+    "sourcePage": "https://wowfest.ru/upload/iblock/578/3ei7x8z69d5ixlixwo80y2o07p4b2sq4/kelnik_kortros_zhk_ravnovesie_prezentatsiya_sayta_dlya_wow_awards_2023_300_dpi_compressed_2023_06_08.pdf",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/635bf180ec5f2145aa88da13.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/main/auto-slider/1.jpg",
+    "sha256": "6d86c3327e715b13b815866200e6e3d5dc3585c4c41f1e74f0d957c51dd00b9c",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/4226672b84004153001c1fe7.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-security/security-02.jpg",
+    "sha256": "3d7ce0f37a745eb1a746983bd8c5171036b8ee6a14abda7d3ae299111582cd47",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/f81cb8db36ae08905662aaa3.jpg",
+      "/images/nmarket/5ec77f67be4f32d50de5b709.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/eb0e8240273f7ad1f4f58af7.jpg",
+    "source": "https://wowfest.ru/upload/iblock/578/3ei7x8z69d5ixlixwo80y2o07p4b2sq4/kelnik_kortros_zhk_ravnovesie_prezentatsiya_sayta_dlya_wow_awards_2023_300_dpi_compressed_2023_06_08.pdf#image-203",
+    "sha256": "63fe5d965e9aecb30bda09fd289fa9b82fcf9e4aad613341aaef077f32058679",
+    "sourcePage": "https://wowfest.ru/upload/iblock/578/3ei7x8z69d5ixlixwo80y2o07p4b2sq4/kelnik_kortros_zhk_ravnovesie_prezentatsiya_sayta_dlya_wow_awards_2023_300_dpi_compressed_2023_06_08.pdf",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/07d30621820cb8547d275e32.jpg",
+      "/images/nmarket/8ae4ec0c53675525dd74324d.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/581d10c06a313957ac86562f.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/main/ravnovesie-main-bg.jpg",
+    "sha256": "c23e4b6aaa7dd709443db1d9c25af23cec0e6bcb5028566c78a5f6dbf82b7916",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/4da05c7c13f5af4700d6462e.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-sport-rest/sport-03.jpg",
+    "sha256": "a27016eae5ac62e2159ea0dbf5998ab0b541a0dc7fee4dc82dabc01e7525f8ba",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/d1e033bed2e2f0a39fc86d71.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/206e0702a5ddae90d02e7628.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-sport-rest/sport-01.webp",
+    "sha256": "28260256962ebe48b95ee2b2a8550d3a19421d7ca34d4a5c8c5c6724cec8abc1",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/adda0da892795a2a5296bde4.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/be5a0109850595adaa0c4495.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-sport-rest/sport-05.webp",
+    "sha256": "826781d45fe963a4c09e0154fad3dca517711b42bb31bef7a90aff710a420305",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/e9ed04c124c6d7f8dc34ba19.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-security/security-03.webp",
+    "sha256": "977930e9669fd0e57bf8df60a399a41f7a911a237d986649be2716de29d9a59c",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/ae2bba05d683292a5cea1b3c.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/9ef0f311f7b5f9a1efee5f93.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-sport-rest/sport-02.jpg",
+    "sha256": "b897ef7a0d844b99843f7a6988d4bbabec35c055d8a5623086564cfb22d25c29",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/e1239581befd302e7f494052.jpg",
+      "/images/nmarket/11b6a81005216f9d11dd2390.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/a8323af551ba89f297ee9ef5.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/gallery-security/security-01.webp",
+    "sha256": "d77029e3906d66a89c4c8806f8a8d5f2052c01dd1eb9d4966f9ba95bf007544c",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/bcc2925951d8c891dc904576.jpg",
+      "/images/nmarket/ae67ea00c77cc42fe7b5634a.jpg"
+    ]
+  },
+  {
+    "project": "ravnovesie",
+    "path": "/images/nmarket/d25051d57754dad208f759a0.jpg",
+    "source": "https://storage.yandexcloud.net/kortros-ru-static-bucket/project/ravnovesie/live/slider-child-ns/NS08.jpg",
+    "sha256": "e9605cdbb929f692d1311fcf8a2e55eea5df354b71e19792310f6491ba45b6ac",
+    "sourcePage": "https://kortros.ru/projects/ravnovesie2",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/4c5c23f466a3ee5d73259c58.jpg",
+    "source": "https://static.tildacdn.com/tild3562-6361-4364-b534-663637373133/CanvasImageNew.jpg",
+    "sha256": "58ef502ad55b2c73b7e2fb502b256b5871cb391edb8a9878dced7748b594735c",
+    "sourcePage": "https://jktroitskiy.ru/",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "troitskiy",
+    "path": "/images/nmarket/ed6d47449d1b30a0e62ffd68.jpg",
+    "source": "https://static.tildacdn.com/tild6163-3638-4633-a466-626639336535/WhatsApp_Image_2025-.jpeg",
+    "sha256": "85b74455354a891e0daa70563908d8c754a21159cb5c168ca22bfab161daf9c9",
+    "sourcePage": "https://jktroitskiy.ru/",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/1e6208cf0ce7fcd270dac2a5.jpg",
+      "/images/nmarket/f48c5194634e82fa2370daed.jpg",
+      "/images/nmarket/6999e82445d940b0db7a9de0.jpg",
+      "/images/nmarket/a0656a53ba311eb46d74e78b.jpg",
+      "/images/nmarket/bddea5da581479d8a8b870ab.jpg"
+    ]
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/f6655bcaf64bf7e8816c0499.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950127/_6lm8CoN0HGx7HwxNzMwOTgxNTIzfGM3Zjdk/kamera_02.jpg",
+    "sha256": "625ff9ad0c0b76b6608b97e8d02883f02c73581ba7758806a633a192266e9e7f",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/ba1d3b731f9f6c540ce500de.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950132/_6lm8CoN0HC07HwxNzMwOTgxNTIzfDYzZmRi/kamera_11.jpg",
+    "sha256": "70e58a7569ab4d8a2fbd547f19eab5a2de5e4bea54621f7d6ba7eb498a121710",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/ece6b599694fdb44f10d623a.jpg",
+      "/images/nmarket/b2f6faf3e181fe5bebe4f82a.jpg",
+      "/images/nmarket/2ba651dd4ec950b1db2620de.jpg",
+      "/images/nmarket/a15dfad500c7fad7db9aca58.jpg"
+    ]
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/54da047906550bc06ee42624.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950125/_6lm8CoN0HGz7HwxNzMwOTgxNTIzfDAxYzBl/kamera_09.jpg",
+    "sha256": "a82e7937de0ac4e95bce5a61ef86fcf6f5da6f9de2b2e6a440b6d6943f94397d",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/bd6070af73ec6038073c468d.jpg",
+      "/images/nmarket/36b861f559310c1317591369.jpg",
+      "/images/nmarket/8b6a60e38eb12f4ab8b8de7b.jpg",
+      "/images/nmarket/a4ca68d06ec6f28bd64fbbe0.jpg"
+    ]
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/e1f94abc6ad4d6445bc44046.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950131/_6lm8CoN0HC37HwxNzMwOTgxNTIzfDMzZDlh/kamera_13.jpg",
+    "sha256": "26c95b52c3d532662b06effd3286fd194d2f90347408d844cab0f1d3f731787e",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/ca9942693fbebc11a9124c76.jpg",
+      "/images/nmarket/f49aa8c91bb8ad867c0aa876.jpg",
+      "/images/nmarket/d9c3e653504fedfd59b57e86.jpg",
+      "/images/nmarket/3dbf499195df68e6a1a0d050.jpg"
+    ]
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/687c1439db8349736076d602.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950130/_6lm8CoN0HC27HwxNzMwOTgxNTIzfDRmNzdj/kamera_06.jpg",
+    "sha256": "f7efa7a6f56d764b71e911010641a92de30085ebed0b87bfcad8c0f68d111306",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/2c37b8d6761d8058e3ebc006.jpg",
+      "/images/nmarket/9994a93247d977144f25bb06.jpg",
+      "/images/nmarket/967b0b9f17a13be68a8307d4.jpg",
+      "/images/nmarket/314e565cd94bf6d342698357.jpg"
+    ]
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/6435044f04d23cd8958a49e7.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950126/_6lm8CoN0HGw7HwxNzMwOTgxNTIzfGZkYWRi/kamera_04.jpg",
+    "sha256": "a28f134371f424b3aa111c7bc39dfaf71b1dc42b2804318cb181832417447052",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true,
+    "aliases": [
+      "/images/nmarket/ebf4e3775706a6e3849cf58a.jpg",
+      "/images/nmarket/5ac67642c15682fa216d123a.jpg",
+      "/images/nmarket/f5e980be9ed3dc1b4df26165.jpg",
+      "/images/nmarket/6fa72c746337aa76f7599727.jpg"
+    ]
+  },
+  {
+    "project": "dyuna",
+    "path": "/images/nmarket/69090e9f91a70410cb6abb18.jpg",
+    "source": "https://macro.sbercrm.com/estate/files/get/4113135/3950128/_6lm8CoN0HG-7HwxNzMwOTgxNTIzfDliNjUw/kamera_16.jpg",
+    "sha256": "28ab78e98dd540e3118bab0fb13a87feeb31e55c47d61e06d029b9529e37ff05",
+    "sourcePage": "https://www.trend-gr.ru/agent",
+    "sameProjectAlternative": true
   }
 ]
