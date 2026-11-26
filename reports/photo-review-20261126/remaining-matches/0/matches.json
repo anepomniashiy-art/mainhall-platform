@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "odingrad-kvartal-semeynyy",
+    "target": "/images/nmarket/a56cec19e77051b972cd0e5c.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:85/rs:fit:1200:1200/plain/s3://idalite-media/media/images/f3857db3bfbf453ba15681703508ebd9.jpg",
+    "page": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad",
+    "inliers": 482,
+    "oldSha256": "006cd685b0697813ac447bf631b1740dc3f599ded6b76dbeef86f2bdf1d3b366",
+    "sha256": "3ef2e485f35f3bac834b4f28fbfcdc331a40453185766099cbc5f60767e3fd1f"
+  },
+  {
+    "slug": "odingrad-kvartal-semeynyy",
+    "target": "/images/nmarket/0a9a0ced08e9eebf8a2b8c2c.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fit:0:1200/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/4dcca1d199314743bf190e402dbd9cac.jpg",
+    "page": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad",
+    "inliers": 416,
+    "oldSha256": "42bd967895d68c78a262fdf1788d62b6c70629209289c67a55791055459cb2eb",
+    "sha256": "eec520b39fc43ddda83cf6fd70ffbe1edfa50c25163e229f6435a9401edb84ef"
+  },
+  {
+    "slug": "odingrad-kvartal-semeynyy",
+    "target": "/images/nmarket/d7ba73a10eebd73511e8e184.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fit:0:1200/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/4dcca1d199314743bf190e402dbd9cac.jpg",
+    "page": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad",
+    "inliers": 416,
+    "oldSha256": "42bd967895d68c78a262fdf1788d62b6c70629209289c67a55791055459cb2eb",
+    "sha256": "eec520b39fc43ddda83cf6fd70ffbe1edfa50c25163e229f6435a9401edb84ef"
+  },
+  {
+    "slug": "odingrad-kvartal-semeynyy",
+    "target": "/images/nmarket/daa951399431d5dccb0541e5.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fit:0:1200/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/4dcca1d199314743bf190e402dbd9cac.jpg",
+    "page": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad",
+    "inliers": 416,
+    "oldSha256": "42bd967895d68c78a262fdf1788d62b6c70629209289c67a55791055459cb2eb",
+    "sha256": "eec520b39fc43ddda83cf6fd70ffbe1edfa50c25163e229f6435a9401edb84ef"
+  },
+  {
+    "slug": "odingrad-kvartal-semeynyy",
+    "target": "/images/nmarket/ca544a506e01fdfb327c5229.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:95/rs:fit:1280:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/8a9953b1-9358-4fda-a4e6-ddbfd9d1bb49/7ccd1bac588940c496307b53a8879fc5.jpg",
+    "page": "https://xn--b1agpqkk.xn--p1ai/complexes/zhk-odingrad",
+    "inliers": 406,
+    "oldSha256": "a4e67ebc3b37a4cc370ec35811b0fae03d301102b577850f881be73ea7790f87",
+    "sha256": "6304a34fb88ce495079c1751d12998b02c42cca163f4a93a0ba395b1769d9815"
+  }
+]

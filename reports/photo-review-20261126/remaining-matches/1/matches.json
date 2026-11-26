@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "insider",
+    "target": "/images/nmarket/b82877d74aea835995ddf694.jpg",
+    "source": "https://respect.house/assets/projects/official-20261018/insider-04.webp",
+    "page": "https://respect.house/projects/insider/",
+    "inliers": 185,
+    "oldSha256": "51f20c8e838fefbfd08961daa90fb9b78fe0544213c4a17894249ed88e0ac1c8",
+    "sha256": "253e98a95bacae4365b4db3a7110a9395734b3ff2f58d29bab0c74259348fdf3"
+  },
+  {
+    "slug": "odintsovskie-kvartaly",
+    "target": "/images/nmarket/eba5415d04fdfe40cf592166.jpg",
+    "source": "https://cdn.idalite.ru/i/insecure/q:100/rs:fill:1063:624/g:ce/bl:0/c:0/plain/s3://idalite-media/media/projects/470f1d6c-84cb-43dc-9058-5d2583e3bfb0/sites/blocks/98c532cb6f48433594d426a5634c916e.jpg",
+    "page": "https://xn--b1agpqkk.xn--p1ai/",
+    "inliers": 312,
+    "oldSha256": "f82178db35b932ef0af303c7dccd1b0bc228b3395a5ed7d1c74696f33fc1011d",
+    "sha256": "0c164c21eea8bbc39fd4f7bf3bde1ac7ff04831edd404664cffc5609e7db7579"
+  }
+]

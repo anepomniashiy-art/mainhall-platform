@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "sokolin-park",
+    "target": "/images/nmarket/bdbf4e99c03076cc99c5324a.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/e33/cbz2yvug5b5luywve3zpmdabroxfdqkd.jpg",
+    "page": "https://etalon-project.ru/projects/sokoliinn-park/",
+    "inliers": 271,
+    "oldSha256": "9116bfe9003053843b16920a0b1fa2eeeea01d614d35af002541a6d2e3b8a148",
+    "sha256": "41cee3a226b7b9550b4f2bf28cd7e6a7c41690e717443505cbe297b92eae752d"
+  },
+  {
+    "slug": "sokolin-park",
+    "target": "/images/nmarket/e1bebda70886da163b3bc18c.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/73e/35h7rts6jxo22zwuw3cjgqubhoxflzez.jpg",
+    "page": "https://etalon-project.ru/projects/sokoliinn-park/",
+    "inliers": 423,
+    "oldSha256": "fc5b33dc9decae43e18e0e00902638084e60747a53c49b36b92e3dda699b959c",
+    "sha256": "f6d892574a3e725053374a63e0a008575842dd63156d551c795f748bdb918e34"
+  },
+  {
+    "slug": "sokolin-park",
+    "target": "/images/nmarket/82fa1c156fae460fe9601852.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/0c0/9pphv9dbdnis897qwnipox64b3yig9cw.jpg",
+    "page": "https://etalon-project.ru/projects/sokoliinn-park/",
+    "inliers": 124,
+    "oldSha256": "a05738886b3e6b0ee06496da1f3586457fe097e7c14135b74dd3e3ac9fae04ca",
+    "sha256": "dede023560b5c0cb786ddc4b6228e81570b5299bc0f4a284fe4278b5e4e9e7c9"
+  },
+  {
+    "slug": "sokolin-park",
+    "target": "/images/nmarket/7a3473fb0e9d3a7d1e98e00b.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/2f1/mlesqn2eaee8p4sc1myyq4qsc8hptfx5.jpg",
+    "page": "https://etalon-project.ru/projects/sokoliinn-park/",
+    "inliers": 353,
+    "oldSha256": "8b8e32bd9375019c2bf81017326617e0bd7c048f48696b1415a0a54ff5b0eb23",
+    "sha256": "0e29a9e6a20b5da43c887b4f2b86a0ec9df8093fd82a6907533760c8ecb35445"
+  },
+  {
+    "slug": "sokolin-park",
+    "target": "/images/nmarket/5910cc74939b3651d3f18ce0.jpg",
+    "source": "https://etalon-project.ru/upload/iblock/8ec/scw12iwot3d1yhufcxtybl07wt2ty07x.jpg",
+    "page": "https://etalon-project.ru/projects/sokoliinn-park/",
+    "inliers": 279,
+    "oldSha256": "d3e31b5944a04b2449ea8a79b0d75a07c8b55be2ed05dcf6d8b35c90607c5ba5",
+    "sha256": "a327c8a1bafaf496850a125ecb39a629025c3f39112dd07c4a1382dc0361239e"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "project": "elyon",
+    "sourcePages": [
+      "https://elyon-dom.ru/usloviya-akcii-privedi-druga"
+    ],
+    "candidates": 11,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "match-point",
+    "sourcePages": [],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "repablik-hoomie",
+    "sourcePages": [
+      "https://wowfest.ru/upload/iblock/8d0/rrrlp79829smx5myxmx8zorxq3001y4f/republic_presentation_3_compressed.pdf"
+    ],
+    "candidates": 33,
+    "decoded": 33,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "sokolin-park",
+    "sourcePages": [
+      "https://etalon-project.ru/projects/sokoliinn-park/"
+    ],
+    "candidates": 14,
+    "decoded": 14,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "zelenyy-oazis-gorod",
+    "sourcePages": [
+      "https://minzhil.mosreg.ru/sobytiya/novosti-ministerstva/v-zk-zelenyi-oazis-gorod-vveden-v-ekspluataciiu-ziloi-dom",
+      "https://minzhil.mosreg.ru/sobytiya/novosti-ministerstva/v-zk-zelenyi-oazis-gorod-vveden-v-ekspluataciiu-novyi-dom-ziloi-dom"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 11
+  }
+]

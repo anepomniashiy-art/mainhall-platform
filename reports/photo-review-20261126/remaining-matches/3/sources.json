@@ -1,0 +1,49 @@
+[
+  {
+    "project": "fabrikant",
+    "sourcePages": [
+      "https://xn----8sbadwpke2a0a0aq.xn--p1ai/object",
+      "https://minzhil.mosreg.ru/sobytiya/novosti-ministerstva/v-zhk-fabrikant-postroili-novyi-dom"
+    ],
+    "candidates": 20,
+    "decoded": 0,
+    "publishedPhotos": 11
+  },
+  {
+    "project": "nagatino-ay-lend",
+    "sourcePages": [
+      "https://etalongroup.ru/spb/news/v-moskve-zaversheno-blagoustroystvo-pridomovykh-prostranstv-i-trekh-dvorov-zhilogo-kvartala-nagatino/"
+    ],
+    "candidates": 23,
+    "decoded": 8,
+    "publishedPhotos": 21
+  },
+  {
+    "project": "semeynyy-dom-oliva",
+    "sourcePages": [
+      "https://xn--80az8a.xn--d1aqf.xn--p1ai/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BA/%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82/58289"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "soyuznyy",
+    "sourcePages": [
+      "https://xn--80az8a.xn--d1aqf.xn--p1ai/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BA/%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82/58759"
+    ],
+    "candidates": 0,
+    "decoded": 0,
+    "publishedPhotos": 6
+  },
+  {
+    "project": "zilart",
+    "sourcePages": [
+      "https://cdn.static.lsr.ru/upload/kelnik.estate/eb7/z48hyz30l2oltayq3gezqjeybd0ziuxr/%D0%904_zilart_img-book_apr-26_p3.pdf",
+      "https://www.lsr.ru/upload/kelnik.estate/09f/frt3uqfc31k4dhyqcwosod39cre43k4c/%D0%904_zilart_img-book_sep-24_p5.pdf"
+    ],
+    "candidates": 60,
+    "decoded": 60,
+    "publishedPhotos": 16
+  }
+]
