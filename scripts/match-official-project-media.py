@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 
 cv2.setNumThreads(1)
 base = Path('reports/photo-review-20261126')
-pages = json.loads((base/'official-pages.json').read_text())
+pages = json.loads((base/os.environ.get('PAGES', 'official-pages.json')).read_text())
 galleries = json.loads(Path('data/catalogue/nmarket-galleries.json').read_text())
 prior = {r['target'] for r in json.loads((base/'matches.json').read_text())}
 shard = int(os.environ['SHARD'])
@@ -150,7 +150,7 @@ def flush():
             pen.text((x+2,y+134),label,fill='white')
         sheet.save(out/('proof-%03d.jpg'%start),quality=88)
 
-for slug in sorted(pages)[shard::8]:
+for slug in sorted(pages)[shard::int(os.environ.get('GROUPS_COUNT','8'))]:
     flags=[r['src'] for r in galleries.get(slug,[]) if r['category']=='Проект' and r['src'] not in prior]
     if not flags:
         continue
@@ -174,6 +174,25 @@ for slug in sorted(pages)[shard::8]:
         s=safe(signature,raw)
         if s is not None:
             sigs[url]=s
+    if slug in ('insider','zilart'):
+        coverage=out/'covers'/slug
+        coverage.mkdir(exist_ok=True,parents=True)
+        catalogue=[]
+        for i,(url,sig) in enumerate(sigs.items()):
+            data=cdata[url]
+            catalogue.append({'id':i,'source':url,'page':raw_candidates[url][0],'sha256':sha256(data).hexdigest()})
+            (coverage/('%03d.jpg'%i)).write_bytes(data)
+        for start in range(0,len(catalogue),35):
+            group=catalogue[start:start+35]
+            sheet=Image.new('RGB',(1000,((len(group)+4)//5)*146),'#141414')
+            pen=ImageDraw.Draw(sheet)
+            for index,entry in enumerate(group):
+                x=(index%5)*200;y=(index//5)*146
+                photo=Image.open(BytesIO(cdata[entry['source']]))
+                photo.thumbnail((196,127))
+                sheet.paste(photo,(x,y));pen.text((x+2,y+129),str(entry['id']),fill='white')
+            sheet.save(coverage/('index-%03d.jpg'%start),quality=85)
+        (coverage/'index.json').write_text(json.dumps(catalogue,ensure_ascii=False))
     stats.append({'project':slug,'sourcePages':pages[slug],'candidates':len(sources),'decoded':len(sigs),'publishedPhotos':len(flags)})
     for path,data in site_data.items():
         if not data:
