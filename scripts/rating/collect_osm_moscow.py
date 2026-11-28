@@ -62,9 +62,11 @@ for cat in (sys.argv[1:] or list(QUERIES)):
         failed.append(cat); continue
     rows = []
     for e in els:
-        lat = e.get("lat") or (e.get("center") or {}).get("lat"); lon = e.get("lon") or (e.get("center") or {}).get("lon")
-        if lat is None: continue
         t = e.get("tags") or {}; b = e.get("bounds") or {}
+        lat = e.get("lat") or (e.get("center") or {}).get("lat"); lon = e.get("lon") or (e.get("center") or {}).get("lon")
+        if lat is None and b:  # ways and relations come with a bounding box only
+            lat = (b["minlat"] + b["maxlat"]) / 2; lon = (b["minlon"] + b["maxlon"]) / 2
+        if lat is None: continue
         rows.append([cat, round(lat, 6), round(lon, 6), t.get("name") or "", {k: t[k] for k in KEEP if k in t}, [b.get("minlat"), b.get("minlon"), b.get("maxlat"), b.get("maxlon")] if b else None])
     with gzip.open(f"out/{cat}.json.gz", "wt", encoding="utf-8") as f:
         json.dump({"fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "bbox": [S, W, N, E], "rows": rows}, f, ensure_ascii=False)
