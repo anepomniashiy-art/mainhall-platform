@@ -18,7 +18,11 @@ QUERIES = {
     "shop": 'nwr["shop"~"^(supermarket|convenience)$"]({b});',
     "park": 'wr["leisure"~"^(park|garden|nature_reserve)$"]({b});wr["landuse"="forest"]["name"]({b});',
 }
-GEOM = {"park_geom": 'wr["leisure"~"^(park|garden|nature_reserve)$"]({b});wr["landuse"="forest"]["name"]({b});'}
+GEOM = {
+    "park_geom": 'way["leisure"~"^(park|garden|nature_reserve)$"]({b});way["landuse"="forest"]["name"]({b});',
+    # relations need the full body: with "out tags" their member ways come without geometry
+    "park_rel": 'rel["leisure"~"^(park|garden|nature_reserve)$"]({b});rel["landuse"="forest"]["name"]({b});',
+}
 KEEP = ("station", "subway", "network", "operator", "railway", "construction", "proposed", "opening_date", "start_date", "line", "colour", "leisure", "shop", "amenity", "transport", "train", "public_transport", "construction:railway", "proposed:railway", "construction:station", "proposed:station")
 
 
@@ -46,9 +50,12 @@ def tiles(n):
             yield (S + (N - S) * i / n, W + (E - W) * j / n, S + (N - S) * (i + 1) / n, W + (E - W) * (j + 1) / n)
 
 
-def ring(points):
-    step = max(1, len(points) // 240)
-    return [[round(p["lat"], 5), round(p["lon"], 5)] for p in points[::step]]
+def ring(points, full=False):
+    points = [p for p in points if p]
+    step = 1 if full else max(1, len(points) // 240)
+    out = [[round(p["lat"], 5), round(p["lon"], 5)] for p in points[::step]]
+    if full and points and out[-1] != [round(points[-1]["lat"], 5), round(points[-1]["lon"], 5)]: out.append([round(points[-1]["lat"], 5), round(points[-1]["lon"], 5)])
+    return out
 
 
 os.makedirs("out", exist_ok=True)
@@ -60,7 +67,7 @@ for cat in (sys.argv[1:] or list(QUERIES)):
         try:
             got = {}
             for box in tiles(n):
-                for e in run(q, box, "geom tags" if geom else "center bb tags"): got[(e["type"], e["id"])] = e
+                for e in run(q, box, ("geom" if cat == "park_rel" else "geom tags") if geom else "center bb tags"): got[(e["type"], e["id"])] = e
                 time.sleep(3)
             els = list(got.values()); break
         except RuntimeError as e:
@@ -71,8 +78,8 @@ for cat in (sys.argv[1:] or list(QUERIES)):
         rows = []
         for e in els:
             t = e.get("tags") or {}
-            rings = [ring(e["geometry"])] if e.get("geometry") else [ring(m["geometry"]) for m in e.get("members", []) if m.get("geometry") and m.get("role") != "inner"]
-            rings = [r for r in rings if len(r) >= 3]
+            rings = [ring(e["geometry"])] if e.get("geometry") else [ring(m["geometry"], True) for m in e.get("members", []) if m.get("type") == "way" and m.get("geometry") and m.get("role") != "inner"]
+            rings = [r for r in rings if len(r) >= (3 if e.get("geometry") else 2)]
             if rings: rows.append([t.get("name") or "", t.get("leisure") or t.get("landuse") or "", rings])
         with gzip.open(f"out/{cat}.json.gz", "wt", encoding="utf-8") as f:
             json.dump({"fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "bbox": [S, W, N, E], "rows": rows}, f, ensure_ascii=False, separators=(",", ":"))
