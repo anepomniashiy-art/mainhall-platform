@@ -22,6 +22,8 @@ GEOM = {
     "park_geom": 'way["leisure"~"^(park|garden|nature_reserve)$"]({b});way["landuse"="forest"]["name"]({b});',
     # relations need the full body: with "out tags" their member ways come without geometry
     "park_rel": 'rel["leisure"~"^(park|garden|nature_reserve)$"]({b});rel["landuse"="forest"]["name"]({b});',
+    # national parks and protected natural areas (Losiny Ostrov, Bitsa forest, river valleys) carry no leisure tag
+    "park_nat": 'wr["boundary"~"^(national_park|protected_area)$"]({b});',
 }
 KEEP = ("station", "subway", "network", "operator", "railway", "construction", "proposed", "opening_date", "start_date", "line", "colour", "leisure", "shop", "amenity", "transport", "train", "public_transport", "construction:railway", "proposed:railway", "construction:station", "proposed:station")
 
@@ -67,7 +69,7 @@ for cat in (sys.argv[1:] or list(QUERIES)):
         try:
             got = {}
             for box in tiles(n):
-                for e in run(q, box, ("geom" if cat == "park_rel" else "geom tags") if geom else "center bb tags"): got[(e["type"], e["id"])] = e
+                for e in run(q, box, ("geom" if cat in ("park_rel", "park_nat") else "geom tags") if geom else "center bb tags"): got[(e["type"], e["id"])] = e
                 time.sleep(3)
             els = list(got.values()); break
         except RuntimeError as e:
@@ -78,9 +80,9 @@ for cat in (sys.argv[1:] or list(QUERIES)):
         rows = []
         for e in els:
             t = e.get("tags") or {}
-            rings = [ring(e["geometry"])] if e.get("geometry") else [ring(m["geometry"], True) for m in e.get("members", []) if m.get("type") == "way" and m.get("geometry") and m.get("role") != "inner"]
+            rings = [ring(e["geometry"], cat == "park_nat")] if e.get("geometry") else [ring(m["geometry"], True) for m in e.get("members", []) if m.get("type") == "way" and m.get("geometry") and m.get("role") != "inner"]
             rings = [r for r in rings if len(r) >= (3 if e.get("geometry") else 2)]
-            if rings: rows.append([t.get("name") or "", t.get("leisure") or t.get("landuse") or "", rings])
+            if rings: rows.append([t.get("name") or "", t.get("leisure") or t.get("landuse") or t.get("boundary") or "", rings])
         with gzip.open(f"out/{cat}.json.gz", "wt", encoding="utf-8") as f:
             json.dump({"fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "bbox": [S, W, N, E], "rows": rows}, f, ensure_ascii=False, separators=(",", ":"))
         print(cat, len(rows), flush=True); continue
