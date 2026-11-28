@@ -2,7 +2,8 @@
 
 One Overpass request per category and per tile of the Moscow bounding box. Every category is
 written to its own file as soon as it is complete, so a partial run still leaves usable data.
-Output: out/<category>.json.gz with [category, lat, lon, name, tags, bbox] rows.
+Output: out/<category>.json.gz with [category, lat, lon, name, tags, bbox] rows; park outlines
+(park_geom, park_rel, park_nat) come as [name, kind, [[lat, lon], ...]] rows.
 Data (c) OpenStreetMap contributors, ODbL.
 """
 import gzip, json, os, sys, time, urllib.parse, urllib.request
@@ -62,7 +63,7 @@ def ring(points, full=False):
 
 os.makedirs("out", exist_ok=True)
 failed = []
-for cat in (sys.argv[1:] or list(QUERIES)):
+for cat in (sys.argv[1:] or list(QUERIES) + list(GEOM)):
     geom = cat in GEOM
     q = GEOM[cat] if geom else QUERIES[cat]; els = None
     for n in ((3, 5) if geom else (1, 3)):
