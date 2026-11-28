@@ -10,7 +10,7 @@ function facts(key:RatingCriterion,r:ProjectRating):string[]{
  if(key==="price"&&r.price){const p=r.price,d=Math.abs(p.diffPercent);
   return [
    `${num(p.pricePerSqm/1000)} тыс. ₽/м²: медиана по зарегистрированным договорам за ${p.windowMonths===6?"шесть":"двенадцать"} месяцев (${num(p.deals)} ${plural(p.deals,"договор","договора","договоров")}).`,
-   d<1?`Цена на уровне сопоставимых домов рядом (${p.comparables} ${plural(p.comparables,"проект","проекта","проектов")}).`:`Это на ${num(d)}% ${p.diffPercent<0?"ниже":"выше"} сопоставимых домов рядом: ${p.comparables} ${plural(p.comparables,"проект","проекта","проектов")} того же класса${p.radiusKm?` в радиусе ${p.radiusKm} км`:" в районе"}, квартиры той же площади${p.sameFinish===false?"":" и отделки"}.`,
+   d<1?`Цена на уровне сопоставимых проектов рядом (${p.comparables} ${plural(p.comparables,"проект","проекта","проектов")}).`:`Это на ${num(d)}% ${p.diffPercent<0?"ниже":"выше"} медианной цены сопоставимых проектов рядом: ${p.comparables} ${plural(p.comparables,"проект","проекта","проектов")} того же класса${p.radiusKm?` в радиусе ${p.radiusKm} км`:" в районе"}, квартиры той же площади${p.sameFinish===false?"":" и отделки"}.`,
    ...(p.finish?[`Отделка в договорах: ${p.finish.toLowerCase()}.`]:[]),
    ...(p.sameFinish===false?["У части сопоставимых домов другая отделка, поэтому разница в цене приблизительная."]:[]),
    ...(p.capped?["Балл ограничен: цена ниже соседей при медленных продажах или высокой доле опта."]:[]),
@@ -28,7 +28,7 @@ function facts(key:RatingCriterion,r:ProjectRating):string[]{
    `В строящихся корпусах без договора ${num(q.stock)} ${plural(q.stock,"квартира","квартиры","квартир")}.`,
    `За шесть месяцев зарегистрировано ${num(q.dealsSixMonths)} ${plural(q.dealsSixMonths,"договор","договора","договоров")} с частными покупателями. При таком темпе остатка хватит на ${num(q.monthsOfStock)} ${plural(Math.round(q.monthsOfStock),"месяц","месяца","месяцев")}.`,
    ...(q.adjusted?["Продажи идут меньше года, поэтому темп скорректирован по соседним проектам того же класса."]:[]),
-   ...(q.wholesalePercent>=1?[`Оптовые сделки: ${num(q.wholesalePercent)}% договоров.`]:[]),
+   ...(q.wholesalePercent>=1?[`Оптовые покупки (несколько квартир одному покупателю): ${num(q.wholesalePercent)}% договоров.`]:[]),
    ...(q.exposureDays!==null?[`Квартира до сделки стоит в продаже ${num(q.exposureDays)} ${plural(Math.round(q.exposureDays),"день","дня","дней")} (медиана).`]:[]),
    ...(q.assignments>0?[`Переуступок за шесть месяцев: ${num(q.assignments)}.`]:[]),
   ];}
@@ -43,7 +43,7 @@ function facts(key:RatingCriterion,r:ProjectRating):string[]{
  if(key==="rent"&&r.rent){const a=r.rent;
   return [
    `Аренда рядом: ${num(a.rentPerSqm)} ₽/м² в месяц (${a.rooms}, ${num(a.listings)} ${plural(a.listings,"объявление","объявления","объявлений")} в радиусе ${num(a.radiusKm,a.radiusKm%1?1:0)} км).`,
-   `Валовая доходность к цене покупки: ${num(a.grossYield,1)}% годовых. После месяца простоя, расходов 5% и налога 13%: около ${num(a.netYield,1)}%.`,
+   `Валовая доходность по объявлениям к цене покупки: ${num(a.grossYield,1)}% годовых. После месяца простоя, расходов 5% и налога 13%: около ${num(a.netYield,1)}%. Это расчёт по сегодняшним ценам, а не прогноз.`,
   ];}
  return [];
 }
@@ -57,9 +57,10 @@ export function InvestmentRating({slug}:{slug:string}){
  const gaps=split.flatMap(item=>item.gap?[item.gap]:[]),notes=split.flatMap(item=>item.note?[item.note]:[]);
  return <section className="mh-dossier-section" aria-labelledby="rating-title">
   <p className="mh-eyebrow">MAINHALL / ИНВЕСТИЦИОННАЯ ОЦЕНКА</p>
-  <h2 id="rating-title">{r.published?`Оценка MAINHALL: ${num(r.score as number,1)} из 10`:"Оценка готовится"}</h2>
+  <h2 id="rating-title">{r.published?`Оценка MAINHALL: ${num(r.score as number,1)} из 10`:r.withheld?"Пять критериев собраны, итог готовится":"Оценка готовится"}</h2>
   {r.published
-   ?<p>Сильная сторона: {criterionNames[best[0]].toLowerCase()} ({num(r[best[0]]!.score,1)}). Слабая: {criterionNames[best[best.length-1]].toLowerCase()} ({num(r[best[best.length-1]]!.score,1)}). Оценка относится к проекту в целом; конкретную квартиру сравниваем отдельно.</p>
+   ?<p>Сильная сторона: {criterionNames[best[0]].toLowerCase()} ({num(r[best[0]]!.score,1)}). Слабая: {criterionNames[best[best.length-1]].toLowerCase()} ({num(r[best[best.length-1]]!.score,1)}). Итог относится к проекту в целом; конкретную квартиру оцениваем отдельно.</p>
+   :r.withheld?<p>Проект относится к элитному сегменту. Общие веса рассчитаны на покупку под перепродажу в массовом сегменте, поэтому итоговый балл для элитных проектов не выводим. Отдельные правила для этого сегмента готовим, пять критериев показаны ниже.</p>
    :<p>Собрано критериев: {ready.length} из 5. Балл опубликуем, когда будут все пять.{gaps.length>0?` Не хватает: ${gaps.join("; ")}.`:""}{notes.map(note=>` ${note.charAt(0).toUpperCase()}${note.slice(1)}.`).join("")}</p>}
   <div style={{display:"grid",gap:1,background:"#d7ddd5",border:"1px solid #d7ddd5",margin:"1.5rem 0"}}>
    {ready.map(key=><div key={key} style={{background:"#f1f2ec",padding:"1.1rem 1.2rem",display:"grid",gridTemplateColumns:"minmax(0,1fr) auto",gap:".4rem 1rem",alignItems:"baseline"}}>
@@ -69,7 +70,7 @@ export function InvestmentRating({slug}:{slug:string}){
    </div>)}
   </div>
   {r.flags.length>0&&<div style={{margin:"0 0 1.2rem"}}><p style={{margin:0,fontWeight:600}}>На что обратить внимание</p><ul style={{margin:".4rem 0 0",paddingLeft:"1.2rem",lineHeight:1.6,listStyle:"disc"}}>{r.flags.map(flag=><li key={flag}>{flag}</li>)}</ul></div>}
-  <p className="mh-content-caption">Расчёт на {ruDate(ratingMeta.asOf)}. Договоры учтены по {ruDate(ratingMeta.dealsThrough)}.{r.published&&r.confidence?` Уверенность оценки: ${r.confidence==="high"?"высокая":r.confidence==="medium"?"средняя":"низкая"}.`:""} Оценка не является индивидуальной инвестиционной рекомендацией и не обещает доходность.</p>
+  <p className="mh-content-caption">Расчёт на {ruDate(ratingMeta.asOf)}. Темп продаж считаем по договорам с {ruDate(ratingMeta.dealWindow[0])} по {ruDate(ratingMeta.dealWindow[1])}. Остаток: с учётом договоров по {ruDate(ratingMeta.dealsThrough)}.{r.published&&r.confidence&&r.price&&r.rent&&r.liquidity?` Уверенность оценки: ${r.confidence==="high"?"высокая":r.confidence==="medium"?"средняя":"низкая"} (сопоставимых сделок ${num(r.price.comparableDeals)}, объявлений аренды ${num(r.rent.listings)}, квартиры в продаже ${num(r.liquidity.monthsOnSale)} мес.).`:""} Оценка не является индивидуальной инвестиционной рекомендацией и не обещает доходность.</p>
   <Link className="mh-text-link" href="/investment-rating/">Как считается оценка ↗</Link>
  </section>;
 }
