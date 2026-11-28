@@ -9,15 +9,20 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
-      - run: python3 -u scripts/rating/collect_osm_moscow.py
+      - name: collect
+        timeout-minutes: 45
+        continue-on-error: true
+        run: python3 -u scripts/rating/collect_osm_moscow.py
       - name: publish to data branch
+        if: always()
         run: |
+          ls -la out || exit 0
           mkdir pub && cp out/*.gz pub/ && cd pub
-          git init -q -b data-rating-osm
+          git init -q -b data-rating-osm-v2
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add . && git commit -q -m "osm moscow $(date -u +%F)"
-          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" data-rating-osm
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" data-rating-osm-v2
           ls -la
